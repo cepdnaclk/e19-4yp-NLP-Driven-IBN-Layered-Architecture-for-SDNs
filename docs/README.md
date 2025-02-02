@@ -4,23 +4,22 @@ permalink: index.html
 
 # Please update this with your repository name and title
 repository-name: eYY-4yp-project-template
-title:
+title: nlp-driven-ibn-layered-architecture-for-sdns
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
+# NLP Driven Intent-Based Networking layered architecture for Software Defined Networks
 
 #### Team
 
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
+- e19409, Udugamasooriya D.P., [email](e19409@eng.pdn.ac.lk)
+- e19413, Viduranga G.G.N, [email](e19413@eng.pdn.ac.lk)
+- e19446, Wijerathna I.M.K.D.I. , [email](e19446@eng.pdn.ac.lk)
 
 #### Supervisors
 
-- Name, [email](mailto:name@eng.pdn.ac.lk)
-- Name, [email](mailto:name@eng.pdn.ac.lk)
+- Dr. Suneth Namal Karunarathna, [email](mailto:namal@eng.pdn.ac.lk)
 
 #### Table of content
 
