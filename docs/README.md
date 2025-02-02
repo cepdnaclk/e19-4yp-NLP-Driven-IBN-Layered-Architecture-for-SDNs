@@ -3,8 +3,8 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-4yp-project-template
-title: nlp-driven-ibn-layered-architecture-for-sdns
+repository-name: e19-4yp-NLP-Driven-IBN-Layered-Architecture-for-SDNs
+title: NLP driven Intent-Based Network Layered Architecture for Software Defined Networks
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
