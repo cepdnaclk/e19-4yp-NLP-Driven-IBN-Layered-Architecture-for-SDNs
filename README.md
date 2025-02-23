@@ -7,7 +7,7 @@ This repository contains the implementation, experiments, and documentation for 
 ---
 
 ## **📌 Project Overview**  
-🔹 **Goal:** Develop a scalable and adaptive **NLP-driven IBN Architecture** for SDNs, enabling dynamic policy adaptation, monitoring transparency, and intelligent reasoning.  
+🔹 **Goal:** Develop a scalable and intelligent **NLP-driven IBN Architecture** for SDNs, enabling dynamic policy adaptation, monitoring transparency, and intelligent reasoning.  
 🔹 **Key Components:**  
 - **NLP Processing & Intent Recognition** (LLMs + Named Entity Recognition)  
 - **Policy Optimization** (Machine Learning / Reinforcement Learning)  
