@@ -127,7 +127,7 @@ To validate the proposed system, a network emulation environment is built using 
    - The system is tested on the following topologies:
      - **Collapsed Core:** Suitable for small networks with limited scalability.
      - **Spine-Leaf:** Used in large organizations for high availability and fault tolerance.
-     - **Fat Tree:** Designed for high-performance computing environments.
+     - **Fat Tree:** Designed for high-performance computing environments and large scale complex networks.
 
 3. **Real-Time Policy Adjustment Using ML & RL**  
    - A Machine Learning Engine predicts optimal QoS configurations based on telemetry feedback.
