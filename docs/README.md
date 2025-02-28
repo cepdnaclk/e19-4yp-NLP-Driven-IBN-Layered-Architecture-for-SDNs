@@ -50,12 +50,12 @@ This is a sample image, to show how to add images to your page. To learn more op
 #### System Overview
 The proposed system integrates AI-driven intent recognition with SDN (Software Defined Networking) to create an intelligent and adaptive networking framework. The architecture interprets natural language user intents, processes them through multiple intelligent layers, and dynamically enforces them using SDN controllers and programmable middleboxes.
 
-![High-Level-Overview-of-the-System](docs/images/system-overview.png)
+![High-Level-Overview-of-the-System](images/system-overview.png)
 
 #### High-Level Design
 To provide a comprehensive understanding of the proposed Intent-Based Networking (IBN) Architecture, the following high-level design diagram illustrates the key components and their interactions:
 
-![Proposed NLP-Driven IBN Layered Architecture](docs/images/architecture-design.png)
+![Proposed NLP-Driven IBN Layered Architecture](images/architecture-design.png)
 
 This architecture consists of multiple layers, each responsible for processing and enforcing user-defined intents within an SDN-driven environment. The data flow begins with natural language input and ends with policy enforcement and feedback loops, ensuring adaptability and optimization.
 
@@ -115,7 +115,7 @@ To validate the proposed system, a network emulation environment is built using 
 
 #### High-Level Implementation Plan
 
-![High-Level Implementation Plan](docs/images/implementation-plan.png)
+![High-Level Implementation Plan](images/implementation-plan.png)
 
 1. **User Intent Processing & Policy Generation**  
    - Users interact with a Chatbot UI and Monitoring Dashboard.
