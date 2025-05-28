@@ -14,7 +14,7 @@ title: NLP driven Intent-Based Network Layered Architecture for Software Defined
 #### Team
 
 - e19409, Udugamasooriya D.P., [email](mailto:e19409@eng.pdn.ac.lk)
-- e19413, Viduranga G.G.N, [email](mailto:e19413@eng.pdn.ac.lk)
+- e19413, Viduranga G.G.N., [email](mailto:e19413@eng.pdn.ac.lk)
 - e19446, Wijerathna I.M.K.D.I. , [email](mailto:e19446@eng.pdn.ac.lk)
 
 #### Supervisors
@@ -161,10 +161,15 @@ To validate the proposed system, a network emulation environment is built using 
 The implementation is designed to ensure scalability, adaptability, and efficiency in intent-based SDN environments.
 
 ## Results and Analysis
+Stay tuned — we are currently analyzing experimental results and will share performance insights soon!
 
 ## Conclusion
+Stay tuned — final conclusions and key takeaways will be updated upon completion of ongoing evaluations.
 
 ## Publications
+Stay tuned — our research papers and publications will be listed here once published.
+
+
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
 
 <!-- 1. [Semester 7 report](./) -->
