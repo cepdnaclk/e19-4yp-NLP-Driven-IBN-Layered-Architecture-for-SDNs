@@ -1,0 +1,28 @@
+🧹 Running docker-compose down (if any compose files are active)...
+ Container grafana  Stopping
+ Container onos  Stopping
+ Container prometheus  Stopping
+ Container containernet  Stopping
+ Container containernet  Stopped
+ Container containernet  Removing
+ Container containernet  Removed
+ Container prometheus  Stopped
+ Container prometheus  Removing
+ Container prometheus  Removed
+ Container grafana  Stopped
+ Container grafana  Removing
+ Container grafana  Removed
+ Container onos  Stopped
+ Container onos  Removing
+ Container onos  Removed
+ Network 01_init_setup_default  Removing
+ Network 01_init_setup_default  Removed
+🛑 Stopping all Docker containers...
+🗑️  Removing all Docker containers...
+🔗 Removing custom Docker networks (if any)...
+📦 Removing dangling Docker volumes (if any)...
+Deleted Volumes:
+12b6736953391d86592ff50e40352c1a8a0be8041ac99c3f7f0d78d9b233f740
+
+Total reclaimed space: 642.6kB
+✅ Docker cluster cleanup completed.

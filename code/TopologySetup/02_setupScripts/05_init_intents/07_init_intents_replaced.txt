@@ -1,0 +1,10 @@
+# execute intents for switching
+add-host-intent 3E:15:86:88:0D:D9/None B2:01:3F:18:D9:4D/None
+add-host-intent 7A:84:02:B4:05:D9/None 3A:91:61:A2:4D:CA/None
+
+# execute intents for routing
+add-host-intent 192.168.0.1 10.0.0.1
+add-host-intent 192.168.0.2 10.0.0.1
+add-host-intent 192.168.1.1 10.0.0.1
+add-host-intent 192.168.1.2 10.0.0.1
+

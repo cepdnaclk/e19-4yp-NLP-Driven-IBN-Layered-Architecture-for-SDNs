@@ -1,0 +1,26 @@
+Welcome to Open Network Operating System (ONOS)!
+[1;31m     ____  _  ______  ____     [0m
+[1;31m    / __ \/ |/ / __ \/ __/   [0m
+[1;31m   / /_/ /    / /_/ /\ \     [0m
+[1;31m   \____/_/|_/\____/___/     [0m
+[1;31m                             h  [0m
+Documentation: wiki.onosproject.org      
+Tutorials:     tuotorsiatlss.onospr
+ojeect.xorig t
+M
+ailing lists: lists.onosproject.org     
+
+Come help out! Find out how at: contribute.onosproject.org 
+
+Hit '[1m<tab>[0m' for a list of available commands
+and '[1m[cmd] --help[0m' for help on a specific command.
+Hit '[1m<ctrl-d>[0m' or type '[1mlogout[0m' to exit ONOS session.
+
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m05:51:15[0m[12C[91mh[0m[91mo[0m[91ms[0m[91mt[0m[94mhosts[0m
+[?1l>[?1000l[?2004lid=42:65:A5:79:AF:F7/None, mac=42:65:A5:79:AF:F7, locations=[of:0000000000000001/2], auxLocations=null, vlan=None, ip(s)=[192.168.1.1], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=96:29:D6:BC:B4:D0/None, mac=96:29:D6:BC:B4:D0, locations=[of:0000000000000002/2], auxLocations=null, vlan=None, ip(s)=[192.168.0.2], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=BA:E1:67:B4:84:E7/None, mac=BA:E1:67:B4:84:E7, locations=[of:0000000000000001/1], auxLocations=null, vlan=None, ip(s)=[192.168.0.1], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=C6:3A:C9:BA:A0:BF/None, mac=C6:3A:C9:BA:A0:BF, locations=[of:0000000000000002/1], auxLocations=null, vlan=None, ip(s)=[192.168.1.2], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m05:51:15[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m05:51:15[0m[12C
+[?1l>[?1000l[?2004l

@@ -1,0 +1,1357 @@
+containernet  |  * /etc/openvswitch/conf.db does not exist
+containernet  |  * Creating empty database /etc/openvswitch/conf.db
+containernet  |  * Starting ovsdb-server
+containernet  |  * Configuring Open vSwitch system IDs
+containernet  |  * Starting ovs-vswitchd
+containernet  |  * Enabling remote OVSDB managers
+containernet  | Pulling the "ubuntu:trusty" and "ubuntu:xenial" image for later use...
+prometheus    | time=2025-05-26T06:34:53.972Z level=INFO source=main.go:674 msg="No time or size retention was set so using the default time retention" duration=15d
+prometheus    | time=2025-05-26T06:34:53.973Z level=INFO source=main.go:725 msg="Starting Prometheus Server" mode=server version="(version=3.4.0, branch=HEAD, revision=546b1d242e209ed4228aa01a248dbf3e41e573ea)"
+prometheus    | time=2025-05-26T06:34:53.973Z level=INFO source=main.go:730 msg="operational information" build_context="(go=go1.24.3, platform=linux/amd64, user=root@b1749ffe17d4, date=20250517-06:54:08, tags=netgo,builtinassets,stringlabels)" host_details="(Linux 6.8.0-52-generic #53-Ubuntu SMP PREEMPT_DYNAMIC Sat Jan 11 00:06:25 UTC 2025 x86_64 1cef864fd26c (none))" fd_limits="(soft=1048576, hard=1048576)" vm_limits="(soft=unlimited, hard=unlimited)"
+prometheus    | time=2025-05-26T06:34:53.974Z level=INFO source=main.go:806 msg="Leaving GOMAXPROCS=12: CPU quota undefined" component=automaxprocs
+prometheus    | time=2025-05-26T06:34:53.975Z level=INFO source=web.go:656 msg="Start listening for connections" component=web address=0.0.0.0:9090
+prometheus    | time=2025-05-26T06:34:53.975Z level=INFO source=main.go:1266 msg="Starting TSDB ..."
+prometheus    | time=2025-05-26T06:34:53.977Z level=INFO source=tls_config.go:347 msg="Listening on" component=web address=[::]:9090
+prometheus    | time=2025-05-26T06:34:53.977Z level=INFO source=tls_config.go:350 msg="TLS is disabled." component=web http2=false address=[::]:9090
+prometheus    | time=2025-05-26T06:34:53.977Z level=INFO source=head.go:657 msg="Replaying on-disk memory mappable chunks if any" component=tsdb
+prometheus    | time=2025-05-26T06:34:53.977Z level=INFO source=head.go:744 msg="On-disk memory mappable chunks replay completed" component=tsdb duration=604ns
+prometheus    | time=2025-05-26T06:34:53.977Z level=INFO source=head.go:752 msg="Replaying WAL, this may take a while" component=tsdb
+prometheus    | time=2025-05-26T06:34:53.978Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=0 duration=217.585µs
+prometheus    | time=2025-05-26T06:34:53.978Z level=INFO source=head.go:862 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=14.135µs wal_replay_duration=226.784µs wbl_replay_duration=93ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=604ns total_replay_duration=266.164µs
+prometheus    | time=2025-05-26T06:34:53.979Z level=INFO source=main.go:1287 msg="filesystem information" fs_type=EXT4_SUPER_MAGIC
+prometheus    | time=2025-05-26T06:34:53.979Z level=INFO source=main.go:1290 msg="TSDB started"
+prometheus    | time=2025-05-26T06:34:53.979Z level=INFO source=main.go:1475 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+prometheus    | time=2025-05-26T06:34:53.979Z level=INFO source=main.go:1514 msg="updated GOGC" old=100 new=75
+prometheus    | time=2025-05-26T06:34:53.979Z level=INFO source=main.go:1524 msg="Completed loading of configuration file" db_storage=584ns remote_storage=838ns web_handler=131ns query_engine=442ns scrape=212.162µs scrape_sd=16.155µs notify=601ns notify_sd=317ns rules=772ns tracing=2.711µs filename=/etc/prometheus/prometheus.yml totalDuration=344.946µs
+prometheus    | time=2025-05-26T06:34:53.979Z level=INFO source=main.go:1251 msg="Server is ready to receive web requests."
+prometheus    | time=2025-05-26T06:34:53.979Z level=INFO source=manager.go:175 msg="Starting rule manager..." component="rule manager"
+grafana       | logger=settings t=2025-05-26T06:34:54.331270121Z level=info msg="Starting Grafana" version=12.0.0 commit=4c0e7045f97f356716755b47183b22e7f12bb4bf branch=HEAD compiled=2025-05-26T06:34:54Z
+grafana       | logger=settings t=2025-05-26T06:34:54.331645311Z level=info msg="Config loaded from" file=/usr/share/grafana/conf/defaults.ini
+grafana       | logger=settings t=2025-05-26T06:34:54.33165523Z level=info msg="Config loaded from" file=/etc/grafana/grafana.ini
+grafana       | logger=settings t=2025-05-26T06:34:54.331659532Z level=info msg="Config overridden from command line" arg="default.paths.data=/var/lib/grafana"
+grafana       | logger=settings t=2025-05-26T06:34:54.331662503Z level=info msg="Config overridden from command line" arg="default.paths.logs=/var/log/grafana"
+grafana       | logger=settings t=2025-05-26T06:34:54.331665008Z level=info msg="Config overridden from command line" arg="default.paths.plugins=/var/lib/grafana/plugins"
+grafana       | logger=settings t=2025-05-26T06:34:54.33166762Z level=info msg="Config overridden from command line" arg="default.paths.provisioning=/etc/grafana/provisioning"
+grafana       | logger=settings t=2025-05-26T06:34:54.331670335Z level=info msg="Config overridden from command line" arg="default.log.mode=console"
+grafana       | logger=settings t=2025-05-26T06:34:54.331672913Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_DATA=/var/lib/grafana"
+grafana       | logger=settings t=2025-05-26T06:34:54.331676679Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_LOGS=/var/log/grafana"
+grafana       | logger=settings t=2025-05-26T06:34:54.331679093Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PLUGINS=/var/lib/grafana/plugins"
+grafana       | logger=settings t=2025-05-26T06:34:54.331681989Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
+grafana       | logger=settings t=2025-05-26T06:34:54.331684567Z level=info msg="Config overridden from Environment variable" var="GF_SECURITY_ADMIN_USER=admin"
+grafana       | logger=settings t=2025-05-26T06:34:54.331687724Z level=info msg="Config overridden from Environment variable" var="GF_SECURITY_ADMIN_PASSWORD=*********"
+grafana       | logger=settings t=2025-05-26T06:34:54.331690424Z level=info msg=Target target=[all]
+grafana       | logger=settings t=2025-05-26T06:34:54.331698111Z level=info msg="Path Home" path=/usr/share/grafana
+grafana       | logger=settings t=2025-05-26T06:34:54.331700489Z level=info msg="Path Data" path=/var/lib/grafana
+grafana       | logger=settings t=2025-05-26T06:34:54.33170296Z level=info msg="Path Logs" path=/var/log/grafana
+grafana       | logger=settings t=2025-05-26T06:34:54.331705264Z level=info msg="Path Plugins" path=/var/lib/grafana/plugins
+grafana       | logger=settings t=2025-05-26T06:34:54.331707788Z level=info msg="Path Provisioning" path=/etc/grafana/provisioning
+grafana       | logger=settings t=2025-05-26T06:34:54.331710182Z level=info msg="App mode production"
+grafana       | logger=featuremgmt t=2025-05-26T06:34:54.331932229Z level=info msg=FeatureToggles alertingUIOptimizeReducer=true alertingNotificationsStepMode=true dashboardScene=true groupToNestedTableTransformation=true useSessionStorageForRedirection=true lokiQuerySplitting=true alertingSimplifiedRouting=true kubernetesPlaylists=true nestedFolders=true cloudWatchRoundUpEndTime=true alertRuleRestore=true publicDashboardsScene=true ssoSettingsApi=true failWrongDSUID=true annotationPermissionUpdate=true awsAsyncQueryCaching=true unifiedRequestLog=true addFieldFromCalculationStatFunctions=true alertingInsights=true prometheusAzureOverrideAudience=true panelMonitoring=true logsContextDatasourceUi=true unifiedStorageSearchPermissionFiltering=true cloudWatchCrossAccountQuerying=true grafanaconThemes=true alertingRuleVersionHistoryRestore=true newDashboardSharingComponent=true alertingRuleRecoverDeleted=true preinstallAutoUpdate=true dashboardSceneSolo=true recoveryThreshold=true tlsMemcached=true dashgpt=true onPremToCloudMigrations=true newFiltersUI=true lokiLabelNamesQueryApi=true logRowsPopoverMenu=true azureMonitorPrometheusExemplars=true kubernetesClientDashboardsFolders=true dashboardSceneForViewers=true logsPanelControls=true angularDeprecationUI=true formatString=true ssoSettingsSAML=true reportingUseRawTimeRange=true logsInfiniteScrolling=true alertingQueryAndExpressionsStepMode=true lokiQueryHints=true cloudWatchNewLabelParsing=true externalCorePlugins=true logsExploreTableVisualisation=true transformationsRedesign=true alertingRulePermanentlyDelete=true alertingApiServer=true recordedQueriesMulti=true pluginsDetailsRightPanel=true dataplaneFrontendFallback=true lokiStructuredMetadata=true newPDFRendering=true prometheusUsesCombobox=true pinNavItems=true influxdbBackendMigration=true correlations=true promQLScope=true azureMonitorEnableUserAuth=true
+grafana       | logger=sqlstore t=2025-05-26T06:34:54.331969847Z level=info msg="Connecting to DB" dbtype=sqlite3
+grafana       | logger=migrator t=2025-05-26T06:34:54.336358765Z level=info msg="Locking database"
+grafana       | logger=migrator t=2025-05-26T06:34:54.33638802Z level=info msg="Starting DB migrations"
+grafana       | logger=migrator t=2025-05-26T06:34:54.345285793Z level=info msg="migrations completed" performed=0 skipped=654 duration=404.159µs
+grafana       | logger=migrator t=2025-05-26T06:34:54.345657797Z level=info msg="Unlocking database"
+grafana       | logger=secrets t=2025-05-26T06:34:54.345904535Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+grafana       | logger=plugin.angulardetectorsprovider.dynamic t=2025-05-26T06:34:54.384518188Z level=info msg="Restored cache from database" duration=396.711µs
+grafana       | logger=resource-migrator t=2025-05-26T06:34:54.391113463Z level=info msg="Locking database"
+grafana       | logger=resource-migrator t=2025-05-26T06:34:54.391129916Z level=info msg="Starting DB migrations"
+grafana       | logger=resource-migrator t=2025-05-26T06:34:54.397830551Z level=info msg="migrations completed" performed=0 skipped=26 duration=43.624µs
+grafana       | logger=resource-migrator t=2025-05-26T06:34:54.398277913Z level=info msg="Unlocking database"
+grafana       | t=2025-05-26T06:34:54.398484158Z level=info caller=logger.go:214 time=2025-05-26T06:34:54.398467939Z msg="Using channel notifier" logger=sql-resource-server
+grafana       | logger=plugin.store t=2025-05-26T06:34:54.399497158Z level=info msg="Loading plugins..."
+onos          | May 26, 2025 6:34:54 AM org.apache.karaf.main.Main launch
+onos          | INFO: Installing and starting initial bundles
+grafana       | logger=plugins.registration t=2025-05-26T06:34:54.430274525Z level=error msg="Could not register plugin" pluginId=table error="plugin table is already registered"
+grafana       | logger=plugins.initialization t=2025-05-26T06:34:54.43029286Z level=error msg="Could not initialize plugin" pluginId=table error="plugin table is already registered"
+grafana       | logger=plugins.registration t=2025-05-26T06:34:54.450161446Z level=info msg="Plugin registered" pluginId=grafana-exploretraces-app
+onos          | May 26, 2025 6:34:54 AM org.apache.karaf.main.Main launch
+onos          | INFO: All initial bundles installed and set to start
+grafana       | logger=plugins.registration t=2025-05-26T06:34:54.466496474Z level=info msg="Plugin registered" pluginId=grafana-lokiexplore-app
+onos          | May 26, 2025 6:34:54 AM org.apache.karaf.main.lock.SimpleFileLock lock
+onos          | INFO: Trying to lock /root/onos/apache-karaf-4.2.14/lock
+onos          | May 26, 2025 6:34:54 AM org.apache.karaf.main.lock.SimpleFileLock lock
+onos          | INFO: Lock acquired
+onos          | May 26, 2025 6:34:54 AM org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+onos          | INFO: Lock acquired. Setting startlevel to 100
+grafana       | logger=plugins.registration t=2025-05-26T06:34:54.478390864Z level=info msg="Plugin registered" pluginId=grafana-metricsdrilldown-app
+grafana       | logger=plugins.registration t=2025-05-26T06:34:54.487853541Z level=info msg="Plugin registered" pluginId=grafana-pyroscope-app
+grafana       | logger=plugin.store t=2025-05-26T06:34:54.487869576Z level=info msg="Plugins loaded" count=57 duration=88.373191ms
+grafana       | logger=query_data t=2025-05-26T06:34:54.490384232Z level=info msg="Query Service initialization"
+grafana       | logger=live.push_http t=2025-05-26T06:34:54.495216553Z level=info msg="Live Push Gateway initialization"
+grafana       | logger=ngalert.notifier.alertmanager org=1 t=2025-05-26T06:34:54.497541064Z level=info msg="Applying new configuration to Alertmanager" configHash=d2c56faca6af2a5772ff4253222f7386
+grafana       | logger=ngalert t=2025-05-26T06:34:54.500810713Z level=info msg="Using simple database alert instance store"
+grafana       | logger=ngalert.state.manager.persist t=2025-05-26T06:34:54.500822302Z level=info msg="Using sync state persister"
+grafana       | logger=infra.usagestats.collector t=2025-05-26T06:34:54.501935639Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+grafana       | logger=grafanaStorageLogger t=2025-05-26T06:34:54.502102872Z level=info msg="Storage starting"
+grafana       | logger=ngalert.state.manager t=2025-05-26T06:34:54.502173878Z level=info msg="Warming state cache for startup"
+grafana       | logger=ngalert.multiorg.alertmanager t=2025-05-26T06:34:54.502198428Z level=info msg="Starting MultiOrg Alertmanager"
+grafana       | logger=http.server t=2025-05-26T06:34:54.503588857Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+grafana       | logger=provisioning.alerting t=2025-05-26T06:34:54.526931246Z level=info msg="starting to provision alerting"
+grafana       | logger=provisioning.alerting t=2025-05-26T06:34:54.52694851Z level=info msg="finished to provision alerting"
+grafana       | logger=provisioning.dashboard t=2025-05-26T06:34:54.52815374Z level=info msg="starting to provision dashboards"
+grafana       | logger=provisioning.dashboard t=2025-05-26T06:34:54.528188263Z level=info msg="finished to provision dashboards"
+grafana       | logger=ngalert.state.manager t=2025-05-26T06:34:54.547730854Z level=info msg="State cache has been initialized" states=0 duration=45.555986ms
+grafana       | logger=ngalert.scheduler t=2025-05-26T06:34:54.547803295Z level=info msg="Starting scheduler" tickInterval=10s maxAttempts=3
+grafana       | logger=ticker t=2025-05-26T06:34:54.547887164Z level=info msg=starting first_tick=2025-05-26T06:35:00Z
+grafana       | logger=grafana-apiserver t=2025-05-26T06:34:54.891604233Z level=info msg="Adding GroupVersion userstorage.grafana.app v0alpha1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-05-26T06:34:54.892338819Z level=info msg="Adding GroupVersion playlist.grafana.app v0alpha1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-05-26T06:34:54.898448714Z level=info msg="Adding GroupVersion dashboard.grafana.app v1beta1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-05-26T06:34:54.899620728Z level=info msg="Adding GroupVersion dashboard.grafana.app v0alpha1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-05-26T06:34:54.900480892Z level=info msg="Adding GroupVersion dashboard.grafana.app v2alpha1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-05-26T06:34:54.901032889Z level=info msg="Adding GroupVersion featuretoggle.grafana.app v0alpha1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-05-26T06:34:54.901933859Z level=info msg="Adding GroupVersion folder.grafana.app v1beta1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-05-26T06:34:54.903884481Z level=info msg="Adding GroupVersion iam.grafana.app v0alpha1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-05-26T06:34:54.905628331Z level=info msg="Adding GroupVersion notifications.alerting.grafana.app v0alpha1 to ResourceManager"
+onos          | [90m06:34:54.902[0m [1;32mINFO [m [90m[EventAdminConfigurationNotifier][0m Sending Event Admin notification (configuration successful) to org/ops4j/pax/logging/Configuration
+grafana       | logger=app-registry t=2025-05-26T06:34:54.937197565Z level=info msg="app registry initialized"
+grafana       | logger=grafana.update.checker t=2025-05-26T06:34:55.144563413Z level=info msg="Update check succeeded" duration=642.383354ms
+grafana       | logger=plugins.update.checker t=2025-05-26T06:34:55.150532981Z level=info msg="Update check succeeded" duration=648.404455ms
+onos          | [90m06:34:55.153[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Adding features: log/[4.2.14,4.2.14],shell/[4.2.14,4.2.14],scr/[4.2.14,4.2.14],eventadmin/[4.2.14,4.2.14],wrap/[2.6.7,2.6.7],instance/[4.2.14,4.2.14],service/[4.2.14,4.2.14],system/[4.2.14,4.2.14],package/[4.2.14,4.2.14],diagnostic/[4.2.14,4.2.14],bundle/[4.2.14,4.2.14],webconsole/[4.2.14,4.2.14],feature/[4.2.14,4.2.14],jaas/[4.2.14,4.2.14],deployer/[4.2.14,4.2.14],framework/[4.2.14,4.2.14],kar/[4.2.14,4.2.14],war/[4.2.14,4.2.14],ssh/[4.2.14,4.2.14],management/[4.2.14,4.2.14],config/[4.2.14,4.2.14]
+onos          | [90m06:34:55.396[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Changes to perform:
+onos          | [90m06:34:55.396[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   Region: root
+onos          | [90m06:34:55.396[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     Bundles to install:
+onos          | [90m06:34:55.397[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.bouncycastle/bcpkix-jdk15on/1.69
+onos          | [90m06:34:55.397[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.bouncycastle/bcprov-jdk15on/1.69
+onos          | [90m06:34:55.397[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.bouncycastle/bcutil-jdk15on/1.69
+onos          | [90m06:34:55.397[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:javax.el/javax.el-api/3.0.0
+onos          | [90m06:34:55.397[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:javax.servlet/javax.servlet-api/3.1.0
+onos          | [90m06:34:55.397[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.aries.jmx/org.apache.aries.jmx.api/1.1.5
+onos          | [90m06:34:55.397[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.aries.jmx/org.apache.aries.jmx.core/1.1.8
+onos          | [90m06:34:55.398[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.aries.jmx/org.apache.aries.jmx.whiteboard/1.2.0
+onos          | [90m06:34:55.398[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/1.3.2
+onos          | [90m06:34:55.398[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.aries/org.apache.aries.util/1.1.3
+onos          | [90m06:34:55.398[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.felix/org.apache.felix.inventory/1.0.6
+onos          | [90m06:34:55.398[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.felix/org.apache.felix.scr/2.1.30
+onos          | [90m06:34:55.398[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.felix/org.apache.felix.webconsole.plugins.ds/2.1.0
+onos          | [90m06:34:55.398[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.felix/org.apache.felix.webconsole.plugins.event/1.1.8
+onos          | [90m06:34:55.399[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.felix/org.apache.felix.webconsole.plugins.memoryusage/1.0.10
+onos          | [90m06:34:55.399[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.geronimo.specs/geronimo-jaspic_1.0_spec/1.1
+onos          | [90m06:34:55.399[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1
+onos          | [90m06:34:55.399[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.bundle/org.apache.karaf.bundle.core/4.2.14
+onos          | [90m06:34:55.399[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.config/org.apache.karaf.config.core/4.2.14
+onos          | [90m06:34:55.399[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.features/4.2.14
+onos          | [90m06:34:55.399[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/4.2.14
+onos          | [90m06:34:55.399[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.wrap/4.2.14
+onos          | [90m06:34:55.400[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.diagnostic/org.apache.karaf.diagnostic.core/4.2.14
+onos          | [90m06:34:55.400[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf/org.apache.karaf.event/4.2.14
+onos          | [90m06:34:55.400[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.features/org.apache.karaf.features.command/4.2.14
+onos          | [90m06:34:55.400[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.http/org.apache.karaf.http.core/4.2.14
+onos          | [90m06:34:55.400[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.instance/org.apache.karaf.instance.core/4.2.14
+onos          | [90m06:34:55.400[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.command/4.2.14
+onos          | [90m06:34:55.400[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.config/4.2.14
+onos          | [90m06:34:55.400[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.modules/4.2.14
+onos          | [90m06:34:55.401[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/4.2.14
+onos          | [90m06:34:55.401[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.log/org.apache.karaf.log.core/4.2.14
+onos          | [90m06:34:55.401[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.management/org.apache.karaf.management.server/4.2.14
+onos          | [90m06:34:55.401[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.package/org.apache.karaf.package.core/4.2.14
+onos          | [90m06:34:55.401[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.scr/org.apache.karaf.scr.management/4.2.14
+onos          | [90m06:34:55.401[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.scr/org.apache.karaf.scr.state/4.2.14
+onos          | [90m06:34:55.401[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.service/org.apache.karaf.service.core/4.2.14
+onos          | [90m06:34:55.401[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.shell/org.apache.karaf.shell.commands/4.2.14
+onos          | [90m06:34:55.402[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.shell/org.apache.karaf.shell.core/4.2.14
+onos          | [90m06:34:55.402[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.shell/org.apache.karaf.shell.ssh/4.2.14
+onos          | [90m06:34:55.402[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.system/org.apache.karaf.system.core/4.2.14
+onos          | [90m06:34:55.402[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.web/org.apache.karaf.web.core/4.2.14
+onos          | [90m06:34:55.402[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.console/4.2.14
+onos          | [90m06:34:55.402[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.features/4.2.14
+onos          | [90m06:34:55.402[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.gogo/4.2.14
+onos          | [90m06:34:55.402[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.http/4.2.14
+onos          | [90m06:34:55.403[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.instance/4.2.14
+onos          | [90m06:34:55.403[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.javax-websocket-api/1.1_1
+onos          | [90m06:34:55.403[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.not-yet-commons-ssl/0.3.11_1
+onos          | [90m06:34:55.403[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.sshd/sshd-osgi/2.5.1
+onos          | [90m06:34:55.403[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.sshd/sshd-scp/2.5.1
+onos          | [90m06:34:55.403[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.sshd/sshd-sftp/2.5.1
+onos          | [90m06:34:55.403[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.xbean/xbean-bundleutils/4.20
+onos          | [90m06:34:55.403[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.xbean/xbean-finder/4.20
+onos          | [90m06:34:55.404[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jdt.core.compiler/ecj/4.5.1
+onos          | [90m06:34:55.404[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-client/9.4.43.v20210629
+onos          | [90m06:34:55.404[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-continuation/9.4.43.v20210629
+onos          | [90m06:34:55.404[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-deploy/9.4.43.v20210629
+onos          | [90m06:34:55.404[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-http/9.4.43.v20210629
+onos          | [90m06:34:55.404[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-io/9.4.43.v20210629
+onos          | [90m06:34:55.404[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-jaas/9.4.43.v20210629
+onos          | [90m06:34:55.404[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-jmx/9.4.43.v20210629
+onos          | [90m06:34:55.405[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-jndi/9.4.43.v20210629
+onos          | [90m06:34:55.405[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-plus/9.4.43.v20210629
+onos          | [90m06:34:55.405[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-proxy/9.4.43.v20210629
+onos          | [90m06:34:55.405[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-rewrite/9.4.43.v20210629
+onos          | [90m06:34:55.405[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-security/9.4.43.v20210629
+onos          | [90m06:34:55.405[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-jaspi/9.4.43.v20210629
+onos          | [90m06:34:55.405[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-server/9.4.43.v20210629
+onos          | [90m06:34:55.405[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-servlet/9.4.43.v20210629
+onos          | [90m06:34:55.405[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-servlets/9.4.43.v20210629
+onos          | [90m06:34:55.406[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-util/9.4.43.v20210629
+onos          | [90m06:34:55.406[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-util-ajax/9.4.43.v20210629
+onos          | [90m06:34:55.406[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-webapp/9.4.43.v20210629
+onos          | [90m06:34:55.406[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty.websocket/websocket-api/9.4.43.v20210629
+onos          | [90m06:34:55.406[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty.websocket/websocket-client/9.4.43.v20210629
+onos          | [90m06:34:55.406[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty.websocket/websocket-common/9.4.43.v20210629
+onos          | [90m06:34:55.406[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty.websocket/javax-websocket-client-impl/9.4.43.v20210629
+onos          | [90m06:34:55.406[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty.websocket/javax-websocket-server-impl/9.4.43.v20210629
+onos          | [90m06:34:55.407[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty.websocket/websocket-server/9.4.43.v20210629
+onos          | [90m06:34:55.407[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty.websocket/websocket-servlet/9.4.43.v20210629
+onos          | [90m06:34:55.407[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.eclipse.jetty/jetty-xml/9.4.43.v20210629
+onos          | [90m06:34:55.407[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.jline/jline-builtins/3.19.0
+onos          | [90m06:34:55.407[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.jline/jline-reader/3.19.0
+onos          | [90m06:34:55.407[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.jline/jline-terminal/3.19.0
+onos          | [90m06:34:55.407[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.jline/jline-terminal-jansi/3.19.0
+onos          | [90m06:34:55.407[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ow2.asm/asm/9.1
+onos          | [90m06:34:55.407[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ow2.asm/asm-commons/9.1
+onos          | [90m06:34:55.408[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ow2.asm/asm-tree/9.1
+onos          | [90m06:34:55.408[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ow2.asm/asm-analysis/9.1
+onos          | [90m06:34:55.408[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ow2.asm/asm-util/9.1
+onos          | [90m06:34:55.408[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.url/pax-url-war/2.6.7/jar/uber
+onos          | [90m06:34:55.408[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.url/pax-url-wrap/2.6.7/jar/uber
+onos          | [90m06:34:55.408[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.web/pax-web-api/7.2.29
+onos          | [90m06:34:55.408[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.web/pax-web-deployer/7.2.29
+onos          | [90m06:34:55.408[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.web/pax-web-descriptor/7.2.29
+onos          | [90m06:34:55.409[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.web/pax-web-extender-war/7.2.29
+onos          | [90m06:34:55.409[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/7.2.29
+onos          | [90m06:34:55.409[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.web/pax-web-jetty/7.2.29
+onos          | [90m06:34:55.409[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.web/pax-web-jsp/7.2.29
+onos          | [90m06:34:55.409[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.web/pax-web-runtime/7.2.29
+onos          | [90m06:34:55.409[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ops4j.pax.web/pax-web-spi/7.2.29
+onos          | [90m06:34:55.411[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Installing bundles:
+onos          | [90m06:34:55.412[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.bouncycastle/bcpkix-jdk15on/1.69
+onos          | [90m06:34:55.419[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.bouncycastle/bcprov-jdk15on/1.69
+onos          | [90m06:34:55.433[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.bouncycastle/bcutil-jdk15on/1.69
+onos          | [90m06:34:55.435[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:javax.el/javax.el-api/3.0.0
+onos          | [90m06:34:55.436[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:javax.servlet/javax.servlet-api/3.1.0
+onos          | [90m06:34:55.438[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.aries.jmx/org.apache.aries.jmx.api/1.1.5
+onos          | [90m06:34:55.439[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.aries.jmx/org.apache.aries.jmx.core/1.1.8
+onos          | [90m06:34:55.441[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.aries.jmx/org.apache.aries.jmx.whiteboard/1.2.0
+onos          | [90m06:34:55.443[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/1.3.2
+onos          | [90m06:34:55.459[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.aries/org.apache.aries.util/1.1.3
+onos          | [90m06:34:55.461[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.felix/org.apache.felix.inventory/1.0.6
+onos          | [90m06:34:55.464[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.felix/org.apache.felix.scr/2.1.30
+onos          | [90m06:34:55.466[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.felix/org.apache.felix.webconsole.plugins.ds/2.1.0
+onos          | [90m06:34:55.467[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.felix/org.apache.felix.webconsole.plugins.event/1.1.8
+onos          | [90m06:34:55.468[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.felix/org.apache.felix.webconsole.plugins.memoryusage/1.0.10
+onos          | [90m06:34:55.470[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.geronimo.specs/geronimo-jaspic_1.0_spec/1.1
+onos          | [90m06:34:55.471[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1
+onos          | [90m06:34:55.472[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.bundle/org.apache.karaf.bundle.core/4.2.14
+onos          | [90m06:34:55.473[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.config/org.apache.karaf.config.core/4.2.14
+onos          | [90m06:34:55.475[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.features/4.2.14
+onos          | [90m06:34:55.477[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/4.2.14
+onos          | [90m06:34:55.480[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.wrap/4.2.14
+onos          | [90m06:34:55.482[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.diagnostic/org.apache.karaf.diagnostic.core/4.2.14
+onos          | [90m06:34:55.484[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf/org.apache.karaf.event/4.2.14
+onos          | [90m06:34:55.485[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.features/org.apache.karaf.features.command/4.2.14
+onos          | [90m06:34:55.487[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.http/org.apache.karaf.http.core/4.2.14
+onos          | [90m06:34:55.491[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.instance/org.apache.karaf.instance.core/4.2.14
+onos          | [90m06:34:55.493[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.command/4.2.14
+onos          | [90m06:34:55.496[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.config/4.2.14
+onos          | [90m06:34:55.498[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.modules/4.2.14
+onos          | [90m06:34:55.501[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/4.2.14
+onos          | [90m06:34:55.503[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.log/org.apache.karaf.log.core/4.2.14
+onos          | [90m06:34:55.504[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.management/org.apache.karaf.management.server/4.2.14
+onos          | [90m06:34:55.505[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.package/org.apache.karaf.package.core/4.2.14
+onos          | [90m06:34:55.506[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.scr/org.apache.karaf.scr.management/4.2.14
+onos          | [90m06:34:55.508[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.scr/org.apache.karaf.scr.state/4.2.14
+onos          | [90m06:34:55.510[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.service/org.apache.karaf.service.core/4.2.14
+onos          | [90m06:34:55.512[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.shell/org.apache.karaf.shell.commands/4.2.14
+onos          | [90m06:34:55.514[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.shell/org.apache.karaf.shell.core/4.2.14
+onos          | [90m06:34:55.516[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.shell/org.apache.karaf.shell.ssh/4.2.14
+onos          | [90m06:34:55.518[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.system/org.apache.karaf.system.core/4.2.14
+onos          | [90m06:34:55.519[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.web/org.apache.karaf.web.core/4.2.14
+onos          | [90m06:34:55.521[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.console/4.2.14
+onos          | [90m06:34:55.523[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.features/4.2.14
+onos          | [90m06:34:55.525[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.gogo/4.2.14
+onos          | [90m06:34:55.527[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.http/4.2.14
+onos          | [90m06:34:55.529[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.instance/4.2.14
+onos          | [90m06:34:55.531[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.javax-websocket-api/1.1_1
+onos          | [90m06:34:55.532[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.not-yet-commons-ssl/0.3.11_1
+onos          | [90m06:34:55.534[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.sshd/sshd-osgi/2.5.1
+onos          | [90m06:34:55.538[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.sshd/sshd-scp/2.5.1
+onos          | [90m06:34:55.540[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.sshd/sshd-sftp/2.5.1
+onos          | [90m06:34:55.543[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.xbean/xbean-bundleutils/4.20
+onos          | [90m06:34:55.545[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.xbean/xbean-finder/4.20
+onos          | [90m06:34:55.548[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jdt.core.compiler/ecj/4.5.1
+onos          | [90m06:34:55.552[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-client/9.4.43.v20210629
+onos          | [90m06:34:55.554[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-continuation/9.4.43.v20210629
+onos          | [90m06:34:55.555[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-deploy/9.4.43.v20210629
+onos          | [90m06:34:55.557[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-http/9.4.43.v20210629
+onos          | [90m06:34:55.560[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-io/9.4.43.v20210629
+onos          | [90m06:34:55.563[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-jaas/9.4.43.v20210629
+onos          | [90m06:34:55.565[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-jmx/9.4.43.v20210629
+onos          | [90m06:34:55.567[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-jndi/9.4.43.v20210629
+onos          | [90m06:34:55.568[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-plus/9.4.43.v20210629
+onos          | [90m06:34:55.569[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-proxy/9.4.43.v20210629
+onos          | [90m06:34:55.571[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-rewrite/9.4.43.v20210629
+onos          | [90m06:34:55.572[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-security/9.4.43.v20210629
+onos          | [90m06:34:55.573[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-jaspi/9.4.43.v20210629
+onos          | [90m06:34:55.576[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-server/9.4.43.v20210629
+onos          | [90m06:34:55.581[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-servlet/9.4.43.v20210629
+onos          | [90m06:34:55.583[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-servlets/9.4.43.v20210629
+onos          | [90m06:34:55.584[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-util/9.4.43.v20210629
+onos          | [90m06:34:55.586[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-util-ajax/9.4.43.v20210629
+onos          | [90m06:34:55.605[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-webapp/9.4.43.v20210629
+onos          | [90m06:34:55.607[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty.websocket/websocket-api/9.4.43.v20210629
+onos          | [90m06:34:55.610[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty.websocket/websocket-client/9.4.43.v20210629
+onos          | [90m06:34:55.611[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty.websocket/websocket-common/9.4.43.v20210629
+onos          | [90m06:34:55.613[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty.websocket/javax-websocket-client-impl/9.4.43.v20210629
+onos          | [90m06:34:55.615[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty.websocket/javax-websocket-server-impl/9.4.43.v20210629
+onos          | [90m06:34:55.616[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty.websocket/websocket-server/9.4.43.v20210629
+onos          | [90m06:34:55.618[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty.websocket/websocket-servlet/9.4.43.v20210629
+onos          | [90m06:34:55.619[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.eclipse.jetty/jetty-xml/9.4.43.v20210629
+onos          | [90m06:34:55.620[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.jline/jline-builtins/3.19.0
+onos          | [90m06:34:55.621[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.jline/jline-reader/3.19.0
+onos          | [90m06:34:55.622[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.jline/jline-terminal/3.19.0
+onos          | [90m06:34:55.623[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.jline/jline-terminal-jansi/3.19.0
+onos          | [90m06:34:55.624[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ow2.asm/asm/9.1
+onos          | [90m06:34:55.626[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ow2.asm/asm-commons/9.1
+onos          | [90m06:34:55.627[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ow2.asm/asm-tree/9.1
+onos          | [90m06:34:55.629[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ow2.asm/asm-analysis/9.1
+onos          | [90m06:34:55.630[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ow2.asm/asm-util/9.1
+onos          | [90m06:34:55.631[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.url/pax-url-war/2.6.7/jar/uber
+onos          | [90m06:34:55.635[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.url/pax-url-wrap/2.6.7/jar/uber
+onos          | [90m06:34:55.638[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.web/pax-web-api/7.2.29
+onos          | [90m06:34:55.639[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.web/pax-web-deployer/7.2.29
+onos          | [90m06:34:55.640[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.web/pax-web-descriptor/7.2.29
+onos          | [90m06:34:55.642[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.web/pax-web-extender-war/7.2.29
+onos          | [90m06:34:55.644[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/7.2.29
+onos          | [90m06:34:55.646[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.web/pax-web-jetty/7.2.29
+onos          | [90m06:34:55.649[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.web/pax-web-jsp/7.2.29
+onos          | [90m06:34:55.652[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.web/pax-web-runtime/7.2.29
+onos          | [90m06:34:55.653[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ops4j.pax.web/pax-web-spi/7.2.29
+onos          | [90m06:34:55.664[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Creating configuration file /root/onos/apache-karaf-4.2.14/etc/jetty.xml
+onos          | [90m06:34:55.742[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Starting bundles:
+onos          | [90m06:34:55.743[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.url.wrap/2.6.7
+onos          | [90m06:34:55.746[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.aries.util/1.1.3
+onos          | [90m06:34:55.747[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.deployer.wrap/4.2.14
+onos          | [90m06:34:55.751[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.deployer.kar/4.2.14
+onos          | [90m06:34:55.755[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.deployer.features/4.2.14
+onos          | [90m06:34:55.771[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.jline.terminal/3.19.0
+onos          | [90m06:34:55.771[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.jline.reader/3.19.0
+onos          | [90m06:34:55.772[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.jline.builtins/3.19.0
+onos          | [90m06:34:55.772[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.shell.core/4.2.14
+onos          | [90m06:34:55.789[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.deployer.kar/4.2.14
+onos          | [90m06:34:55.791[0m [1;32mINFO [m [90m[Activator][0m Not starting local console. To activate set karaf.startLocalConsole=true
+onos          | [90m06:34:55.792[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.diagnostic.core/4.2.14
+onos          | [90m06:34:55.802[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.diagnostic.core/4.2.14
+onos          | [90m06:34:55.802[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   javax.servlet-api/3.1.0
+onos          | [90m06:34:55.803[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.aries.spifly.dynamic.bundle/1.3.2
+onos          | [90m06:34:55.825[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.util/9.4.43.v20210629
+onos          | [90m06:34:55.826[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.jmx/9.4.43.v20210629
+onos          | [90m06:34:55.827[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.io/9.4.43.v20210629
+onos          | [90m06:34:55.827[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.http/9.4.43.v20210629
+onos          | [90m06:34:55.842[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.client/9.4.43.v20210629
+onos          | [90m06:34:55.844[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.server/9.4.43.v20210629
+onos          | [90m06:34:55.844[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.geronimo.specs.geronimo-jaspic_1.0_spec/1.1.0
+onos          | [90m06:34:55.846[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.security.jaspi/9.4.43.v20210629
+onos          | [90m06:34:55.850[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.security/9.4.43.v20210629
+onos          | [90m06:34:55.851[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.util.ajax/9.4.43.v20210629
+onos          | [90m06:34:55.851[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.servlet/9.4.43.v20210629
+onos          | [90m06:34:55.852[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.websocket.common/9.4.43.v20210629
+onos          | [90m06:34:55.860[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.websocket.api/9.4.43.v20210629
+onos          | [90m06:34:55.862[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.websocket.servlet/9.4.43.v20210629
+onos          | [90m06:34:55.863[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.websocket.server/9.4.43.v20210629
+onos          | [90m06:34:55.865[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.websocket.javax.websocket.server/9.4.43.v20210629
+onos          | [90m06:34:55.872[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.servicemix.bundles.javax-websocket-api/1.1.0.1
+onos          | [90m06:34:55.873[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.xml/9.4.43.v20210629
+onos          | [90m06:34:55.874[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.websocket.client/9.4.43.v20210629
+onos          | [90m06:34:55.874[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.websocket.javax.websocket/9.4.43.v20210629
+onos          | [90m06:34:55.876[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   bcprov/1.69.0
+onos          | [90m06:34:55.876[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   bcutil/1.69.0
+onos          | [90m06:34:55.876[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   bcpkix/1.69.0
+onos          | [90m06:34:55.877[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.sshd.osgi/2.5.1
+onos          | [90m06:34:55.877[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.sshd.sftp/2.5.1
+onos          | [90m06:34:55.877[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.web.pax-web-api/7.2.29
+onos          | [90m06:34:55.878[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.web.pax-web-spi/7.2.29
+onos          | [90m06:34:55.878[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jdt.core.compiler.batch/3.11.1.v20150902-1521
+onos          | [90m06:34:55.878[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   javax.el-api/3.0.0
+onos          | [90m06:34:55.878[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.web.pax-web-jsp/7.2.29
+onos          | [90m06:34:55.879[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.bundle.core/4.2.14
+onos          | [90m06:34:55.894[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.bundle.core/4.2.14
+onos          | [90m06:34:55.895[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.jaas.config/4.2.14
+onos          | [90m06:34:55.899[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.jaas.modules/4.2.14
+onos          | [90m06:34:55.903[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.jaas.command/4.2.14
+onos          | [90m06:34:55.911[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.jaas.command/4.2.14
+onos          | [90m06:34:55.912[0m [1;32mINFO [m [90m[CommandExtension][0m Updating commands for bundle org.apache.karaf.jaas.command/4.2.14
+onos          | [90m06:34:55.914[0m [1;32mINFO [m [90m[CommandExtension][0m Updating commands for bundle org.apache.karaf.jaas.command/4.2.14
+onos          | [90m06:34:55.914[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.jaas/9.4.43.v20210629
+onos          | [90m06:34:55.915[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.felix.scr/2.1.30
+onos          | [90m06:34:55.932[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.web.pax-web-deployer/7.2.29
+onos          | [90m06:34:55.952[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.geronimo.specs.geronimo-jta_1.1_spec/1.1.1
+onos          | [90m06:34:55.953[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.jndi/9.4.43.v20210629
+onos          | [90m06:34:55.954[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.webapp/9.4.43.v20210629
+onos          | [90m06:34:55.954[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.plus/9.4.43.v20210629
+onos          | [90m06:34:55.955[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.deploy/9.4.43.v20210629
+onos          | [90m06:34:55.955[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.rewrite/9.4.43.v20210629
+onos          | [90m06:34:55.955[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.continuation/9.4.43.v20210629
+onos          | [90m06:34:55.956[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.proxy/9.4.43.v20210629
+onos          | [90m06:34:55.956[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.eclipse.jetty.servlets/9.4.43.v20210629
+onos          | [90m06:34:55.956[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.web.pax-web-jetty/7.2.29
+onos          | [90m06:34:55.970[0m [1;32mINFO [m [90m[log][0m Logging initialized @1804ms to org.eclipse.jetty.util.log.Slf4jLog
+onos          | [90m06:34:55.973[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.web.pax-web-runtime/7.2.29
+onos          | [90m06:34:55.978[0m [1;32mINFO [m [90m[Activator][0m EventAdmin support enabled, servlet events will be postet to topics.
+onos          | [90m06:34:55.979[0m [1;32mINFO [m [90m[Activator][0m LogService support enabled, log events will be created.
+onos          | [90m06:34:55.981[0m [1;32mINFO [m [90m[Activator][0m Pax Web started
+onos          | [90m06:34:55.996[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.http.core/4.2.14
+onos          | [90m06:34:56.002[0m [1;32mINFO [m [90m[CommandExtension][0m Command registration delayed for bundle org.apache.karaf.http.core/4.2.14. Missing service: [org.apache.karaf.http.core.ServletService, org.apache.karaf.http.core.ProxyService]
+onos          | [90m06:34:56.002[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.shell.commands/4.2.14
+onos          | [90m06:34:56.007[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.shell.commands/4.2.14
+onos          | [90m06:34:56.008[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.package.core/4.2.14
+onos          | [90m06:34:56.015[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.package.core/4.2.14
+onos          | [90m06:34:56.015[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.scr.state/4.2.14
+onos          | [90m06:34:56.018[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.scr.state/4.2.14
+onos          | [90m06:34:56.019[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.aries.jmx.whiteboard/1.2.0
+onos          | [90m06:34:56.021[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.webconsole.console/4.2.14
+onos          | [90m06:34:56.056[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.webconsole.http/4.2.14
+onos          | [90m06:34:56.061[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.webconsole.http/4.2.14
+onos          | [90m06:34:56.061[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.aries.jmx.api/1.1.5
+onos          | [90m06:34:56.062[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.aries.jmx.core/1.1.8
+onos          | [90m06:34:56.065[0m [1;32mINFO [m [90m[core][0m Starting JMX OSGi agent
+onos          | [90m06:34:56.083[0m [1;32mINFO [m [90m[core][0m Registering MBean with ObjectName [osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7] for service with service.id [15]
+onos          | [90m06:34:56.085[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.servicemix.bundles.not-yet-commons-ssl/0.3.11.1
+onos          | [90m06:34:56.085[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.sshd.scp/2.5.1
+onos          | [90m06:34:56.086[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.shell.ssh/4.2.14
+onos          | [90m06:34:56.104[0m [1;32mINFO [m [90m[CommandExtension][0m Command registration delayed for bundle org.apache.karaf.shell.ssh/4.2.14. Missing service: [org.apache.sshd.server.SshServer]
+onos          | [90m06:34:56.105[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.config.core/4.2.14
+onos          | [90m06:34:56.118[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.config.core/4.2.14
+onos          | [90m06:34:56.138[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.features.command/4.2.14
+onos          | [90m06:34:56.149[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.features.command/4.2.14
+onos          | [90m06:34:56.150[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.instance.core/4.2.14
+onos          | [90m06:34:56.155[0m [1;32mINFO [m [90m[JettyFactoryImpl][0m No ALPN class available
+onos          | [90m06:34:56.155[0m [1;32mINFO [m [90m[JettyFactoryImpl][0m HTTP/2 not available, creating standard ServerConnector for Http
+onos          | [90m06:34:56.163[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.instance.core/4.2.14
+onos          | [90m06:34:56.165[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.service.core/4.2.14
+onos          | [90m06:34:56.170[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.service.core/4.2.14
+onos          | [90m06:34:56.170[0m [1;32mINFO [m [90m[JettyServerImpl][0m Pax Web available at [0.0.0.0]:[8181]
+onos          | [90m06:34:56.170[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.system.core/4.2.14
+onos          | [90m06:34:56.176[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.karaf.http.core [41]] to http service
+onos          | [90m06:34:56.177[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.shell.ssh/4.2.14
+onos          | [90m06:34:56.177[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.system.core/4.2.14
+onos          | [90m06:34:56.178[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.felix.webconsole.plugins.memoryusage/1.0.10
+onos          | [90m06:34:56.181[0m [1;32mINFO [m [90m[memoryusage][0m Storing Memory Dumps in /root/onos/apache-karaf-4.2.14/data/cache/bundle30/data/dumps
+onos          | [90m06:34:56.183[0m [1;32mINFO [m [90m[memoryusage][0m Setting Automatic Memory Dump Threshold to 0% for pools [CodeHeap 'non-nmethods', CodeHeap 'non-profiled nmethods', CodeHeap 'profiled nmethods', Compressed Class Space, G1 Old Gen, Metaspace]
+onos          | [90m06:34:56.183[0m [1;32mINFO [m [90m[memoryusage][0m Automatic Memory Dump cannot be set for pools [G1 Eden Space, G1 Survivor Space]
+onos          | [90m06:34:56.183[0m [1;32mINFO [m [90m[memoryusage][0m Setting Automatic Memory Dump Interval to 21600 seconds
+onos          | [90m06:34:56.185[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.karaf.webconsole.console [58]] to http service
+onos          | [90m06:34:56.186[0m [1;32mINFO [m [90m[DefaultIoServiceFactoryFactory][0m No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
+onos          | [90m06:34:56.187[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.webconsole.gogo/4.2.14
+onos          | [90m06:34:56.188[0m [1;32mINFO [m [90m[memoryusage][0m Setting Automatic Memory Dump Threshold to 0% for pools [CodeHeap 'non-nmethods', CodeHeap 'non-profiled nmethods', CodeHeap 'profiled nmethods', Compressed Class Space, G1 Old Gen, Metaspace]
+onos          | [90m06:34:56.188[0m [1;32mINFO [m [90m[memoryusage][0m Automatic Memory Dump cannot be set for pools [G1 Eden Space, G1 Survivor Space]
+onos          | [90m06:34:56.188[0m [1;32mINFO [m [90m[memoryusage][0m Setting Automatic Memory Dump Interval to 21600 seconds
+onos          | [90m06:34:56.189[0m [1;32mINFO [m [90m[memoryusage][0m Storing Memory Dumps in /root/onos/apache-karaf-4.2.14/data/cache/bundle30/data/dumps
+onos          | [90m06:34:56.193[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.http.core/4.2.14
+onos          | [90m06:34:56.196[0m [1;32mINFO [m [90m[GogoPlugin][0m Gogo plugin activated
+onos          | [90m06:34:56.196[0m [1;32mINFO [m [90m[HttpPlugin][0m Http plugin activated
+onos          | [90m06:34:56.197[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.log.core/4.2.14
+onos          | [90m06:34:56.200[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m will add org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer to ServletContainerInitializers
+onos          | [90m06:34:56.201[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m added ServletContainerInitializer: org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer
+onos          | [90m06:34:56.201[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m will add org.apache.jasper.servlet.JasperInitializer to ServletContainerInitializers
+onos          | [90m06:34:56.201[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m Skipt org.apache.jasper.servlet.JasperInitializer, because specialized handler will be present
+onos          | [90m06:34:56.202[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m will add org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer to ServletContainerInitializers
+onos          | [90m06:34:56.205[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.log.core/4.2.14
+onos          | [90m06:34:56.211[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.felix.inventory/1.0.6
+onos          | [90m06:34:56.211[0m [1;32mINFO [m [90m[CommandExtension][0m Unregistering commands for bundle org.apache.karaf.log.core/4.2.14
+onos          | [90m06:34:56.214[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.log.core/4.2.14
+onos          | [90m06:34:56.225[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.felix.webconsole.plugins.ds/2.1.0
+onos          | [90m06:34:56.233[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.kar.core/4.2.14
+onos          | [90m06:34:56.239[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.kar.core/4.2.14
+onos          | [90m06:34:56.240[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.web.core/4.2.14
+onos          | [90m06:34:56.247[0m [1;32mINFO [m [90m[CommandExtension][0m Command registration delayed for bundle org.apache.karaf.web.core/4.2.14. Missing service: [org.apache.karaf.web.WebContainerService]
+onos          | [90m06:34:56.248[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.web.pax-web-descriptor/7.2.29
+onos          | [90m06:34:56.249[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.web.pax-web-extender-war/7.2.29
+onos          | [90m06:34:56.267[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.felix.webconsole.plugins.event/1.1.8
+onos          | [90m06:34:56.269[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.web.core/4.2.14
+onos          | [90m06:34:56.274[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.webconsole.instance/4.2.14
+onos          | [90m06:34:56.281[0m [1;32mINFO [m [90m[InstancePlugin][0m Instance plugin activated
+onos          | [90m06:34:56.283[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.webconsole.instance/4.2.14
+onos          | [90m06:34:56.284[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.web.pax-web-extender-whiteboard/7.2.29
+onos          | [90m06:34:56.286[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.ops4j.pax.web.pax-web-extender-whiteboard [113]] to http service
+onos          | [90m06:34:56.293[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [148] without valid alias or url patterns property.
+onos          | [90m06:34:56.295[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.felix.webconsole.plugins.ds [28]] to http service
+onos          | [90m06:34:56.299[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [110] without valid alias or url patterns property.
+onos          | [90m06:34:56.300[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.felix.webconsole.plugins.memoryusage [30]] to http service
+onos          | [90m06:34:56.300[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [138] without valid alias or url patterns property.
+onos          | [90m06:34:56.300[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.felix.inventory [26]] to http service
+onos          | [90m06:34:56.301[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [142] without valid alias or url patterns property.
+onos          | [90m06:34:56.302[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [144] without valid alias or url patterns property.
+onos          | [90m06:34:56.302[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [161] without valid alias or url patterns property.
+onos          | [90m06:34:56.302[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.karaf.webconsole.instance [62]] to http service
+onos          | [90m06:34:56.302[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [120] without valid alias or url patterns property.
+onos          | [90m06:34:56.303[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.karaf.webconsole.gogo [60]] to http service
+onos          | [90m06:34:56.303[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [141] without valid alias or url patterns property.
+onos          | [90m06:34:56.303[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [121] without valid alias or url patterns property.
+onos          | [90m06:34:56.303[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.karaf.webconsole.http [61]] to http service
+onos          | [90m06:34:56.304[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [140] without valid alias or url patterns property.
+onos          | [90m06:34:56.304[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [145] without valid alias or url patterns property.
+onos          | [90m06:34:56.304[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [146] without valid alias or url patterns property.
+onos          | [90m06:34:56.304[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [143] without valid alias or url patterns property.
+onos          | [90m06:34:56.305[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [139] without valid alias or url patterns property.
+onos          | [90m06:34:56.305[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [160] without valid alias or url patterns property.
+onos          | [90m06:34:56.305[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.felix.webconsole.plugins.event [29]] to http service
+onos          | [90m06:34:56.312[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.management.server/4.2.14
+onos          | [90m06:34:56.318[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.scr.management/4.2.14
+onos          | [90m06:34:56.323[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.ops4j.pax.url.war/2.6.7
+onos          | [90m06:34:56.328[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.webconsole.features/4.2.14
+onos          | [90m06:34:56.334[0m [1;32mINFO [m [90m[FeaturesPlugin][0m Features plugin activated
+onos          | [90m06:34:56.335[0m [1;32mINFO [m [90m[ServletWebElement][0m Ignoring servlet [166] without valid alias or url patterns property.
+onos          | [90m06:34:56.336[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.apache.karaf.webconsole.features [59]] to http service
+onos          | [90m06:34:56.338[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.objectweb.asm/9.1.0
+onos          | [90m06:34:56.340[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.objectweb.asm.tree/9.1.0
+onos          | [90m06:34:56.341[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.objectweb.asm.commons/9.1.0
+onos          | [90m06:34:56.342[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.xbean.bundleutils/4.20.0
+onos          | [90m06:34:56.343[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.xbean.finder/4.20.0
+onos          | [90m06:34:56.344[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.objectweb.asm.tree.analysis/9.1.0
+onos          | [90m06:34:56.345[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m added ServletContainerInitializer: org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer
+onos          | [90m06:34:56.345[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.karaf.event/4.2.14
+onos          | [90m06:34:56.349[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.apache.karaf.event/4.2.14
+onos          | [90m06:34:56.350[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.objectweb.asm.util/9.1.0
+onos          | [90m06:34:56.352[0m [1;32mINFO [m [90m[Activator][0m Deployment finished. Registering FeatureDeploymentListener
+onos          | [90m06:34:56.355[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.BundleStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=bundleState,version=1.7,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.357[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.wiring.BundleWiringStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=wiringState,version=1.1,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.358[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.FrameworkMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=framework,version=1.7,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.358[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.PackageStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=packageState,version=1.5,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.359[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.service.cm.ConfigurationAdminMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.359[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.ServiceStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=serviceState,version=1.7,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.369[0m [1;32mINFO [m [90m[ServiceComponentRuntimeMBeanImpl][0m Activating the Apache Karaf ServiceComponentRuntime MBean
+onos          | [90m06:34:56.394[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Done.
+onos          | [90m06:34:56.395[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Adding features: onos-thirdparty-base/[3.0.0.SNAPSHOT,3.0.0.SNAPSHOT]
+onos          | [90m06:34:56.400[0m [1;32mINFO [m [90m[HttpServiceContext][0m registering context DefaultHttpContext [bundle=org.apache.karaf.webconsole.console [58], contextID=custom], with context-name: 
+onos          | [90m06:34:56.409[0m [1;32mINFO [m [90m[core][0m Unregistering org.osgi.jmx.framework.BundleStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=bundleState,version=1.7,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.410[0m [1;32mINFO [m [90m[core][0m Unregistering org.osgi.jmx.framework.wiring.BundleWiringStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=wiringState,version=1.1,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.410[0m [1;32mINFO [m [90m[core][0m Unregistering org.osgi.jmx.framework.FrameworkMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=framework,version=1.7,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.411[0m [1;32mINFO [m [90m[core][0m Unregistering org.osgi.jmx.framework.PackageStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=packageState,version=1.5,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.411[0m [1;32mINFO [m [90m[core][0m Unregistering org.osgi.jmx.service.cm.ConfigurationAdminMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.411[0m [1;32mINFO [m [90m[core][0m Unregistering org.osgi.jmx.framework.ServiceStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@4616888f with name osgi.core:type=serviceState,version=1.7,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.412[0m [1;33mWARN [m [90m[core][0m Task rejected for JMX Notification dispatch of event [org.osgi.framework.ServiceEvent[source=[javax.management.MBeanServer]]] - Dispatcher may have been shutdown
+onos          | [90m06:34:56.413[0m [1;32mINFO [m [90m[HttpServiceContext][0m registering JasperInitializer
+onos          | [90m06:34:56.414[0m [1;32mINFO [m [90m[ServiceComponentRuntimeMBeanImpl][0m Deactivating the Apache Karaf ServiceComponentRuntime MBean
+onos          | [90m06:34:56.437[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.BundleStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@73522811 with name osgi.core:type=bundleState,version=1.7,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.437[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.wiring.BundleWiringStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@73522811 with name osgi.core:type=wiringState,version=1.1,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.438[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.FrameworkMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@73522811 with name osgi.core:type=framework,version=1.7,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.438[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.PackageStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@73522811 with name osgi.core:type=packageState,version=1.5,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.438[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.service.cm.ConfigurationAdminMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@73522811 with name osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.439[0m [1;32mINFO [m [90m[core][0m Registering org.osgi.jmx.framework.ServiceStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@73522811 with name osgi.core:type=serviceState,version=1.7,framework=org.apache.felix.framework,uuid=1d708592-1021-45ac-94c1-1b7bf23714b7
+onos          | [90m06:34:56.441[0m [1;32mINFO [m [90m[ServiceComponentRuntimeMBeanImpl][0m Activating the Apache Karaf ServiceComponentRuntime MBean
+onos          | [90m06:34:56.443[0m [1;32mINFO [m [90m[WebSocketServerFactory][0m No DecoratedObjectFactory provided, using new org.eclipse.jetty.util.DecoratedObjectFactory[decorators=1]
+onos          | [90m06:34:56.499[0m [1;32mINFO [m [90m[session][0m DefaultSessionIdManager workerName=node0
+onos          | [90m06:34:56.499[0m [1;32mINFO [m [90m[session][0m No SessionScavenger set, using defaults
+onos          | [90m06:34:56.500[0m [1;32mINFO [m [90m[session][0m node0 Scavenging every 660000ms
+onos          | [90m06:34:56.523[0m [1;32mINFO [m [90m[ContextHandler][0m Started HttpServiceContext{httpContext=DefaultHttpContext [bundle=org.apache.karaf.webconsole.console [58], contextID=custom]}
+onos          | [90m06:34:56.531[0m [1;32mINFO [m [90m[Server][0m jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 11.0.13+8-LTS
+onos          | [90m06:34:56.553[0m [1;32mINFO [m [90m[AbstractConnector][0m Started default@59769386{HTTP/1.1, (http/1.1)}{0.0.0.0:8181}
+onos          | [90m06:34:56.553[0m [1;32mINFO [m [90m[Server][0m Started @2387ms
+onos          | [90m06:34:56.749[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Changes to perform:
+onos          | [90m06:34:56.749[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   Region: root
+onos          | [90m06:34:56.750[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     Bundles to install:
+onos          | [90m06:34:56.755[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.bouncycastle/bcpkix-jdk15on/1.66/jar
+onos          | [90m06:34:56.756[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.bouncycastle/bcprov-jdk15on/1.66/jar
+onos          | [90m06:34:56.756[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.esotericsoftware/kryo/4.0.1/jar
+onos          | [90m06:34:56.756[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.esotericsoftware/minlog/1.3.0/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.esotericsoftware/reflectasm/1.11.7/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.fasterxml.jackson.core/jackson-annotations/2.11.4/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.fasterxml.jackson.core/jackson-core/2.11.4/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.fasterxml.jackson.core/jackson-databind/2.11.4/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.google.guava/guava/22.0/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.typesafe/config/1.3.2/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.googlecode.concurrent-trees/concurrent-trees/2.6.1/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.atomix/atomix/3.1.12/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.atomix/atomix-cluster/3.1.12/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.atomix/atomix-primary-backup/3.1.12/jar
+onos          | [90m06:34:56.757[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.atomix/atomix-primitive/3.1.12/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.atomix/atomix-raft/3.1.12/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.atomix/atomix-storage/3.1.12/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.atomix/atomix-utils/3.1.12/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.dropwizard.metrics/metrics-core/3.2.2/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.dropwizard.metrics/metrics-json/3.2.2/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.github.classgraph/classgraph/4.2.3/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-buffer/4.1.35.Final/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-codec/4.1.35.Final/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-codec-http/4.1.35.Final/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-codec-http2/4.1.35.Final/jar
+onos          | [90m06:34:56.758[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-codec-socks/4.1.35.Final/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-common/4.1.35.Final/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-handler/4.1.35.Final/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-handler-proxy/4.1.35.Final/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-resolver/4.1.35.Final/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-tcnative-boringssl-static/2.0.25.Final/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-transport/4.1.35.Final/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-transport-native-epoll/4.1.35.Final/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty-transport-native-unix-common/4.1.35.Final/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:javax.xml.bind/jaxb-api/2.3.1/jar
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       wrap:mvn:jdom/jdom/1.0$Bundle-SymbolicName=jdom.jdom&Bundle-Version=1.0
+onos          | [90m06:34:56.759[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:joda-time/joda-time/2.9.3/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:com.eclipsesource.minimal-json/minimal-json/0.9.4/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:commons-beanutils/commons-beanutils/1.9.3/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:commons-codec/commons-codec/1.10/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:commons-collections/commons-collections/3.2.2/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:commons-configuration/commons-configuration/1.10/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:commons-io/commons-io/2.6/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:commons-jxpath/commons-jxpath/1.3/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:commons-lang/commons-lang/2.6/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.commons/commons-lang3/3.7/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.commons/commons-math3/3.6.1/jar
+onos          | [90m06:34:56.760[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:commons-pool/commons-pool/1.6/jar
+onos          | [90m06:34:56.761[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.apache.commons/commons-text/1.3/jar
+onos          | [90m06:34:56.761[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:io.netty/netty/3.10.5.Final/jar
+onos          | [90m06:34:56.761[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.knowhowlab.osgi/sigar/1.6.5_01/jar
+onos          | [90m06:34:56.761[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.mapdb/mapdb/1.0.9/jar
+onos          | [90m06:34:56.761[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.ow2.asm/asm/5.2/jar
+onos          | [90m06:34:56.761[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.objenesis/objenesis/2.6/jar
+onos          | [90m06:34:56.762[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Installing bundles:
+onos          | [90m06:34:56.763[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.bouncycastle/bcpkix-jdk15on/1.66/jar
+onos          | [90m06:34:56.768[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.bouncycastle/bcprov-jdk15on/1.66/jar
+onos          | [90m06:34:56.780[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.esotericsoftware/kryo/4.0.1/jar
+onos          | [90m06:34:56.782[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.esotericsoftware/minlog/1.3.0/jar
+onos          | [90m06:34:56.783[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.esotericsoftware/reflectasm/1.11.7/jar
+onos          | [90m06:34:56.784[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.fasterxml.jackson.core/jackson-annotations/2.11.4/jar
+onos          | [90m06:34:56.785[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.fasterxml.jackson.core/jackson-core/2.11.4/jar
+onos          | [90m06:34:56.786[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.fasterxml.jackson.core/jackson-databind/2.11.4/jar
+onos          | [90m06:34:56.789[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.google.guava/guava/22.0/jar
+onos          | [90m06:34:56.793[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.typesafe/config/1.3.2/jar
+onos          | [90m06:34:56.794[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.googlecode.concurrent-trees/concurrent-trees/2.6.1/jar
+onos          | [90m06:34:56.795[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.atomix/atomix/3.1.12/jar
+onos          | [90m06:34:56.797[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.atomix/atomix-cluster/3.1.12/jar
+onos          | [90m06:34:56.798[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.atomix/atomix-primary-backup/3.1.12/jar
+onos          | [90m06:34:56.799[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.atomix/atomix-primitive/3.1.12/jar
+onos          | [90m06:34:56.801[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.atomix/atomix-raft/3.1.12/jar
+onos          | [90m06:34:56.803[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.atomix/atomix-storage/3.1.12/jar
+onos          | [90m06:34:56.804[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.atomix/atomix-utils/3.1.12/jar
+onos          | [90m06:34:56.806[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.dropwizard.metrics/metrics-core/3.2.2/jar
+onos          | [90m06:34:56.808[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.dropwizard.metrics/metrics-json/3.2.2/jar
+onos          | [90m06:34:56.809[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.github.classgraph/classgraph/4.2.3/jar
+onos          | [90m06:34:56.811[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-buffer/4.1.35.Final/jar
+onos          | [90m06:34:56.814[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-codec/4.1.35.Final/jar
+onos          | [90m06:34:56.816[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-codec-http/4.1.35.Final/jar
+onos          | [90m06:34:56.819[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-codec-http2/4.1.35.Final/jar
+onos          | [90m06:34:56.821[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-codec-socks/4.1.35.Final/jar
+onos          | [90m06:34:56.823[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-common/4.1.35.Final/jar
+onos          | [90m06:34:56.825[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-handler/4.1.35.Final/jar
+onos          | [90m06:34:56.828[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-handler-proxy/4.1.35.Final/jar
+onos          | [90m06:34:56.830[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-resolver/4.1.35.Final/jar
+onos          | [90m06:34:56.831[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-tcnative-boringssl-static/2.0.25.Final/jar
+onos          | [90m06:34:56.836[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-transport/4.1.35.Final/jar
+onos          | [90m06:34:56.837[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-transport-native-epoll/4.1.35.Final/jar
+onos          | [90m06:34:56.839[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty-transport-native-unix-common/4.1.35.Final/jar
+onos          | [90m06:34:56.841[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:javax.xml.bind/jaxb-api/2.3.1/jar
+onos          | [90m06:34:56.843[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   wrap:mvn:jdom/jdom/1.0$Bundle-SymbolicName=jdom.jdom&Bundle-Version=1.0
+onos          | [90m06:34:56.844[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:joda-time/joda-time/2.9.3/jar
+onos          | [90m06:34:56.847[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:com.eclipsesource.minimal-json/minimal-json/0.9.4/jar
+onos          | [90m06:34:56.848[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:commons-beanutils/commons-beanutils/1.9.3/jar
+onos          | [90m06:34:56.849[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:commons-codec/commons-codec/1.10/jar
+onos          | [90m06:34:56.851[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:commons-collections/commons-collections/3.2.2/jar
+onos          | [90m06:34:56.852[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:commons-configuration/commons-configuration/1.10/jar
+onos          | [90m06:34:56.854[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:commons-io/commons-io/2.6/jar
+onos          | [90m06:34:56.856[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:commons-jxpath/commons-jxpath/1.3/jar
+onos          | [90m06:34:56.859[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:commons-lang/commons-lang/2.6/jar
+onos          | [90m06:34:56.860[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.commons/commons-lang3/3.7/jar
+onos          | [90m06:34:56.863[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.commons/commons-math3/3.6.1/jar
+onos          | [90m06:34:56.866[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:commons-pool/commons-pool/1.6/jar
+onos          | [90m06:34:56.867[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.apache.commons/commons-text/1.3/jar
+onos          | [90m06:34:56.868[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:io.netty/netty/3.10.5.Final/jar
+onos          | [90m06:34:56.871[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.knowhowlab.osgi/sigar/1.6.5_01/jar
+onos          | [90m06:34:56.874[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.mapdb/mapdb/1.0.9/jar
+onos          | [90m06:34:56.876[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.ow2.asm/asm/5.2/jar
+onos          | [90m06:34:56.878[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.objenesis/objenesis/2.6/jar
+onos          | [90m06:34:56.915[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Starting bundles:
+onos          | [90m06:34:56.926[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.dropwizard.metrics.core/3.2.2
+onos          | [90m06:34:56.928[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   com.fasterxml.jackson.core.jackson-core/2.11.4
+onos          | [90m06:34:56.929[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   com.fasterxml.jackson.core.jackson-annotations/2.11.4
+onos          | [90m06:34:56.930[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   com.fasterxml.jackson.core.jackson-databind/2.11.4
+onos          | [90m06:34:56.931[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.dropwizard.metrics.json/3.2.2
+onos          | [90m06:34:56.932[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.objenesis/2.6.0
+onos          | [90m06:34:56.933[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.collections/3.2.2
+onos          | [90m06:34:56.934[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.beanutils/1.9.3
+onos          | [90m06:34:56.934[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   jaxb-api/2.3.1
+onos          | [90m06:34:56.935[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   bcprov/1.66.0
+onos          | [90m06:34:56.936[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   com.esotericsoftware.minlog/1.3.0
+onos          | [90m06:34:56.936[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.objectweb.asm/5.2.0
+onos          | [90m06:34:56.937[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   com.esotericsoftware.reflectasm/1.11.7
+onos          | [90m06:34:56.937[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   com.esotericsoftware.kryo/4.0.1
+onos          | [90m06:34:56.938[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   com.google.guava/22.0.0
+onos          | [90m06:34:56.938[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   com.typesafe.config/1.3.2
+onos          | [90m06:34:56.939[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.lang3/3.7.0
+onos          | [90m06:34:56.939[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.utils/3.1.12
+onos          | [90m06:34:56.940[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.buffer/4.1.35.Final
+onos          | [90m06:34:56.940[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.resolver/4.1.35.Final
+onos          | [90m06:34:56.941[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.transport/4.1.35.Final
+onos          | [90m06:34:56.941[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.transport-native-unix-common/4.1.35.Final
+onos          | [90m06:34:56.942[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.transport-native-epoll/4.1.35.Final
+onos          | [90m06:34:56.942[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.codec/4.1.35.Final
+onos          | [90m06:34:56.943[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.tcnative-boringssl-static/2.0.25.Final
+onos          | [90m06:34:56.945[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   bcpkix/1.66.0
+onos          | [90m06:34:56.946[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.handler/4.1.35.Final
+onos          | [90m06:34:56.946[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.math3/3.6.1
+onos          | [90m06:34:56.947[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.cluster/3.1.12
+onos          | [90m06:34:56.947[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.storage/3.1.12
+onos          | [90m06:34:56.948[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.github.classgraph.classgraph/4.2.3
+onos          | [90m06:34:56.948[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.primitive/3.1.12
+onos          | [90m06:34:56.948[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.primary-backup/3.1.12
+onos          | [90m06:34:56.949[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.raft/3.1.12
+onos          | [90m06:34:56.949[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix/3.1.12
+onos          | [90m06:34:56.950[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   joda-time/2.9.3
+onos          | [90m06:34:56.950[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   concurrent-trees/2.6.1
+onos          | [90m06:34:56.950[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.jboss.netty/3.10.5.Final
+onos          | [90m06:34:56.951[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.lang/2.6.0
+onos          | [90m06:34:56.952[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   jdom.jdom/1.0.0
+onos          | [90m06:34:56.952[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.jxpath/1.3.0
+onos          | [90m06:34:56.953[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.codec/1.10.0
+onos          | [90m06:34:56.953[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.configuration/1.10.0
+onos          | [90m06:34:56.953[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.text/1.3.0
+onos          | [90m06:34:56.954[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.io/2.6.0
+onos          | [90m06:34:56.954[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.knowhowlab.osgi.sigar/1.6.5.01
+onos          | [90m06:34:56.955[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.codec-socks/4.1.35.Final
+onos          | [90m06:34:56.956[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.codec-http/4.1.35.Final
+onos          | [90m06:34:56.956[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.handler-proxy/4.1.35.Final
+onos          | [90m06:34:56.957[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.apache.commons.pool/1.6.0
+onos          | [90m06:34:56.957[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   minimal-json/0.9.4
+onos          | [90m06:34:56.958[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.mapdb.mapdb/1.0.9
+onos          | [90m06:34:56.958[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.codec-http2/4.1.35.Final
+onos          | [90m06:34:56.959[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.common/4.1.35.Final
+onos          | [90m06:34:56.962[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Done.
+onos          | [90m06:34:56.965[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Adding features: onos-api/[3.0.0.SNAPSHOT,3.0.0.SNAPSHOT],onos-core/[3.0.0.SNAPSHOT,3.0.0.SNAPSHOT],onos-rest/[3.0.0.SNAPSHOT,3.0.0.SNAPSHOT],onos-cli/[3.0.0.SNAPSHOT,3.0.0.SNAPSHOT]
+onos          | [90m06:34:57.139[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Changes to perform:
+onos          | [90m06:34:57.139[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   Region: root
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     Bundles to install:
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.javassist/javassist/3.22.0-GA/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:javax.annotation/javax.annotation-api/1.3
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:javax.validation/validation-api/2.0.1.Final/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:javax.ws.rs/javax.ws.rs-api/2.1/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.hk2/hk2-api/2.5.0-b42/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.hk2.external/aopalliance-repackaged/2.5.0-b42/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.hk2.external/javax.inject/2.5.0-b42/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.hk2/hk2-locator/2.5.0-b42/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.hk2/osgi-resource-locator/1.0.1/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.hk2/hk2-utils/2.5.0-b42/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.jersey.containers/jersey-container-servlet/2.27/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.jersey.containers/jersey-container-servlet-core/2.27/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.jersey.core/jersey-client/2.27/jar
+onos          | [90m06:34:57.140[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.jersey.core/jersey-common/2.27/jar
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.jersey.core/jersey-server/2.27/jar
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.jersey.inject/jersey-hk2/2.27/jar
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.glassfish.jersey.media/jersey-media-multipart/2.27/jar
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.jvnet.mimepull/mimepull/1.9.6/jar
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onlab-misc/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onlab-osgi/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onlab-rest/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-api/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-cli/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-core-common/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-core-dist/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-core-net/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-core-persistence/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-core-primitives/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.141[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-core-serializers/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.142[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-rest/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.142[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Stopping bundles:
+onos          | [90m06:34:57.142[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.handler-proxy/4.1.35.Final
+onos          | [90m06:34:57.143[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.handler/4.1.35.Final
+onos          | [90m06:34:57.144[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.codec-http2/4.1.35.Final
+onos          | [90m06:34:57.144[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.codec-http/4.1.35.Final
+onos          | [90m06:34:57.145[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.raft/3.1.12
+onos          | [90m06:34:57.145[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.primitive/3.1.12
+onos          | [90m06:34:57.145[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.primary-backup/3.1.12
+onos          | [90m06:34:57.146[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.cluster/3.1.12
+onos          | [90m06:34:57.146[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix/3.1.12
+onos          | [90m06:34:57.147[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Installing bundles:
+onos          | [90m06:34:57.147[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.javassist/javassist/3.22.0-GA/jar
+onos          | [90m06:34:57.149[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:javax.annotation/javax.annotation-api/1.3
+onos          | [90m06:34:57.150[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:javax.validation/validation-api/2.0.1.Final/jar
+onos          | [90m06:34:57.152[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:javax.ws.rs/javax.ws.rs-api/2.1/jar
+onos          | [90m06:34:57.154[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.hk2/hk2-api/2.5.0-b42/jar
+onos          | [90m06:34:57.155[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.hk2.external/aopalliance-repackaged/2.5.0-b42/jar
+onos          | [90m06:34:57.157[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.hk2.external/javax.inject/2.5.0-b42/jar
+onos          | [90m06:34:57.158[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.hk2/hk2-locator/2.5.0-b42/jar
+onos          | [90m06:34:57.159[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.hk2/osgi-resource-locator/1.0.1/jar
+onos          | [90m06:34:57.160[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.hk2/hk2-utils/2.5.0-b42/jar
+onos          | [90m06:34:57.162[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.jersey.containers/jersey-container-servlet/2.27/jar
+onos          | [90m06:34:57.163[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.jersey.containers/jersey-container-servlet-core/2.27/jar
+onos          | [90m06:34:57.164[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.jersey.core/jersey-client/2.27/jar
+onos          | [90m06:34:57.170[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.jersey.core/jersey-common/2.27/jar
+onos          | [90m06:34:57.172[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.jersey.core/jersey-server/2.27/jar
+onos          | [90m06:34:57.173[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.jersey.inject/jersey-hk2/2.27/jar
+onos          | [90m06:34:57.174[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.glassfish.jersey.media/jersey-media-multipart/2.27/jar
+onos          | [90m06:34:57.175[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.jvnet.mimepull/mimepull/1.9.6/jar
+onos          | [90m06:34:57.176[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onlab-misc/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.178[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onlab-osgi/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.178[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onlab-rest/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.179[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-api/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.182[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-cli/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.183[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-core-common/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.184[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-core-dist/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.186[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-core-net/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.191[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-core-persistence/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.193[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-core-primitives/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.195[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-core-serializers/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.197[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-rest/3.0.0-SNAPSHOT
+onos          | [90m06:34:57.199[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Refreshing bundles:
+onos          | [90m06:34:57.200[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     io.atomix/3.1.12 (Wired to io.atomix.cluster/3.1.12 which is being refreshed)
+onos          | [90m06:34:57.200[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     io.atomix.cluster/3.1.12 (Wired to io.netty.handler/4.1.35.Final which is being refreshed)
+onos          | [90m06:34:57.200[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     io.atomix.primary-backup/3.1.12 (Wired to io.atomix.cluster/3.1.12 which is being refreshed)
+onos          | [90m06:34:57.200[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     io.atomix.primitive/3.1.12 (Wired to io.atomix.cluster/3.1.12 which is being refreshed)
+onos          | [90m06:34:57.200[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     io.atomix.raft/3.1.12 (Wired to io.atomix.cluster/3.1.12 which is being refreshed)
+onos          | [90m06:34:57.200[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     io.netty.codec-http/4.1.35.Final (Wired to io.netty.handler/4.1.35.Final which is being refreshed)
+onos          | [90m06:34:57.200[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     io.netty.codec-http2/4.1.35.Final (Wired to io.netty.codec-http/4.1.35.Final which is being refreshed)
+onos          | [90m06:34:57.200[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     io.netty.handler/4.1.35.Final (Should be wired to: io.netty.tcnative-boringssl-static/2.0.25.Final (through [io.netty.handler/4.1.35.Final] osgi.wiring.package; resolution:=optional; filter:="(&(osgi.wiring.package=io.netty.internal.tcnative)(version>=2.0.0)(!(version>=3.0.0)))"))
+onos          | [90m06:34:57.200[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     io.netty.handler-proxy/4.1.35.Final (Wired to io.netty.codec-http/4.1.35.Final which is being refreshed)
+onos          | [90m06:34:57.249[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Starting bundles:
+onos          | [90m06:34:57.249[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   javax.annotation-api/1.3.0
+onos          | [90m06:34:57.258[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.handler/4.1.35.Final
+onos          | [90m06:34:57.259[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onlab-misc/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.260[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onlab-osgi/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.261[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.hk2.osgi-resource-locator/1.0.1
+onos          | [90m06:34:57.273[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.cluster/3.1.12
+onos          | [90m06:34:57.274[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.primitive/3.1.12
+onos          | [90m06:34:57.274[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.primary-backup/3.1.12
+onos          | [90m06:34:57.275[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix.raft/3.1.12
+onos          | [90m06:34:57.275[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.atomix/3.1.12
+onos          | [90m06:34:57.275[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-core-serializers/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.276[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-core-common/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.298[0m [1;32mINFO [m [90m[CodecManager][0m Started
+onos          | [90m06:34:57.299[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-core-primitives/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.305[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-core-dist/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.329[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-core-net/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.367[0m [1;32mINFO [m [90m[ComponentManager][0m Started
+onos          | [90m06:34:57.367[0m [1;32mINFO [m [90m[ClusterActivator][0m Started
+onos          | [90m06:34:57.369[0m [1;32mINFO [m [90m[HybridLogicalClockManager][0m Started
+onos          | [90m06:34:57.377[0m [1;32mINFO [m [90m[VersionManager][0m Started
+onos          | [90m06:34:57.391[0m [1;32mINFO [m [90m[CoreEventDispatcher][0m Starting watchdog task for dispatcher topology
+onos          | [90m06:34:57.396[0m [1;32mINFO [m [90m[CoreEventDispatcher][0m Dispatch loop(topology) initiated
+onos          | [90m06:34:57.398[0m [1;32mINFO [m [90m[CoreEventDispatcher][0m Starting watchdog task for dispatcher programming
+onos          | [90m06:34:57.398[0m [1;32mINFO [m [90m[CoreEventDispatcher][0m Dispatch loop(programming) initiated
+onos          | [90m06:34:57.398[0m [1;32mINFO [m [90m[CoreEventDispatcher][0m Starting watchdog task for dispatcher default
+onos          | [90m06:34:57.398[0m [1;32mINFO [m [90m[CoreEventDispatcher][0m Dispatch loop(default) initiated
+onos          | [90m06:34:57.398[0m [1;32mINFO [m [90m[CoreEventDispatcher][0m Started
+onos          | [90m06:34:57.400[0m [1;32mINFO [m [90m[ClusterMetadataManager][0m Started
+onos          | [90m06:34:57.461[0m [1;32mINFO [m [90m[ConfigFileBasedClusterMetadataProvider][0m Started
+onos          | [90m06:34:57.472[0m [1;32mINFO [m [90m[ComponentManager][0m Enabling component org.onosproject.store.atomix.impl.AtomixManager
+onos          | [90m06:34:57.475[0m [1;32mINFO [m [90m[DefaultClusterMetadataProvider][0m Started
+onos          | [90m06:34:57.485[0m [1;32mINFO [m [90m[AtomixManager][0m ClusterMetadata{providerId=ProviderId{scheme=default, id=none, ancillary=false}, name=default, controllerNodes=[], storageNodes=[]}
+onos          | [90m06:34:57.486[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-cli/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.489[0m [1;33mWARN [m [90m[AtomixManager][0m No storage nodes found in cluster metadata!
+onos          | [90m06:34:57.490[0m [1;33mWARN [m [90m[AtomixManager][0m Bootstrapping ONOS cluster in test mode! For production use, configure external storage nodes.
+onos          | [90m06:34:57.534[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.onosproject.onos-cli/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.538[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   javax.validation.api/2.0.1.Final
+onos          | [90m06:34:57.539[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.hk2.external.javax.inject/2.5.0.b42
+onos          | [90m06:34:57.540[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.jersey.core.jersey-common/2.27.0
+onos          | [90m06:34:57.541[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.jersey.core.jersey-client/2.27.0
+onos          | [90m06:34:57.542[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.jersey.core.jersey-server/2.27.0
+onos          | [90m06:34:57.542[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.jersey.containers.jersey-container-servlet-core/2.27.0
+onos          | [90m06:34:57.543[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.jvnet.mimepull/1.9.6
+onos          | [90m06:34:57.544[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-rest/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.682[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.onosproject.onos-rest [201]] to http service
+onos          | [90m06:34:57.691[0m [1;32mINFO [m [90m[ApiDocManager][0m Started
+onos          | [90m06:34:57.692[0m [1;32mINFO [m [90m[ApiDocManager][0m ONOS Core REST API registered at /onos/v1
+onos          | [90m06:34:57.693[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   javassist/3.22.0.GA
+onos          | [90m06:34:57.695[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.hk2.external.aopalliance-repackaged/2.5.0.b42
+onos          | [90m06:34:57.696[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.jersey.containers.jersey-container-servlet/2.27.0
+onos          | [90m06:34:57.697[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.codec-http/4.1.35.Final
+onos          | [90m06:34:57.696[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m will add org.apache.jasper.servlet.JasperInitializer to ServletContainerInitializers
+onos          | [90m06:34:57.697[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m Skipt org.apache.jasper.servlet.JasperInitializer, because specialized handler will be present
+onos          | [90m06:34:57.697[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m will add org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer to ServletContainerInitializers
+onos          | [90m06:34:57.697[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.handler-proxy/4.1.35.Final
+onos          | [90m06:34:57.697[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   io.netty.codec-http2/4.1.35.Final
+onos          | [90m06:34:57.698[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.jersey.media.jersey-media-multipart/2.27.0
+onos          | [90m06:34:57.698[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.jersey.inject.jersey-hk2/2.27.0
+onos          | [90m06:34:57.699[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.hk2.api/2.5.0.b42
+onos          | [90m06:34:57.701[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.hk2.locator/2.5.0.b42
+onos          | [90m06:34:57.702[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.glassfish.hk2.utils/2.5.0.b42
+onos          | [90m06:34:57.704[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   javax.ws.rs-api/2.1.0
+onos          | [90m06:34:57.707[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onlab-rest/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.708[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-api/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.708[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-core-persistence/3.0.0.SNAPSHOT
+onos          | [90m06:34:57.714[0m [1;32mINFO [m [90m[PersistenceManager][0m The specified folder location for the database did not exist and will be created.
+onos          | [90m06:34:57.716[0m [1;32mINFO [m [90m[PersistenceManager][0m The database file could not be located, a new database will be constructed.
+onos          | WARNING: An illegal reflective access operation has occurred
+onos          | WARNING: Illegal reflective access by com.esotericsoftware.kryo.util.UnsafeUtil (jar:bundle://120.0:0/!/) to constructor java.nio.DirectByteBuffer(long,int,java.lang.Object)
+onos          | WARNING: Please consider reporting this to the maintainers of com.esotericsoftware.kryo.util.UnsafeUtil
+onos          | WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+onos          | WARNING: All illegal access operations will be denied in a future release
+onos          | [90m06:34:57.809[0m [1;32mINFO [m [90m[Atomix][0m 3.1.12 (revision 7e24f4 built on 2022-02-07 15:23:49)
+onos          | 
+onos          | [90m06:34:57.830[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m added ServletContainerInitializer: org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer
+onos          | [90m06:34:57.830[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m will add org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer to ServletContainerInitializers
+onos          | [90m06:34:57.831[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m added ServletContainerInitializer: org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer
+onos          | [90m06:34:57.831[0m [1;32mINFO [m [90m[HttpServiceContext][0m registering context WebAppHttpContext{org.onosproject.onos-rest - 201}, with context-name: onos/v1
+onos          | [90m06:34:57.838[0m [1;32mINFO [m [90m[HttpServiceContext][0m registering JasperInitializer
+onos          | [90m06:34:57.840[0m [1;32mINFO [m [90m[WebSocketServerFactory][0m No DecoratedObjectFactory provided, using new org.eclipse.jetty.util.DecoratedObjectFactory[decorators=1]
+onos          | [90m06:34:57.846[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/c-1_0-rt.tld
+onos          | [90m06:34:57.855[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/c-1_0.tld
+onos          | [90m06:34:57.861[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/c-1_1.tld
+onos          | [90m06:34:57.864[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/c.tld
+onos          | [90m06:34:57.867[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/fmt-1_0-rt.tld
+onos          | [90m06:34:57.870[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/fmt-1_0.tld
+onos          | [90m06:34:57.873[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/fmt.tld
+onos          | [90m06:34:57.876[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/fn.tld
+onos          | [90m06:34:57.878[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/permittedTaglibs.tld
+onos          | [90m06:34:57.879[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/scriptfree.tld
+onos          | [90m06:34:57.879[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/sql-1_0-rt.tld
+onos          | [90m06:34:57.881[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/sql-1_0.tld
+onos          | [90m06:34:57.882[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/sql.tld
+onos          | [90m06:34:57.883[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/x-1_0-rt.tld
+onos          | [90m06:34:57.885[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/x-1_0.tld
+onos          | [90m06:34:57.886[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/x.tld
+onos          | [90m06:34:57.902[0m [1;32mINFO [m [90m[NettyMessagingService][0m TCP server listening for connections on 0.0.0.0:9876
+onos          | [90m06:34:57.903[0m [1;32mINFO [m [90m[NettyMessagingService][0m Started
+onos          | [90m06:34:57.914[0m [1;32mINFO [m [90m[NettyUnicastService][0m UDP server listening for connections on 0.0.0.0:9876
+onos          | [90m06:34:57.914[0m [1;32mINFO [m [90m[BootstrapDiscoveryProvider][0m Joined
+onos          | [90m06:34:57.915[0m [1;32mINFO [m [90m[SwimMembershipProtocol][0m 172.20.0.3 - Member activated: Member{id=172.20.0.3, address=172.20.0.3:9876, host=172.20.0.3, properties={type=onos}}
+onos          | [90m06:34:57.917[0m [1;32mINFO [m [90m[SwimMembershipProtocol][0m Started
+onos          | [90m06:34:57.917[0m [1;32mINFO [m [90m[DefaultClusterMembershipService][0m Started
+onos          | [90m06:34:57.917[0m [1;32mINFO [m [90m[DefaultClusterCommunicationService][0m Started
+onos          | [90m06:34:57.918[0m [1;32mINFO [m [90m[DefaultClusterEventService][0m Started
+onos          | [90m06:34:57.922[0m [1;32mINFO [m [90m[DefaultPartitionGroupMembershipService][0m Started
+onos          | [90m06:34:57.931[0m [1;32mINFO [m [90m[HashBasedPrimaryElectionService][0m Started
+onos          | [90m06:34:57.947[0m [1;32mINFO [m [90m[RaftPartitionServer][0m Starting server for partition PartitionId{id=1, group=system}
+onos          | [90m06:34:57.975[0m [1;32mINFO [m [90m[PersistenceManager][0m Started
+onos          | [90m06:34:57.976[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Done.
+onos          | [90m06:34:57.986[0m [1;32mINFO [m [90m[RaftContext][0m RaftServer{system-partition-1} - Transitioning to FOLLOWER
+onos          | [90m06:34:58.244[0m [1;32mINFO [m [90m[ContextHandler][0m Started HttpServiceContext{httpContext=WebAppHttpContext{org.onosproject.onos-rest - 201}}
+containernet  | trusty: Pulling from library/ubuntu
+containernet  | Digest: sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30
+containernet  | Status: Image is up to date for ubuntu:trusty
+containernet  | docker.io/library/ubuntu:trusty
+onos          | [90m06:35:01.345[0m [1;32mINFO [m [90m[RaftContext][0m RaftServer{system-partition-1} - Transitioning to CANDIDATE
+onos          | [90m06:35:01.347[0m [1;32mINFO [m [90m[CandidateRole][0m RaftServer{system-partition-1}{role=CANDIDATE} - Starting election
+onos          | [90m06:35:01.351[0m [1;32mINFO [m [90m[RaftContext][0m RaftServer{system-partition-1} - Transitioning to LEADER
+onos          | [90m06:35:01.356[0m [1;32mINFO [m [90m[RaftContext][0m RaftServer{system-partition-1} - Found leader 172.20.0.3
+onos          | [90m06:35:01.370[0m [1;32mINFO [m [90m[RaftPartitionGroup][0m Started
+onos          | [90m06:35:01.410[0m [1;32mINFO [m [90m[RaftPartitionServer][0m Starting server for partition PartitionId{id=1, group=raft}
+onos          | [90m06:35:01.416[0m [1;32mINFO [m [90m[RaftContext][0m RaftServer{raft-partition-1} - Transitioning to FOLLOWER
+containernet  | xenial: Pulling from library/ubuntu
+containernet  | Digest: sha256:1f1a2d56de1d604801a9671f301190704c25d604a416f59e03c04f5c6ffee0d6
+containernet  | Status: Image is up to date for ubuntu:xenial
+containernet  | docker.io/library/ubuntu:xenial
+containernet  | Welcome to Containernet running within a Docker container ...
+onos          | [90m06:35:04.728[0m [1;32mINFO [m [90m[RaftContext][0m RaftServer{raft-partition-1} - Transitioning to CANDIDATE
+onos          | [90m06:35:04.729[0m [1;32mINFO [m [90m[CandidateRole][0m RaftServer{raft-partition-1}{role=CANDIDATE} - Starting election
+onos          | [90m06:35:04.732[0m [1;32mINFO [m [90m[RaftContext][0m RaftServer{raft-partition-1} - Transitioning to LEADER
+onos          | [90m06:35:04.733[0m [1;32mINFO [m [90m[RaftContext][0m RaftServer{raft-partition-1} - Found leader 172.20.0.3
+onos          | [90m06:35:04.738[0m [1;32mINFO [m [90m[RaftPartitionGroup][0m Started
+onos          | [90m06:35:04.738[0m [1;32mINFO [m [90m[DefaultPartitionService][0m Started
+onos          | [90m06:35:04.833[0m [1;32mINFO [m [90m[CoreTransactionService][0m Started
+onos          | [90m06:35:04.833[0m [1;32mINFO [m [90m[CorePrimitivesService][0m Started
+onos          | [90m06:35:04.834[0m [1;32mINFO [m [90m[AtomixManager][0m Started
+onos          | [90m06:35:04.836[0m [1;32mINFO [m [90m[AtomixClusterStore][0m Updated node 172.20.0.3 state to ACTIVE
+onos          | [90m06:35:04.837[0m [1;32mINFO [m [90m[AtomixClusterStore][0m Started
+onos          | [90m06:35:04.837[0m [1;32mINFO [m [90m[ClusterManager][0m Started
+onos          | [90m06:35:04.838[0m [1;32mINFO [m [90m[ComponentsMonitorManager][0m Started
+onos          | [90m06:35:04.842[0m [1;32mINFO [m [90m[MembershipManager][0m Started
+onos          | [90m06:35:04.850[0m [1;32mINFO [m [90m[AtomixMessagingManager][0m Started
+onos          | [90m06:35:04.851[0m [1;32mINFO [m [90m[ClusterCommunicationManager][0m Started
+onos          | [90m06:35:04.852[0m [1;32mINFO [m [90m[ProxyManager][0m Started
+onos          | [90m06:35:04.860[0m [1;32mINFO [m [90m[CoordinationManager][0m Started
+onos          | [90m06:35:04.921[0m [1;32mINFO [m [90m[UpgradeManager][0m Started
+onos          | [90m06:35:04.931[0m [1;32mINFO [m [90m[PartitionManager][0m Started
+onos          | [90m06:35:04.932[0m [1;32mINFO [m [90m[StorageManager][0m Started
+onos          | [90m06:35:04.946[0m [1;32mINFO [m [90m[DistributedComponentConfigStore][0m Started
+onos          | [90m06:35:04.948[0m [1;32mINFO [m [90m[ComponentConfigManager][0m Started
+onos          | [90m06:35:04.961[0m [1;32mINFO [m [90m[AuditManager][0m Started
+onos          | [90m06:35:04.963[0m [1;32mINFO [m [90m[ComponentConfigLoader][0m Started
+onos          | [90m06:35:04.991[0m [1;32mINFO [m [90m[DistributedLeadershipStore][0m Started
+onos          | [90m06:35:04.992[0m [1;32mINFO [m [90m[LeadershipManager][0m Started
+onos          | [90m06:35:05.020[0m [1;32mINFO [m [90m[WorkPartitionManager][0m Started
+onos          | [90m06:35:05.027[0m [1;32mINFO [m [90m[ConsistentDeviceMastershipStore][0m Started
+onos          | [90m06:35:05.044[0m [1;32mINFO [m [90m[DistributedNetworkConfigStore][0m Started
+onos          | [90m06:35:05.047[0m [1;32mINFO [m [90m[NetworkConfigManager][0m Started
+onos          | [90m06:35:05.082[0m [1;32mINFO [m [90m[DistributedApplicationIdStore][0m Started
+onos          | [90m06:35:05.115[0m [1;32mINFO [m [90m[DistributedApplicationStore][0m Going to download missing applications
+onos          | [90m06:35:05.119[0m [1;32mINFO [m [90m[DistributedApplicationStore][0m Going to activate existing applications
+onos          | [90m06:35:05.152[0m [1;32mINFO [m [90m[DistributedApplicationStore][0m Started
+onos          | [90m06:35:05.155[0m [1;32mINFO [m [90m[ApplicationManager][0m Started
+onos          | [90m06:35:05.158[0m [1;32mINFO [m [90m[DistributedIdBlockStore][0m Started
+onos          | [90m06:35:05.165[0m [1;32mINFO [m [90m[CoreManager][0m ONOS starting up on Java version 11.0.13, JVM version 11.0.13+8-LTS
+onos          | [90m06:35:05.185[0m [1;32mINFO [m [90m[BasicNetworkConfigs][0m Started
+onos          | [90m06:35:05.192[0m [1;32mINFO [m [90m[InterfaceManager][0m Started
+onos          | [90m06:35:05.205[0m [1;32mINFO [m [90m[LogicalClockManager][0m Started
+onos          | [90m06:35:05.237[0m [1;32mINFO [m [90m[DistributedFlowObjectiveStore][0m Started
+onos          | [90m06:35:05.261[0m [1;32mINFO [m [90m[DefaultHostProbeStore][0m Started
+onos          | [90m06:35:05.275[0m [1;32mINFO [m [90m[DistributedHostStore][0m Started
+onos          | [90m06:35:05.282[0m [1;32mINFO [m [90m[GossipIntentStore][0m Persistence is set to "false", this was the initial setting so no state will be purged or persisted
+onos          | [90m06:35:05.308[0m [1;32mINFO [m [90m[GossipIntentStore][0m Started
+onos          | [90m06:35:05.322[0m [1;32mINFO [m [90m[DistributedDeviceKeyStore][0m Started
+onos          | [90m06:35:05.324[0m [1;32mINFO [m [90m[DeviceKeyManager][0m Started
+onos          | [90m06:35:05.346[0m [1;32mINFO [m [90m[DistributedMcastStore][0m Started
+onos          | [90m06:35:05.347[0m [1;32mINFO [m [90m[MulticastRouteManager][0m Started
+onos          | [90m06:35:05.362[0m [1;32mINFO [m [90m[DistributedDevicePipeconfMappingStore][0m Started
+onos          | [90m06:35:05.370[0m [1;32mINFO [m [90m[DistributedPiFlowRuleTranslationStore][0m Started
+onos          | [90m06:35:05.374[0m [1;32mINFO [m [90m[DistributedPiGroupTranslationStore][0m Started
+onos          | [90m06:35:05.378[0m [1;32mINFO [m [90m[DistributedPiMeterTranslationStore][0m Started
+onos          | [90m06:35:05.383[0m [1;32mINFO [m [90m[DistributedPiReplicationGroupTranslationStore][0m Started
+onos          | [90m06:35:05.410[0m [1;32mINFO [m [90m[DistributedRegionStore][0m Started
+onos          | [90m06:35:05.412[0m [1;32mINFO [m [90m[RegionManager][0m Started
+onos          | [90m06:35:05.417[0m [1;32mINFO [m [90m[MastershipManager][0m Started
+onos          | [90m06:35:05.419[0m [1;32mINFO [m [90m[MastershipProxyManager][0m Started
+onos          | [90m06:35:05.421[0m [1;32mINFO [m [90m[ReplicaInfoManager][0m Started
+onos          | [90m06:35:05.424[0m [1;32mINFO [m [90m[DistributedPacketStore][0m Setting: messageHandlerThreadPoolSize=4
+onos          | [90m06:35:05.448[0m [1;32mINFO [m [90m[DistributedPacketStore][0m Started
+onos          | [90m06:35:05.451[0m [1;32mINFO [m [90m[DistributedFlowStatisticStore][0m Setting: messageHandlerThreadPoolSize=4
+onos          | [90m06:35:05.452[0m [1;32mINFO [m [90m[DistributedFlowStatisticStore][0m Started
+onos          | [90m06:35:05.454[0m [1;32mINFO [m [90m[DistributedStatisticStore][0m Setting: messageHandlerThreadPoolSize=4
+onos          | [90m06:35:05.455[0m [1;32mINFO [m [90m[DistributedStatisticStore][0m Started
+onos          | [90m06:35:05.459[0m [1;32mINFO [m [90m[DeviceClockManager][0m Started
+onos          | [90m06:35:05.471[0m [1;32mINFO [m [90m[ECLinkStore][0m Started
+onos          | [90m06:35:05.493[0m [1;32mINFO [m [90m[GossipDeviceStore][0m Started
+onos          | [90m06:35:05.498[0m [1;32mINFO [m [90m[DeviceManager][0m Modified. Values = roleTimeoutSeconds: 10
+onos          | [90m06:35:05.499[0m [1;32mINFO [m [90m[DeviceManager][0m Started
+onos          | [90m06:35:05.500[0m [1;32mINFO [m [90m[DomainManager][0m Started
+onos          | [90m06:35:05.504[0m [1;32mINFO [m [90m[DriverRegistryManager][0m Modified, Required drivers: default
+onos          | [90m06:35:05.504[0m [1;32mINFO [m [90m[DriverRegistryManager][0m Started
+onos          | [90m06:35:05.507[0m [1;32mINFO [m [90m[PiPipeconfManager][0m Started
+onos          | [90m06:35:05.512[0m [1;32mINFO [m [90m[LinkManager][0m Started
+onos          | [90m06:35:05.537[0m [1;32mINFO [m [90m[PiPipeconfWatchdogManager][0m Starting pipeline probe thread with 15 seconds interval...
+onos          | [90m06:35:05.538[0m [1;32mINFO [m [90m[PiPipeconfWatchdogManager][0m Started
+onos          | [90m06:35:05.540[0m [1;32mINFO [m [90m[PiTranslationServiceImpl][0m Started
+onos          | [90m06:35:05.543[0m [1;32mINFO [m [90m[FlowStatisticManager][0m Started
+onos          | [90m06:35:05.546[0m [1;32mINFO [m [90m[PortStatisticsManager][0m Started
+onos          | [90m06:35:05.570[0m [1;32mINFO [m [90m[ECFlowRuleStore][0m Started with msgHandlerPoolSize = 8; backupPeriod = 2000, backupCount = 2
+onos          | [90m06:35:05.582[0m [1;32mINFO [m [90m[ConsistentIntentSetMultimap][0m Started
+onos          | [90m06:35:05.629[0m [1;32mINFO [m [90m[ConsistentResourceStore][0m Started
+onos          | [90m06:35:05.630[0m [1;32mINFO [m [90m[ResourceManager][0m Started
+onos          | [90m06:35:05.646[0m [1;32mINFO [m [90m[DefaultTopology][0m Setting new default maximum paths count to -1
+onos          | [90m06:35:05.647[0m [1;32mINFO [m [90m[DistributedTopologyStore][0m Settings: linkWeightFunction=hopCount
+onos          | [90m06:35:05.652[0m [1;32mINFO [m [90m[DistributedTopologyStore][0m Started
+onos          | [90m06:35:05.652[0m [1;32mINFO [m [90m[TopologyManager][0m Started
+onos          | [90m06:35:05.654[0m [1;32mINFO [m [90m[DefaultTopologyProvider][0m Configured with maxEvents = 1000; maxBatchMs = 50; maxIdleMs = 10; accumulator=true
+onos          | [90m06:35:05.655[0m [1;32mINFO [m [90m[DefaultTopologyProvider][0m Started
+onos          | [90m06:35:05.662[0m [1;32mINFO [m [90m[TopologyManager][0m Topology DefaultTopology{time=7584472226293107, creationTime=1748241305655, computeCost=2430540, clusters=0, devices=0, links=0} changed
+onos          | [90m06:35:05.687[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.messaging-perf has been installed
+onos          | [90m06:35:05.702[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.yang has been installed
+onos          | [90m06:35:05.707[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.config has been installed
+onos          | [90m06:35:05.713[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.flowspec-api has been installed
+onos          | [90m06:35:05.717[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.imr has been installed
+onos          | [90m06:35:05.725[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.restsb has been installed
+onos          | [90m06:35:05.731[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.cisco.rest has been installed
+onos          | [90m06:35:05.737[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.inbandtelemetry has been installed
+onos          | [90m06:35:05.743[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.faultmanagement has been installed
+onos          | [90m06:35:05.749[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.snmp has been installed
+onos          | [90m06:35:05.754[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.models.common has been installed
+onos          | [90m06:35:05.761[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.protocols.grpc has been installed
+onos          | [90m06:35:05.768[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.protocols.gnmi has been installed
+onos          | [90m06:35:05.773[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.generaldeviceprovider has been installed
+onos          | [90m06:35:05.779[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.protocols.gnoi has been installed
+onos          | [90m06:35:05.785[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.gnoi has been installed
+onos          | [90m06:35:05.789[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.tunnel has been installed
+onos          | [90m06:35:05.797[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.ovsdb-base has been installed
+onos          | [90m06:35:05.802[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.ovsdb has been installed
+onos          | [90m06:35:05.806[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.kubevirt-node has been installed
+onos          | [90m06:35:05.814[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.route-service has been installed
+onos          | [90m06:35:05.819[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.fibinstaller has been installed
+onos          | [90m06:35:05.824[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.bgprouter has been installed
+onos          | [90m06:35:05.832[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.linkdiscovery has been installed
+onos          | [90m06:35:05.838[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.netconf has been installed
+onos          | [90m06:35:05.844[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.netconf has been installed
+onos          | [90m06:35:05.849[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.ciena.c5162 has been installed
+onos          | [90m06:35:05.854[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.intentsynchronizer has been installed
+onos          | [90m06:35:05.858[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.vpls has been installed
+onos          | [90m06:35:05.865[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.netcfghostprovider has been installed
+onos          | [90m06:35:05.870[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.optical-model has been installed
+onos          | [90m06:35:05.878[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers has been installed
+onos          | [90m06:35:05.883[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.optical has been installed
+onos          | [90m06:35:05.887[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.models.ciena.waveserverai has been installed
+onos          | [90m06:35:05.890[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.ciena.waveserverai has been installed
+onos          | [90m06:35:05.898[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.sdnip has been installed
+onos          | [90m06:35:05.903[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.hostprovider has been installed
+onos          | [90m06:35:05.910[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.lldpprovider has been installed
+onos          | [90m06:35:05.911[0m [1;32mINFO [m [90m[ECFlowRuleStore][0m Reconfigured with msgHandlerPoolSize = 8; backupPeriod = 2000, backupCount = 2
+onos          | [90m06:35:05.919[0m [1;32mINFO [m [90m[DefaultTopology][0m Setting new default maximum paths count to -1
+onos          | [90m06:35:05.919[0m [1;32mINFO [m [90m[DistributedTopologyStore][0m Settings: linkWeightFunction=hopCount
+onos          | [90m06:35:05.920[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openflow-base has been installed
+onos          | [90m06:35:05.921[0m [1;32mINFO [m [90m[DeviceManager][0m Modified. Values = roleTimeoutSeconds: 10
+onos          | [90m06:35:05.922[0m [1;32mINFO [m [90m[PiPipeconfWatchdogManager][0m Configured. 15 is configured to 15 seconds
+onos          | [90m06:35:05.924[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openflow has been installed
+onos          | [90m06:35:05.927[0m [1;32mINFO [m [90m[DistributedPacketStore][0m Setting: messageHandlerThreadPoolSize=4
+onos          | [90m06:35:05.929[0m [1;32mINFO [m [90m[GossipIntentStore][0m Persistence is set to "false", this was the initial setting so no state will be purged or persisted
+onos          | [90m06:35:05.932[0m [1;32mINFO [m [90m[DistributedFlowStatisticStore][0m Setting: messageHandlerThreadPoolSize=4
+onos          | [90m06:35:05.934[0m [1;32mINFO [m [90m[DriverRegistryManager][0m Modified, Required drivers: default
+onos          | [90m06:35:05.936[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.ovsdbhostprovider has been installed
+onos          | [90m06:35:05.936[0m [1;32mINFO [m [90m[DistributedStatisticStore][0m Setting: messageHandlerThreadPoolSize=4
+onos          | [90m06:35:05.938[0m [1;32mINFO [m [90m[CoreManager][0m Settings: sharedThreadPoolSize=30, maxEventTimeLimit=2000, sharedThreadPerformanceCheck=false
+onos          | [90m06:35:05.940[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.ovsdb has been installed
+onos          | [90m06:35:05.945[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.artemis has been installed
+onos          | [90m06:35:05.952[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.yang-gui has been installed
+onos          | [90m06:35:05.957[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.restconf has been installed
+onos          | [90m06:35:05.963[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.protocols.restconfserver has been installed
+onos          | [90m06:35:05.969[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.models.openroadm has been installed
+onos          | [90m06:35:05.972[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openroadm has been installed
+onos          | [90m06:35:05.982[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.models.tapi has been installed
+onos          | [90m06:35:05.988[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.models.ietf has been installed
+onos          | [90m06:35:05.992[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.models.openconfig has been installed
+onos          | [90m06:35:05.999[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.models.openconfig-infinera has been installed
+onos          | [90m06:35:06.004[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.models.openconfig-odtn has been installed
+onos          | [90m06:35:06.007[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.odtn-api has been installed
+onos          | [90m06:35:06.013[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.gnmi has been installed
+onos          | [90m06:35:06.018[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.odtn-driver has been installed
+onos          | [90m06:35:06.022[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.czechlight has been installed
+onos          | [90m06:35:06.029[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.flowspec has been installed
+onos          | [90m06:35:06.035[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.routeradvertisement has been installed
+onos          | [90m06:35:06.040[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.dhcp has been installed
+onos          | [90m06:35:06.047[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.primitiveperf has been installed
+onos          | [90m06:35:06.053[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.events has been installed
+onos          | [90m06:35:06.057[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.models.polatis has been installed
+onos          | [90m06:35:06.066[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.protocols.xmpp has been installed
+onos          | [90m06:35:06.070[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.xmpp.device has been installed
+onos          | [90m06:35:06.074[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.loadtest has been installed
+onos          | [90m06:35:06.082[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.juniper has been installed
+onos          | [90m06:35:06.101[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.portloadbalancer has been installed
+onos          | [90m06:35:06.106[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.optical-rest has been installed
+onos          | [90m06:35:06.113[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.mobility has been installed
+onos          | [90m06:35:06.119[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openflow-message has been installed
+onos          | [90m06:35:06.122[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.cpman has been installed
+onos          | [90m06:35:06.127[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.bgpmonitoring has been installed
+onos          | [90m06:35:06.132[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.ciena.waveserver has been installed
+onos          | [90m06:35:06.136[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.cfm has been installed
+onos          | [90m06:35:06.143[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.protocols.p4runtime has been installed
+onos          | [90m06:35:06.149[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.p4runtime has been installed
+onos          | [90m06:35:06.151[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.p4runtime has been installed
+onos          | [90m06:35:06.154[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.pipelines.basic has been installed
+onos          | [90m06:35:06.157[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.stratum has been installed
+onos          | [90m06:35:06.164[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.bmv2 has been installed
+onos          | [90m06:35:06.168[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.cord-support has been installed
+onos          | [90m06:35:06.172[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.network-troubleshoot has been installed
+onos          | [90m06:35:06.176[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.scalablegateway has been installed
+onos          | [90m06:35:06.181[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.pipelines.fabric has been installed
+onos          | [90m06:35:06.184[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.transaction-perf has been installed
+onos          | [90m06:35:06.187[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.protocols.xmpp.pubsub has been installed
+onos          | [90m06:35:06.194[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openstacknode has been installed
+onos          | [90m06:35:06.198[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openstacknetworking has been installed
+onos          | [90m06:35:06.201[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openstacktroubleshoot has been installed
+onos          | [90m06:35:06.205[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.server has been installed
+onos          | [90m06:35:06.211[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.metrics has been installed
+onos          | [90m06:35:06.216[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.gui2 has been installed
+onos          | [90m06:35:06.227[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Adding features: onos-web-gui2/[3.0.0.SNAPSHOT,3.0.0.SNAPSHOT]
+onos          | [90m06:35:06.443[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Changes to perform:
+onos          | [90m06:35:06.443[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   Region: root
+onos          | [90m06:35:06.443[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     Bundles to install:
+onos          | [90m06:35:06.443[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-web-gui2/3.0.0-SNAPSHOT
+onos          | [90m06:35:06.444[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Installing bundles:
+onos          | [90m06:35:06.444[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-web-gui2/3.0.0-SNAPSHOT
+onos          | [90m06:35:06.461[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Starting bundles:
+onos          | [90m06:35:06.462[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject._onos-gui2-base-jar/3.0.0.SNAPSHOT
+onos          | [90m06:35:06.509[0m [1;32mINFO [m [90m[HttpServiceFactoryImpl][0m Binding bundle: [org.onosproject._onos-gui2-base-jar [202]] to http service
+onos          | [90m06:35:06.519[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m will add org.apache.jasper.servlet.JasperInitializer to ServletContainerInitializers
+onos          | [90m06:35:06.519[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m Skipt org.apache.jasper.servlet.JasperInitializer, because specialized handler will be present
+onos          | [90m06:35:06.520[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m will add org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer to ServletContainerInitializers
+onos          | [90m06:35:06.525[0m [1;32mINFO [m [90m[CommandExtension][0m Registering commands for bundle org.onosproject._onos-gui2-base-jar/3.0.0.SNAPSHOT
+onos          | [90m06:35:06.535[0m [1;32mINFO [m [90m[UiTopoLayoutManager][0m Initializing layout configurations...
+onos          | [90m06:35:06.537[0m [1;32mINFO [m [90m[UiTopoLayoutManager][0m Updating Layout via config... root: null
+onos          | [90m06:35:06.537[0m [1;32mINFO [m [90m[UiTopoLayoutManager][0m Started
+onos          | [90m06:35:06.539[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Done.
+onos          | [90m06:35:06.539[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.gui2 has been activated
+onos          | [90m06:35:06.545[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.cisco.netconf has been installed
+onos          | [90m06:35:06.549[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.stratum-odtn has been installed
+onos          | [90m06:35:06.553[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.polatis.openflow has been installed
+onos          | [90m06:35:06.558[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.arista has been installed
+onos          | [90m06:35:06.564[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.tl1 has been installed
+onos          | [90m06:35:06.569[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.fujitsu has been installed
+onos          | [90m06:35:06.579[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.mappingmanagement has been installed
+onos          | [90m06:35:06.586[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.pim has been installed
+onos          | [90m06:35:06.594[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.virtual has been installed
+onos          | [90m06:35:06.601[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.ofagent has been installed
+onos          | [90m06:35:06.605[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.odtn-service has been installed
+onos          | [90m06:35:06.610[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.netcfglinksprovider has been installed
+onos          | [90m06:35:06.615[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.fpm has been installed
+onos          | [90m06:35:06.619[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.dhcprelay has been installed
+onos          | [90m06:35:06.623[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.distributedprimitives has been installed
+onos          | [90m06:35:06.628[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openstackvtap has been installed
+onos          | [90m06:35:06.634[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.layout has been installed
+onos          | [90m06:35:06.638[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.onos-topo has been installed
+onos          | [90m06:35:06.644[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.oplink has been installed
+onos          | [90m06:35:06.648[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.workflow has been installed
+onos          | [90m06:35:06.651[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.node-diagnosis has been installed
+onos          | [90m06:35:06.654[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.p4tutorial.pipeconf has been installed
+onos          | [90m06:35:06.656[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.mlb has been installed
+onos          | [90m06:35:06.660[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.castor has been installed
+onos          | [90m06:35:06.667[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.null has been installed
+onos          | [90m06:35:06.671[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.hp has been installed
+onos          | [90m06:35:06.675[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.virtualbng has been installed
+onos          | [90m06:35:06.680[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.zte has been installed
+onos          | [90m06:35:06.684[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivermatrix has been installed
+onos          | [90m06:35:06.688[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.netflow has been installed
+onos          | [90m06:35:06.688[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m added ServletContainerInitializer: org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer
+onos          | [90m06:35:06.689[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m will add org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer to ServletContainerInitializers
+onos          | [90m06:35:06.689[0m [1;32mINFO [m [90m[ServletContainerInitializerScanner][0m added ServletContainerInitializer: org.eclipse.jetty.websocket.server.NativeWebSocketServletContainerInitializer
+onos          | [90m06:35:06.690[0m [1;32mINFO [m [90m[HttpServiceContext][0m registering context WebAppHttpContext{org.onosproject._onos-gui2-base-jar - 202}, with context-name: onos/ui
+onos          | [90m06:35:06.692[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.mellanox has been installed
+onos          | [90m06:35:06.697[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.flow-perf has been installed
+onos          | [90m06:35:06.700[0m [1;32mINFO [m [90m[HttpServiceContext][0m registering JasperInitializer
+onos          | [90m06:35:06.701[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.newoptical has been installed
+onos          | [90m06:35:06.701[0m [1;32mINFO [m [90m[WebSocketServerFactory][0m No DecoratedObjectFactory provided, using new org.eclipse.jetty.util.DecoratedObjectFactory[decorators=1]
+onos          | [90m06:35:06.703[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.reactive-routing has been installed
+onos          | [90m06:35:06.706[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/c-1_0-rt.tld
+onos          | [90m06:35:06.706[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.routescale has been installed
+onos          | [90m06:35:06.710[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.influxdbmetrics has been installed
+onos          | [90m06:35:06.712[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/c-1_0.tld
+onos          | [90m06:35:06.714[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/c-1_1.tld
+onos          | [90m06:35:06.714[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.simplefabric has been installed
+onos          | [90m06:35:06.716[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/c.tld
+onos          | [90m06:35:06.717[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/fmt-1_0-rt.tld
+onos          | [90m06:35:06.718[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.kubevirt-networking has been installed
+onos          | [90m06:35:06.719[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/fmt-1_0.tld
+onos          | [90m06:35:06.720[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/fmt.tld
+onos          | [90m06:35:06.721[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.ciena.c5170 has been installed
+onos          | [90m06:35:06.722[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/fn.tld
+onos          | [90m06:35:06.722[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/permittedTaglibs.tld
+onos          | [90m06:35:06.723[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/scriptfree.tld
+onos          | [90m06:35:06.723[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/sql-1_0-rt.tld
+onos          | [90m06:35:06.724[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.workflow.ofoverlay has been installed
+onos          | [90m06:35:06.727[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/sql-1_0.tld
+onos          | [90m06:35:06.729[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.linkprops has been installed
+onos          | [90m06:35:06.729[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/sql.tld
+onos          | [90m06:35:06.730[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/x-1_0-rt.tld
+onos          | [90m06:35:06.732[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/x-1_0.tld
+onos          | [90m06:35:06.733[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.packet-stats has been installed
+onos          | [90m06:35:06.734[0m [1;32mINFO [m [90m[TldScanner][0m found TLD bundle://115.0:1/META-INF/x.tld
+onos          | [90m06:35:06.737[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.cpr has been installed
+onos          | [90m06:35:06.741[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.vrouter has been installed
+onos          | [90m06:35:06.745[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.netcfg-monitor has been installed
+onos          | [90m06:35:06.748[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.proxyarp has been installed
+onos          | [90m06:35:06.751[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.roadm has been installed
+onos          | [90m06:35:06.753[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.gui has been installed
+onos          | [90m06:35:06.758[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.gangliametrics has been installed
+onos          | [90m06:35:06.763[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.pathpainter has been installed
+onos          | [90m06:35:06.767[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.graphitemetrics has been installed
+onos          | [90m06:35:06.770[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.powermanagement has been installed
+onos          | [90m06:35:06.774[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.rabbitmq has been installed
+onos          | [90m06:35:06.779[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.aiplugin has been installed
+onos          | [90m06:35:06.784[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.p4tutorial.mytunnel has been installed
+onos          | [90m06:35:06.788[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openstacktelemetry has been installed
+onos          | [90m06:35:06.791[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.packetthrottle has been installed
+onos          | [90m06:35:06.795[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.polatis.netconf has been installed
+onos          | [90m06:35:06.799[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.onlp-demo has been installed
+onos          | [90m06:35:06.802[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.lumentum has been installed
+onos          | [90m06:35:06.806[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.lisp has been installed
+onos          | [90m06:35:06.811[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.lisp has been installed
+onos          | [90m06:35:06.815[0m [1;32mINFO [m [90m[ContextHandler][0m Started HttpServiceContext{httpContext=WebAppHttpContext{org.onosproject._onos-gui2-base-jar - 202}}
+onos          | [90m06:35:06.816[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.corsa has been installed
+onos          | [90m06:35:06.819[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.kafka-integration has been installed
+onos          | [90m06:35:06.822[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.intentperf has been installed
+onos          | [90m06:35:06.826[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.hostprobingprovider has been installed
+onos          | [90m06:35:06.833[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.openstacknetworkingui has been installed
+onos          | [90m06:35:06.836[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.cluster-ha has been installed
+onos          | [90m06:35:06.838[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.fwd has been installed
+onos          | [90m06:35:06.843[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.k8s-node has been installed
+onos          | [90m06:35:06.848[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.nodemetrics has been installed
+onos          | [90m06:35:06.851[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.mcast has been installed
+onos          | [90m06:35:06.854[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.demo has been installed
+onos          | [90m06:35:06.856[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.sflow has been installed
+onos          | [90m06:35:06.861[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.mfwd has been installed
+onos          | [90m06:35:06.865[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers.barefoot has been installed
+onos          | [90m06:35:06.869[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.k8s-networking has been installed
+onos          | [90m06:35:06.871[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.flowanalyzer has been installed
+onos          | [90m06:35:06.872[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Adding features: onos-drivers-default/[3.0.0.SNAPSHOT,3.0.0.SNAPSHOT]
+onos          | [90m06:35:07.039[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Changes to perform:
+onos          | [90m06:35:07.039[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   Region: root
+onos          | [90m06:35:07.039[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m     Bundles to install:
+onos          | [90m06:35:07.039[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-drivers-default/3.0.0-SNAPSHOT
+onos          | [90m06:35:07.039[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/onos-protocols-openflow-api/3.0.0-SNAPSHOT
+onos          | [90m06:35:07.039[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m       mvn:org.onosproject/openflowj/3.2.1.onos/jar
+onos          | [90m06:35:07.040[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Installing bundles:
+onos          | [90m06:35:07.040[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-drivers-default/3.0.0-SNAPSHOT
+onos          | [90m06:35:07.042[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/onos-protocols-openflow-api/3.0.0-SNAPSHOT
+onos          | [90m06:35:07.043[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   mvn:org.onosproject/openflowj/3.2.1.onos/jar
+onos          | [90m06:35:07.077[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Starting bundles:
+onos          | [90m06:35:07.078[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.openflowj/3.2.1.onos
+onos          | [90m06:35:07.078[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-protocols-openflow-api/3.0.0.SNAPSHOT
+onos          | [90m06:35:07.079[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m   org.onosproject.onos-drivers-default/3.0.0.SNAPSHOT
+onos          | [90m06:35:07.088[0m [1;32mINFO [m [90m[DefaultCodecRegister][0m Registered default driver codecs.
+onos          | [90m06:35:07.116[0m [1;32mINFO [m [90m[DriverRegistryManager][0m Starting driver subsystem
+onos          | [90m06:35:07.117[0m [1;32mINFO [m [90m[ComponentManager][0m Enabling component org.onosproject.net.driver.impl.DriverManager
+onos          | [90m06:35:07.117[0m [1;32mINFO [m [90m[DefaultDriversLoader][0m Started
+onos          | [90m06:35:07.117[0m [1;32mINFO [m [90m[FeaturesServiceImpl][0m Done.
+onos          | [90m06:35:07.118[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.drivers has been activated
+onos          | [90m06:35:07.120[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.election has been installed
+onos          | [90m06:35:07.120[0m [1;32mINFO [m [90m[DriverManager][0m Started
+onos          | [90m06:35:07.128[0m [1;32mINFO [m [90m[ApplicationManager][0m Application org.onosproject.acl has been installed
+onos          | [90m06:35:07.130[0m [1;32mINFO [m [90m[DeviceInjectionConfigMonitor][0m Started
+onos          | [90m06:35:07.134[0m [1;32mINFO [m [90m[DomainIntentManager][0m Started
+onos          | [90m06:35:07.143[0m [1;32mINFO [m [90m[FlowRuleManager][0m Configured. AllowExtraneousRules is disabled
+onos          | [90m06:35:07.143[0m [1;32mINFO [m [90m[FlowRuleManager][0m Configured. importExtraneousRules is disabled
+onos          | [90m06:35:07.143[0m [1;32mINFO [m [90m[FlowRuleManager][0m Configured. PurgeOnDisconnection is disabled
+onos          | [90m06:35:07.144[0m [1;32mINFO [m [90m[FlowRuleManager][0m Configured. FallbackFlowPollFrequency is 30 seconds
+onos          | [90m06:35:07.145[0m [1;32mINFO [m [90m[FlowRuleManager][0m Started
+onos          | [90m06:35:07.146[0m [1;32mINFO [m [90m[StatisticManager][0m Started
+onos          | [90m06:35:07.151[0m [1;32mINFO [m [90m[ProtectionConfigMonitor][0m Started
+onos          | [90m06:35:07.155[0m [1;32mINFO [m [90m[ResourceRegistrar][0m Started
+onos          | [90m06:35:07.196[0m [1;32mINFO [m [90m[DistributedGroupStore][0m Started
+onos          | [90m06:35:07.199[0m [1;32mINFO [m [90m[GroupManager][0m Configured. PurgeOnDisconnection is disabled
+onos          | [90m06:35:07.200[0m [1;32mINFO [m [90m[GroupManager][0m Started
+onos          | [90m06:35:07.203[0m [1;32mINFO [m [90m[InOrderFlowObjectiveManager][0m Started
+onos          | [90m06:35:07.211[0m [1;32mINFO [m [90m[PacketManager][0m Started
+onos          | [90m06:35:07.212[0m [1;32mINFO [m [90m[EdgeManager][0m Started
+onos          | [90m06:35:07.219[0m [1;32mINFO [m [90m[HostManager][0m Configured. monitorHosts disabled
+onos          | [90m06:35:07.219[0m [1;32mINFO [m [90m[HostManager][0m Configured. probeRate 30000
+onos          | [90m06:35:07.219[0m [1;32mINFO [m [90m[HostManager][0m Removal of duplicate ip address is disabled
+onos          | [90m06:35:07.219[0m [1;32mINFO [m [90m[HostManager][0m Configured. greedyLearningIpv6 disabled
+onos          | [90m06:35:07.219[0m [1;32mINFO [m [90m[HostManager][0m Configured. hostMoveTrackerEnabled disabled
+onos          | [90m06:35:07.219[0m [1;32mINFO [m [90m[HostManager][0m Started
+onos          | [90m06:35:07.220[0m [1;32mINFO [m [90m[ObjectiveTracker][0m Started
+onos          | [90m06:35:07.224[0m [1;32mINFO [m [90m[PathManager][0m Started
+onos          | [90m06:35:07.231[0m [1;32mINFO [m [90m[NeighbourResolutionManager][0m IPv6 neighbor discovery is disabled
+onos          | [90m06:35:07.231[0m [1;32mINFO [m [90m[NeighbourResolutionManager][0m Address resolution protocol is enabled
+onos          | [90m06:35:07.231[0m [1;32mINFO [m [90m[NeighbourResolutionManager][0m Configured. Request intercepts is enabled
+onos          | [90m06:35:07.281[0m [1;32mINFO [m [90m[IntentManager][0m Started
+onos          | [90m06:35:07.297[0m [1;32mINFO [m [90m[IntentCleanup][0m Started
+onos          | [90m06:35:07.303[0m [1;32mINFO [m [90m[IntentConfigurableRegistrator][0m Started
+onos          | [90m06:35:07.313[0m [1;32mINFO [m [90m[ProtectedTransportIntentCompiler][0m started
+onos          | [90m06:35:07.331[0m [1;32mINFO [m [90m[UiSharedTopologyModel][0m Started
+onos          | [90m06:35:07.332[0m [1;32mINFO [m [90m[LionUtils][0m System Default Locale: [en_US]
+onos          | [90m06:35:07.333[0m [1;32mINFO [m [90m[LionUtils][0m Language: [en], Country: [US]
+onos          | [90m06:35:07.333[0m [1;32mINFO [m [90m[LionUtils][0m Setting runtime locale to: [en_US]
+onos          | [90m06:35:07.350[0m [1;32mINFO [m [90m[BundleStitcher][0m Generated LION bundle: LionBundle{id=core.fw.Mast, #items=7}
+onos          | [90m06:35:07.354[0m [1;32mINFO [m [90m[BundleStitcher][0m Generated LION bundle: LionBundle{id=core.fw.Nav, #items=15}
+onos          | [90m06:35:07.355[0m [1;32mINFO [m [90m[BundleStitcher][0m Generated LION bundle: LionBundle{id=core.fw.QuickHelp, #items=5}
+onos          | [90m06:35:07.356[0m [1;32mINFO [m [90m[BundleStitcher][0m Generated LION bundle: LionBundle{id=core.view.App, #items=32}
+onos          | [90m06:35:07.357[0m [1;32mINFO [m [90m[BundleStitcher][0m Generated LION bundle: LionBundle{id=core.view.Cluster, #items=23}
+onos          | [90m06:35:07.359[0m [1;32mINFO [m [90m[BundleStitcher][0m Generated LION bundle: LionBundle{id=core.view.Topo, #items=160}
+onos          | [90m06:35:07.360[0m [1;32mINFO [m [90m[BundleStitcher][0m Generated LION bundle: LionBundle{id=core.view.Flow, #items=25}
+onos          | [90m06:35:07.385[0m [1;32mINFO [m [90m[UiExtensionManager][0m Started
+onos          | [90m06:35:07.423[0m [1;32mINFO [m [90m[DistributedMeterStore][0m Started
+onos          | [90m06:35:07.426[0m [1;32mINFO [m [90m[MeterManager][0m Configured. PurgeOnDisconnection is disabled
+onos          | [90m06:35:07.427[0m [1;32mINFO [m [90m[MeterManager][0m UserDefinedIndex is disabled
+onos          | [90m06:35:07.429[0m [1;32mINFO [m [90m[MeterManager][0m Started
+onos          | [90m06:35:07.682[0m [1;32mINFO [m [90m[IntentCleanup][0m Settings: enabled=true, period=5, retryThreshold=5
+onos          | [90m06:35:07.683[0m [1;32mINFO [m [90m[FlowRuleManager][0m Configured. AllowExtraneousRules is disabled
+onos          | [90m06:35:07.683[0m [1;32mINFO [m [90m[FlowRuleManager][0m Configured. importExtraneousRules is disabled
+onos          | [90m06:35:07.683[0m [1;32mINFO [m [90m[FlowRuleManager][0m Configured. PurgeOnDisconnection is disabled
+onos          | [90m06:35:07.683[0m [1;32mINFO [m [90m[FlowRuleManager][0m Configured. FallbackFlowPollFrequency is 30 seconds
+onos          | [90m06:35:07.684[0m [1;32mINFO [m [90m[NeighbourResolutionManager][0m IPv6 neighbor discovery is disabled
+onos          | [90m06:35:07.684[0m [1;32mINFO [m [90m[NeighbourResolutionManager][0m Address resolution protocol is enabled
+onos          | [90m06:35:07.685[0m [1;32mINFO [m [90m[NeighbourResolutionManager][0m Configured. Request intercepts is enabled
+onos          | [90m06:35:07.691[0m [1;32mINFO [m [90m[UiExtensionManager][0m Settings: trafficRefresh=5000
+onos          | [90m06:35:07.696[0m [1;32mINFO [m [90m[GroupManager][0m Configured. PurgeOnDisconnection is disabled
+onos          | [90m06:35:07.697[0m [1;32mINFO [m [90m[HostManager][0m Configured. monitorHosts disabled
+onos          | [90m06:35:07.698[0m [1;32mINFO [m [90m[HostManager][0m Configured. probeRate 30000
+onos          | [90m06:35:07.698[0m [1;32mINFO [m [90m[HostManager][0m Removal of duplicate ip address is disabled
+onos          | [90m06:35:07.698[0m [1;32mINFO [m [90m[HostManager][0m Configured. greedyLearningIpv6 disabled
+onos          | [90m06:35:07.698[0m [1;32mINFO [m [90m[HostManager][0m Configured. hostMoveTrackerEnabled disabled
+onos          | [90m06:35:07.700[0m [1;32mINFO [m [90m[MeterManager][0m Configured. PurgeOnDisconnection is disabled
+onos          | [90m06:35:07.701[0m [1;32mINFO [m [90m[MeterManager][0m UserDefinedIndex is disabled
+onos          | [90m06:35:09.918[0m [1;32mINFO [m [90m[AtomixClusterStore][0m Updated node 172.20.0.3 state to READY
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-05-26T06:35:40.168535096Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.20.0.1 time_ms=1 duration=1.253003ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-05-26T06:36:40.174539131Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.20.0.1 time_ms=1 duration=1.550313ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=infra.usagestats t=2025-05-26T06:36:44.508841823Z level=info msg="Usage stats are ready to report"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-05-26T06:37:40.25408604Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.20.0.1 time_ms=1 duration=1.633711ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-05-26T06:38:40.342038012Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.20.0.1 time_ms=1 duration=1.521918ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-05-26T06:39:40.655700888Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.20.0.1 time_ms=1 duration=1.534214ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-05-26T06:40:40.685284026Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.20.0.1 time_ms=1 duration=1.054452ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=server t=2025-05-26T06:40:48.839937738Z level=info msg="Shutdown started" reason="System signal: terminated"
+containernet  | ]0;root@4ce229f9dee5: /containernetroot@4ce229f9dee5:/containernet# exit
+grafana       | logger=ticker t=2025-05-26T06:40:48.840144162Z level=info msg=stopped last_tick=2025-05-26T06:40:40Z
+grafana       | logger=tracing t=2025-05-26T06:40:48.840132916Z level=info msg="Closing tracing"
+grafana       | logger=grafana-apiserver t=2025-05-26T06:40:48.840209268Z level=info msg="StorageObjectCountTracker pruner is exiting"
+prometheus    | time=2025-05-26T06:40:48.842Z level=WARN source=main.go:1053 msg="Received an OS signal, exiting gracefully..." signal=terminated
+prometheus    | time=2025-05-26T06:40:48.842Z level=INFO source=main.go:1078 msg="Stopping scrape discovery manager..."
+prometheus    | time=2025-05-26T06:40:48.842Z level=INFO source=main.go:1092 msg="Stopping notify discovery manager..."
+prometheus    | time=2025-05-26T06:40:48.842Z level=INFO source=manager.go:189 msg="Stopping rule manager..." component="rule manager"
+prometheus    | time=2025-05-26T06:40:48.842Z level=INFO source=manager.go:205 msg="Rule manager stopped" component="rule manager"
+prometheus    | time=2025-05-26T06:40:48.842Z level=INFO source=main.go:1129 msg="Stopping scrape manager..."
+prometheus    | time=2025-05-26T06:40:48.842Z level=INFO source=main.go:1074 msg="Scrape discovery manager stopped"
+prometheus    | time=2025-05-26T06:40:48.842Z level=INFO source=main.go:1088 msg="Notify discovery manager stopped"
+prometheus    | time=2025-05-26T06:40:48.844Z level=INFO source=main.go:1121 msg="Scrape manager stopped"
+prometheus    | time=2025-05-26T06:40:48.846Z level=INFO source=manager.go:540 msg="Stopping notification manager..." component=notifier
+prometheus    | time=2025-05-26T06:40:48.846Z level=INFO source=manager.go:282 msg="Draining any remaining notifications..." component=notifier
+prometheus    | time=2025-05-26T06:40:48.846Z level=INFO source=manager.go:288 msg="Remaining notifications drained" component=notifier
+prometheus    | time=2025-05-26T06:40:48.846Z level=INFO source=manager.go:218 msg="Notification manager stopped" component=notifier
+prometheus    | time=2025-05-26T06:40:48.846Z level=INFO source=main.go:1399 msg="Notifier manager stopped"
+prometheus    | time=2025-05-26T06:40:48.846Z level=INFO source=main.go:1413 msg="See you next time!"
+[Kcontainernet exited with code 0
+[Kprometheus exited with code 0
+[Kgrafana exited with code 0
+[Konos exited with code 137
