@@ -1,0 +1,133 @@
+[ {
+
+  "ids": 1,
+
+  "text": "allow the teacher network to use the VoIP service and the VPN protocol",
+
+  "spo_list": [
+
+    {
+
+      "predicate": "allow service",
+
+      "object_type": {
+
+        "@value": "service"
+
+      },
+
+      "subject_type": "user type",
+
+      "object": {
+
+        "@value": "VoIP"
+
+      },
+
+      "subject": "teacher"
+
+    },
+
+    {
+
+      "predicate": "allow protocol",
+
+      "object_type": {
+
+        "@value": "protocol"
+
+      },
+
+      "subject_type": "user type",
+
+      "object": {
+
+        "@value": "VPN"
+
+      },
+
+      "subject": "teacher"
+
+    }
+
+  ]
+
+},
+{
+
+  "ids": 2,
+
+  "text": "Allocate 20Mbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 90ms. The server ip address is 10.0.1.95.",
+
+  "spo_list": [
+
+    {
+
+      "predicate": "allocate bandwidth",
+
+      "object_type": {
+
+        "@value": "bandwidth"
+
+      },
+
+      "subject_type": "network business",
+
+      "object": {
+
+        "@value": "20Mbps"
+
+      },
+
+      "subject": "E-commerce"
+
+    },
+
+    {
+
+      "predicate": "ensure latency",
+
+      "object_type": {
+
+        "@value": "latency"
+
+      },
+
+      "subject_type": "network business",
+
+      "object": {
+
+        "@value": "90ms"
+
+      },
+
+      "subject": "E-commerce"
+
+    },
+
+    {
+
+      "predicate": "server address",
+
+      "object_type": {
+
+        "@value": "ip address"
+
+      },
+
+      "subject_type": "network business",
+
+      "object": {
+
+        "@value": "10.0.1.95"
+
+      },
+
+      "subject": "E-commerce"
+
+    }
+
+  ]
+
+} ]
+

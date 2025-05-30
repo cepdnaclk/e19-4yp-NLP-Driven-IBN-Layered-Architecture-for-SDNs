@@ -1,0 +1,9 @@
+modules:
+  icmp:
+    prober: icmp
+    timeout: 5s
+
+  tcp_connect:
+    prober: tcp
+    timeout: 5s
+

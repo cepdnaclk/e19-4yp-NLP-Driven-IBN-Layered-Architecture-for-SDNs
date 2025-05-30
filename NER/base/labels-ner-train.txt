@@ -1,0 +1,314 @@
+B-bandwidth: 20Mbps
+B-online service: online
+
+B-communication service: video
+B-network scenario: telemedicine
+B-bandwidth: 20Gbps
+B-round-trip time: 240ms
+
+B-communication service: Email
+B-protocol: SMTP
+B-ip address: 10.0.4.56
+
+B-network service: VR
+B-network scenario: industrial
+B-bandwidth: 500Mbps
+B-latency: latency
+
+B-terminal: Safety
+B-reliability: reliability
+B-delay: delay
+
+B-bandwidth: 30Mbps
+B-network business: CRM
+
+B-ip address: router(192.168.1.47
+B-ip address: switch(192.168.1.132
+
+B-network function: network
+B-time: time
+
+B-middlebox: middlebox
+B-source address: 172.10.135.49
+B-destination address: 172.10.134.182
+
+B-user type: teaching
+B-quota: 6gb
+
+B-user type: multimedia
+B-quota: 23gb
+
+B-network service: VR
+B-network scenario: industrial
+B-bandwidth: 10Mbps
+B-latency: latency
+
+B-ip address: router(192.168.1.7
+B-ip address: switch(192.168.1.104
+
+B-online service: electronic
+B-network scenario: campus
+B-bandwidth: 300Mbps
+B-latency: latency
+
+B-network business: instant
+B-latency: 180ms
+B-bandwidth: 60Mbps
+
+B-controller: PLC
+B-terminal: Safety
+B-delay: delay
+B-time: 9:45
+B-time: 16:45
+
+B-controller: PLC
+B-terminal: Safety
+B-delay: delay
+B-time: 11:45
+B-time: 23:45
+
+B-service: VPN
+B-protocol: IMAP
+B-source address: 192.168.60.111
+B-destination address: 192.168.177.163
+B-time: 04:43
+B-time: 23:43
+
+(No B labels)
+
+B-bandwidth: 90Mbps
+B-communication service: IRC
+B-latency: latency
+B-ip address: 192.168.4.5
+
+B-network function: Telnet
+B-ip address: 192.168.2.46/24
+B-latency: 7ms
+
+B-middlebox: middlebox
+B-user type: security
+B-protocol: NFS
+
+B-bandwidth: 10Gbps
+B-communication service: LISTSERV
+B-ip address: 10.0.5.15
+
+B-bandwidth: bandwidth
+
+B-bandwidth: 10Gbps
+B-online service: streaming
+B-time: 4seconds
+
+B-middlebox: middlebox
+B-source address: 172.10.35.127
+B-destination address: 172.10.8.115
+B-protocol: UDP
+
+(No B labels except time in the end)
+
+B-time: 9:15
+B-time: 15:15
+
+B-communication service
+B-bandwidth
+
+B-middlebox
+B-source address
+B-destination address
+
+B-communication service
+B-bandwidth
+
+B-quota
+B-source address
+B-destination address
+
+B-middlebox
+B-user type
+B-time
+  
+B-bandwidth
+B-online service
+
+(No B labels)
+
+   
+B-middlebox
+B-user type
+B-middlebox
+
+B-online service
+B-protocol
+B-latency
+B-ip address
+B-packet loss rate
+
+
+B-network business
+B-protocol
+B-ip addressl
+B-bandwidth
+
+    Example 11
+
+        B-bandwidth
+
+        B-network business
+
+        B-latency
+
+    Example 12
+
+        B-bandwidth
+
+        B-latency
+
+        B-ip address
+
+    Example 13
+
+        B-middlebox
+
+        B-middlebox
+
+        B-user type
+
+        B-middlebox
+
+        B-time
+
+    Example 14
+
+        B-latency
+
+    Example 15
+
+        (No B labels)
+
+    Example 16
+
+        B-communication service
+
+        B-protocol
+
+        B-ip address
+
+    Example 17
+
+        B-middlebox
+
+        B-source address
+
+        B-destination address
+
+        B-service
+
+    Example 18
+
+        B-source address
+
+        B-destination address
+
+        B-bandwidth
+
+        B-time
+
+    Example 19
+
+        B-bandwidth
+
+        B-network business
+
+    Example 20
+
+        B-communication service
+
+        B-ip address
+
+    Example 21
+
+        B-middlebox
+
+        B-user type
+
+        B-middlebox
+
+        B-time
+
+    Example 22
+
+        B-bandwidth
+
+        B-ip address
+
+    Example 23
+
+        B-bandwidth
+
+        B-network service
+
+        B-protocol
+
+        B-network function
+
+        B-latency
+
+    Example 24
+
+        B-middlebox
+
+        B-time
+
+    Example 25
+
+        B-latency
+
+    Example 26
+
+        B-communication service
+
+        B-protocol
+
+        B-ip address
+
+    Example 27
+
+        B-middlebox
+
+        B-source address
+
+        B-destination address
+
+        B-service
+
+    Example 28
+
+        B-middlebox
+
+        B-user type
+
+        B-middlebox
+
+        B-time
+
+    Example 29
+
+        B-bandwidth
+
+        B-latency
+
+    Example 30
+
+        B-destination address
+
+        B-bandwidth
+
+    Example 31
+
+        B-terminal
+
+        B-delay
+
+        B-reliability
+
+

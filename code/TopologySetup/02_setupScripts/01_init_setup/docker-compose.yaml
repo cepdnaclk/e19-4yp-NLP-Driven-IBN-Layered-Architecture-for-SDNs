@@ -1,0 +1,50 @@
+services:
+  containernet:
+    image: containernet/containernet
+    container_name: containernet
+    privileged: true
+    pid: "host"
+    stdin_open: true
+    tty: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: /bin/bash
+
+  onos:
+    image: onosproject/onos
+    container_name: onos
+    ports:
+      - "8181:8181"
+      - "8101:8101"
+      - "5005:5005"
+      - "830:830"
+      - "6653:6653"
+    tty: true
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./configs/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    restart: unless-stopped
+
+volumes:
+  grafana-storage:
+

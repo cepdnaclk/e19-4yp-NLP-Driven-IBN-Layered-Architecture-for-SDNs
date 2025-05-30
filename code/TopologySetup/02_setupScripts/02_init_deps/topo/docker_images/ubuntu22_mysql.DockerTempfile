@@ -1,0 +1,32 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    iputils-ping \
+    net-tools \
+    iproute2 \
+    dnsutils \
+    curl \
+    mysql-server \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Set DNS resolver
+RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
+
+# Configure MySQL to listen on all interfaces
+RUN sed -i 's/^bind-address\s*=.*/bind-address = 0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf && \
+    sed -i 's/^mysqlx-bind-address\s*=.*/mysqlx-bind-address = 0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf
+
+# Initialize MySQL, create root user accessible remotely, then stop MySQL
+RUN service mysql start && \
+    sleep 5 && \
+    mysql -e "CREATE USER 'root'@'%' IDENTIFIED BY 'password';" && \
+    mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;" && \
+    mysql -e "FLUSH PRIVILEGES;" && \
+    service mysql stop
+
+EXPOSE 3306
+
+CMD ["sh", "-c", "service mysql start && tail -f /var/log/mysql/error.log"]
+
