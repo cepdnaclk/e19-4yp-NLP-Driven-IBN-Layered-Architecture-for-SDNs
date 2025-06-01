@@ -1,8 +1,9 @@
-📜 Starting script execution at Mon May 26 02:17:16 PM +0530 2025
+📜 Starting script execution at Mon Jun  2 02:30:55 AM +0530 2025
 ======================================
 
 ▶️ Running 01_view_onos_hosts.sh ...
 ------------------------
+Warning: Permanently added '[localhost]:8101' (RSA) to the list of known hosts.
 Connection to localhost closed.
 ✅ Finished 01_view_onos_hosts.sh
 ========================
@@ -15,63 +16,64 @@ Formatted output written to 04_formatted_hosts.csv
 
 ▶️ Running 06_relpace_with_host_ids.sh ...
 ------------------------
-Warning: Could not find ID for 192.168.0.1 or 10.0.0.1. Keeping original line.
-Warning: Could not find ID for 192.168.0.2 or 10.0.0.1. Keeping original line.
-Warning: Could not find ID for 192.168.1.1 or 10.0.0.1. Keeping original line.
-Warning: Could not find ID for 192.168.1.2 or 10.0.0.1. Keeping original line.
 Replacement done. See 07_init_intents_replaced.txt
 ✅ Finished 06_relpace_with_host_ids.sh
 ========================
 
 ▶️ Running 08_init_intents_exec.sh ...
 ------------------------
-Welcome to Open Network Operating System (ONOS)!
-[1;31m     ____  _ # ___ ___e  _x__e_ c  u  t[0m
-e[1 ;3i1m n   t/ e__n \t/ s|/  / f__o \r/  __s/ w  i[0tmc
-h[1i;3n1mg   
-/ a/_d/ d/ -  h /o /s_/t /\- \i  n  t e[0mnt
- [13;3E1m:  1 \_5___:/_8/|6_/:\_8__8_/:___/    0 [0mD
-:[1D;319m  /  N  o  n  e      B      2       :   0[01m:
-Do3cumFen:ta1tio8n: :wikDi.o9no:sp4roDje/ctN.oorgn  e   
- a
-Tdutdor-iahlso: s  t  -tuitonritales.onnotsp roj7ecAt.:org8 
-Mailing lists: lists.onospr4oje:ct.0or2g :  B  4
-:
-0C5om:e Dhe9lp/ oNuto! nFiend  o3utA h:ow9 a1t:: c6on1tr:ibAut2e.:on4osDpr:ojCecAt./orNg on
-e
-H
-it
- '#[1m< taeb>x[e0mc' ufotr ea  liistn otf eavnaitlasbl e fcoommran dsro
-aundt 'i[n1mg[cm
-d]a -d-hdel-ph[0om's ftor- hielnp tone a specific command.
-Hit '[1m<ctrln-d>[0mt'  or1 t9yp2e .'1[16ml8og.ou0t.[01m'  t1o 0ex.it0 O.NO0S .se1ssio
-n.ad
-d-
-host-intent 192.168.0.2 10.0.0.1
-add-host-intent 192.168.1.1 10.0.0.1
-add-host-intent 192.168.1.2 10.0.0.1
+Failed to add the host to the list of known hosts (/home/kalindu/.ssh/known_hosts).
+# execute intents for switching
+add-hostW-elcome to Open Network Operating System (ONOS)!
+[1;31m     ____  _  ______  ____     [0m
+[1;31m    / __ \/ |/ / __ \/ __/   [0m
+[1;31m   / /_/ /    / /_/ /\ \     [0m
+[1;31m   \____/_/|_/\____/___/     [0m
+[1;31m                               [0mi
+Documentation: wiki.onosproject.org      
+Tutorials:     tutorials.onosproject.org 
+Mailing lists: lists.onosproject.org     
+
+Come help out! Find out how at: contribute.onosproject.org 
+
+Hit '[1m<tab>[0m' for a list of available commandsn
+and '[1m[cmd] --help[0m' for help on a specific command.
+Hit '[1m<ctrl-d>[0m' or type '[1mlogout[0m' to exit ONOS session.
+tent 6
+2:56:9B:BC:BC:6A/None 46:61:99:CF:99:AA/None
+add-host-intent 1E:4E:34:24:77:DC/None CA:2E:A7:E5:B5:F0/None
+
+# execute intents for routing
+add-host-intent 62:56:9B:BC:BC:6A/None 72:1D:65:F3:DE:9E/None
+add-host-intent 46:61:99:CF:99:AA/None 72:1D:65:F3:DE:9E/None
+add-host-intent 1E:4E:34:24:77:DC/None 72:1D:65:F3:DE:9E/None
+add-host-intent CA:2E:A7:E5:B5:F0/None 72:1D:65:F3:DE:9E/None
 
 exit
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C#[Cexecute[Cintents[Cfor[Cswitching
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m3[0m3E:15:86:88:0D:D9/None[CB2:01:3F:18:D9:4D/N[Kone
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:55[0m[12C#[Cexecute[Cintents[Cfor[Cswitching
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:55[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m6[0m[32m2[0m62:56:9B:BC:BC:6A/None[C[32m4[0m[32m6[0m46:61:99:CF:99:AA/N[Kone
 [?1l>[?1000l[?2004lHost to Host intent submitted:
-HostToHostIntent{id=0x0, key=0x0, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[3E:15:86:88:0D:D9/None, B2:01:3F:18:D9:4D/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=3E:15:86:88:0D:D9/None, two=B2:01:3F:18:D9:4D/None}
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m7[0m7A:84:02:B4:05:D9/None[C[32m3[0m3A:91:61:A2:4D:CA/N[Kone
+HostToHostIntent{id=0x6a, key=0x6a, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[62:56:9B:BC:BC:6A/None, 46:61:99:CF:99:AA/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=62:56:9B:BC:BC:6A/None, two=46:61:99:CF:99:AA/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:55[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m1[0m1E:4E:34:24:77:DC/None[CCA:2E:A7:E5:B5:F0/N[Kone
 [?1l>[?1000l[?2004lHost to Host intent submitted:
-HostToHostIntent{id=0x5, key=0x5, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[7A:84:02:B4:05:D9/None, 3A:91:61:A2:4D:CA/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=7A:84:02:B4:05:D9/None, two=3A:91:61:A2:4D:CA/None}
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C#[Cexecute[Cintents[Cfor[Crouting
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m1[0m[32m9[0m[32m2[0m192.[32m192.1[0m[32m6[0m[32m8[0m[7D192.168.0.1[C[32m1[0m[32m0[0m10.[32m10.0[0m10.0.0.1
-[?1l>[?1000l[?2004l[31mError executing command: [0m[31;1mHost ID must be at least 19 characters[0m
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m1[0m[32m9[0m[32m2[0m192.[32m192.1[0m[32m6[0m[32m8[0m[7D192.168.0.2[C[32m1[0m[32m0[0m10.[32m10.0[0m10.0.0.1
-[?1l>[?1000l[?2004l[31mError executing command: [0m[31;1mHost ID must be at least 19 characters[0m
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m1[0m[32m9[0m[32m2[0m192.[32m192.1[0m[32m6[0m[32m8[0m[7D192.168.1.1[C[32m1[0m[32m0[0m10.[32m10.0[0m10.0.0.1
-[?1l>[?1000l[?2004l[31mError executing command: [0m[31;1mHost ID must be at least 19 characters[0m
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m1[0m[32m9[0m[32m2[0m192.[32m192.1[0m[32m6[0m[32m8[0m[7D192.168.1.2[C[32m1[0m[32m0[0m10.[32m10.0[0m10.0.0.1
-[?1l>[?1000l[?2004l[31mError executing command: [0m[31;1mHost ID must be at least 19 characters[0m
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:47:16[0m[12C
+HostToHostIntent{id=0x6f, key=0x6f, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[1E:4E:34:24:77:DC/None, CA:2E:A7:E5:B5:F0/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=1E:4E:34:24:77:DC/None, two=CA:2E:A7:E5:B5:F0/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:56[0m[12C
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:56[0m[12C#[Cexecute[Cintents[Cfor[Crouting
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:56[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m6[0m[32m2[0m62:56:9B:BC:BC:6A/None[C[32m7[0m[32m2[0m72:1D:65:F3:DE:9E/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x74, key=0x74, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[62:56:9B:BC:BC:6A/None, 72:1D:65:F3:DE:9E/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=62:56:9B:BC:BC:6A/None, two=72:1D:65:F3:DE:9E/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:56[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m4[0m[32m6[0m46:61:99:CF:99:AA/None[C[32m7[0m[32m2[0m72:1D:65:F3:DE:9E/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x79, key=0x79, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[46:61:99:CF:99:AA/None, 72:1D:65:F3:DE:9E/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=46:61:99:CF:99:AA/None, two=72:1D:65:F3:DE:9E/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:56[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m1[0m1E:4E:34:24:77:DC/None[C[32m7[0m[32m2[0m72:1D:65:F3:DE:9E/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x7e, key=0x7e, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[1E:4E:34:24:77:DC/None, 72:1D:65:F3:DE:9E/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=1E:4E:34:24:77:DC/None, two=72:1D:65:F3:DE:9E/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:56[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CCA:2E:A7:E5:B5:F0/None[C[32m7[0m[32m2[0m72:1D:65:F3:DE:9E/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x83, key=0x83, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[CA:2E:A7:E5:B5:F0/None, 72:1D:65:F3:DE:9E/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=CA:2E:A7:E5:B5:F0/None, two=72:1D:65:F3:DE:9E/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:56[0m[12C
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:56[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m21:00:56[0m[12C
 [?1l>[?1000l[?2004lConnection to localhost closed.
 ✅ Finished 08_init_intents_exec.sh
 ========================
