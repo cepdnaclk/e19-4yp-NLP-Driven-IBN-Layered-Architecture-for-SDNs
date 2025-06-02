@@ -2,11 +2,17 @@
 
 set -e
 
-echo "[*] Installing Python3..."
+echo "[*] Installing OpenSSH Server..."
 apt update
-apt install -y python3
+apt install -y openssh-server
 
-echo "[*] Starting Python HTTP server on port 8000..."
-nohup python3 -m http.server 8000 > /var/log/http_server.log 2>&1 &
+echo "[*] Configuring SSH server..."
+mkdir -p /var/run/sshd
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sed -i 's/^#*PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+echo 'root:root' | chpasswd
 
-echo "[✔] HTTP server started. Log: /var/log/http_server.log"
+echo "[*] Starting SSH server..."
+nohup /usr/sbin/sshd -D > /var/log/ssh_server.log 2>&1 &
+
+echo "[✔] SSH server started. Log: /var/log/ssh_server.log"

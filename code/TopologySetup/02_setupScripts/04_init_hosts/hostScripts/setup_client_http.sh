@@ -2,11 +2,8 @@
 
 set -e
 
-echo "[*] Installing Python3..."
+echo "[*] Installing HTTP client tools (curl and wget)..."
 apt update
-apt install -y python3
+apt install -y curl wget
 
-echo "[*] Starting Python HTTP server on port 8000..."
-nohup python3 -m http.server 8000 > /var/log/http_server.log 2>&1 &
-
-echo "[✔] HTTP server started. Log: /var/log/http_server.log"
+echo "[✔] HTTP clients are ready (you can use 'curl http://host:port' or 'wget http://host:port')."

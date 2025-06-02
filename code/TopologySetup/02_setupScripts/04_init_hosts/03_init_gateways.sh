@@ -1,6 +1,9 @@
 #!/bin/bash
 
-for x in {1..5}; do
+# Get the number of client containers from the file
+end=$(wc -l < clientHostConfig.txt)
+
+for x in $(seq 1 "$end"); do
     echo "Processing mn.d$x ..."
 
     # Get IP addresses of d<x>-eth0 and eth0
@@ -15,12 +18,9 @@ for x in {1..5}; do
         ip route del default;
         ip route add default via $ip1 dev d${x}-eth0;
         ip route add 172.17.0.0/16 via $ip2 dev eth0;
+        echo 'nameserver 8.8.8.8' > /etc/resolv.conf
     "
 
-	echo "Setting the default nameserver"
-	echo "nameserver 8.8.8.8" | tee /etc/resolv.conf > /dev/null
-	
-    echo "  Routing updated in mn.d$x."
+    echo "  Routing and DNS updated in mn.d$x."
     echo ""
 done
-

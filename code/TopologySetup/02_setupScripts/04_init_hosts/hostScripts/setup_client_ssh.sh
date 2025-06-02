@@ -2,11 +2,8 @@
 
 set -e
 
-echo "[*] Installing Python3..."
+echo "[*] Installing OpenSSH client..."
 apt update
-apt install -y python3
+apt install -y openssh-client
 
-echo "[*] Starting Python HTTP server on port 8000..."
-nohup python3 -m http.server 8000 > /var/log/http_server.log 2>&1 &
-
-echo "[✔] HTTP server started. Log: /var/log/http_server.log"
+echo "[✔] SSH client is ready (you can use 'ssh user@host')."
