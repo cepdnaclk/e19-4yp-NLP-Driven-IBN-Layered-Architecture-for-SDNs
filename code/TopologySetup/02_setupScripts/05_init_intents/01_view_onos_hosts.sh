@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Ensure ~/.ssh exists
-mkdir -p ~/.ssh
-chmod 700 ~/.ssh
-
 # Remove stale SSH host entry
 ssh-keygen -f ~/.ssh/known_hosts -R '[localhost]:8101' 2>/dev/null
 

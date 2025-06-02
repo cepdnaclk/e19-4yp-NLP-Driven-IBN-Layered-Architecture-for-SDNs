@@ -1,0 +1,39 @@
+Cleaning the related tmux sessions
+🧹 Running docker-compose down (if any compose files are active)...
+ Container onos  Stopping
+ Container grafana  Stopping
+ Container prometheus  Stopping
+ Container containernet  Stopping
+ Container containernet  Stopped
+ Container containernet  Removing
+ Container containernet  Removed
+ Container grafana  Stopped
+ Container grafana  Removing
+ Container grafana  Removed
+ Container prometheus  Stopped
+ Container prometheus  Removing
+ Container prometheus  Removed
+ Container onos  Stopped
+ Container onos  Removing
+ Container onos  Removed
+ Network 01_init_setup_default  Removing
+ Network 01_init_setup_default  Removed
+🛑 Stopping all Docker containers...
+a0f03be6e2f6
+f11741d76562
+0086b55fb8da
+f7cdb0d9a478
+be825b7e6ae8
+🗑️  Removing all Docker containers...
+a0f03be6e2f6
+f11741d76562
+0086b55fb8da
+f7cdb0d9a478
+be825b7e6ae8
+🔗 Removing custom Docker networks (if any)...
+📦 Removing dangling Docker volumes (if any)...
+Deleted Volumes:
+c6e38c433413e30305101c189a545ca9c0218e8cf5a7a1cc9abbc971d9fffe7f
+
+Total reclaimed space: 478.8kB
+✅ Docker cluster cleanup completed.

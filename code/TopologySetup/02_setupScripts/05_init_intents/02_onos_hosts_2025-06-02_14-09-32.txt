@@ -1,0 +1,27 @@
+Welcome to Open Network Operating System (ONOS)!
+[1;31m     ____  _  ______  ____     [0m
+[1;31m    / __ \/ |/ / __ \/ __/   [0m
+[1;31m   / /_/ /    / /_/ /\ \     [0m
+[1;31m   \____/_/|_/\____/___/     [0m
+[1;31m           h                    [0oms
+Dtocsumenta
+tieonx: iwitki
+.onosproject.org      
+Tutorials:     tutorials.onosproject.org 
+Mailing lists: lists.onosproject.org     
+
+Come help out! Find out how at: contribute.onosproject.org 
+
+Hit '[1m<tab>[0m' for a list of available commands
+and '[1m[cmd] --help[0m' for help on a specific command.
+Hit '[1m<ctrl-d>[0m' or type '[1mlogout[0m' to exit ONOS session.
+
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:39:32[0m[12C[91mh[0m[91mo[0m[91ms[0m[91mt[0m[94mhosts[0m
+[?1l>[?1000l[?2004lid=4E:01:7A:9D:61:10/None, mac=4E:01:7A:9D:61:10, locations=[of:0000000000000002/1], auxLocations=null, vlan=None, ip(s)=[192.168.1.2], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=6A:EB:A0:EA:16:80/None, mac=6A:EB:A0:EA:16:80, locations=[of:0000000000000002/2], auxLocations=null, vlan=None, ip(s)=[192.168.0.2], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=6A:F1:2D:4E:8A:6D/None, mac=6A:F1:2D:4E:8A:6D, locations=[of:0000000000000001/1], auxLocations=null, vlan=None, ip(s)=[192.168.0.1], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=8E:9A:AF:AC:29:3B/None, mac=8E:9A:AF:AC:29:3B, locations=[of:0000000000000001/2], auxLocations=null, vlan=None, ip(s)=[192.168.1.1], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=CE:1E:64:E4:35:78/None, mac=CE:1E:64:E4:35:78, locations=[of:0000000000000004/1], auxLocations=null, vlan=None, ip(s)=[10.0.0.1], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:39:32[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:39:32[0m[12C
+[?1l>[?1000l[?2004l
