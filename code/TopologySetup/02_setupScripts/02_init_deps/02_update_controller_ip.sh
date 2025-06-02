@@ -14,6 +14,9 @@ if [[ -z "$TOPO_FILE" ]]; then
   exit 1
 fi
 
+# Remove existing SSH host key entry (to avoid authenticity errors)
+sudo ssh-keygen -f ~/.ssh/known_hosts -R '[localhost]:8101' 2>/dev/null
+
 # Extract ONOS controller IP using sshpass
 CONTROLLER_INFO=$(sshpass -p "$PASSWORD" ssh -tt -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" << EOF
 nodes

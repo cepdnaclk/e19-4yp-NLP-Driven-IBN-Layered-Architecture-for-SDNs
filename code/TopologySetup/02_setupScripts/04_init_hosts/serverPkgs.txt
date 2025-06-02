@@ -1,5 +1,0 @@
-web="apt update && apt install -y apache2 && systemctl start apache2"
-ssh="apt update && apt install -y openssh-server && systemctl start ssh"
-ftp="apt update && apt install -y vsftpd && systemctl start vsftpd"
-db="apt update && apt install -y mariadb-server && systemctl start mariadb"
-voip="apt update && apt install -y asterisk && systemctl start asterisk"

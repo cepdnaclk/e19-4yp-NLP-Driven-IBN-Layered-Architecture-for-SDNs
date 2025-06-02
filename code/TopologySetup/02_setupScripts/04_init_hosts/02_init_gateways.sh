@@ -17,6 +17,9 @@ for x in {1..5}; do
         ip route add 172.17.0.0/16 via $ip2 dev eth0;
     "
 
+	echo "Setting the default nameserver"
+	echo "nameserver 8.8.8.8" | tee /etc/resolv.conf > /dev/null
+	
     echo "  Routing updated in mn.d$x."
     echo ""
 done

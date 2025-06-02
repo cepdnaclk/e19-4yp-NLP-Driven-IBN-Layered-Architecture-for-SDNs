@@ -16,6 +16,7 @@ sudo apt install -y \
     sshpass \
     openssh-server \
     git \
+    tmux \
     python3-pip
 
 echo "[+] Installing Docker..."
@@ -41,11 +42,15 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 echo "[+] Adding current user to docker group..."
 sudo usermod -aG docker $USER
+newgrp docker
 
 echo "[+] Pulling Docker images..."
 docker pull onosproject/onos
 docker pull containernet/containernet
 docker pull prom/prometheus
 docker pull grafana/grafana
+
+echo "[+] Making all the scripts executable"
+sudo find ../TopologySetup -type f -name "*.sh" -exec chmod +x {} +
 
 echo "[+] Setup complete. Please reboot or log out and back in for Docker group changes to apply."

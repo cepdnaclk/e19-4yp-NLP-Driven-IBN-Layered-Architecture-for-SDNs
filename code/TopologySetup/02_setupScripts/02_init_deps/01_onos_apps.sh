@@ -17,9 +17,8 @@ apps=(
   "org.onosproject.proxyarp"
 )
 
-
 # Remove existing SSH host key entry (to avoid authenticity errors)
-ssh-keygen -f "/home/sdn/.ssh/known_hosts" -R "[$HOST]:$PORT" 2>/dev/null
+sudo ssh-keygen -f ~/.ssh/known_hosts -R '[$HOST]:$PORT' 2>/dev/null
 
 # Start SSH session and activate apps
 sshpass -p "$PASSWORD" ssh -tt -p $PORT -o StrictHostKeyChecking=no $USER@$HOST << EOF
