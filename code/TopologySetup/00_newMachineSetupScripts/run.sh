@@ -51,6 +51,6 @@ docker pull prom/prometheus
 docker pull grafana/grafana
 
 echo "[+] Making all the scripts executable"
-sudo find ../TopologySetup -type f -name "*.sh" -exec chmod +x {} +
+sudo find ../../TopologySetup -type f -name "*.sh" -exec chmod +x {} +
 
 echo "[+] Setup complete. Please reboot or log out and back in for Docker group changes to apply."
