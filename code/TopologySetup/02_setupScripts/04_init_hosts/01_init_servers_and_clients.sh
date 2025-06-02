@@ -33,10 +33,12 @@ process_config() {
     done < "$config_file"
 }
 
-echo "=== Processing Server Configs ==="
+echo "=== Start Processing Server Configs ==="
 process_config "$SERVER_CONFIG" "server"
+echo "=== End Processing Server Configs ==="
 
-echo "=== Processing Client Configs ==="
+echo "=== Start Processing Client Configs ==="
 process_config "$CLIENT_CONFIG" "client"
+echo "=== End Processing Client Configs ==="
 
-echo "✅ All scripts processed."
+echo "✅ All scripts processed. All the Servers and Clients are ready now"
