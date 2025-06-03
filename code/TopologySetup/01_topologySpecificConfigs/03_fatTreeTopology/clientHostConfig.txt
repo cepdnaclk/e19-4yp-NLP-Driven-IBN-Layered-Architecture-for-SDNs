@@ -3,4 +3,3 @@ mn.d2,_
 mn.d3,voip
 mn.d4,http,ssh
 mn.d5,http,ssh,ftp,voip
-

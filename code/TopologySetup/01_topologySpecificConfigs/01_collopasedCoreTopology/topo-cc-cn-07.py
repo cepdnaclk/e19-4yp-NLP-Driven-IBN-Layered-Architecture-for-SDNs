@@ -6,9 +6,8 @@ from mininet.cli import CLI
 from mininet.link import TCLink
 from mininet.log import info, setLogLevel
 
-# TODO: Add a fat tree topology 
-
 setLogLevel('info')
+info('*** Starting Collapsed Core Topology\n')
 
 net = Containernet(controller=lambda name: RemoteController(name,ip='172.23.0.2'),switch=OVSSwitch)
 
