@@ -50,7 +50,7 @@ const ValidationPanel: React.FC<ValidationPanelProps> = ({
         </div>
       )}
       
-      <div className="p-3 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30">
+      {/* <div className="p-3 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30">
         <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Suggestions:</h4>
         <div className="flex flex-wrap gap-2">
           <button 
@@ -66,7 +66,7 @@ const ValidationPanel: React.FC<ValidationPanelProps> = ({
             Improve QoS
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
