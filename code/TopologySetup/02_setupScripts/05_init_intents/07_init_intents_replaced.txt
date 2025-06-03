@@ -1,10 +1,10 @@
 # execute intents for switching
-add-host-intent F6:C5:FD:CD:DA:1C/None 0E:6A:4D:6F:A5:08/None
-add-host-intent FA:8D:08:32:30:5A/None 36:0C:68:6F:D2:9C/None
+add-host-intent 42:17:33:66:5B:A5/None C6:48:19:12:1A:82/None
+add-host-intent 5A:0D:CF:C1:4C:2D/None 26:D2:95:C4:A8:81/None
 
 # execute intents for routing
-add-host-intent F6:C5:FD:CD:DA:1C/None 92:20:88:5D:1E:17/None
-add-host-intent 0E:6A:4D:6F:A5:08/None 92:20:88:5D:1E:17/None
-add-host-intent FA:8D:08:32:30:5A/None 92:20:88:5D:1E:17/None
-add-host-intent 36:0C:68:6F:D2:9C/None 92:20:88:5D:1E:17/None
+add-host-intent 42:17:33:66:5B:A5/None AE:8D:80:2A:04:85/None
+add-host-intent C6:48:19:12:1A:82/None AE:8D:80:2A:04:85/None
+add-host-intent 5A:0D:CF:C1:4C:2D/None AE:8D:80:2A:04:85/None
+add-host-intent 26:D2:95:C4:A8:81/None AE:8D:80:2A:04:85/None
 

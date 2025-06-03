@@ -1,9 +1,9 @@
-hosts
-exit
 Welcome to Open Network Operating System (ONOS)!
 [1;31m     ____  _  ______  ____     [0m
-[1;31m    / __ \/ |/ / __ \/ __/   [0m
-[1;31m   / /_/ /    / /_/ /\ \     [0m
+[1;31m    / __ \/ h|/ / __ \/ __/   [0m
+o[s1t;3s1m   / /
+_/e /x  i t /
+ /_/ /\ \     [0m
 [1;31m   \____/_/|_/\____/___/     [0m
 [1;31m                               [0m
 Documentation: wiki.onosproject.org      
@@ -16,12 +16,12 @@ Hit '[1m<tab>[0m' for a list of available commands
 and '[1m[cmd] --help[0m' for help on a specific command.
 Hit '[1m<ctrl-d>[0m' or type '[1mlogout[0m' to exit ONOS session.
 
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m15:49:11[0m[12C[91mh[0m[91mo[0m[91ms[0m[91mt[0m[94mhosts[0m
-[?1l>[?1000l[?2004lid=0E:6A:4D:6F:A5:08/None, mac=0E:6A:4D:6F:A5:08, locations=[of:0000000000000002/2], auxLocations=null, vlan=None, ip(s)=[172.17.0.5, 192.168.0.2], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
-id=36:0C:68:6F:D2:9C/None, mac=36:0C:68:6F:D2:9C, locations=[of:0000000000000002/1], auxLocations=null, vlan=None, ip(s)=[172.17.0.4, 192.168.1.2], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
-id=92:20:88:5D:1E:17/None, mac=92:20:88:5D:1E:17, locations=[of:0000000000000004/1], auxLocations=null, vlan=None, ip(s)=[172.17.0.6, 10.0.0.1], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
-id=F6:C5:FD:CD:DA:1C/None, mac=F6:C5:FD:CD:DA:1C, locations=[of:0000000000000001/1], auxLocations=null, vlan=None, ip(s)=[172.17.0.2, 192.168.0.1], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
-id=FA:8D:08:32:30:5A/None, mac=FA:8D:08:32:30:5A, locations=[of:0000000000000001/2], auxLocations=null, vlan=None, ip(s)=[172.17.0.3, 192.168.1.1], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m15:49:11[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m15:49:11[0m[12C
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m20:40:16[0m[12C[91mh[0m[91mo[0m[91ms[0m[91mt[0m[94mhosts[0m
+[?1l>[?1000l[?2004lid=26:D2:95:C4:A8:81/None, mac=26:D2:95:C4:A8:81, locations=[of:0000000000000002/1], auxLocations=null, vlan=None, ip(s)=[192.168.1.2, 172.17.0.4], gridX=65.0, gridY=550.0, locType=grid, name=-, innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=42:17:33:66:5B:A5/None, mac=42:17:33:66:5B:A5, locations=[of:0000000000000001/1], auxLocations=null, vlan=None, ip(s)=[172.17.0.2, 192.168.0.1], gridX=-335.0, gridY=550.0, locType=grid, name=-, innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=5A:0D:CF:C1:4C:2D/None, mac=5A:0D:CF:C1:4C:2D, locations=[of:0000000000000001/2], auxLocations=null, vlan=None, ip(s)=[172.17.0.3, 192.168.1.1], gridX=-281.0, gridY=561.6666666666666, locType=grid, name=-, innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=AE:8D:80:2A:04:85/None, mac=AE:8D:80:2A:04:85, locations=[of:0000000000000004/1], auxLocations=null, vlan=None, ip(s)=[10.0.0.1, 172.17.0.6], innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+id=C6:48:19:12:1A:82/None, mac=C6:48:19:12:1A:82, locations=[of:0000000000000002/2], auxLocations=null, vlan=None, ip(s)=[192.168.0.2, 172.17.0.5], gridX=119.0, gridY=561.6666666666666, locType=grid, name=-, innerVlan=None, outerTPID=unknown, provider=of:org.onosproject.provider.host, configured=false
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m20:40:16[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m20:40:16[0m[12C
 [?1l>[?1000l[?2004l

@@ -14,25 +14,25 @@ Copying and executing setup_server_http.sh in container mn.d1...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
-Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
 Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:6 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
 Get:8 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
-Get:9 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
-Get:10 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4622 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3290 kB]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4622 kB]
 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
-Fetched 38.7 MB in 7s (5220 kB/s)
+Fetched 38.7 MB in 9s (4458 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -53,11 +53,10 @@ Copying and executing setup_server_ssh.sh in container mn.d1...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Fetched 129 kB in 2s (79.7 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -137,7 +136,7 @@ Get:41 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ncurses-term al
 Get:42 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-distro all 1.7.0-1 [17.0 kB]
 Get:43 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssh-import-id all 5.11-0ubuntu1 [10.1 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 11.2 MB in 6s (1796 kB/s)
+Fetched 11.2 MB in 4s (2773 kB/s)
 Selecting previously unselected package libapparmor1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../0-libapparmor1_3.0.4-2ubuntu2.4_amd64.deb ...
@@ -332,11 +331,11 @@ Setting up openssh-server (1:8.9p1-3ubuntu0.13) ...
 
 Creating config file /etc/ssh/sshd_config with new version
 Creating SSH2 RSA key; this may take some time ...
-3072 SHA256:OtmoyVBs5fw4oIUHHRb0McOQFQYi0P9FsYTsTWmuMSU root@d1 (RSA)
+3072 SHA256:ck8354ey6kDo423kCQLsazw4qRrgFpowELj6BXIShBc root@d1 (RSA)
 Creating SSH2 ECDSA key; this may take some time ...
-256 SHA256:H1jiYj1M9Ng9Qb5VPlgmcjpiIxm9pZM4qvSv4avK9nc root@d1 (ECDSA)
+256 SHA256:l9SqJxmfJ1CNDbeoIlilfLbobLOwvSvucIIq177PonI root@d1 (ECDSA)
 Creating SSH2 ED25519 key; this may take some time ...
-256 SHA256:vUL14YQZov63y922UDj4oQCa5wlZSlbO2vuG5pv0Idc root@d1 (ED25519)
+256 SHA256:1cXpdTT5W9NfJNmd4fYCmO4PlrEOivwEf1O/pJz+/kI root@d1 (ED25519)
 invoke-rc.d: could not determine current runlevel
 invoke-rc.d: policy-rc.d denied execution of start.
 Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
@@ -366,7 +365,7 @@ Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+df
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (103 kB/s)
+Fetched 106 kB in 1s (91.3 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -401,7 +400,7 @@ Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+df
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 2s (67.8 kB/s)
+Fetched 106 kB in 1s (70.9 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -440,7 +439,7 @@ Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libwrap0 amd64 7.6.q-31b
 Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
 Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vsftpd amd64 3.0.5-0ubuntu1.1 [123 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 357 kB in 2s (183 kB/s)
+Fetched 357 kB in 2s (164 kB/s)
 Selecting previously unselected package cron.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7270 files and directories currently installed.)
 Preparing to unpack .../0-cron_3.0pl1-137ubuntu3_amd64.deb ...
@@ -501,7 +500,7 @@ Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+df
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (99.2 kB/s)
+Fetched 106 kB in 1s (101 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11931 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -535,7 +534,7 @@ Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 tnftp amd64 20210827-4bu
 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 ftp all 20210827-4build1 [4812 B]
 Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 lftp amd64 4.9.2-1build1 [720 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 843 kB in 2s (388 kB/s)
+Fetched 843 kB in 2s (516 kB/s)
 Selecting previously unselected package netbase.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11949 files and directories currently installed.)
 Preparing to unpack .../archives/netbase_6.3_all.deb ...
@@ -577,7 +576,7 @@ Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+df
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (96.0 kB/s)
+Fetched 106 kB in 2s (67.2 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -599,8 +598,8 @@ Copying and executing setup_client_http.sh in container mn.d4...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists...
@@ -622,8 +621,8 @@ Copying and executing setup_client_ssh.sh in container mn.d4...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists...
@@ -660,7 +659,7 @@ Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client 
 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
 Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 1945 kB in 2s (985 kB/s)
+Fetched 1945 kB in 3s (717 kB/s)
 Selecting previously unselected package libcbor0.8:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7413 files and directories currently installed.)
 Preparing to unpack .../00-libcbor0.8_0.8.0-2ubuntu1_amd64.deb ...
@@ -726,22 +725,22 @@ WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
 Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:6 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
-Get:9 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
 Get:10 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4622 kB]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
-Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3290 kB]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4622 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3290 kB]
 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
-Fetched 38.7 MB in 7s (5426 kB/s)
+Fetched 38.7 MB in 8s (4759 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -761,8 +760,8 @@ Copying and executing setup_client_ssh.sh in container mn.d5...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists...
@@ -799,7 +798,7 @@ Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client 
 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
 Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 1945 kB in 2s (970 kB/s)
+Fetched 1945 kB in 2s (1018 kB/s)
 Selecting previously unselected package libcbor0.8:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../00-libcbor0.8_0.8.0-2ubuntu1_amd64.deb ...
@@ -874,7 +873,7 @@ Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 tnftp amd64 20210827-4bu
 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 ftp all 20210827-4build1 [4812 B]
 Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 lftp amd64 4.9.2-1build1 [720 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 843 kB in 2s (376 kB/s)
+Fetched 843 kB in 2s (531 kB/s)
 Selecting previously unselected package netbase.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7614 files and directories currently installed.)
 Preparing to unpack .../archives/netbase_6.3_all.deb ...
@@ -916,7 +915,7 @@ Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+df
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (95.0 kB/s)
+Fetched 106 kB in 1s (94.5 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7659 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -982,3 +981,6 @@ Starting Monitoring Exports in mn.d2...
 Starting Monitoring Exports in mn.d3...
 Starting Monitoring Exports in mn.d4...
 Starting Monitoring Exports in mn.d5...
+Finished 04_init_monitoring.sh
+------------------------
+Skipping run_all.sh

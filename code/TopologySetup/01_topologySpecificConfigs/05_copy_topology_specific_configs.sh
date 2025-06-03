@@ -39,11 +39,11 @@ cp "${FOLDER}/monitoringConfig/prometheus-agent.yml" "${DEST_ROOT}/02_init_deps/
 cp "${FOLDER}/serverHostConfig.txt" "${DEST_ROOT}/04_init_hosts/"
 cp "${FOLDER}/clientHostConfig.txt" "${DEST_ROOT}/04_init_hosts/"
 
-# Copy dashboards directory
+# Copy trafficConfig directory
 mkdir -p "../03_trafficGenScripts/trafficConfig"
 cp -r "${FOLDER}/trafficConfig/"* "../03_trafficGenScripts/trafficConfig/"
 
-# Copy trafficConfig directory
+# Copy dashboards directory
 mkdir -p "../02_setupScripts/06_init_dashboards/dashboards"
 cp -r "${FOLDER}/dashboards/"* "../02_setupScripts/06_init_dashboards/dashboards/"
 

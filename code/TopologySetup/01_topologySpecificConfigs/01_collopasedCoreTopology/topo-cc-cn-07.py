@@ -24,7 +24,9 @@ d5 = net.addDocker('d5', ip='10.0.0.1/8', dimage="ubuntu22")
 info('*** Adding switches\n')
 s1 = net.addSwitch('s1',protocols='OpenFlow13')
 s2 = net.addSwitch('s2',protocols='OpenFlow13')
+
 s3 = net.addSwitch('s3',protocols='OpenFlow13')
+
 s4 = net.addSwitch('s4',protocols='OpenFlow13')
 
 info('*** Creating links\n')

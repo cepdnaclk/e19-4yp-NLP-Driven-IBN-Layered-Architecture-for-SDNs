@@ -45,7 +45,7 @@ while IFS=',' read -r host ip; do
   if [[ "$host" =~ mn\.d([0-9]+) ]]; then
     i="${BASH_REMATCH[1]}"
     output_file="d${i}.json"
-    sed "s/{{i}}/$i/g" "$TEMPLATE_FILE" > "./dashbaords/$output_file"
+    sed "s/{{i}}/$i/g" "$TEMPLATE_FILE" > "./dashboards/$output_file"
     echo "Created $output_file for $host ($ip)"
   fi
 done < "$MAPPING_FILE"
