@@ -100,7 +100,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
             >
               Code View
             </button>
-            <button
+            {/* <button
               className={`px-4 py-2 rounded-md ${
                 activeTab === 'form'
                   ? 'bg-blue-600 text-white'
@@ -109,7 +109,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
               onClick={() => setActiveTab('form')}
             >
               Form View
-            </button>
+            </button> */}
           </div>
         </div>
         
@@ -156,7 +156,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
             </div>
           )}
           
-          {currentIntent.raw !== originalIntentRef.current && (
+          {/* {currentIntent.raw !== originalIntentRef.current && (
             <div className="mb-6">
               <h3 className="text-lg font-medium mb-2 text-gray-800 dark:text-white">Changes</h3>
               <IntentDiff
@@ -165,7 +165,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
                 format={currentIntent.format}
               />
             </div>
-          )}
+          ) } */}
           
           {simulationResult && (
             <div className={`mb-6 p-4 rounded-md ${
@@ -196,7 +196,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
           >
             Cancel
           </button>
-          <button
+          {/* <button
             onClick={handleSimulate}
             disabled={isSimulating || isPushing}
             className={`px-4 py-2 rounded-md ${
@@ -206,7 +206,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
             }`}
           >
             {isSimulating ? 'Simulating...' : 'Simulate'}
-          </button>
+          </button> */}
           <button
             onClick={handlePush}
             disabled={isPushing || isSimulating || (simulationResult?.success === false)}
