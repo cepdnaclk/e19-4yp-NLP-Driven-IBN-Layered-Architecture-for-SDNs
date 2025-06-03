@@ -15,6 +15,13 @@ apps=(
   "org.onosproject.drivers"
   "org.onosproject.openflow"
   "org.onosproject.proxyarp"
+  "org.onosproject.acl"
+  "org.onosproject.drivers.optical"
+  "org.onosproject.drivermatrix"
+  "org.onosproject.gui2"
+  "org.onosproject.roadm"
+  "org.onosproject.pathpainter"
+  "org.onosproject.layout"
 )
 
 # Ensure ~/.ssh exists
