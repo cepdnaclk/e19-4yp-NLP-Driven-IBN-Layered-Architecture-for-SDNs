@@ -5,12 +5,12 @@ CONFIG_FILE="trafficConfig.txt"
 # Traffic script map
 declare -A TRAFFIC_SCRIPTS
 TRAFFIC_SCRIPTS["http"]="./trafficGen/http_traffic.sh"
-TRAFFIC_SCRIPTS["voip"]="./voip_traffic.sh"
-TRAFFIC_SCRIPTS["db"]="./db_traffic.sh"
-TRAFFIC_SCRIPTS["video"]="./video_traffic.sh"
-TRAFFIC_SCRIPTS["ftp"]="./ftp_traffic.sh"
-TRAFFIC_SCRIPTS["ssh"]="./ssh_traffic.sh"
-TRAFFIC_SCRIPTS["mail"]="./mail_traffic.sh"
+TRAFFIC_SCRIPTS["voip"]="./trafficGen/voip_traffic.sh"
+TRAFFIC_SCRIPTS["db"]="./trafficGen/db_traffic.sh"
+TRAFFIC_SCRIPTS["video"]="./trafficGen/video_traffic.sh"
+TRAFFIC_SCRIPTS["ftp"]="./trafficGen/ftp_traffic.sh"
+TRAFFIC_SCRIPTS["ssh"]="./trafficGen/ssh_traffic.sh"
+TRAFFIC_SCRIPTS["mail"]="./trafficGen/mail_traffic.sh"
 
 # Phase by time
 get_phase_by_time() {

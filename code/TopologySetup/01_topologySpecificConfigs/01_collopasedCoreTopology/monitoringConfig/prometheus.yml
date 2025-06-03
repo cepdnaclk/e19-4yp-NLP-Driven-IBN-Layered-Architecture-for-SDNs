@@ -101,4 +101,3 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: 172.17.0.6:9115  # Replace with IP or DNS of Blackbox Exporter
-
