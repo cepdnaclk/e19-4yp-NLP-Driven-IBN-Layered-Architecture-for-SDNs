@@ -59,7 +59,7 @@ const ChatPage: React.FC = () => {
         </div>
       </div>
       {/* Header */}
-      <header className="bg-white dark:bg-gray-700 shadow-sm relative z-10 flex-shrink-0">
+      <header className="bg-white dark:bg-gray-700 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center">
@@ -82,7 +82,7 @@ const ChatPage: React.FC = () => {
       </header>
       
       {/* Main Content */}
-      <main className="flex-1 overflow-hidden relative z-10 min-h-0">
+      <main className="flex-1 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex h-full py-6">
             <div className="w-1/2 pr-3 flex flex-col h-full">
