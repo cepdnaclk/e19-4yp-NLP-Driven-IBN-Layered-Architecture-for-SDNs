@@ -5,6 +5,7 @@ end=$(grep -cve '^\s*$' clientHostConfig.txt)
 
 echo "Attaching prometheus server to the monitoring network..."
 docker network connect bridge prometheus
+docker network connect bridge grafana
 
 for x in $(seq 1 "$end"); do
   container="mn.d$x"
