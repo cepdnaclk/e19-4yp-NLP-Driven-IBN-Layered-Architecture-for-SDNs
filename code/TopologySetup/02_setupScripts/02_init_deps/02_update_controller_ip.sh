@@ -14,6 +14,22 @@ if [[ -z "$TOPO_FILE" ]]; then
   exit 1
 fi
 
+# Remove existing SSH host key entry (to avoid authenticity errors)
+ssh-keygen -f ~/.ssh/known_hosts -R '[localhost]:8101' 2>/dev/null
+
+# Wait for ONOS CLI to be ready
+echo "⏳ Waiting for ONOS CLI to become available..."
+
+until sshpass -p "$PASSWORD" ssh -tt -p "$PORT" \
+  -o StrictHostKeyChecking=no \
+  -o UserKnownHostsFile=/dev/null \
+  "$USER@$HOST" "apps -a" 2>/dev/null | grep -q "org.onosproject"; do
+    echo "🔄 ONOS not ready yet... retrying in 3s"
+    sleep 3
+done
+
+echo "✅ ONOS CLI is available."
+
 # Extract ONOS controller IP using sshpass
 CONTROLLER_INFO=$(sshpass -p "$PASSWORD" ssh -tt -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" << EOF
 nodes

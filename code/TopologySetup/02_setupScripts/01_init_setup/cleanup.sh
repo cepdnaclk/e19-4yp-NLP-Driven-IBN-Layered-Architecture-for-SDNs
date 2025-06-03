@@ -17,6 +17,9 @@ fi
 echo "📁 Logging cleanup process to $LOG_FILE"
 
 {
+	echo "Cleaning the related tmux sessions"
+	tmux kill-session -t topo_cli
+	
     echo "🧹 Running docker-compose down (if any compose files are active)..."
     docker compose down
 
