@@ -2,9 +2,48 @@
 
 set -e
 
+# Input Validation
+read -p "Enter a topology ID (allowed: 00, 01, 02): " xx
+if [[ ! "$xx" =~ ^0[0-2]$ ]]; then
+  echo "[✘] Invalid input: $xx. Must be 00, 01, or 02."
+  exit 1
+fi
+
+clear
+echo "=================================================="
+echo "🚧  Preparing for Initialization of Topology: $xx"
+echo "=================================================="
+sleep 1
+
+# Part 1: Run topology-specific config scripts
+echo "[*] Switching to ../01_topologySpecificConfigs..."
+cd ../01_topologySpecificConfigs || { echo "[✘] Directory not found."; exit 1; }
+
+echo "[*] Running topology-specific config scripts with argument '$xx'..."
+
+# Find and run scripts starting with 01_, 02_, etc. in order
+for script in $(ls -1 [0-9][0-9]_*.sh 2>/dev/null | sort); do
+  echo "→ Running $script with arg '$xx'..."
+  bash "$script" "$xx"
+done
+
+echo ""
+echo "✅  Preparation Complete for Topology: $xx"
+echo ""
+sleep 1
+
+# Part 2: Move to setup scripts
+echo "[*] Moving to ../02_setupScripts..."
+cd ../02_setupScripts || { echo "[✘] Directory not found."; exit 1; }
+
+
+echo "🚀  Starting Initialization..."
+echo "========================================="
+sleep 1
+
+
 logfile="init_all.log"
 > "$logfile"
-
 
 for dir in $(ls -d [0-9][0-9]_*/ | sort); do
   echo "Processing directory: $dir"
@@ -34,16 +73,22 @@ for dir in $(ls -d [0-9][0-9]_*/ | sort); do
   next_dir=$(ls -d [0-9][0-9]_* | sort | awk -v d="${dir%/}" 'found { print; exit } $0 == d { found=1 }')
 
   if [[ -n "$next_dir" ]]; then
-    read -p "Do you want to proceed to the next stage: $next_dir? (y/n): " ans
-    if [[ "$ans" != "y" && "$ans" != "Y" ]]; then
-      echo "Stopping execution by user choice."
-      exit 0
-    fi
+	 read -p "Do you want to proceed to the next stage: $next_dir? (Y/n): " ansans=${ans:-Y}  
+		if [[ "$ans" != [Yy] ]]; then
+			echo "⛔ Stopping execution by user choice."
+			exit 0
+		fi
   else
     echo "No more directories to process."
     break
   fi
 done
 
+echo ""
+echo "=============================================================="
+echo "✅ All initialization scripts have been executed successfully!"
+echo "📄 Logs have been saved to: $logfile"
+echo "📦 Topology setup is now complete and deployed."
+echo "=============================================================="
+echo ""
 
-echo "All scripts completed. Logs saved in $logfile."
