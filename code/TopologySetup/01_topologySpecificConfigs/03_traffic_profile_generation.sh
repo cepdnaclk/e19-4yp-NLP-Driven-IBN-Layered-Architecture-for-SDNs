@@ -30,7 +30,8 @@ if [[ ! -f __ipServerMapping.txt || ! -f clientHostConfig.txt ]]; then
 fi
 
 # Create the output directory
-mkdir -p trafficConfig
+rm -rf "./trafficConfig"
+mkdir -p "./trafficConfig"
 
 # Read clientHostConfig.txt and generate config files
 while IFS=',' read -r host rest; do

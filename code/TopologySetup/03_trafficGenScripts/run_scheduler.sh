@@ -32,3 +32,6 @@ for config_file in "$CONFIG_DIR"/trafficConfig_d*.txt; do
 
     echo "[✔] Deployment complete for $container_name"
 done
+
+echo "🔧 Traffic schedule initiated! Simulated packets are hitting the road"
+
