@@ -7,8 +7,9 @@ from mininet.link import TCLink
 from mininet.log import info, setLogLevel
 
 setLogLevel('info')
+info('*** Starting Collapsed Core Topology\n')
 
-net = Containernet(controller=lambda name: RemoteController(name,ip='172.23.0.2'),switch=OVSSwitch)
+net = Containernet(controller=lambda name: RemoteController(name,ip='172.18.0.2'),switch=OVSSwitch)
 
 info('*** Adding controller\n')
 net.addController('c0')

@@ -20,8 +20,7 @@ scrape_configs:
           - 192.168.0.1 
           - 192.168.0.2 
           - 192.168.1.1 
-          - 192.168.1.2 
-          
+          - 192.168.1.2      
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -101,4 +100,3 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: 172.17.0.6:9115  # Replace with IP or DNS of Blackbox Exporter
-

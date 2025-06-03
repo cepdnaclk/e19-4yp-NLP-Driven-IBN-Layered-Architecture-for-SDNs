@@ -29,4 +29,3 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: localhost:9115  # Blackbox exporter address
-
