@@ -1,0 +1,146 @@
+{
+  "title": "Passive Metrics Dashboard",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "CPU Usage (%)",
+      "gridPos": {"h": 6, "w": 8, "x": 0, "y": 0},
+      "targets": [
+        {
+          "expr": "cpu_usage_percent{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "CPU - {{instance}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Memory Usage (%)",
+      "gridPos": {"h": 6, "w": 8, "x": 8, "y": 0},
+      "targets": [
+        {
+          "expr": "memory_usage_percent{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "Memory - {{instance}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Disk Usage (%)",
+      "gridPos": {"h": 6, "w": 8, "x": 16, "y": 0},
+      "targets": [
+        {
+          "expr": "disk_usage_percent{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "Disk - {{instance}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Process Virtual & Resident Memory (Bytes)",
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 6},
+      "targets": [
+        {
+          "expr": "process_virtual_memory_bytes{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "Virtual - {{instance}}"
+        },
+        {
+          "expr": "process_resident_memory_bytes{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "Resident - {{instance}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Process CPU Time (Seconds)",
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 6},
+      "targets": [
+        {
+          "expr": "process_cpu_seconds_total{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "CPU Time - {{instance}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Network RX Bytes by Interface",
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 12},
+      "targets": [
+        {
+          "expr": "net_rx_bytes{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "RX - {{interface}} - {{instance}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Network TX Bytes by Interface",
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 12},
+      "targets": [
+        {
+          "expr": "net_tx_bytes{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "TX - {{interface}} - {{instance}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Network RX Packets by Interface",
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 18},
+      "targets": [
+        {
+          "expr": "net_rx_packets{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "RX Packets - {{interface}} - {{instance}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Network TX Packets by Interface",
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 18},
+      "targets": [
+        {
+          "expr": "net_tx_packets{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "TX Packets - {{interface}} - {{instance}}"
+        }
+      ]
+    },
+    {
+  "type": "timeseries",
+  "title": "Network TX Errors by Interface",
+  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 30 },
+  "targets": [
+    {
+      "expr": "net_tx_errors{job=\"hosts-passive-metrics\"}",
+      "legendFormat": "TX Errors - {{interface}} - {{instance}}"
+    }
+  ]
+},
+{
+  "type": "timeseries",
+  "title": "Network TX Drops by Interface",
+  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 30 },
+  "targets": [
+    {
+      "expr": "net_tx_drops{job=\"hosts-passive-metrics\"}",
+      "legendFormat": "TX Drops - {{interface}} - {{instance}}"
+    }
+  ]
+}
+,
+    {
+      "type": "timeseries",
+      "title": "TCP Connection States",
+      "gridPos": {"h": 6, "w": 24, "x": 0, "y": 24},
+      "targets": [
+        {
+          "expr": "tcp_connection_states{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "{{state}} - {{instance}}"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 27,
+  "version": 1,
+  "refresh": "30s",
+  "timezone": "browser"
+}
