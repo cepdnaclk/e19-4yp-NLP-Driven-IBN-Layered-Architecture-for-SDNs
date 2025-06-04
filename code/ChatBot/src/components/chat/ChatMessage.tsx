@@ -65,7 +65,7 @@ const ChatMessage: React.FC<MessageProps> = ({ message }) => {
               </div>
               <div className="mt-2 flex gap-2">
                 <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700">
-                  Edit Intent
+                  Edit Configuration
                 </button>
                 <button className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md hover:bg-gray-300 dark:hover:bg-gray-600">
                   Reset

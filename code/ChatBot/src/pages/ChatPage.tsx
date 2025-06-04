@@ -101,9 +101,9 @@ const ChatPage: React.FC = () => {
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow h-full overflow-hidden flex flex-col">
                 <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700 ">
                   <div>
-                    <h2 className="text-lg font-medium text-gray-900 dark:text-white">Intent Editor</h2>
+                    <h2 className="text-lg font-medium text-gray-900 dark:text-white">Configuration Editor</h2>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      View, edit, and validate network intents
+                      View, edit, and validate network configurations
                     </p>
                   </div>
                   {currentIntent && (
