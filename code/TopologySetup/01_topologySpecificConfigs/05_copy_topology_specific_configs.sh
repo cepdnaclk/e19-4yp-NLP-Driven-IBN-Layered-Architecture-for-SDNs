@@ -29,6 +29,9 @@ DEST_ROOT="../02_setupScripts"
 # Copy prometheus.yml
 cp "${FOLDER}/monitoringConfig/prometheus.yml" "${DEST_ROOT}/01_init_setup/configs/prometheus.yml"
 
+# Copy Grafana datascources.yml
+cp "${FOLDER}/monitoringConfig/datasources.yml" "${DEST_ROOT}/01_init_setup/configs/datasources/prometheus.yml"
+
 # Copy topo-*.py
 cp "${FOLDER}"/topo*.py "${DEST_ROOT}/02_init_deps/topo/"
 

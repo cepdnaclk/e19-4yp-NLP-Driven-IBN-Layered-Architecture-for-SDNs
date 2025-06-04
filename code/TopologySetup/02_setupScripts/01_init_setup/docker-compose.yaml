@@ -39,12 +39,13 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - grafana-storage:/var/lib/grafana
+      #  - grafana-storage:/var/lib/grafana
+      - ./configs/datasources:/etc/grafana/provisioning/datasources
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
     restart: unless-stopped
 
-volumes:
-  grafana-storage:
+#volumes:
+#  grafana-storage:
 

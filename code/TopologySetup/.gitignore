@@ -1,4 +1,5 @@
 /02_setupScripts/01_init_setup/configs/prometheus.yml
+/02_setupScripts/01_init_setup/configs/datasources/prometheus.yml
 /02_setupScripts/02_init_deps/topo/topo-*.py
 /02_setupScripts/02_init_deps/topo/docker_images/prometheus-agent.yml
 /02_setupScripts/04_init_hosts/serverHostConfig.txt

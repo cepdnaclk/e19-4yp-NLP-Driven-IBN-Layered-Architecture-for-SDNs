@@ -1,4 +1,4 @@
-📜 Starting script execution at Wed Jun  4 02:10:28 AM +0530 2025
+📜 Starting script execution at Wed Jun  4 09:20:56 AM +0530 2025
 ======================================
 
 ▶️ Running 01_get_grafana_ip.sh ...
@@ -11,17 +11,17 @@ Updated IP in 02_grafana_config.txt to 172.17.0.8
 ------------------------
 http://admin:admin@172.17.0.8:3000
 Uploading dashboards/d1.json...
-{"folderUid":"","id":12,"slug":"host-1-probes-to-all-hosts","status":"success","uid":"9e33afb7-5995-403d-ba0a-5dc7ed062bdf","url":"/d/9e33afb7-5995-403d-ba0a-5dc7ed062bdf/host-1-probes-to-all-hosts","version":1}Uploaded dashboards/d1.json
+{"folderUid":"","id":18,"slug":"host-1-probes-to-all-hosts","status":"success","uid":"a8289de9-8155-416b-83f5-04db5564e145","url":"/d/a8289de9-8155-416b-83f5-04db5564e145/host-1-probes-to-all-hosts","version":1}Uploaded dashboards/d1.json
 Uploading dashboards/d2.json...
-{"folderUid":"","id":13,"slug":"host-2-probes-to-all-hosts","status":"success","uid":"5f3c3b80-36c6-437d-b79d-188e2b5aa477","url":"/d/5f3c3b80-36c6-437d-b79d-188e2b5aa477/host-2-probes-to-all-hosts","version":1}Uploaded dashboards/d2.json
+{"folderUid":"","id":19,"slug":"host-2-probes-to-all-hosts","status":"success","uid":"b4e03edb-f7a8-4f84-b5a4-adb5cd84d19c","url":"/d/b4e03edb-f7a8-4f84-b5a4-adb5cd84d19c/host-2-probes-to-all-hosts","version":1}Uploaded dashboards/d2.json
 Uploading dashboards/d3.json...
-{"folderUid":"","id":14,"slug":"host-3-probes-to-all-hosts","status":"success","uid":"62315c63-3d46-4580-a871-e542a47192df","url":"/d/62315c63-3d46-4580-a871-e542a47192df/host-3-probes-to-all-hosts","version":1}Uploaded dashboards/d3.json
+{"folderUid":"","id":20,"slug":"host-3-probes-to-all-hosts","status":"success","uid":"f7c52b4f-265c-4f50-8a56-669d37bb710a","url":"/d/f7c52b4f-265c-4f50-8a56-669d37bb710a/host-3-probes-to-all-hosts","version":1}Uploaded dashboards/d3.json
 Uploading dashboards/d4.json...
-{"folderUid":"","id":15,"slug":"host-4-probes-to-all-hosts","status":"success","uid":"4779ba3f-b696-4f10-8769-5c465ca11541","url":"/d/4779ba3f-b696-4f10-8769-5c465ca11541/host-4-probes-to-all-hosts","version":1}Uploaded dashboards/d4.json
+{"folderUid":"","id":21,"slug":"host-4-probes-to-all-hosts","status":"success","uid":"74350c06-67f1-4740-95b3-1722945e2b58","url":"/d/74350c06-67f1-4740-95b3-1722945e2b58/host-4-probes-to-all-hosts","version":1}Uploaded dashboards/d4.json
 Uploading dashboards/d5.json...
-{"folderUid":"","id":16,"slug":"host-5-probes-to-all-hosts","status":"success","uid":"d2263e95-e0b6-4fbd-a1cc-61ff1c7ff2e9","url":"/d/d2263e95-e0b6-4fbd-a1cc-61ff1c7ff2e9/host-5-probes-to-all-hosts","version":1}Uploaded dashboards/d5.json
+{"folderUid":"","id":22,"slug":"host-5-probes-to-all-hosts","status":"success","uid":"c61d858b-1cbf-4709-a476-c5708955770f","url":"/d/c61d858b-1cbf-4709-a476-c5708955770f/host-5-probes-to-all-hosts","version":1}Uploaded dashboards/d5.json
 Uploading dashboards/passive.json...
-{"folderUid":"","id":17,"slug":"passive-metrics-dashboard","status":"success","uid":"030d6818-682b-48be-8b29-8be63e04d8e4","url":"/d/030d6818-682b-48be-8b29-8be63e04d8e4/passive-metrics-dashboard","version":1}Uploaded dashboards/passive.json
+{"folderUid":"","id":23,"slug":"passive-metrics-dashboard","status":"success","uid":"767621a9-509a-4dc5-97ab-52505020fed1","url":"/d/767621a9-509a-4dc5-97ab-52505020fed1/passive-metrics-dashboard","version":1}Uploaded dashboards/passive.json
 ✅ Finished 03_import_dashboards.sh
 ========================
 ⏭️  Skipping run_all.sh

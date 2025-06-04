@@ -16,27 +16,27 @@ WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
-Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
-Get:7 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
 Get:8 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
-Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
-Get:10 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
-Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3290 kB]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4622 kB]
-Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
-Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
-Fetched 38.7 MB in 9s (4458 kB/s)
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4630 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3295 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
+Fetched 38.7 MB in 10s (4053 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
-All packages are up to date.
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
@@ -44,7 +44,7 @@ Reading package lists...
 Building dependency tree...
 Reading state information...
 python3 is already the newest version (3.10.6-1~22.04.1).
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 11 not upgraded.
 [*] Creating index.html...
 [*] Starting Python HTTP server on port 80...
 [✔] HTTP server started. Log: /var/log/http_server.log
@@ -53,14 +53,14 @@ Copying and executing setup_server_ssh.sh in container mn.d1...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists...
 Building dependency tree...
 Reading state information...
-All packages are up to date.
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
@@ -89,7 +89,7 @@ The following NEW packages will be installed:
   openssh-client openssh-server openssh-sftp-server python3-dbus
   python3-distro python3-gi shared-mime-info ssh-import-id systemd
   systemd-sysv systemd-timesyncd ucf xauth xdg-user-dirs
-0 upgraded, 43 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 43 newly installed, 0 to remove and 11 not upgraded.
 Need to get 11.2 MB of archives.
 After this operation, 44.5 MB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapparmor1 amd64 3.0.4-2ubuntu2.4 [39.7 kB]
@@ -136,7 +136,7 @@ Get:41 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ncurses-term al
 Get:42 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-distro all 1.7.0-1 [17.0 kB]
 Get:43 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssh-import-id all 5.11-0ubuntu1 [10.1 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 11.2 MB in 4s (2773 kB/s)
+Fetched 11.2 MB in 10s (1107 kB/s)
 Selecting previously unselected package libapparmor1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../0-libapparmor1_3.0.4-2ubuntu2.4_amd64.deb ...
@@ -331,11 +331,11 @@ Setting up openssh-server (1:8.9p1-3ubuntu0.13) ...
 
 Creating config file /etc/ssh/sshd_config with new version
 Creating SSH2 RSA key; this may take some time ...
-3072 SHA256:ck8354ey6kDo423kCQLsazw4qRrgFpowELj6BXIShBc root@d1 (RSA)
+3072 SHA256:JlOeknWf4OHgLOb/WTUYiWd0przzk6v7ukI2GjMHoBQ root@d1 (RSA)
 Creating SSH2 ECDSA key; this may take some time ...
-256 SHA256:l9SqJxmfJ1CNDbeoIlilfLbobLOwvSvucIIq177PonI root@d1 (ECDSA)
+256 SHA256:aM28sMxh67YglTfYEv87E9nSAVn7H2A0JaxVjLj0pzM root@d1 (ECDSA)
 Creating SSH2 ED25519 key; this may take some time ...
-256 SHA256:1cXpdTT5W9NfJNmd4fYCmO4PlrEOivwEf1O/pJz+/kI root@d1 (ED25519)
+256 SHA256:0DwMo1UUtkbJsDpmVEgxSUHlM8CfHmGRN9A9niIIVPI root@d1 (ED25519)
 invoke-rc.d: could not determine current runlevel
 invoke-rc.d: policy-rc.d denied execution of start.
 Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
@@ -343,7 +343,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib
 Setting up python3-gi (3.42.1-0ubuntu1) ...
 Setting up networkd-dispatcher (2.1-2ubuntu0.22.04.2) ...
 Created symlink /etc/systemd/system/multi-user.target.wants/networkd-dispatcher.service → /lib/systemd/system/networkd-dispatcher.service.
-Processing triggers for libc-bin (2.35-0ubuntu3.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [*] Configuring SSH server...
 [*] Starting SSH server...
 [✔] SSH server started. Log: /var/log/ssh_server.log
@@ -358,14 +358,14 @@ Suggested packages:
   lksctp-tools
 The following NEW packages will be installed:
   iperf3 libiperf0 libsctp1
-0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 3 newly installed, 0 to remove and 11 not upgraded.
 Need to get 106 kB of archives.
 After this operation, 346 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+dfsg-1build1 [9370 B]
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (91.3 kB/s)
+Fetched 106 kB in 1s (103 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -379,7 +379,7 @@ Unpacking iperf3 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up libsctp1:amd64 (1.0.19+dfsg-1build1) ...
 Setting up libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up iperf3 (3.9-1+deb11u1build0.22.04.1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [*] Starting iperf3 server on port 5061 (verbose mode)...
 [✔] VoIP simulation server running on UDP port 5061
 Copying and executing setup_server_db.sh in container mn.d4...
@@ -393,14 +393,14 @@ Suggested packages:
   lksctp-tools
 The following NEW packages will be installed:
   iperf3 libiperf0 libsctp1
-0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 3 newly installed, 0 to remove and 11 not upgraded.
 Need to get 106 kB of archives.
 After this operation, 346 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+dfsg-1build1 [9370 B]
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (70.9 kB/s)
+Fetched 106 kB in 1s (130 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -414,7 +414,7 @@ Unpacking iperf3 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up libsctp1:amd64 (1.0.19+dfsg-1build1) ...
 Setting up libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up iperf3 (3.9-1+deb11u1build0.22.04.1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [*] Starting iperf3 server on TCP port 3306...
 [✔] DB simulation server running on TCP port 3306
 Copying and executing setup_server_ftp.sh in container mn.d4...
@@ -428,7 +428,7 @@ Suggested packages:
   anacron checksecurity default-mta | mail-transport-agent bsd-mailx | mailx
 The following NEW packages will be installed:
   cron libpopt0 libwrap0 logrotate netbase ssl-cert vsftpd
-0 upgraded, 7 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 7 newly installed, 0 to remove and 11 not upgraded.
 Need to get 357 kB of archives.
 After this operation, 1100 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 cron amd64 3.0pl1-137ubuntu3 [73.7 kB]
@@ -439,7 +439,7 @@ Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libwrap0 amd64 7.6.q-31b
 Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
 Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vsftpd amd64 3.0.5-0ubuntu1.1 [123 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 357 kB in 2s (164 kB/s)
+Fetched 357 kB in 1s (311 kB/s)
 Selecting previously unselected package cron.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7270 files and directories currently installed.)
 Preparing to unpack .../0-cron_3.0pl1-137ubuntu3_amd64.deb ...
@@ -475,11 +475,10 @@ Setting up logrotate (3.19.0-1ubuntu1.1) ...
 Setting up vsftpd (3.0.5-0ubuntu1.1) ...
 invoke-rc.d: could not determine current runlevel
 invoke-rc.d: policy-rc.d denied execution of start.
-Processing triggers for libc-bin (2.35-0ubuntu3.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [*] Creating FTP user and directory...
 [*] Creating secure_chroot_dir...
 chown: cannot access '/home/ftpuser/ftp': No such file or directory
-exit status 1
 === End Processing Server Configs ===
 === Start Processing Client Configs ===
 Copying and executing setup_client_db.sh in container mn.d1...
@@ -493,14 +492,14 @@ Suggested packages:
   lksctp-tools
 The following NEW packages will be installed:
   iperf3 libiperf0 libsctp1
-0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 3 newly installed, 0 to remove and 11 not upgraded.
 Need to get 106 kB of archives.
 After this operation, 346 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+dfsg-1build1 [9370 B]
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (101 kB/s)
+Fetched 106 kB in 1s (132 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11931 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -514,7 +513,7 @@ Unpacking iperf3 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up libsctp1:amd64 (1.0.19+dfsg-1build1) ...
 Setting up libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up iperf3 (3.9-1+deb11u1build0.22.04.1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [✔] DB simulation client ready. You can now run iperf3 to simulate DB traffic.
 iperf3 -c <db-server-ip> -p 3306 -t 10
 Copying and executing setup_client_ftp.sh in container mn.d1...
@@ -526,7 +525,7 @@ The following additional packages will be installed:
   netbase tnftp
 The following NEW packages will be installed:
   ftp lftp netbase tnftp
-0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 4 newly installed, 0 to remove and 11 not upgraded.
 Need to get 843 kB of archives.
 After this operation, 2263 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 netbase all 6.3 [12.9 kB]
@@ -534,7 +533,7 @@ Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 tnftp amd64 20210827-4bu
 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 ftp all 20210827-4build1 [4812 B]
 Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 lftp amd64 4.9.2-1build1 [720 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 843 kB in 2s (516 kB/s)
+Fetched 843 kB in 1s (698 kB/s)
 Selecting previously unselected package netbase.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11949 files and directories currently installed.)
 Preparing to unpack .../archives/netbase_6.3_all.deb ...
@@ -569,14 +568,14 @@ Suggested packages:
   lksctp-tools
 The following NEW packages will be installed:
   iperf3 libiperf0 libsctp1
-0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 3 newly installed, 0 to remove and 11 not upgraded.
 Need to get 106 kB of archives.
 After this operation, 346 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+dfsg-1build1 [9370 B]
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 2s (67.2 kB/s)
+Fetched 106 kB in 1s (136 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -590,7 +589,7 @@ Unpacking iperf3 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up libsctp1:amd64 (1.0.19+dfsg-1build1) ...
 Setting up libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up iperf3 (3.9-1+deb11u1build0.22.04.1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [✔] VoIP simulation client ready. You can run iperf3 to simulate VoIP traffic.
 iperf3 -c <voip-server-ip> -u -b 512k -t 10 -p 5061 --tos 184
 Copying and executing setup_client_http.sh in container mn.d4...
@@ -598,14 +597,14 @@ Copying and executing setup_client_http.sh in container mn.d4...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists...
 Building dependency tree...
 Reading state information...
-All packages are up to date.
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
@@ -614,7 +613,7 @@ Building dependency tree...
 Reading state information...
 curl is already the newest version (7.81.0-1ubuntu1.20).
 wget is already the newest version (1.21.2-2ubuntu1.1).
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 11 not upgraded.
 [✔] HTTP clients are ready (you can use 'curl http://host:port' or 'wget http://host:port').
 Copying and executing setup_client_ssh.sh in container mn.d4...
 [*] Installing OpenSSH client...
@@ -628,7 +627,7 @@ Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists...
 Building dependency tree...
 Reading state information...
-All packages are up to date.
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
@@ -643,7 +642,7 @@ Suggested packages:
 The following NEW packages will be installed:
   libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
   libxext6 libxmuu1 openssh-client sshpass xauth
-0 upgraded, 12 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 12 newly installed, 0 to remove and 11 not upgraded.
 Need to get 1945 kB of archives.
 After this operation, 6938 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcbor0.8 amd64 0.8.0-2ubuntu1 [24.6 kB]
@@ -659,7 +658,7 @@ Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client 
 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
 Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 1945 kB in 3s (717 kB/s)
+Fetched 1945 kB in 2s (851 kB/s)
 Selecting previously unselected package libcbor0.8:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7413 files and directories currently installed.)
 Preparing to unpack .../00-libcbor0.8_0.8.0-2ubuntu1_amd64.deb ...
@@ -715,7 +714,7 @@ update-alternatives: using /usr/bin/scp to provide /usr/bin/rcp (rcp) in auto mo
 update-alternatives: warning: skip creation of /usr/share/man/man1/rcp.1.gz because associated file /usr/share/man/man1/scp.1.gz (of link group rcp) doesn't exist
 Setting up libxext6:amd64 (2:1.3.4-1build1) ...
 Setting up xauth (1:1.1-1build2) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [✔] SSH client is ready (you can use 'ssh user@host').
 Copying and executing setup_client_http.sh in container mn.d5...
 [*] Installing HTTP client tools (curl and wget)...
@@ -724,27 +723,27 @@ WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
-Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
-Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
 Get:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:7 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
-Get:9 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
-Get:10 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4622 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3295 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4630 kB]
 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3290 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
-Fetched 38.7 MB in 8s (4759 kB/s)
+Fetched 38.7 MB in 5s (7100 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
-All packages are up to date.
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
@@ -753,21 +752,22 @@ Building dependency tree...
 Reading state information...
 curl is already the newest version (7.81.0-1ubuntu1.20).
 wget is already the newest version (1.21.2-2ubuntu1.1).
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 11 not upgraded.
 [✔] HTTP clients are ready (you can use 'curl http://host:port' or 'wget http://host:port').
 Copying and executing setup_client_ssh.sh in container mn.d5...
 [*] Installing OpenSSH client...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 128 kB in 2s (74.2 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
-All packages are up to date.
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
@@ -782,7 +782,7 @@ Suggested packages:
 The following NEW packages will be installed:
   libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
   libxext6 libxmuu1 openssh-client sshpass xauth
-0 upgraded, 12 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 12 newly installed, 0 to remove and 11 not upgraded.
 Need to get 1945 kB of archives.
 After this operation, 6938 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcbor0.8 amd64 0.8.0-2ubuntu1 [24.6 kB]
@@ -798,7 +798,7 @@ Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client 
 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
 Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 1945 kB in 2s (1018 kB/s)
+Fetched 1945 kB in 2s (783 kB/s)
 Selecting previously unselected package libcbor0.8:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../00-libcbor0.8_0.8.0-2ubuntu1_amd64.deb ...
@@ -854,7 +854,7 @@ update-alternatives: using /usr/bin/scp to provide /usr/bin/rcp (rcp) in auto mo
 update-alternatives: warning: skip creation of /usr/share/man/man1/rcp.1.gz because associated file /usr/share/man/man1/scp.1.gz (of link group rcp) doesn't exist
 Setting up libxext6:amd64 (2:1.3.4-1build1) ...
 Setting up xauth (1:1.1-1build2) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [✔] SSH client is ready (you can use 'ssh user@host').
 Copying and executing setup_client_ftp.sh in container mn.d5...
 [*] Installing FTP clients...
@@ -865,7 +865,7 @@ The following additional packages will be installed:
   netbase tnftp
 The following NEW packages will be installed:
   ftp lftp netbase tnftp
-0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 4 newly installed, 0 to remove and 11 not upgraded.
 Need to get 843 kB of archives.
 After this operation, 2263 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 netbase all 6.3 [12.9 kB]
@@ -873,7 +873,7 @@ Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 tnftp amd64 20210827-4bu
 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 ftp all 20210827-4build1 [4812 B]
 Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 lftp amd64 4.9.2-1build1 [720 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 843 kB in 2s (531 kB/s)
+Fetched 843 kB in 1s (593 kB/s)
 Selecting previously unselected package netbase.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7614 files and directories currently installed.)
 Preparing to unpack .../archives/netbase_6.3_all.deb ...
@@ -908,14 +908,14 @@ Suggested packages:
   lksctp-tools
 The following NEW packages will be installed:
   iperf3 libiperf0 libsctp1
-0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 3 newly installed, 0 to remove and 11 not upgraded.
 Need to get 106 kB of archives.
 After this operation, 346 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+dfsg-1build1 [9370 B]
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (94.5 kB/s)
+Fetched 106 kB in 1s (97.3 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7659 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -929,7 +929,7 @@ Unpacking iperf3 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up libsctp1:amd64 (1.0.19+dfsg-1build1) ...
 Setting up libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
 Setting up iperf3 (3.9-1+deb11u1build0.22.04.1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [✔] VoIP simulation client ready. You can run iperf3 to simulate VoIP traffic.
 iperf3 -c <voip-server-ip> -u -b 512k -t 10 -p 5061 --tos 184
 === End Processing Client Configs ===
@@ -941,35 +941,30 @@ Processing mn.d1 ...
   d1-eth0 IP: 192.168.0.1
   eth0 IP: 172.17.0.2
 RTNETLINK answers: File exists
-exit status 2
   Default Gateway and Routing updated in mn.d1.
 
 Processing mn.d2 ...
   d2-eth0 IP: 192.168.1.1
   eth0 IP: 172.17.0.3
 RTNETLINK answers: File exists
-exit status 2
   Default Gateway and Routing updated in mn.d2.
 
 Processing mn.d3 ...
   d3-eth0 IP: 192.168.1.2
   eth0 IP: 172.17.0.4
 RTNETLINK answers: File exists
-exit status 2
   Default Gateway and Routing updated in mn.d3.
 
 Processing mn.d4 ...
   d4-eth0 IP: 192.168.0.2
   eth0 IP: 172.17.0.5
 RTNETLINK answers: File exists
-exit status 2
   Default Gateway and Routing updated in mn.d4.
 
 Processing mn.d5 ...
   d5-eth0 IP: 10.0.0.1
   eth0 IP: 172.17.0.6
 RTNETLINK answers: File exists
-exit status 2
   Default Gateway and Routing updated in mn.d5.
 
 Finished 03_init_gateways.sh
