@@ -9,7 +9,7 @@ scrape_configs:
       
   - job_name: 'hosts-passive-metrics'
     static_configs:
-      - targets: ['172.17.0.2:8000', '172.17.0.3:8000', '172.17.0.4:8000', '172.17.0.5:8000', '172.17.0.6:8000','172.17.0.7:8000','172.17.0.8:8000']
+      - targets: ['172.17.0.2:8000', '172.17.0.3:8000', '172.17.0.4:8000', '172.17.0.5:8000', '172.17.0.6:8000','172.17.0.7:8000','172.17.0.8:8000',172.17.0.9:8000',172.17.0.10:8000',172.17.0.11:8000',172.17.0.12:8000']
       
   - job_name: 'd1-active-metrics'
     metrics_path: /probe
@@ -23,6 +23,10 @@ scrape_configs:
           - 192.168.1.2 
           - 192.168.2.1 
           - 192.168.2.2 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
           - 10.0.0.1
     relabel_configs:
       - source_labels: [__address__]
@@ -44,6 +48,10 @@ scrape_configs:
           - 192.168.1.2 
           - 192.168.2.1 
           - 192.168.2.2 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
           - 10.0.0.1
     relabel_configs:
       - source_labels: [__address__]
@@ -65,7 +73,11 @@ scrape_configs:
           - 192.168.1.2 
           - 192.168.2.1 
           - 192.168.2.2 
-          - 10.0.0.1 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
+          - 10.0.0.1
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -86,7 +98,11 @@ scrape_configs:
           - 192.168.1.2 
           - 192.168.2.1 
           - 192.168.2.2 
-          - 10.0.0.1    
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
+          - 10.0.0.1   
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -107,6 +123,10 @@ scrape_configs:
           - 192.168.1.2 
           - 192.168.2.1 
           - 192.168.2.2 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
           - 10.0.0.1
     relabel_configs:
       - source_labels: [__address__]
@@ -128,6 +148,10 @@ scrape_configs:
           - 192.168.1.2 
           - 192.168.2.1 
           - 192.168.2.2 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
           - 10.0.0.1
     relabel_configs:
       - source_labels: [__address__]
@@ -150,6 +174,10 @@ scrape_configs:
           - 192.168.1.2 
           - 192.168.2.1 
           - 192.168.2.2 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
           - 10.0.0.1
     relabel_configs:
       - source_labels: [__address__]
@@ -159,4 +187,104 @@ scrape_configs:
       - target_label: __address__
         replacement: 172.17.0.8:9115  # Replace with IP or DNS of Blackbox Exporter
         
+  - job_name: 'd8-active-metrics'
+    metrics_path: /probe
+    params:
+      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+    static_configs:
+      - targets:
+          - 192.168.0.1 
+          - 192.168.0.2 
+          - 192.168.1.1 
+          - 192.168.1.2 
+          - 192.168.2.1 
+          - 192.168.2.2 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
+          - 10.0.0.1
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 172.17.0.9:9115  # Replace with IP or DNS of Blackbox Exporter
+        
+  - job_name: 'd9-active-metrics'
+    metrics_path: /probe
+    params:
+      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+    static_configs:
+      - targets:
+          - 192.168.0.1 
+          - 192.168.0.2 
+          - 192.168.1.1 
+          - 192.168.1.2 
+          - 192.168.2.1 
+          - 192.168.2.2 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
+          - 10.0.0.1
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 172.17.0.10:9115  # Replace with IP or DNS of Blackbox Exporter
+        
+        
+  - job_name: 'd10-active-metrics'
+    metrics_path: /probe
+    params:
+      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+    static_configs:
+      - targets:
+          - 192.168.0.1 
+          - 192.168.0.2 
+          - 192.168.1.1 
+          - 192.168.1.2 
+          - 192.168.2.1 
+          - 192.168.2.2 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
+          - 10.0.0.1
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 172.17.0.11:9115  # Replace with IP or DNS of Blackbox Exporter
 
+
+  - job_name: 'd11-active-metrics'
+    metrics_path: /probe
+    params:
+      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+    static_configs:
+      - targets:
+          - 192.168.0.1 
+          - 192.168.0.2 
+          - 192.168.1.1 
+          - 192.168.1.2 
+          - 192.168.2.1 
+          - 192.168.2.2 
+          - 192.168.3.1 
+          - 192.168.3.2 
+          - 192.168.4.1 
+          - 192.168.4.2 
+          - 10.0.0.1
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 172.17.0.12:9115  # Replace with IP or DNS of Blackbox Exporter

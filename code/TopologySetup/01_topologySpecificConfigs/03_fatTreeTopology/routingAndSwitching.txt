@@ -2,11 +2,25 @@
 add-host-intent 192.168.0.1 192.168.0.2
 add-host-intent 192.168.1.1 192.168.1.2
 add-host-intent 192.168.2.1 192.168.2.2
+add-host-intent 192.168.3.1 192.168.3.2
+add-host-intent 192.168.4.1 192.168.4.2
 
 # execute intents for routing
+add-host-intent 192.168.3.1 192.168.0.1
+add-host-intent 192.168.3.1 192.168.1.1
+add-host-intent 192.168.3.2 192.168.0.1
+add-host-intent 192.168.3.2 192.168.1.1
+add-host-intent 192.168.4.1 192.168.0.1
+add-host-intent 192.168.4.1 192.168.1.1
+add-host-intent 192.168.4.1 192.168.0.2
+add-host-intent 192.168.4.2 192.168.0.1
+add-host-intent 192.168.4.2 192.168.1.1
+add-host-intent 192.168.4.2 192.168.1.2
 add-host-intent 192.168.0.1 10.0.0.1
 add-host-intent 192.168.0.2 10.0.0.1
 add-host-intent 192.168.1.1 10.0.0.1
 add-host-intent 192.168.1.2 10.0.0.1
 add-host-intent 192.168.2.1 10.0.0.1
 add-host-intent 192.168.2.2 10.0.0.1
+add-host-intent 192.168.3.1 10.0.0.1
+add-host-intent 192.168.3.2 10.0.0.1

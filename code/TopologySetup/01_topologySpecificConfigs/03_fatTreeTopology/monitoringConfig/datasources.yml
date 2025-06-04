@@ -4,6 +4,6 @@ datasources:
   - name: Prometheus
     type: prometheus
     access: proxy
-    url: http://172.17.0.7:9090
+    url: http://172.17.0.13:9090
     isDefault: true
     editable: true	

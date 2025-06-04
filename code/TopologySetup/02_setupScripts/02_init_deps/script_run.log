@@ -3,33 +3,35 @@ Running 01_onos_apps.sh ...
 🔄 ONOS not ready yet... retrying in 3s
 🔄 ONOS not ready yet... retrying in 3s
 🔄 ONOS not ready yet... retrying in 3s
+🔄 ONOS not ready yet... retrying in 3s
+🔄 ONOS not ready yet... retrying in 3s
 ✅ ONOS CLI is available.
 Failed to add the host to the list of known hosts (/home/sdn/.ssh/known_hosts).
 Welcome to Open Network Operating System (ONOS)!
-[1;31m     ____  _  ______  __a__     [0m
-[1;31m    / __p \p/ |/  /a c__t i\/v _a_/t  e  [o0rmg
-.o[n1o;s31pm r o /j e/c_t/. /o p t i c/ a/l_-/m o/d\e l\     
-a[p0pm ac
-t[i1v;3a1mt e   o\r_g__._o/n_/o|s_p/\r_o_j_e_c/t__._/o p e n  f[l0mow
--[1b;3a1ms e  
-  a  p  p    a    c  t   i   v  a t e   o r[g0.mono
-Dsopcurmeontjateiocn:t w.ikli.londosppprorjeoctv.iordg      
-Tutoreials:r    
- tuatoripals.ponosprojec t.org 
-Maaicltinigv laistts: lisets .onosoprrogje.cto.onrg o  s  pr
-o
-jCoemec htel.p ohuto! sFitnd pourt hoowv ait:d ceonrtri
-buatpe.onosppro jaecctti.voartge  
-or
-gH.iotn o's[p1rmo<jteacbt>.d[r0imv'e rfsor
- aap pl iasct toif vaavtaiela boler cgo.momnaonsdpsr
-oajnedc t'.[o1pme[ncfmldo]w --
-haelppp[ 0am'c ftoirv helap ont a esp eocrifgic. ocnomomsapnrdo.je
-cHti.tp r'ox[y1amr<pctr
-la-pdp> a[c0mt' iovr atytpee  'o[1mlrogg.ooutno[s0mp' rtoo ejxeictt O.NaOSc lses
-saiopnp. 
-acti
-vate org.onosproject.drivers.optical
+[1;31m     ____  _  ______  ____     [0m
+[1;31m    / __ \/ |/ / __ \/ __/   [0m
+[1;31m   / /_/ /    / /_/ /\ \     [0m
+[1;31m   \____/_/|_/\____/___/   a  [0m
+[1;31m        p  p   a c t i v a  t e   o r g . o n o s p ro[j0emct.
+oDpotciucmaeln-tmaotdieoln: wi
+kaip.po naocstpirvoajteec to.rogr.go n o  s p roj
+eTcuttor.ioaplesn:f l o w - btausteori
+aalpsp.o naocstpriovjaetcet .oorrgg. ono
+sMparioljiencgt .llilsdtpsp:r olvisitds.onospreorjec
+t.orga  p p   act
+iva
+tCeo moer gh.eolnpo sopurto!j eFcitn.d hooustt phroowv iadte:r c
+oanptpr iabcuttiev.aotneos proorjge.cotn.oosrgp roj
+ect
+.Hdirti v'er[s1m
+<atpapb >ac[t0imv'a tfeo ro rag .loinsots porfo jaevcati.loapbelnef lcoowmm
+aanpdps ac
+tainvda '[1m[cmd] --help[0m' for help on a specific commtande. or
+gH.iotn o'sp[r1omj<eccttr.lp-rdo>xy[a0rmp' 
+oarp pt yapcet i'va[t1em loorggo.uotno[s0pmr'o jteoc te.xaictl O
+NaOpSp  saecstsiivoant.e o
+rg.ono
+sproject.drivers.optical
 app activate org.onosproject.drivermatrix
 app activate org.onosproject.gui2
 app activate org.onosproject.roadm
@@ -37,37 +39,37 @@ app activate org.onosproject.pathpainter
 app activate org.onosproject.layout
 
 exit
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:25:58[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.optical-model
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:25[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.optical-model
 [?1l>[?1000l[?2004lActivated org.onosproject.optical-model
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:25:58[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.openflow-base
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:25[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.openflow-base
 [?1l>[?1000l[?2004lActivated org.onosproject.openflow-base
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:25:58[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.lldpprovider
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.lldpprovider
 [?1l>[?1000l[?2004lActivated org.onosproject.lldpprovider
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:25:59[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.hostprovider
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.hostprovider
 [?1l>[?1000l[?2004lActivated org.onosproject.hostprovider
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:25:59[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivers
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivers
 [?1l>[?1000l[?2004lActivated org.onosproject.drivers
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:25:59[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.openflow
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.openflow
 [?1l>[?1000l[?2004lActivated org.onosproject.openflow
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:25:59[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.proxyarp
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.proxyarp
 [?1l>[?1000l[?2004lActivated org.onosproject.proxyarp
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:25:59[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.acl
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:27[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.acl
 [?1l>[?1000l[?2004lActivated org.onosproject.acl
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:26:00[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivers.optical
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:27[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivers.optical
 [?1l>[?1000l[?2004lActivated org.onosproject.drivers.optical
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:26:00[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivermatrix
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:27[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivermatrix
 [?1l>[?1000l[?2004lActivated org.onosproject.drivermatrix
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:26:00[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.gui2
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.gui2
 [?1l>[?1000l[?2004lActivated org.onosproject.gui2
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:26:00[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.roadm
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.roadm
 [?1l>[?1000l[?2004lActivated org.onosproject.roadm
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:26:00[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.pathpainter
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.pathpainter
 [?1l>[?1000l[?2004lActivated org.onosproject.pathpainter
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:26:01[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.layout
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.layout
 [?1l>[?1000l[?2004lActivated org.onosproject.layout
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:26:01[0m[12C
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:26:01[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m03:26:01[0m[12C
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C
 [?1l>[?1000l[?2004lConnection to localhost closed.
 Finished 01_onos_apps.sh
 ------------------------
@@ -75,11 +77,10 @@ Running 02_update_controller_ip.sh ...
 ⏳ Waiting for ONOS CLI to become available...
 ✅ ONOS CLI is available.
 Failed to add the host to the list of known hosts (/home/sdn/.ssh/known_hosts).
-Connection to localhost closed by remote host.
 Connection to localhost closed.
-ℹ️  Found controller IP: 172.24.0.3
-📝 Updating IP in file: ./topo/topo-cc-cn-07.py
-✅ Controller IP updated to 172.24.0.3 in ./topo/topo-cc-cn-07.py
+ℹ️  Found controller IP: 192.168.0.2
+📝 Updating IP in file: ./topo/topo-ft-cn-01.py
+✅ Controller IP updated to 192.168.0.2 in ./topo/topo-ft-cn-01.py
 Finished 02_update_controller_ip.sh
 ------------------------
 Running 03_topo_deps.sh ...
@@ -88,23 +89,23 @@ Running 03_topo_deps.sh ...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [102 kB]
-Get:2 https://download.docker.com/linux/ubuntu bionic InRelease [64.4 kB]
-Get:3 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages [46.4 kB]
-Hit:4 http://archive.ubuntu.com/ubuntu bionic InRelease
-Get:5 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1637 kB]
-Get:6 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [102 kB]
-Get:7 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [102 kB]
-Get:8 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1688 kB]
-Get:9 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2411 kB]
-Get:10 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [3373 kB]
-Get:11 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [23.8 kB]
-Get:12 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [30.8 kB]
-Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1728 kB]
+Get:1 https://download.docker.com/linux/ubuntu bionic InRelease [64.4 kB]
+Get:2 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages [46.4 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu bionic InRelease
+Get:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [102 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [102 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [102 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [30.8 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2411 kB]
+Get:9 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [23.8 kB]
+Get:10 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1688 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1728 kB]
+Get:12 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1637 kB]
+Get:13 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [3373 kB]
 Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3786 kB]
 Get:15 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [64.0 kB]
 Get:16 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [20.6 kB]
-Fetched 15.2 MB in 4s (3985 kB/s)
+Fetched 15.2 MB in 3s (4602 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -112,7 +113,7 @@ Reading state information...
 [+] Building Docker images from .Dockerfile files...
 [+] Building image 'ubuntu22' from Dockerfile 'ubuntu22.Dockerfile'
 #1 [internal] load build definition from ubuntu22.Dockerfile
-#1 sha256:c249a1eaffc3b41cbedbce772a685e392fad3d511828de4f9bc962714b4c2494
+#1 sha256:9d5173811b8df6259d1be1ed68867d686b65ca30369d48171972c69a112c562f
 #1 transferring dockerfile: 2.06kB done
 #1 DONE 0.0s
 
@@ -121,59 +122,59 @@ Reading state information...
 #2 DONE 0.0s
 
 #3 [internal] load .dockerignore
-#3 sha256:d332e2e2402d312cb73b2caae5deca73d226f9d5b5fc159f505ec19a8a515e4c
+#3 sha256:cf04aa74ed4b04198a527c2d9d47d6c899887bf23fdfd65cf4d85866b5a11d77
 #3 transferring context: 2B done
 #3 DONE 0.0s
 
-#8 [ 1/10] FROM docker.io/library/ubuntu:22.04
-#8 sha256:531773a4172c14394035965ba9904dbac39e486e1c25667b3c1d57071c2f6a8c
+#14 [ 1/10] FROM docker.io/library/ubuntu:22.04
+#14 sha256:531773a4172c14394035965ba9904dbac39e486e1c25667b3c1d57071c2f6a8c
+#14 DONE 0.0s
+
+#8 [internal] load build context
+#8 sha256:fa8fc48e6be78de742b29f3b85d889c95c5083255ebefc58380dfbcf6e707792
+#8 transferring context: 3.81kB done
 #8 DONE 0.0s
 
-#13 [internal] load build context
-#13 sha256:3d998e1c14660fb2483c61cbae411ca40f2f770dabc7aee52677cf140f32a648
-#13 transferring context: 3.65kB done
-#13 DONE 0.0s
+#13 [ 2/10] RUN apt-get update && apt-get install -y --no-install-recommends     iputils-ping     net-tools     iproute2     dnsutils     curl     wget     tar     python3     python3-pip     && apt-get clean && rm -rf /var/lib/apt/lists/*
+#13 sha256:9d5fa19a7519b2642f14afc851f196a74ea4a6315964cfa224beb3cfb126ee64
+#13 CACHED
 
-#7 [ 2/10] RUN apt-get update && apt-get install -y --no-install-recommends     iputils-ping     net-tools     iproute2     dnsutils     curl     wget     tar     python3     python3-pip     && apt-get clean && rm -rf /var/lib/apt/lists/*
-#7 sha256:9d5fa19a7519b2642f14afc851f196a74ea4a6315964cfa224beb3cfb126ee64
+#7 [ 7/10] COPY prometheus-agent.yml /etc/prometheus/prometheus-agent.yml
+#7 sha256:4e20334d5791859454f933a4090df6d56d041405f71846c92db47a611599d6a7
 #7 CACHED
 
-#5 [ 4/10] RUN wget https://github.com/prometheus/prometheus/releases/download/v2.48.0/prometheus-2.48.0.linux-amd64.tar.gz &&     tar xvf prometheus-2.48.0.linux-amd64.tar.gz &&     mv prometheus-2.48.0.linux-amd64/prometheus /usr/local/bin/prometheus &&     mv prometheus-2.48.0.linux-amd64/promtool /usr/local/bin/promtool &&     rm -rf prometheus-2.48.0.linux-amd64*
-#5 sha256:23f524b35540eb6ed91c39369fac1e314dc2e8252bbd10906aeeb04e0e5e3633
-#5 CACHED
-
-#6 [ 3/10] RUN pip3 install psutil prometheus_client
-#6 sha256:76af163fb8ad2c76f56f9e485d44f018f45717a0ba24c318418902ca4d47430f
+#6 [ 8/10] COPY blackbox.yml /etc/prometheus/blackbox.yml
+#6 sha256:46a5dc43098321ad327daedd9b740d89b8f92eb3455ca808adef16fb5ca7f3fe
 #6 CACHED
 
-#4 [ 5/10] RUN wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.24.0/blackbox_exporter-0.24.0.linux-amd64.tar.gz &&     tar xvf blackbox_exporter-0.24.0.linux-amd64.tar.gz &&     mv blackbox_exporter-0.24.0.linux-amd64/blackbox_exporter /usr/local/bin/blackbox_exporter &&     rm -rf blackbox_exporter-0.24.0.linux-amd64*
-#4 sha256:e45844caed5b7d22ac2a0a862cf3eb2f7a1ab2ff34275dc3a59ed151746c7159
+#11 [ 4/10] RUN wget https://github.com/prometheus/prometheus/releases/download/v2.48.0/prometheus-2.48.0.linux-amd64.tar.gz &&     tar xvf prometheus-2.48.0.linux-amd64.tar.gz &&     mv prometheus-2.48.0.linux-amd64/prometheus /usr/local/bin/prometheus &&     mv prometheus-2.48.0.linux-amd64/promtool /usr/local/bin/promtool &&     rm -rf prometheus-2.48.0.linux-amd64*
+#11 sha256:23f524b35540eb6ed91c39369fac1e314dc2e8252bbd10906aeeb04e0e5e3633
+#11 CACHED
+
+#9 [ 6/10] RUN mkdir -p /etc/prometheus /prometheus_data /exporter
+#9 sha256:10e3f8d045da2e04d121c79fd77ac8d40ed79bf68ebcfc24ffefe94bdbc0b578
+#9 CACHED
+
+#5 [ 9/10] COPY exporter.py /exporter/exporter.py
+#5 sha256:a61240fe3fd677275285c4f75504d635809830380073f6b34ef94365c0d71861
+#5 CACHED
+
+#12 [ 3/10] RUN pip3 install psutil prometheus_client
+#12 sha256:76af163fb8ad2c76f56f9e485d44f018f45717a0ba24c318418902ca4d47430f
+#12 CACHED
+
+#10 [ 5/10] RUN wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.24.0/blackbox_exporter-0.24.0.linux-amd64.tar.gz &&     tar xvf blackbox_exporter-0.24.0.linux-amd64.tar.gz &&     mv blackbox_exporter-0.24.0.linux-amd64/blackbox_exporter /usr/local/bin/blackbox_exporter &&     rm -rf blackbox_exporter-0.24.0.linux-amd64*
+#10 sha256:e45844caed5b7d22ac2a0a862cf3eb2f7a1ab2ff34275dc3a59ed151746c7159
+#10 CACHED
+
+#4 [10/10] WORKDIR /exporter
+#4 sha256:6ef370089ac8f6aecbb367bbfd52f29c3ae47694133669863d35b13941b85a20
 #4 CACHED
 
-#14 [ 6/10] RUN mkdir -p /etc/prometheus /prometheus_data /exporter
-#14 sha256:10e3f8d045da2e04d121c79fd77ac8d40ed79bf68ebcfc24ffefe94bdbc0b578
-#14 CACHED
-
-#12 [ 7/10] COPY prometheus-agent.yml /etc/prometheus/prometheus-agent.yml
-#12 sha256:0fdb7738bb49eb85fd91359b95b0554ef778804287f331eb152c0fa3190112f7
-#12 DONE 0.2s
-
-#11 [ 8/10] COPY blackbox.yml /etc/prometheus/blackbox.yml
-#11 sha256:cc0b9b49161161434aa2cfda7bcee06a82fd1eeb1d316b42597965e570ddd5cc
-#11 DONE 0.0s
-
-#10 [ 9/10] COPY exporter.py /exporter/exporter.py
-#10 sha256:4c02edf9d6e0b33688e0554b9cba0a2a0cccd06969ff86f9bceee04c629e53bc
-#10 DONE 0.0s
-
-#9 [10/10] WORKDIR /exporter
-#9 sha256:8d50ac374fa97270766e7b3777d6b9a43550ff356d5a968f64634a37e5829d23
-#9 DONE 0.0s
-
 #15 exporting to image
-#15 sha256:2bb201c4d2549c6073f4fa3849f0866da50fc598d9b27f04f471b1a1ed07407e
-#15 exporting layers 0.0s done
-#15 writing image sha256:de4030ef433d30cc2de2df80d7ac3c477f40241a0e210705480db6ef2a8c56d1 done
+#15 sha256:0b123f73925b793502344d4056f0d6224df03cabce51863e85d5bf4ebf012854
+#15 exporting layers done
+#15 writing image sha256:f90f4f4f7e2ea07e5b2174b0a8bb7604330f122ccc9c07ae877dbf3c5fc9e373 done
 #15 naming to docker.io/library/ubuntu22:latest done
 #15 DONE 0.0s
 Finished 03_topo_deps.sh

@@ -33,6 +33,7 @@ cp "${FOLDER}/monitoringConfig/prometheus.yml" "${DEST_ROOT}/01_init_setup/confi
 cp "${FOLDER}/monitoringConfig/datasources.yml" "${DEST_ROOT}/01_init_setup/configs/datasources/prometheus.yml"
 
 # Copy topo-*.py
+rm "${DEST_ROOT}/02_init_deps/topo"/topo-*.py
 cp "${FOLDER}"/topo*.py "${DEST_ROOT}/02_init_deps/topo/"
 
 # Copy prometheus-agent.yml
