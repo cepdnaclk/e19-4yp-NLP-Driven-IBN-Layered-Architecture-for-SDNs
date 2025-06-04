@@ -1,0 +1,51 @@
+intent_id: INTENT-001
+user_role: admin
+timestamp: 2024-07-01T14:30:00Z
+
+QoS:
+  application: "video streaming"
+  category: "real-time"
+  latency: "<LATENCY_THRESHOLD>"        # e.g., <30ms
+  bandwidth: "<BANDWIDTH_THRESHOLD>"    # e.g., >=5Mbps
+  jitter: "<JITTER_THRESHOLD>"          # e.g., <10ms
+  packet_loss: "<LOSS_THRESHOLD>"       # e.g., <1%
+  priority: "high"                      # high | medium | low
+  enforce: true
+  time_constraints:
+    active_period:
+      start: "18:00"
+      end: "23:00"
+      days: ["Mon", "Tue", "Wed", "Thu", "Fri"]
+  routing:
+    primary_path: "Path-A"
+    backup_path: "Path-B"
+    dynamic_routing: true
+
+ACL:
+  allow_rules:
+    - source: "10.0.0.0/24"
+      destination: "video_server"
+      ports: [443, 80]
+      protocols: ["TCP", "UDP"]
+      action: "allow"
+  deny_rules:
+    - source: "0.0.0.0/0"
+      destination: "admin_panel"
+      ports: [22]
+      protocols: ["TCP"]
+      action: "deny"
+  schedule:
+    start: "08:00"
+    end: "20:00"
+    timezone: "UTC"
+
+logs:
+  fetch: true
+  filter:
+    application: "video streaming"
+    parameters: ["latency", "jitter", "bandwidth"]
+    thresholds:
+      latency: ">35ms"
+      bandwidth: "<4Mbps"
+  destination: "intent-feedback-log"
+  log_retention_days: 7
