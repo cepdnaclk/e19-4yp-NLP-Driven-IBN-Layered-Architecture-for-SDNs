@@ -69,7 +69,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ intentId, onSubmit, onClose
           <form onSubmit={handleSubmit} className="p-6">
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                How would you rate this intent?
+                How would you rate this configuration?
               </label>
               <div className="flex justify-center gap-6">
                 <button
