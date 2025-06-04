@@ -1,0 +1,9 @@
+/02_setupScripts/01_init_setup/configs/prometheus.yml
+/02_setupScripts/02_init_deps/topo/topo-*.py
+/02_setupScripts/02_init_deps/topo/docker_images/prometheus-agent.yml
+/02_setupScripts/04_init_hosts/serverHostConfig.txt
+/02_setupScripts/04_init_hosts/clientHostConfig.txt
+/02_setupScripts/05_init_intents/05_init_intents.txt
+/02_setupScripts/06_init_dashboards/dashboards/*
+!/02_setupScripts/06_init_dashboards/dashboards/passive.json
+/03_trafficGenScripts/trafficConfig/*
