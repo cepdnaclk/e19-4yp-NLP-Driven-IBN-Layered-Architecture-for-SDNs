@@ -1,0 +1,33 @@
+{
+  "intent": "Permit HTTPS traffic from branch office subnet 192.168.200.0/24 to cloud services",
+  "config": {
+    "intent_id": "INTENT-007",
+    "user_role": "it-support",
+    "timestamp": "2024-07-01T16:15:00Z",
+    "QoS": {
+      "priority": "high"
+    },
+    "ACL": {
+      "source_ip": "192.168.200.0/24",
+      "destination_port": "443",
+      "protocol": "tcp",
+      "action": "allow"
+    },
+    "logs": {
+      "enable": true,
+      "log_type": "flow",
+      "match_conditions": [
+        {
+          "source_ip": "192.168.200.0/24"
+        },
+        {
+          "destination_port": 443
+        },
+        {
+          "protocol": "tcp"
+        }
+      ],
+      "retention_period": "14d"
+    }
+  }
+}
