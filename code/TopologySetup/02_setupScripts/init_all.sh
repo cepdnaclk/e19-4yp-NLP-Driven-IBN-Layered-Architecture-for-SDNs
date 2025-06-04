@@ -3,9 +3,9 @@
 set -e
 
 # Input Validation
-read -p "Enter a topology ID (allowed: 00, 01, 02): " xx
-if [[ ! "$xx" =~ ^0[0-2]$ ]]; then
-  echo "[✘] Invalid input: $xx. Must be 00, 01, or 02."
+read -p "Enter a topology ID (allowed: 01, 02, 03): " xx
+if [[ ! "$xx" =~ ^0[1-3]$ ]]; then
+  echo "[✘] Invalid input: $xx. Must be 01, 02, or 03."
   exit 1
 fi
 
@@ -73,7 +73,8 @@ for dir in $(ls -d [0-9][0-9]_*/ | sort); do
   next_dir=$(ls -d [0-9][0-9]_* | sort | awk -v d="${dir%/}" 'found { print; exit } $0 == d { found=1 }')
 
   if [[ -n "$next_dir" ]]; then
-	 read -p "Do you want to proceed to the next stage: $next_dir? (Y/n): " ansans=${ans:-Y}  
+	 read -p "Do you want to proceed to the next stage: $next_dir? (Y/n): " ans
+	 ans=${ans:-Y}  
 		if [[ "$ans" != [Yy] ]]; then
 			echo "⛔ Stopping execution by user choice."
 			exit 0

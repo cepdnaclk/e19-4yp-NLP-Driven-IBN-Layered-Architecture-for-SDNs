@@ -4,56 +4,56 @@ Running startup.sh in 01_init_setup/
 🟢 Running docker-compose in detached mode...
  Network 01_init_setup_default  Creating
  Network 01_init_setup_default  Created
- Container onos  Creating
- Container containernet  Creating
- Container prometheus  Creating
  Container grafana  Creating
- Container prometheus  Created
- Container onos  Created
+ Container prometheus  Creating
+ Container containernet  Creating
+ Container onos  Creating
  Container containernet  Created
+ Container onos  Created
  Container grafana  Created
+ Container prometheus  Created
  Container onos  Starting
  Container grafana  Starting
  Container containernet  Starting
  Container prometheus  Starting
- Container prometheus  Started
  Container grafana  Started
+ Container prometheus  Started
  Container containernet  Started
  Container onos  Started
-📜 Logging output to ./startup-logs/startup_2025-06-02_13-59-21.log ...
-📝 Logs are being written to ./startup-logs/startup_2025-06-02_13-59-21.log (PID: 265141)
+📜 Logging output to ./startup-logs/startup_2025-06-04_11-50-07.log ...
+📝 Logs are being written to ./startup-logs/startup_2025-06-04_11-50-07.log (PID: 528362)
 🛑 Only the first 30 log lines are shown in the terminal.
-🔍 To see full logs, use: tail -f ./startup-logs/startup_2025-06-02_13-59-21.log
+🔍 To see full logs, use: tail -f ./startup-logs/startup_2025-06-04_11-50-07.log
+prometheus    | time=2025-06-04T06:20:07.640Z level=INFO source=main.go:674 msg="No time or size retention was set so using the default time retention" duration=15d
 containernet  |  * /etc/openvswitch/conf.db does not exist
+prometheus    | time=2025-06-04T06:20:07.640Z level=INFO source=main.go:725 msg="Starting Prometheus Server" mode=server version="(version=3.4.0, branch=HEAD, revision=546b1d242e209ed4228aa01a248dbf3e41e573ea)"
 containernet  |  * Creating empty database /etc/openvswitch/conf.db
 containernet  |  * Starting ovsdb-server
 containernet  |  * Configuring Open vSwitch system IDs
+prometheus    | time=2025-06-04T06:20:07.640Z level=INFO source=main.go:730 msg="operational information" build_context="(go=go1.24.3, platform=linux/amd64, user=root@b1749ffe17d4, date=20250517-06:54:08, tags=netgo,builtinassets,stringlabels)" host_details="(Linux 6.11.0-26-generic #26~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Apr 17 19:20:47 UTC 2 x86_64 eccc506152b2 (none))" fd_limits="(soft=1048576, hard=1048576)" vm_limits="(soft=unlimited, hard=unlimited)"
 containernet  |  * Starting ovs-vswitchd
+prometheus    | time=2025-06-04T06:20:07.640Z level=INFO source=main.go:806 msg="Leaving GOMAXPROCS=12: CPU quota undefined" component=automaxprocs
+prometheus    | time=2025-06-04T06:20:07.641Z level=INFO source=web.go:656 msg="Start listening for connections" component=web address=0.0.0.0:9090
+prometheus    | time=2025-06-04T06:20:07.642Z level=INFO source=main.go:1266 msg="Starting TSDB ..."
+prometheus    | time=2025-06-04T06:20:07.644Z level=INFO source=tls_config.go:347 msg="Listening on" component=web address=[::]:9090
+prometheus    | time=2025-06-04T06:20:07.644Z level=INFO source=tls_config.go:350 msg="TLS is disabled." component=web http2=false address=[::]:9090
+prometheus    | time=2025-06-04T06:20:07.646Z level=INFO source=head.go:657 msg="Replaying on-disk memory mappable chunks if any" component=tsdb
+prometheus    | time=2025-06-04T06:20:07.646Z level=INFO source=head.go:744 msg="On-disk memory mappable chunks replay completed" component=tsdb duration=7.168µs
+prometheus    | time=2025-06-04T06:20:07.646Z level=INFO source=head.go:752 msg="Replaying WAL, this may take a while" component=tsdb
+prometheus    | time=2025-06-04T06:20:07.646Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=0 duration=277.242µs
+prometheus    | time=2025-06-04T06:20:07.646Z level=INFO source=head.go:862 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=27.801µs wal_replay_duration=305.189µs wbl_replay_duration=181ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=7.168µs total_replay_duration=422.389µs
+prometheus    | time=2025-06-04T06:20:07.648Z level=INFO source=main.go:1287 msg="filesystem information" fs_type=EXT4_SUPER_MAGIC
+prometheus    | time=2025-06-04T06:20:07.648Z level=INFO source=main.go:1290 msg="TSDB started"
+prometheus    | time=2025-06-04T06:20:07.648Z level=INFO source=main.go:1475 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+prometheus    | time=2025-06-04T06:20:07.649Z level=INFO source=main.go:1514 msg="updated GOGC" old=100 new=75
+prometheus    | time=2025-06-04T06:20:07.649Z level=INFO source=main.go:1524 msg="Completed loading of configuration file" db_storage=879ns remote_storage=1.081µs web_handler=1.127µs query_engine=738ns scrape=326.875µs scrape_sd=78.288µs notify=1.381µs notify_sd=616ns rules=2.653µs tracing=5.268µs filename=/etc/prometheus/prometheus.yml totalDuration=1.092018ms
+prometheus    | time=2025-06-04T06:20:07.649Z level=INFO source=main.go:1251 msg="Server is ready to receive web requests."
+prometheus    | time=2025-06-04T06:20:07.649Z level=INFO source=manager.go:175 msg="Starting rule manager..." component="rule manager"
 containernet  |  * Enabling remote OVSDB managers
 containernet  | Pulling the "ubuntu:trusty" and "ubuntu:xenial" image for later use...
-prometheus    | time=2025-06-02T08:29:22.110Z level=INFO source=main.go:674 msg="No time or size retention was set so using the default time retention" duration=15d
-prometheus    | time=2025-06-02T08:29:22.110Z level=INFO source=main.go:725 msg="Starting Prometheus Server" mode=server version="(version=3.4.0, branch=HEAD, revision=546b1d242e209ed4228aa01a248dbf3e41e573ea)"
-prometheus    | time=2025-06-02T08:29:22.110Z level=INFO source=main.go:730 msg="operational information" build_context="(go=go1.24.3, platform=linux/amd64, user=root@b1749ffe17d4, date=20250517-06:54:08, tags=netgo,builtinassets,stringlabels)" host_details="(Linux 6.11.0-26-generic #26~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Apr 17 19:20:47 UTC 2 x86_64 da3065cb3798 (none))" fd_limits="(soft=1048576, hard=1048576)" vm_limits="(soft=unlimited, hard=unlimited)"
-prometheus    | time=2025-06-02T08:29:22.111Z level=INFO source=main.go:806 msg="Leaving GOMAXPROCS=12: CPU quota undefined" component=automaxprocs
-prometheus    | time=2025-06-02T08:29:22.112Z level=INFO source=web.go:656 msg="Start listening for connections" component=web address=0.0.0.0:9090
-prometheus    | time=2025-06-02T08:29:22.112Z level=INFO source=main.go:1266 msg="Starting TSDB ..."
-prometheus    | time=2025-06-02T08:29:22.114Z level=INFO source=tls_config.go:347 msg="Listening on" component=web address=[::]:9090
-prometheus    | time=2025-06-02T08:29:22.114Z level=INFO source=tls_config.go:350 msg="TLS is disabled." component=web http2=false address=[::]:9090
-prometheus    | time=2025-06-02T08:29:22.115Z level=INFO source=head.go:657 msg="Replaying on-disk memory mappable chunks if any" component=tsdb
-prometheus    | time=2025-06-02T08:29:22.115Z level=INFO source=head.go:744 msg="On-disk memory mappable chunks replay completed" component=tsdb duration=1.045µs
-prometheus    | time=2025-06-02T08:29:22.115Z level=INFO source=head.go:752 msg="Replaying WAL, this may take a while" component=tsdb
-prometheus    | time=2025-06-02T08:29:22.115Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=0 duration=168.485µs
-prometheus    | time=2025-06-02T08:29:22.115Z level=INFO source=head.go:862 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=15.708µs wal_replay_duration=178.776µs wbl_replay_duration=251ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=1.045µs total_replay_duration=236.623µs
-prometheus    | time=2025-06-02T08:29:22.117Z level=INFO source=main.go:1287 msg="filesystem information" fs_type=EXT4_SUPER_MAGIC
-prometheus    | time=2025-06-02T08:29:22.117Z level=INFO source=main.go:1290 msg="TSDB started"
-prometheus    | time=2025-06-02T08:29:22.117Z level=INFO source=main.go:1475 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
-prometheus    | time=2025-06-02T08:29:22.118Z level=INFO source=main.go:1514 msg="updated GOGC" old=100 new=75
-prometheus    | time=2025-06-02T08:29:22.118Z level=INFO source=main.go:1524 msg="Completed loading of configuration file" db_storage=1.429µs remote_storage=1.314µs web_handler=367ns query_engine=1.95µs scrape=253.15µs scrape_sd=84.253µs notify=1.895µs notify_sd=1.085µs rules=2.455µs tracing=6.783µs filename=/etc/prometheus/prometheus.yml totalDuration=1.035323ms
-prometheus    | time=2025-06-02T08:29:22.118Z level=INFO source=main.go:1251 msg="Server is ready to receive web requests."
-prometheus    | time=2025-06-02T08:29:22.118Z level=INFO source=manager.go:175 msg="Starting rule manager..." component="rule manager"
-grafana       | logger=settings t=2025-06-02T08:29:22.368001717Z level=info msg="Starting Grafana" version=12.0.0 commit=4c0e7045f97f356716755b47183b22e7f12bb4bf branch=HEAD compiled=2025-06-02T08:29:22Z
-grafana       | logger=settings t=2025-06-02T08:29:22.368195631Z level=info msg="Config loaded from" file=/usr/share/grafana/conf/defaults.ini
-grafana       | logger=settings t=2025-06-02T08:29:22.368201454Z level=info msg="Config loaded from" file=/etc/grafana/grafana.ini
+grafana       | logger=settings t=2025-06-04T06:20:07.903981491Z level=info msg="Starting Grafana" version=12.0.0 commit=4c0e7045f97f356716755b47183b22e7f12bb4bf branch=HEAD compiled=2025-06-04T06:20:07Z
+grafana       | logger=settings t=2025-06-04T06:20:07.904153261Z level=info msg="Config loaded from" file=/usr/share/grafana/conf/defaults.ini
+grafana       | logger=settings t=2025-06-04T06:20:07.904158739Z level=info msg="Config loaded from" file=/etc/grafana/grafana.ini
 Finished startup.sh in 01_init_setup/
 ==========================
 ==========================
@@ -65,50 +65,72 @@ Running 01_onos_apps.sh ...
 🔄 ONOS not ready yet... retrying in 3s
 🔄 ONOS not ready yet... retrying in 3s
 🔄 ONOS not ready yet... retrying in 3s
+🔄 ONOS not ready yet... retrying in 3s
 ✅ ONOS CLI is available.
 Failed to add the host to the list of known hosts (/home/sdn/.ssh/known_hosts).
 Welcome to Open Network Operating System (ONOS)!
-a[1;31m     ____  _  ___p__p_   a_c__t_i v a t  e[ 0morg
-.[o1;n3o1smp r  o /j _e_ c\t/. |o/ p/ t_i_ c\a/ l__-/m  o d[0eml
-[1;3
-1ma  p /p / _/a /c  t i /v /a_/t /e\  \ o  r  g[.0mon
-o[1s;3p1mr   \_o__j_/e_/c|_t/\.__o__p/_e_n_/f  l  o w[-0mba
-s[e1;3
-1ma  p  p      a  c t   i  v  a  t  e     o  r  g[.0mon
-oDoscupmerntoatjioen:c wtik.i.lonlosdprpojpecrt.oorvg i  d  e r
-Tu
-toriaalps:p     a tcuttoriiavlsa.otnoesp roojerctg.o.rgo n
-oMasiling plriosjtesc:t .lhiossttsp.roonvoisdperroje
-cta.popr ga c t i v at
-e 
-oCrogm.eo nhoeslpp rooujte!c tF.idndr iovuetr show
- aatp:p  caocnttiribvuatet.eo noorsgp.roojneocstp.roorgj ec
-t.o
-pHeintf l'ow[1
-ma<ptpa ba>ct[i0vma' ftor ea  olrigs.to noofs parvoajielacbtle. pcromomxaynadrsp
+[1;31m     ____  _  ______  ____     [0m
+[1;31m    / __ \/ |/ / __ \/ __/   [0m
+[1;31m   / /_/ /    / /_/ /\ \     [0m
+[1;31m   \____/_/|_/\____/___/   a  [0m
+[1;31m        p  p   a c t i v a  t e   o r g . o n o s p ro[j0emct.
+oDpotciucmaeln-tmaotdieoln: wi
+kaip.po naocstpirvoajteec to.rogr.go n o  s p roj
+eTcuttor.ioaplesn:f l o w - btausteori
+aalpsp.o naocstpriovjaetcet .oorrgg. ono
+sMparioljiencgt .llilsdtpsp:r olvisitds.onospreorjec
+t.orga  p p   act
+iva
+tCeo moer gh.eolnpo sopurto!j eFcitn.d hooustt phroowv iadte:r c
+oanptpr iabcuttiev.aotneos proorjge.cotn.oosrgp roj
+ect
+.Hdirti v'er[s1m
+<atpapb >ac[t0imv'a tfeo ro rag .loinsots porfo jaevcati.loapbelnef lcoowmm
+aanpdps ac
+tainvda '[1m[cmd] --help[0m' for help on a specific commtande. or
+gH.iotn o'sp[r1omj<eccttr.lp-rdo>xy[a0rmp' 
+oarp pt yapcet i'va[t1em loorggo.uotno[s0pmr'o jteoc te.xaictl O
+NaOpSp  saecstsiivoant.e o
+rg.ono
+sproject.drivers.optical
+app activate org.onosproject.drivermatrix
+app activate org.onosproject.gui2
+app activate org.onosproject.roadm
+app activate org.onosproject.pathpainter
+app activate org.onosproject.layout
 
-and
- e'xi[t1m
-[cmd] --help[0m' for help on a specific command.
-Hit '[1m<ctrl-d>[0m' or type '[1mlogout[0m' to exit ONOS session.
-
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:36[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.optical-model
+exit
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:25[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.optical-model
 [?1l>[?1000l[?2004lActivated org.onosproject.optical-model
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:36[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.openflow-base
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:25[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.openflow-base
 [?1l>[?1000l[?2004lActivated org.onosproject.openflow-base
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:37[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.lldpprovider
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.lldpprovider
 [?1l>[?1000l[?2004lActivated org.onosproject.lldpprovider
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:37[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.hostprovider
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.hostprovider
 [?1l>[?1000l[?2004lActivated org.onosproject.hostprovider
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:37[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivers
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivers
 [?1l>[?1000l[?2004lActivated org.onosproject.drivers
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:37[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.openflow
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.openflow
 [?1l>[?1000l[?2004lActivated org.onosproject.openflow
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:38[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.proxyarp
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:26[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.proxyarp
 [?1l>[?1000l[?2004lActivated org.onosproject.proxyarp
-[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:38[0m[12C
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:38[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
-[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m08:29:38[0m[12C
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:27[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.acl
+[?1l>[?1000l[?2004lActivated org.onosproject.acl
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:27[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivers.optical
+[?1l>[?1000l[?2004lActivated org.onosproject.drivers.optical
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:27[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.drivermatrix
+[?1l>[?1000l[?2004lActivated org.onosproject.drivermatrix
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.gui2
+[?1l>[?1000l[?2004lActivated org.onosproject.gui2
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.roadm
+[?1l>[?1000l[?2004lActivated org.onosproject.roadm
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.pathpainter
+[?1l>[?1000l[?2004lActivated org.onosproject.pathpainter
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91ma[0m[91mp[0m[94mapp[0m[Cactivate[Corg.onosproject.layout
+[?1l>[?1000l[?2004lActivated org.onosproject.layout
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:20:28[0m[12C
 [?1l>[?1000l[?2004lConnection to localhost closed.
 Finished 01_onos_apps.sh
 ------------------------
@@ -117,9 +139,9 @@ Running 02_update_controller_ip.sh ...
 ✅ ONOS CLI is available.
 Failed to add the host to the list of known hosts (/home/sdn/.ssh/known_hosts).
 Connection to localhost closed.
-ℹ️  Found controller IP: 172.23.0.2
-📝 Updating IP in file: ./topo/topo7_cn.py
-✅ Controller IP updated to 172.23.0.2 in ./topo/topo7_cn.py
+ℹ️  Found controller IP: 192.168.0.2
+📝 Updating IP in file: ./topo/topo-ft-cn-01.py
+✅ Controller IP updated to 192.168.0.2 in ./topo/topo-ft-cn-01.py
 Finished 02_update_controller_ip.sh
 ------------------------
 Running 03_topo_deps.sh ...
@@ -129,22 +151,22 @@ Running 03_topo_deps.sh ...
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 Get:1 https://download.docker.com/linux/ubuntu bionic InRelease [64.4 kB]
-Hit:2 http://archive.ubuntu.com/ubuntu bionic InRelease
-Get:3 http://security.ubuntu.com/ubuntu bionic-security InRelease [102 kB]
-Get:4 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages [46.4 kB]
+Get:2 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages [46.4 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu bionic InRelease
+Get:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [102 kB]
 Get:5 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [102 kB]
-Get:6 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1637 kB]
-Get:7 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [102 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [102 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [30.8 kB]
 Get:8 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2411 kB]
-Get:9 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1688 kB]
-Get:10 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [30.8 kB]
+Get:9 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [23.8 kB]
+Get:10 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1688 kB]
 Get:11 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1728 kB]
-Get:12 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [23.8 kB]
+Get:12 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1637 kB]
 Get:13 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [3373 kB]
 Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3786 kB]
 Get:15 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [64.0 kB]
 Get:16 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [20.6 kB]
-Fetched 15.2 MB in 3s (4460 kB/s)
+Fetched 15.2 MB in 3s (4602 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -152,7 +174,7 @@ Reading state information...
 [+] Building Docker images from .Dockerfile files...
 [+] Building image 'ubuntu22' from Dockerfile 'ubuntu22.Dockerfile'
 #1 [internal] load build definition from ubuntu22.Dockerfile
-#1 sha256:1fb28e34de7a4acbd29e3c3f5b4e96a561bcdd6d8cddcb84c7cebf02f2f3bb71
+#1 sha256:9d5173811b8df6259d1be1ed68867d686b65ca30369d48171972c69a112c562f
 #1 transferring dockerfile: 2.06kB done
 #1 DONE 0.0s
 
@@ -161,59 +183,59 @@ Reading state information...
 #2 DONE 0.0s
 
 #3 [internal] load .dockerignore
-#3 sha256:b59eff91e0df08c1f266ec00c220a9f864503243afc386bc1e627e2569f11822
+#3 sha256:cf04aa74ed4b04198a527c2d9d47d6c899887bf23fdfd65cf4d85866b5a11d77
 #3 transferring context: 2B done
 #3 DONE 0.0s
 
-#10 [ 1/10] FROM docker.io/library/ubuntu:22.04
-#10 sha256:531773a4172c14394035965ba9904dbac39e486e1c25667b3c1d57071c2f6a8c
-#10 DONE 0.0s
+#14 [ 1/10] FROM docker.io/library/ubuntu:22.04
+#14 sha256:531773a4172c14394035965ba9904dbac39e486e1c25667b3c1d57071c2f6a8c
+#14 DONE 0.0s
 
-#4 [internal] load build context
-#4 sha256:845552cd5480f0880ced1c57a4e26b4d4b783c59a192938a26403ab88e7c4c6e
-#4 transferring context: 3.65kB done
-#4 DONE 0.0s
+#8 [internal] load build context
+#8 sha256:fa8fc48e6be78de742b29f3b85d889c95c5083255ebefc58380dfbcf6e707792
+#8 transferring context: 3.81kB done
+#8 DONE 0.0s
 
-#7 [ 4/10] RUN wget https://github.com/prometheus/prometheus/releases/download/v2.48.0/prometheus-2.48.0.linux-amd64.tar.gz &&     tar xvf prometheus-2.48.0.linux-amd64.tar.gz &&     mv prometheus-2.48.0.linux-amd64/prometheus /usr/local/bin/prometheus &&     mv prometheus-2.48.0.linux-amd64/promtool /usr/local/bin/promtool &&     rm -rf prometheus-2.48.0.linux-amd64*
-#7 sha256:23f524b35540eb6ed91c39369fac1e314dc2e8252bbd10906aeeb04e0e5e3633
-#7 CACHED
-
-#12 [ 9/10] COPY exporter.py /exporter/exporter.py
-#12 sha256:0475d935edcd51b5a7244ca3dfb0bede6805427a2b36f506f33bc9d43b0e15d5
-#12 CACHED
-
-#8 [ 3/10] RUN pip3 install psutil prometheus_client
-#8 sha256:76af163fb8ad2c76f56f9e485d44f018f45717a0ba24c318418902ca4d47430f
-#8 CACHED
-
-#13 [ 8/10] COPY blackbox.yml /etc/prometheus/blackbox.yml
-#13 sha256:d4a5388d8ea84c93511b0fb9ad41f5c916c569d6df46d6105a5e9602fbe1cd0b
+#13 [ 2/10] RUN apt-get update && apt-get install -y --no-install-recommends     iputils-ping     net-tools     iproute2     dnsutils     curl     wget     tar     python3     python3-pip     && apt-get clean && rm -rf /var/lib/apt/lists/*
+#13 sha256:9d5fa19a7519b2642f14afc851f196a74ea4a6315964cfa224beb3cfb126ee64
 #13 CACHED
 
-#6 [ 5/10] RUN wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.24.0/blackbox_exporter-0.24.0.linux-amd64.tar.gz &&     tar xvf blackbox_exporter-0.24.0.linux-amd64.tar.gz &&     mv blackbox_exporter-0.24.0.linux-amd64/blackbox_exporter /usr/local/bin/blackbox_exporter &&     rm -rf blackbox_exporter-0.24.0.linux-amd64*
-#6 sha256:e45844caed5b7d22ac2a0a862cf3eb2f7a1ab2ff34275dc3a59ed151746c7159
+#7 [ 7/10] COPY prometheus-agent.yml /etc/prometheus/prometheus-agent.yml
+#7 sha256:4e20334d5791859454f933a4090df6d56d041405f71846c92db47a611599d6a7
+#7 CACHED
+
+#6 [ 8/10] COPY blackbox.yml /etc/prometheus/blackbox.yml
+#6 sha256:46a5dc43098321ad327daedd9b740d89b8f92eb3455ca808adef16fb5ca7f3fe
 #6 CACHED
 
-#5 [ 6/10] RUN mkdir -p /etc/prometheus /prometheus_data /exporter
-#5 sha256:10e3f8d045da2e04d121c79fd77ac8d40ed79bf68ebcfc24ffefe94bdbc0b578
-#5 CACHED
-
-#14 [ 7/10] COPY prometheus-agent.yml /etc/prometheus/prometheus-agent.yml
-#14 sha256:a2969ad927039da2f5fb450e1a942ab3f2b2003e510277bc85fcdaeccfa7164d
-#14 CACHED
-
-#9 [ 2/10] RUN apt-get update && apt-get install -y --no-install-recommends     iputils-ping     net-tools     iproute2     dnsutils     curl     wget     tar     python3     python3-pip     && apt-get clean && rm -rf /var/lib/apt/lists/*
-#9 sha256:9d5fa19a7519b2642f14afc851f196a74ea4a6315964cfa224beb3cfb126ee64
-#9 CACHED
-
-#11 [10/10] WORKDIR /exporter
-#11 sha256:ac461178b47511a065d089cab08e0a9623132ee7f1a53acf0d5988f31ace6518
+#11 [ 4/10] RUN wget https://github.com/prometheus/prometheus/releases/download/v2.48.0/prometheus-2.48.0.linux-amd64.tar.gz &&     tar xvf prometheus-2.48.0.linux-amd64.tar.gz &&     mv prometheus-2.48.0.linux-amd64/prometheus /usr/local/bin/prometheus &&     mv prometheus-2.48.0.linux-amd64/promtool /usr/local/bin/promtool &&     rm -rf prometheus-2.48.0.linux-amd64*
+#11 sha256:23f524b35540eb6ed91c39369fac1e314dc2e8252bbd10906aeeb04e0e5e3633
 #11 CACHED
 
+#9 [ 6/10] RUN mkdir -p /etc/prometheus /prometheus_data /exporter
+#9 sha256:10e3f8d045da2e04d121c79fd77ac8d40ed79bf68ebcfc24ffefe94bdbc0b578
+#9 CACHED
+
+#5 [ 9/10] COPY exporter.py /exporter/exporter.py
+#5 sha256:a61240fe3fd677275285c4f75504d635809830380073f6b34ef94365c0d71861
+#5 CACHED
+
+#12 [ 3/10] RUN pip3 install psutil prometheus_client
+#12 sha256:76af163fb8ad2c76f56f9e485d44f018f45717a0ba24c318418902ca4d47430f
+#12 CACHED
+
+#10 [ 5/10] RUN wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.24.0/blackbox_exporter-0.24.0.linux-amd64.tar.gz &&     tar xvf blackbox_exporter-0.24.0.linux-amd64.tar.gz &&     mv blackbox_exporter-0.24.0.linux-amd64/blackbox_exporter /usr/local/bin/blackbox_exporter &&     rm -rf blackbox_exporter-0.24.0.linux-amd64*
+#10 sha256:e45844caed5b7d22ac2a0a862cf3eb2f7a1ab2ff34275dc3a59ed151746c7159
+#10 CACHED
+
+#4 [10/10] WORKDIR /exporter
+#4 sha256:6ef370089ac8f6aecbb367bbfd52f29c3ae47694133669863d35b13941b85a20
+#4 CACHED
+
 #15 exporting to image
-#15 sha256:f9e7d231cc8a2f303bdc0510983b9203cad5ae3b5493180f129cac8c0091a2eb
+#15 sha256:0b123f73925b793502344d4056f0d6224df03cabce51863e85d5bf4ebf012854
 #15 exporting layers done
-#15 writing image sha256:e93815fe8f49d667139f86e8a70c355446f6a47ab77be99a26ca0948712e8a77 done
+#15 writing image sha256:f90f4f4f7e2ea07e5b2174b0a8bb7604330f122ccc9c07ae877dbf3c5fc9e373 done
 #15 naming to docker.io/library/ubuntu22:latest done
 #15 DONE 0.0s
 Finished 03_topo_deps.sh
@@ -238,48 +260,47 @@ Finished run_all.sh in 03_init_topo/
 ==========================
 Running run_all.sh in 04_init_hosts/
 --------------------------
-run_all.sh: line 4: script_run.log: Permission denied
-tee: script_run.log: Permission denied
 Running 01_init_dns.sh ...
-tee: script_run.log: Permission denied
 [*] Updating /etc/resolv.conf in container: mn.d1
 [*] Updating /etc/resolv.conf in container: mn.d2
 [*] Updating /etc/resolv.conf in container: mn.d3
 [*] Updating /etc/resolv.conf in container: mn.d4
 [*] Updating /etc/resolv.conf in container: mn.d5
-[✔] DNS updated in all containers from mn.d1 to mn.d5.
-tee: script_run.log: Permission denied
+[*] Updating /etc/resolv.conf in container: mn.d6
+[*] Updating /etc/resolv.conf in container: mn.d7
+[*] Updating /etc/resolv.conf in container: mn.d8
+[*] Updating /etc/resolv.conf in container: mn.d9
+[*] Updating /etc/resolv.conf in container: mn.d10
+[*] Updating /etc/resolv.conf in container: mn.d11
+[✔] DNS updated in all containers from mn.d1 to mn.d11.
 Finished 01_init_dns.sh
-tee: script_run.log: Permission denied
 ------------------------
-tee: script_run.log: Permission denied
 Running 02_init_servers_and_clients.sh ...
-tee: script_run.log: Permission denied
 === Start Processing Server Configs ===
 Copying and executing setup_server_http.sh in container mn.d1...
 [*] Installing Python3...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
-Get:3 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4410 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Get:5 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
-Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2953 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1246 kB]
-Get:9 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
-Get:10 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
 Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3264 kB]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4564 kB]
-Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3295 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4630 kB]
 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
-Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
-Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
-Fetched 38.6 MB in 7s (5660 kB/s)
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
+Fetched 38.7 MB in 6s (6042 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -300,10 +321,10 @@ Copying and executing setup_server_ssh.sh in container mn.d1...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -383,7 +404,7 @@ Get:41 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ncurses-term al
 Get:42 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-distro all 1.7.0-1 [17.0 kB]
 Get:43 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssh-import-id all 5.11-0ubuntu1 [10.1 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 11.2 MB in 12s (902 kB/s)
+Fetched 11.2 MB in 10s (1102 kB/s)
 Selecting previously unselected package libapparmor1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../0-libapparmor1_3.0.4-2ubuntu2.4_amd64.deb ...
@@ -578,11 +599,11 @@ Setting up openssh-server (1:8.9p1-3ubuntu0.13) ...
 
 Creating config file /etc/ssh/sshd_config with new version
 Creating SSH2 RSA key; this may take some time ...
-3072 SHA256:UD7OozBBxWlpbM3EAShLj94+2+rIEDvZUY2voyCunoM root@d1 (RSA)
+3072 SHA256:5aKCOU/NbUYd7I9m0KTF97ZCi57koXXQaTIytEc38Fg root@d1 (RSA)
 Creating SSH2 ECDSA key; this may take some time ...
-256 SHA256:1ox323+NFzEJ7O72wdAArGBmZdEKzE8AkFj5vRV9pkc root@d1 (ECDSA)
+256 SHA256:TGTOimEYsFdtd6+SHu/eWmRSDBcgb72ZPej3cpQef9s root@d1 (ECDSA)
 Creating SSH2 ED25519 key; this may take some time ...
-256 SHA256:+n/vCbCzxPW14N2LJMRHPX1AJ8xAaj2hVTMmRk8wTU4 root@d1 (ED25519)
+256 SHA256:ywBCVTKF7grWZr/nO5T2prURiFa7Lx4U8x5kUPMYEjI root@d1 (ED25519)
 invoke-rc.d: could not determine current runlevel
 invoke-rc.d: policy-rc.d denied execution of start.
 Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
@@ -594,42 +615,202 @@ Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [*] Configuring SSH server...
 [*] Starting SSH server...
 [✔] SSH server started. Log: /var/log/ssh_server.log
-Copying and executing setup_server_voip.sh in container mn.d2...
-[*] Installing iperf3...
+Copying and executing setup_server_mail.sh in container mn.d2...
+[*] Installing Postfix SMTP server...
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3295 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4630 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+Fetched 38.7 MB in 5s (7811 kB/s)
+Reading package lists...
 Reading package lists...
 Building dependency tree...
 Reading state information...
 The following additional packages will be installed:
-  libiperf0 libsctp1
+  cpio gsasl-common guile-3.0-libs libfribidi0 libgc1 libgsasl7 libidn12
+  libltdl7 libmailutils8 libmysqlclient21 libntlm0 libpq5 libpython3.10
+  mailutils-common mysql-common netbase ssl-cert
 Suggested packages:
-  lksctp-tools
+  libarchive1 mailutils-mh mailutils-doc procmail postfix-mysql postfix-pgsql
+  postfix-ldap postfix-pcre postfix-lmdb postfix-sqlite sasl2-bin
+  | dovecot-common libsasl2-modules | dovecot-common resolvconf postfix-cdb
+  postfix-mta-sts-resolver ufw postfix-doc
 The following NEW packages will be installed:
-  iperf3 libiperf0 libsctp1
-0 upgraded, 3 newly installed, 0 to remove and 11 not upgraded.
-Need to get 106 kB of archives.
-After this operation, 346 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+dfsg-1build1 [9370 B]
-Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
+  cpio gsasl-common guile-3.0-libs libfribidi0 libgc1 libgsasl7 libidn12
+  libltdl7 libmailutils8 libmysqlclient21 libntlm0 libpq5 libpython3.10
+  mailutils mailutils-common mysql-common netbase postfix ssl-cert
+0 upgraded, 19 newly installed, 0 to remove and 11 not upgraded.
+Need to get 13.8 MB of archives.
+After this operation, 78.0 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 netbase all 6.3 [12.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpio amd64 2.13+dfsg-7ubuntu0.1 [84.5 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 postfix amd64 3.6.4-1ubuntu1.3 [1248 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libfribidi0 amd64 1.0.8-2ubuntu3.1 [26.1 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 gsasl-common all 1.10.0-5 [59.8 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgc1 amd64 1:8.0.6-1.1build1 [96.8 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 guile-3.0-libs amd64 3.0.7-1 [7538 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libidn12 amd64 1.38-4ubuntu1 [60.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libntlm0 amd64 1.6-4 [73.7 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libgsasl7 amd64 1.10.0-5 [71.1 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 libltdl7 amd64 2.4.6-15build2 [39.6 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mailutils-common all 1:3.14-1 [382 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 mysql-common all 5.8+1.0.8 [7212 B]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmysqlclient21 amd64 8.0.42-0ubuntu0.22.04.1 [1308 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpq5 amd64 14.18-0ubuntu0.22.04.1 [152 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10 amd64 3.10.12-1~22.04.9 [1949 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmailutils8 amd64 1:3.14-1 [519 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/universe amd64 mailutils amd64 1:3.14-1 [130 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (90.4 kB/s)
-Selecting previously unselected package libsctp1:amd64.
+Fetched 13.8 MB in 6s (2293 kB/s)
+Selecting previously unselected package netbase.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
-Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
-Unpacking libsctp1:amd64 (1.0.19+dfsg-1build1) ...
-Selecting previously unselected package libiperf0:amd64.
-Preparing to unpack .../libiperf0_3.9-1+deb11u1build0.22.04.1_amd64.deb ...
-Unpacking libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
-Selecting previously unselected package iperf3.
-Preparing to unpack .../iperf3_3.9-1+deb11u1build0.22.04.1_amd64.deb ...
-Unpacking iperf3 (3.9-1+deb11u1build0.22.04.1) ...
-Setting up libsctp1:amd64 (1.0.19+dfsg-1build1) ...
-Setting up libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
-Setting up iperf3 (3.9-1+deb11u1build0.22.04.1) ...
+Preparing to unpack .../00-netbase_6.3_all.deb ...
+Unpacking netbase (6.3) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../01-ssl-cert_1.1.2_all.deb ...
+Unpacking ssl-cert (1.1.2) ...
+Selecting previously unselected package cpio.
+Preparing to unpack .../02-cpio_2.13+dfsg-7ubuntu0.1_amd64.deb ...
+Unpacking cpio (2.13+dfsg-7ubuntu0.1) ...
+Selecting previously unselected package postfix.
+Preparing to unpack .../03-postfix_3.6.4-1ubuntu1.3_amd64.deb ...
+Unpacking postfix (3.6.4-1ubuntu1.3) ...
+Selecting previously unselected package libfribidi0:amd64.
+Preparing to unpack .../04-libfribidi0_1.0.8-2ubuntu3.1_amd64.deb ...
+Unpacking libfribidi0:amd64 (1.0.8-2ubuntu3.1) ...
+Selecting previously unselected package gsasl-common.
+Preparing to unpack .../05-gsasl-common_1.10.0-5_all.deb ...
+Unpacking gsasl-common (1.10.0-5) ...
+Selecting previously unselected package libgc1:amd64.
+Preparing to unpack .../06-libgc1_1%3a8.0.6-1.1build1_amd64.deb ...
+Unpacking libgc1:amd64 (1:8.0.6-1.1build1) ...
+Selecting previously unselected package guile-3.0-libs:amd64.
+Preparing to unpack .../07-guile-3.0-libs_3.0.7-1_amd64.deb ...
+Unpacking guile-3.0-libs:amd64 (3.0.7-1) ...
+Selecting previously unselected package libidn12:amd64.
+Preparing to unpack .../08-libidn12_1.38-4ubuntu1_amd64.deb ...
+Unpacking libidn12:amd64 (1.38-4ubuntu1) ...
+Selecting previously unselected package libntlm0:amd64.
+Preparing to unpack .../09-libntlm0_1.6-4_amd64.deb ...
+Unpacking libntlm0:amd64 (1.6-4) ...
+Selecting previously unselected package libgsasl7:amd64.
+Preparing to unpack .../10-libgsasl7_1.10.0-5_amd64.deb ...
+Unpacking libgsasl7:amd64 (1.10.0-5) ...
+Selecting previously unselected package libltdl7:amd64.
+Preparing to unpack .../11-libltdl7_2.4.6-15build2_amd64.deb ...
+Unpacking libltdl7:amd64 (2.4.6-15build2) ...
+Selecting previously unselected package mailutils-common.
+Preparing to unpack .../12-mailutils-common_1%3a3.14-1_all.deb ...
+Unpacking mailutils-common (1:3.14-1) ...
+Selecting previously unselected package mysql-common.
+Preparing to unpack .../13-mysql-common_5.8+1.0.8_all.deb ...
+Unpacking mysql-common (5.8+1.0.8) ...
+Selecting previously unselected package libmysqlclient21:amd64.
+Preparing to unpack .../14-libmysqlclient21_8.0.42-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking libmysqlclient21:amd64 (8.0.42-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libpq5:amd64.
+Preparing to unpack .../15-libpq5_14.18-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking libpq5:amd64 (14.18-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libpython3.10:amd64.
+Preparing to unpack .../16-libpython3.10_3.10.12-1~22.04.9_amd64.deb ...
+Unpacking libpython3.10:amd64 (3.10.12-1~22.04.9) ...
+Selecting previously unselected package libmailutils8:amd64.
+Preparing to unpack .../17-libmailutils8_1%3a3.14-1_amd64.deb ...
+Unpacking libmailutils8:amd64 (1:3.14-1) ...
+Selecting previously unselected package mailutils.
+Preparing to unpack .../18-mailutils_1%3a3.14-1_amd64.deb ...
+Unpacking mailutils (1:3.14-1) ...
+Setting up cpio (2.13+dfsg-7ubuntu0.1) ...
+update-alternatives: using /bin/mt-gnu to provide /bin/mt (mt) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/mt.1.gz because associated file /usr/share/man/man1/mt-gnu.1.gz (of link group mt) doesn't exist
+Setting up libpython3.10:amd64 (3.10.12-1~22.04.9) ...
+Setting up mysql-common (5.8+1.0.8) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up libmysqlclient21:amd64 (8.0.42-0ubuntu0.22.04.1) ...
+Setting up libpq5:amd64 (14.18-0ubuntu0.22.04.1) ...
+Setting up libntlm0:amd64 (1.6-4) ...
+Setting up ssl-cert (1.1.2) ...
+Setting up libfribidi0:amd64 (1.0.8-2ubuntu3.1) ...
+Setting up libidn12:amd64 (1.38-4ubuntu1) ...
+Setting up mailutils-common (1:3.14-1) ...
+Setting up libgc1:amd64 (1:8.0.6-1.1build1) ...
+Setting up libltdl7:amd64 (2.4.6-15build2) ...
+Setting up netbase (6.3) ...
+Setting up gsasl-common (1.10.0-5) ...
+Setting up guile-3.0-libs:amd64 (3.0.7-1) ...
+Setting up libgsasl7:amd64 (1.10.0-5) ...
+Setting up libmailutils8:amd64 (1:3.14-1) ...
+Setting up postfix (3.6.4-1ubuntu1.3) ...
+Adding group `postfix' (GID 102) ...
+Done.
+Adding system user `postfix' (UID 101) ...
+Adding new user `postfix' (UID 101) with group `postfix' ...
+Not creating home directory `/var/spool/postfix'.
+Creating /etc/postfix/dynamicmaps.cf
+Adding group `postdrop' (GID 103) ...
+Done.
+setting myhostname: d2
+setting alias maps
+setting alias database
+mailname is not a fully qualified domain name.  Not changing /etc/mailname.
+setting destinations: $myhostname, d2, localhost.localdomain, , localhost
+setting relayhost: 
+setting mynetworks: 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+setting mailbox_size_limit: 0
+setting recipient_delimiter: +
+setting inet_interfaces: all
+setting inet_protocols: all
+/etc/aliases does not exist, creating it.
+WARNING: /etc/aliases exists, but does not have a root alias.
+
+Postfix (main.cf) is now set up with a default configuration.  If you need to 
+make changes, edit /etc/postfix/main.cf (and others) as needed.  To view 
+Postfix configuration values, see postconf(1).
+
+After modifying main.cf, be sure to run 'systemctl reload postfix'.
+
+Running newaliases
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of restart.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up mailutils (1:3.14-1) ...
+update-alternatives: using /usr/bin/frm.mailutils to provide /usr/bin/frm (frm) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/frm.1.gz because associated file /usr/share/man/man1/frm.mailutils.1.gz (of link group frm) doesn't exist
+update-alternatives: using /usr/bin/from.mailutils to provide /usr/bin/from (from) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/from.1.gz because associated file /usr/share/man/man1/from.mailutils.1.gz (of link group from) doesn't exist
+update-alternatives: using /usr/bin/messages.mailutils to provide /usr/bin/messages (messages) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/messages.1.gz because associated file /usr/share/man/man1/messages.mailutils.1.gz (of link group messages) doesn't exist
+update-alternatives: using /usr/bin/movemail.mailutils to provide /usr/bin/movemail (movemail) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/movemail.1.gz because associated file /usr/share/man/man1/movemail.mailutils.1.gz (of link group movemail) doesn't exist
+update-alternatives: using /usr/bin/readmsg.mailutils to provide /usr/bin/readmsg (readmsg) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/readmsg.1.gz because associated file /usr/share/man/man1/readmsg.mailutils.1.gz (of link group readmsg) doesn't exist
+update-alternatives: using /usr/bin/dotlock.mailutils to provide /usr/bin/dotlock (dotlock) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/dotlock.1.gz because associated file /usr/share/man/man1/dotlock.mailutils.1.gz (of link group dotlock) doesn't exist
+update-alternatives: using /usr/bin/mail.mailutils to provide /usr/bin/mailx (mailx) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/mailx.1.gz because associated file /usr/share/man/man1/mail.mailutils.1.gz (of link group mailx) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/mail.1.gz because associated file /usr/share/man/man1/mail.mailutils.1.gz (of link group mailx) doesn't exist
 Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
-[*] Starting iperf3 server on port 5061 (verbose mode)...
-[✔] VoIP simulation server running on UDP port 5061
-⚠️  Script not found: setup_server_penTest.sh, skipping for container mn.d3
+[*] Configuring Postfix to listen on all interfaces...
+[*] Restarting postfix service...
+   ...done.
+   ...done.
+[✔] SMTP server is running on port 25.
 Copying and executing setup_server_db.sh in container mn.d4...
 [*] Installing iperf3...
 Reading package lists...
@@ -648,7 +829,7 @@ Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+df
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (136 kB/s)
+Fetched 106 kB in 1s (133 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -687,7 +868,7 @@ Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libwrap0 amd64 7.6.q-31b
 Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
 Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vsftpd amd64 3.0.5-0ubuntu1.1 [123 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 357 kB in 1s (311 kB/s)
+Fetched 357 kB in 7s (54.4 kB/s)
 Selecting previously unselected package cron.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7270 files and directories currently installed.)
 Preparing to unpack .../0-cron_3.0pl1-137ubuntu3_amd64.deb ...
@@ -727,6 +908,42 @@ Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [*] Creating FTP user and directory...
 [*] Creating secure_chroot_dir...
 chown: cannot access '/home/ftpuser/ftp': No such file or directory
+Copying and executing setup_server_voip.sh in container mn.d5...
+[*] Installing iperf3...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libiperf0 libsctp1
+Suggested packages:
+  lksctp-tools
+The following NEW packages will be installed:
+  iperf3 libiperf0 libsctp1
+0 upgraded, 3 newly installed, 0 to remove and 11 not upgraded.
+Need to get 106 kB of archives.
+After this operation, 346 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+dfsg-1build1 [9370 B]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 106 kB in 1s (80.8 kB/s)
+Selecting previously unselected package libsctp1:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
+Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
+Unpacking libsctp1:amd64 (1.0.19+dfsg-1build1) ...
+Selecting previously unselected package libiperf0:amd64.
+Preparing to unpack .../libiperf0_3.9-1+deb11u1build0.22.04.1_amd64.deb ...
+Unpacking libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
+Selecting previously unselected package iperf3.
+Preparing to unpack .../iperf3_3.9-1+deb11u1build0.22.04.1_amd64.deb ...
+Unpacking iperf3 (3.9-1+deb11u1build0.22.04.1) ...
+Setting up libsctp1:amd64 (1.0.19+dfsg-1build1) ...
+Setting up libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
+Setting up iperf3 (3.9-1+deb11u1build0.22.04.1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[*] Starting iperf3 server on port 5061 (verbose mode)...
+[✔] VoIP simulation server running on UDP port 5061
+⚠️  Script not found: setup_server_video.sh, skipping for container mn.d6
 === End Processing Server Configs ===
 === Start Processing Client Configs ===
 Copying and executing setup_client_db.sh in container mn.d1...
@@ -747,7 +964,7 @@ Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+df
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (130 kB/s)
+Fetched 106 kB in 6s (16.7 kB/s)
 Selecting previously unselected package libsctp1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11931 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
@@ -781,7 +998,7 @@ Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 tnftp amd64 20210827-4bu
 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 ftp all 20210827-4build1 [4812 B]
 Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 lftp amd64 4.9.2-1build1 [720 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 843 kB in 1s (683 kB/s)
+Fetched 843 kB in 2s (514 kB/s)
 Selecting previously unselected package netbase.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11949 files and directories currently installed.)
 Preparing to unpack .../archives/netbase_6.3_all.deb ...
@@ -805,49 +1022,14 @@ Setting up ftp (20210827-4build1) ...
   ftp <server-ip>
   or
   lftp ftpuser@<server-ip>
-Copying and executing setup_client_voip.sh in container mn.d3...
-[*] Installing iperf3...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following additional packages will be installed:
-  libiperf0 libsctp1
-Suggested packages:
-  lksctp-tools
-The following NEW packages will be installed:
-  iperf3 libiperf0 libsctp1
-0 upgraded, 3 newly installed, 0 to remove and 11 not upgraded.
-Need to get 106 kB of archives.
-After this operation, 346 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+dfsg-1build1 [9370 B]
-Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
-debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 2s (70.0 kB/s)
-Selecting previously unselected package libsctp1:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
-Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
-Unpacking libsctp1:amd64 (1.0.19+dfsg-1build1) ...
-Selecting previously unselected package libiperf0:amd64.
-Preparing to unpack .../libiperf0_3.9-1+deb11u1build0.22.04.1_amd64.deb ...
-Unpacking libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
-Selecting previously unselected package iperf3.
-Preparing to unpack .../iperf3_3.9-1+deb11u1build0.22.04.1_amd64.deb ...
-Unpacking iperf3 (3.9-1+deb11u1build0.22.04.1) ...
-Setting up libsctp1:amd64 (1.0.19+dfsg-1build1) ...
-Setting up libiperf0:amd64 (3.9-1+deb11u1build0.22.04.1) ...
-Setting up iperf3 (3.9-1+deb11u1build0.22.04.1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
-[✔] VoIP simulation client ready. You can run iperf3 to simulate VoIP traffic.
-iperf3 -c <voip-server-ip> -u -b 512k -t 10 -p 5061 --tos 184
 Copying and executing setup_client_http.sh in container mn.d4...
 [*] Installing HTTP client tools (curl and wget)...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
-Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists...
 Building dependency tree...
@@ -868,8 +1050,8 @@ Copying and executing setup_client_ssh.sh in container mn.d4...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists...
@@ -889,10 +1071,10 @@ Suggested packages:
   keychain libpam-ssh monkeysphere ssh-askpass
 The following NEW packages will be installed:
   libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
-  libxext6 libxmuu1 openssh-client xauth
-0 upgraded, 11 newly installed, 0 to remove and 11 not upgraded.
-Need to get 1934 kB of archives.
-After this operation, 6902 kB of additional disk space will be used.
+  libxext6 libxmuu1 openssh-client sshpass xauth
+0 upgraded, 12 newly installed, 0 to remove and 11 not upgraded.
+Need to get 1945 kB of archives.
+After this operation, 6938 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcbor0.8 amd64 0.8.0-2ubuntu1 [24.6 kB]
 Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfido2-1 amd64 1.10.0-1 [82.8 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxau6 amd64 1:1.0.9-1build5 [7634 B]
@@ -904,8 +1086,9 @@ Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxext6 amd64 2:1.3.4-1
 Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxmuu1 amd64 2:1.1.3-3 [10.2 kB]
 Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client amd64 1:8.9p1-3ubuntu0.13 [903 kB]
 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 1934 kB in 2s (1066 kB/s)
+Fetched 1945 kB in 2s (1180 kB/s)
 Selecting previously unselected package libcbor0.8:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7413 files and directories currently installed.)
 Preparing to unpack .../00-libcbor0.8_0.8.0-2ubuntu1_amd64.deb ...
@@ -940,10 +1123,14 @@ Unpacking openssh-client (1:8.9p1-3ubuntu0.13) ...
 Selecting previously unselected package xauth.
 Preparing to unpack .../10-xauth_1%3a1.1-1build2_amd64.deb ...
 Unpacking xauth (1:1.1-1build2) ...
+Selecting previously unselected package sshpass.
+Preparing to unpack .../11-sshpass_1.09-1_amd64.deb ...
+Unpacking sshpass (1.09-1) ...
 Setting up libxau6:amd64 (1:1.0.9-1build5) ...
 Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
 Setting up libxcb1:amd64 (1.14-3ubuntu3) ...
 Setting up libcbor0.8:amd64 (0.8.0-2ubuntu1) ...
+Setting up sshpass (1.09-1) ...
 Setting up libx11-data (2:1.7.5-1ubuntu0.3) ...
 Setting up libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
 Setting up libfido2-1:amd64 (1.10.0-1) ...
@@ -959,30 +1146,159 @@ Setting up libxext6:amd64 (2:1.3.4-1build1) ...
 Setting up xauth (1:1.1-1build2) ...
 Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [✔] SSH client is ready (you can use 'ssh user@host').
-Copying and executing setup_client_http.sh in container mn.d5...
+Copying and executing setup_client_mail.sh in container mn.d5...
+[*] Installing swaks SMTP client tool...
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl netbase perl perl-modules-5.34
+  perl-openssl-defaults
+Suggested packages:
+  gdbm-l10n perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+  make libtap-harness-archive-perl libauthen-ntlm-perl libauthen-sasl-perl
+The following NEW packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl netbase perl perl-modules-5.34
+  perl-openssl-defaults swaks
+0 upgraded, 19 newly installed, 0 to remove and 11 not upgraded.
+Need to get 9093 kB of archives.
+After this operation, 51.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.4 [2977 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.4 [4820 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.4 [232 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 netbase all 6.3 [12.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-bubblebabble-perl all 0.02-2.1 [7160 B]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-hmac-perl all 1.04+dfsg-1 [10.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libidn12 amd64 1.38-4ubuntu1 [60.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsocket6-perl amd64 0.29-1build4 [19.7 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 libio-socket-inet6-perl all 2.73-1 [14.7 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnet-ip-perl all 1.26-2ubuntu0.22.04.1 [28.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-perl all 1.33-1 [350 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-sec-perl amd64 1.19-1build2 [44.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-libidn-perl amd64 0.12.ds-3build6 [18.4 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy/main amd64 perl-openssl-defaults amd64 5build2 [7542 B]
+Get:17 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-ssleay-perl amd64 1.92-1build2 [327 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 libperl4-corelibs-perl all 0.004-2 [37.4 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/universe amd64 swaks all 20201014.0-2 [85.9 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 9093 kB in 3s (2951 kB/s)
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7270 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.4_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../03-libperl5.34_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking perl (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../05-netbase_6.3_all.deb ...
+Unpacking netbase (6.3) ...
+Selecting previously unselected package libdigest-bubblebabble-perl.
+Preparing to unpack .../06-libdigest-bubblebabble-perl_0.02-2.1_all.deb ...
+Unpacking libdigest-bubblebabble-perl (0.02-2.1) ...
+Selecting previously unselected package libdigest-hmac-perl.
+Preparing to unpack .../07-libdigest-hmac-perl_1.04+dfsg-1_all.deb ...
+Unpacking libdigest-hmac-perl (1.04+dfsg-1) ...
+Selecting previously unselected package libidn12:amd64.
+Preparing to unpack .../08-libidn12_1.38-4ubuntu1_amd64.deb ...
+Unpacking libidn12:amd64 (1.38-4ubuntu1) ...
+Selecting previously unselected package libsocket6-perl.
+Preparing to unpack .../09-libsocket6-perl_0.29-1build4_amd64.deb ...
+Unpacking libsocket6-perl (0.29-1build4) ...
+Selecting previously unselected package libio-socket-inet6-perl.
+Preparing to unpack .../10-libio-socket-inet6-perl_2.73-1_all.deb ...
+Unpacking libio-socket-inet6-perl (2.73-1) ...
+Selecting previously unselected package libnet-ip-perl.
+Preparing to unpack .../11-libnet-ip-perl_1.26-2ubuntu0.22.04.1_all.deb ...
+Unpacking libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Selecting previously unselected package libnet-dns-perl.
+Preparing to unpack .../12-libnet-dns-perl_1.33-1_all.deb ...
+Unpacking libnet-dns-perl (1.33-1) ...
+Selecting previously unselected package libnet-dns-sec-perl.
+Preparing to unpack .../13-libnet-dns-sec-perl_1.19-1build2_amd64.deb ...
+Unpacking libnet-dns-sec-perl (1.19-1build2) ...
+Selecting previously unselected package libnet-libidn-perl.
+Preparing to unpack .../14-libnet-libidn-perl_0.12.ds-3build6_amd64.deb ...
+Unpacking libnet-libidn-perl (0.12.ds-3build6) ...
+Selecting previously unselected package perl-openssl-defaults:amd64.
+Preparing to unpack .../15-perl-openssl-defaults_5build2_amd64.deb ...
+Unpacking perl-openssl-defaults:amd64 (5build2) ...
+Selecting previously unselected package libnet-ssleay-perl:amd64.
+Preparing to unpack .../16-libnet-ssleay-perl_1.92-1build2_amd64.deb ...
+Unpacking libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Selecting previously unselected package libperl4-corelibs-perl.
+Preparing to unpack .../17-libperl4-corelibs-perl_0.004-2_all.deb ...
+Unpacking libperl4-corelibs-perl (0.004-2) ...
+Selecting previously unselected package swaks.
+Preparing to unpack .../18-swaks_20201014.0-2_all.deb ...
+Unpacking swaks (20201014.0-2) ...
+Setting up perl-openssl-defaults:amd64 (5build2) ...
+Setting up perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Setting up libidn12:amd64 (1.38-4ubuntu1) ...
+Setting up netbase (6.3) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Setting up perl (5.34.0-3ubuntu1.4) ...
+Setting up libdigest-hmac-perl (1.04+dfsg-1) ...
+Setting up libsocket6-perl (0.29-1build4) ...
+Setting up libnet-libidn-perl (0.12.ds-3build6) ...
+Setting up swaks (20201014.0-2) ...
+Setting up libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Setting up libdigest-bubblebabble-perl (0.02-2.1) ...
+Setting up libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Setting up libperl4-corelibs-perl (0.004-2) ...
+Setting up libnet-dns-perl (1.33-1) ...
+Setting up libio-socket-inet6-perl (2.73-1) ...
+Setting up libnet-dns-sec-perl (1.19-1build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[✔] SMTP client ready. Use swaks to send emails, e.g.:
+swaks --to test@example.com --server <smtp-server-ip>
+Copying and executing setup_client_http.sh in container mn.d7...
 [*] Installing HTTP client tools (curl and wget)...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
-Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
-Get:6 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4410 kB]
-Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2953 kB]
-Get:10 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3264 kB]
-Get:13 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1246 kB]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
-Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4564 kB]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
-Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
-Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
-Fetched 38.6 MB in 5s (7708 kB/s)
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4630 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3295 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
+Fetched 38.7 MB in 6s (6271 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -997,13 +1313,13 @@ curl is already the newest version (7.81.0-1ubuntu1.20).
 wget is already the newest version (1.21.2-2ubuntu1.1).
 0 upgraded, 0 newly installed, 0 to remove and 11 not upgraded.
 [✔] HTTP clients are ready (you can use 'curl http://host:port' or 'wget http://host:port').
-Copying and executing setup_client_ssh.sh in container mn.d5...
+Copying and executing setup_client_ssh.sh in container mn.d7...
 [*] Installing OpenSSH client...
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists...
@@ -1023,10 +1339,10 @@ Suggested packages:
   keychain libpam-ssh monkeysphere ssh-askpass
 The following NEW packages will be installed:
   libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
-  libxext6 libxmuu1 openssh-client xauth
-0 upgraded, 11 newly installed, 0 to remove and 11 not upgraded.
-Need to get 1934 kB of archives.
-After this operation, 6902 kB of additional disk space will be used.
+  libxext6 libxmuu1 openssh-client sshpass xauth
+0 upgraded, 12 newly installed, 0 to remove and 11 not upgraded.
+Need to get 1945 kB of archives.
+After this operation, 6938 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcbor0.8 amd64 0.8.0-2ubuntu1 [24.6 kB]
 Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfido2-1 amd64 1.10.0-1 [82.8 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxau6 amd64 1:1.0.9-1build5 [7634 B]
@@ -1038,8 +1354,9 @@ Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxext6 amd64 2:1.3.4-1
 Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxmuu1 amd64 2:1.1.3-3 [10.2 kB]
 Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client amd64 1:8.9p1-3ubuntu0.13 [903 kB]
 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 1934 kB in 2s (981 kB/s)
+Fetched 1945 kB in 1s (1307 kB/s)
 Selecting previously unselected package libcbor0.8:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
 Preparing to unpack .../00-libcbor0.8_0.8.0-2ubuntu1_amd64.deb ...
@@ -1074,10 +1391,14 @@ Unpacking openssh-client (1:8.9p1-3ubuntu0.13) ...
 Selecting previously unselected package xauth.
 Preparing to unpack .../10-xauth_1%3a1.1-1build2_amd64.deb ...
 Unpacking xauth (1:1.1-1build2) ...
+Selecting previously unselected package sshpass.
+Preparing to unpack .../11-sshpass_1.09-1_amd64.deb ...
+Unpacking sshpass (1.09-1) ...
 Setting up libxau6:amd64 (1:1.0.9-1build5) ...
 Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
 Setting up libxcb1:amd64 (1.14-3ubuntu3) ...
 Setting up libcbor0.8:amd64 (0.8.0-2ubuntu1) ...
+Setting up sshpass (1.09-1) ...
 Setting up libx11-data (2:1.7.5-1ubuntu0.3) ...
 Setting up libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
 Setting up libfido2-1:amd64 (1.10.0-1) ...
@@ -1093,7 +1414,419 @@ Setting up libxext6:amd64 (2:1.3.4-1build1) ...
 Setting up xauth (1:1.1-1build2) ...
 Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 [✔] SSH client is ready (you can use 'ssh user@host').
-Copying and executing setup_client_ftp.sh in container mn.d5...
+Copying and executing setup_client_mail.sh in container mn.d7...
+[*] Installing swaks SMTP client tool...
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl netbase perl perl-modules-5.34
+  perl-openssl-defaults
+Suggested packages:
+  gdbm-l10n perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+  make libtap-harness-archive-perl libauthen-ntlm-perl libauthen-sasl-perl
+The following NEW packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl netbase perl perl-modules-5.34
+  perl-openssl-defaults swaks
+0 upgraded, 19 newly installed, 0 to remove and 11 not upgraded.
+Need to get 9093 kB of archives.
+After this operation, 51.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.4 [2977 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.4 [4820 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.4 [232 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 netbase all 6.3 [12.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-bubblebabble-perl all 0.02-2.1 [7160 B]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-hmac-perl all 1.04+dfsg-1 [10.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libidn12 amd64 1.38-4ubuntu1 [60.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsocket6-perl amd64 0.29-1build4 [19.7 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 libio-socket-inet6-perl all 2.73-1 [14.7 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnet-ip-perl all 1.26-2ubuntu0.22.04.1 [28.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-perl all 1.33-1 [350 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-sec-perl amd64 1.19-1build2 [44.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-libidn-perl amd64 0.12.ds-3build6 [18.4 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy/main amd64 perl-openssl-defaults amd64 5build2 [7542 B]
+Get:17 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-ssleay-perl amd64 1.92-1build2 [327 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 libperl4-corelibs-perl all 0.004-2 [37.4 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/universe amd64 swaks all 20201014.0-2 [85.9 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 9093 kB in 7s (1264 kB/s)
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7614 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.4_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../03-libperl5.34_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking perl (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../05-netbase_6.3_all.deb ...
+Unpacking netbase (6.3) ...
+Selecting previously unselected package libdigest-bubblebabble-perl.
+Preparing to unpack .../06-libdigest-bubblebabble-perl_0.02-2.1_all.deb ...
+Unpacking libdigest-bubblebabble-perl (0.02-2.1) ...
+Selecting previously unselected package libdigest-hmac-perl.
+Preparing to unpack .../07-libdigest-hmac-perl_1.04+dfsg-1_all.deb ...
+Unpacking libdigest-hmac-perl (1.04+dfsg-1) ...
+Selecting previously unselected package libidn12:amd64.
+Preparing to unpack .../08-libidn12_1.38-4ubuntu1_amd64.deb ...
+Unpacking libidn12:amd64 (1.38-4ubuntu1) ...
+Selecting previously unselected package libsocket6-perl.
+Preparing to unpack .../09-libsocket6-perl_0.29-1build4_amd64.deb ...
+Unpacking libsocket6-perl (0.29-1build4) ...
+Selecting previously unselected package libio-socket-inet6-perl.
+Preparing to unpack .../10-libio-socket-inet6-perl_2.73-1_all.deb ...
+Unpacking libio-socket-inet6-perl (2.73-1) ...
+Selecting previously unselected package libnet-ip-perl.
+Preparing to unpack .../11-libnet-ip-perl_1.26-2ubuntu0.22.04.1_all.deb ...
+Unpacking libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Selecting previously unselected package libnet-dns-perl.
+Preparing to unpack .../12-libnet-dns-perl_1.33-1_all.deb ...
+Unpacking libnet-dns-perl (1.33-1) ...
+Selecting previously unselected package libnet-dns-sec-perl.
+Preparing to unpack .../13-libnet-dns-sec-perl_1.19-1build2_amd64.deb ...
+Unpacking libnet-dns-sec-perl (1.19-1build2) ...
+Selecting previously unselected package libnet-libidn-perl.
+Preparing to unpack .../14-libnet-libidn-perl_0.12.ds-3build6_amd64.deb ...
+Unpacking libnet-libidn-perl (0.12.ds-3build6) ...
+Selecting previously unselected package perl-openssl-defaults:amd64.
+Preparing to unpack .../15-perl-openssl-defaults_5build2_amd64.deb ...
+Unpacking perl-openssl-defaults:amd64 (5build2) ...
+Selecting previously unselected package libnet-ssleay-perl:amd64.
+Preparing to unpack .../16-libnet-ssleay-perl_1.92-1build2_amd64.deb ...
+Unpacking libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Selecting previously unselected package libperl4-corelibs-perl.
+Preparing to unpack .../17-libperl4-corelibs-perl_0.004-2_all.deb ...
+Unpacking libperl4-corelibs-perl (0.004-2) ...
+Selecting previously unselected package swaks.
+Preparing to unpack .../18-swaks_20201014.0-2_all.deb ...
+Unpacking swaks (20201014.0-2) ...
+Setting up perl-openssl-defaults:amd64 (5build2) ...
+Setting up perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Setting up libidn12:amd64 (1.38-4ubuntu1) ...
+Setting up netbase (6.3) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Setting up perl (5.34.0-3ubuntu1.4) ...
+Setting up libdigest-hmac-perl (1.04+dfsg-1) ...
+Setting up libsocket6-perl (0.29-1build4) ...
+Setting up libnet-libidn-perl (0.12.ds-3build6) ...
+Setting up swaks (20201014.0-2) ...
+Setting up libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Setting up libdigest-bubblebabble-perl (0.02-2.1) ...
+Setting up libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Setting up libperl4-corelibs-perl (0.004-2) ...
+Setting up libnet-dns-perl (1.33-1) ...
+Setting up libio-socket-inet6-perl (2.73-1) ...
+Setting up libnet-dns-sec-perl (1.19-1build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[✔] SMTP client ready. Use swaks to send emails, e.g.:
+swaks --to test@example.com --server <smtp-server-ip>
+Copying and executing setup_client_mail.sh in container mn.d8...
+[*] Installing swaks SMTP client tool...
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3295 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4630 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
+Fetched 38.7 MB in 16s (2401 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl netbase perl perl-modules-5.34
+  perl-openssl-defaults
+Suggested packages:
+  gdbm-l10n perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+  make libtap-harness-archive-perl libauthen-ntlm-perl libauthen-sasl-perl
+The following NEW packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl netbase perl perl-modules-5.34
+  perl-openssl-defaults swaks
+0 upgraded, 19 newly installed, 0 to remove and 11 not upgraded.
+Need to get 9093 kB of archives.
+After this operation, 51.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.4 [2977 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.4 [4820 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.4 [232 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 netbase all 6.3 [12.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-bubblebabble-perl all 0.02-2.1 [7160 B]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-hmac-perl all 1.04+dfsg-1 [10.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libidn12 amd64 1.38-4ubuntu1 [60.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsocket6-perl amd64 0.29-1build4 [19.7 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 libio-socket-inet6-perl all 2.73-1 [14.7 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnet-ip-perl all 1.26-2ubuntu0.22.04.1 [28.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-perl all 1.33-1 [350 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-sec-perl amd64 1.19-1build2 [44.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-libidn-perl amd64 0.12.ds-3build6 [18.4 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy/main amd64 perl-openssl-defaults amd64 5build2 [7542 B]
+Get:17 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-ssleay-perl amd64 1.92-1build2 [327 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 libperl4-corelibs-perl all 0.004-2 [37.4 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/universe amd64 swaks all 20201014.0-2 [85.9 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 9093 kB in 5s (1913 kB/s)
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.4_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../03-libperl5.34_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking perl (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../05-netbase_6.3_all.deb ...
+Unpacking netbase (6.3) ...
+Selecting previously unselected package libdigest-bubblebabble-perl.
+Preparing to unpack .../06-libdigest-bubblebabble-perl_0.02-2.1_all.deb ...
+Unpacking libdigest-bubblebabble-perl (0.02-2.1) ...
+Selecting previously unselected package libdigest-hmac-perl.
+Preparing to unpack .../07-libdigest-hmac-perl_1.04+dfsg-1_all.deb ...
+Unpacking libdigest-hmac-perl (1.04+dfsg-1) ...
+Selecting previously unselected package libidn12:amd64.
+Preparing to unpack .../08-libidn12_1.38-4ubuntu1_amd64.deb ...
+Unpacking libidn12:amd64 (1.38-4ubuntu1) ...
+Selecting previously unselected package libsocket6-perl.
+Preparing to unpack .../09-libsocket6-perl_0.29-1build4_amd64.deb ...
+Unpacking libsocket6-perl (0.29-1build4) ...
+Selecting previously unselected package libio-socket-inet6-perl.
+Preparing to unpack .../10-libio-socket-inet6-perl_2.73-1_all.deb ...
+Unpacking libio-socket-inet6-perl (2.73-1) ...
+Selecting previously unselected package libnet-ip-perl.
+Preparing to unpack .../11-libnet-ip-perl_1.26-2ubuntu0.22.04.1_all.deb ...
+Unpacking libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Selecting previously unselected package libnet-dns-perl.
+Preparing to unpack .../12-libnet-dns-perl_1.33-1_all.deb ...
+Unpacking libnet-dns-perl (1.33-1) ...
+Selecting previously unselected package libnet-dns-sec-perl.
+Preparing to unpack .../13-libnet-dns-sec-perl_1.19-1build2_amd64.deb ...
+Unpacking libnet-dns-sec-perl (1.19-1build2) ...
+Selecting previously unselected package libnet-libidn-perl.
+Preparing to unpack .../14-libnet-libidn-perl_0.12.ds-3build6_amd64.deb ...
+Unpacking libnet-libidn-perl (0.12.ds-3build6) ...
+Selecting previously unselected package perl-openssl-defaults:amd64.
+Preparing to unpack .../15-perl-openssl-defaults_5build2_amd64.deb ...
+Unpacking perl-openssl-defaults:amd64 (5build2) ...
+Selecting previously unselected package libnet-ssleay-perl:amd64.
+Preparing to unpack .../16-libnet-ssleay-perl_1.92-1build2_amd64.deb ...
+Unpacking libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Selecting previously unselected package libperl4-corelibs-perl.
+Preparing to unpack .../17-libperl4-corelibs-perl_0.004-2_all.deb ...
+Unpacking libperl4-corelibs-perl (0.004-2) ...
+Selecting previously unselected package swaks.
+Preparing to unpack .../18-swaks_20201014.0-2_all.deb ...
+Unpacking swaks (20201014.0-2) ...
+Setting up perl-openssl-defaults:amd64 (5build2) ...
+Setting up perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Setting up libidn12:amd64 (1.38-4ubuntu1) ...
+Setting up netbase (6.3) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Setting up perl (5.34.0-3ubuntu1.4) ...
+Setting up libdigest-hmac-perl (1.04+dfsg-1) ...
+Setting up libsocket6-perl (0.29-1build4) ...
+Setting up libnet-libidn-perl (0.12.ds-3build6) ...
+Setting up swaks (20201014.0-2) ...
+Setting up libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Setting up libdigest-bubblebabble-perl (0.02-2.1) ...
+Setting up libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Setting up libperl4-corelibs-perl (0.004-2) ...
+Setting up libnet-dns-perl (1.33-1) ...
+Setting up libio-socket-inet6-perl (2.73-1) ...
+Setting up libnet-dns-sec-perl (1.19-1build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[✔] SMTP client ready. Use swaks to send emails, e.g.:
+swaks --to test@example.com --server <smtp-server-ip>
+Copying and executing setup_client_http.sh in container mn.d9...
+[*] Installing HTTP client tools (curl and wget)...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3295 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4630 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+Fetched 38.7 MB in 9s (4090 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.81.0-1ubuntu1.20).
+wget is already the newest version (1.21.2-2ubuntu1.1).
+0 upgraded, 0 newly installed, 0 to remove and 11 not upgraded.
+[✔] HTTP clients are ready (you can use 'curl http://host:port' or 'wget http://host:port').
+Copying and executing setup_client_ssh.sh in container mn.d9...
+[*] Installing OpenSSH client...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
+  libxext6 libxmuu1 xauth
+Suggested packages:
+  keychain libpam-ssh monkeysphere ssh-askpass
+The following NEW packages will be installed:
+  libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
+  libxext6 libxmuu1 openssh-client sshpass xauth
+0 upgraded, 12 newly installed, 0 to remove and 11 not upgraded.
+Need to get 1945 kB of archives.
+After this operation, 6938 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcbor0.8 amd64 0.8.0-2ubuntu1 [24.6 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfido2-1 amd64 1.10.0-1 [82.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxau6 amd64 1:1.0.9-1build5 [7634 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu5 [10.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb1 amd64 1.14-3ubuntu3 [49.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-data all 2:1.7.5-1ubuntu0.3 [120 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-6 amd64 2:1.7.5-1ubuntu0.3 [667 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxext6 amd64 2:1.3.4-1build1 [31.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxmuu1 amd64 2:1.1.3-3 [10.2 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client amd64 1:8.9p1-3ubuntu0.13 [903 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 1945 kB in 1s (1306 kB/s)
+Selecting previously unselected package libcbor0.8:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
+Preparing to unpack .../00-libcbor0.8_0.8.0-2ubuntu1_amd64.deb ...
+Unpacking libcbor0.8:amd64 (0.8.0-2ubuntu1) ...
+Selecting previously unselected package libfido2-1:amd64.
+Preparing to unpack .../01-libfido2-1_1.10.0-1_amd64.deb ...
+Unpacking libfido2-1:amd64 (1.10.0-1) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../02-libxau6_1%3a1.0.9-1build5_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1build5) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../03-libxdmcp6_1%3a1.1.3-0ubuntu5_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../04-libxcb1_1.14-3ubuntu3_amd64.deb ...
+Unpacking libxcb1:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../05-libx11-data_2%3a1.7.5-1ubuntu0.3_all.deb ...
+Unpacking libx11-data (2:1.7.5-1ubuntu0.3) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../06-libx11-6_2%3a1.7.5-1ubuntu0.3_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../07-libxext6_2%3a1.3.4-1build1_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1build1) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../08-libxmuu1_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package openssh-client.
+Preparing to unpack .../09-openssh-client_1%3a8.9p1-3ubuntu0.13_amd64.deb ...
+Unpacking openssh-client (1:8.9p1-3ubuntu0.13) ...
+Selecting previously unselected package xauth.
+Preparing to unpack .../10-xauth_1%3a1.1-1build2_amd64.deb ...
+Unpacking xauth (1:1.1-1build2) ...
+Selecting previously unselected package sshpass.
+Preparing to unpack .../11-sshpass_1.09-1_amd64.deb ...
+Unpacking sshpass (1.09-1) ...
+Setting up libxau6:amd64 (1:1.0.9-1build5) ...
+Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Setting up libxcb1:amd64 (1.14-3ubuntu3) ...
+Setting up libcbor0.8:amd64 (0.8.0-2ubuntu1) ...
+Setting up sshpass (1.09-1) ...
+Setting up libx11-data (2:1.7.5-1ubuntu0.3) ...
+Setting up libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
+Setting up libfido2-1:amd64 (1.10.0-1) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3) ...
+Setting up openssh-client (1:8.9p1-3ubuntu0.13) ...
+update-alternatives: using /usr/bin/ssh to provide /usr/bin/rsh (rsh) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/rsh.1.gz because associated file /usr/share/man/man1/ssh.1.gz (of link group rsh) doesn't exist
+update-alternatives: using /usr/bin/slogin to provide /usr/bin/rlogin (rlogin) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/rlogin.1.gz because associated file /usr/share/man/man1/slogin.1.gz (of link group rlogin) doesn't exist
+update-alternatives: using /usr/bin/scp to provide /usr/bin/rcp (rcp) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/rcp.1.gz because associated file /usr/share/man/man1/scp.1.gz (of link group rcp) doesn't exist
+Setting up libxext6:amd64 (2:1.3.4-1build1) ...
+Setting up xauth (1:1.1-1build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[✔] SSH client is ready (you can use 'ssh user@host').
+Copying and executing setup_client_ftp.sh in container mn.d9...
 [*] Installing FTP clients...
 Reading package lists...
 Building dependency tree...
@@ -1110,9 +1843,9 @@ Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 tnftp amd64 20210827-4bu
 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 ftp all 20210827-4build1 [4812 B]
 Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 lftp amd64 4.9.2-1build1 [720 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 843 kB in 1s (573 kB/s)
+Fetched 843 kB in 2s (437 kB/s)
 Selecting previously unselected package netbase.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7609 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7614 files and directories currently installed.)
 Preparing to unpack .../archives/netbase_6.3_all.deb ...
 Unpacking netbase (6.3) ...
 Selecting previously unselected package tnftp.
@@ -1134,7 +1867,703 @@ Setting up ftp (20210827-4build1) ...
   ftp <server-ip>
   or
   lftp ftpuser@<server-ip>
-Copying and executing setup_client_voip.sh in container mn.d5...
+Copying and executing setup_client_mail.sh in container mn.d9...
+[*] Installing swaks SMTP client tool...
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl perl perl-modules-5.34 perl-openssl-defaults
+Suggested packages:
+  gdbm-l10n perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+  make libtap-harness-archive-perl libauthen-ntlm-perl libauthen-sasl-perl
+The following NEW packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl perl perl-modules-5.34 perl-openssl-defaults
+  swaks
+0 upgraded, 18 newly installed, 0 to remove and 11 not upgraded.
+Need to get 9081 kB of archives.
+After this operation, 51.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.4 [2977 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.4 [4820 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.4 [232 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-bubblebabble-perl all 0.02-2.1 [7160 B]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-hmac-perl all 1.04+dfsg-1 [10.8 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libidn12 amd64 1.38-4ubuntu1 [60.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsocket6-perl amd64 0.29-1build4 [19.7 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 libio-socket-inet6-perl all 2.73-1 [14.7 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnet-ip-perl all 1.26-2ubuntu0.22.04.1 [28.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-perl all 1.33-1 [350 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-sec-perl amd64 1.19-1build2 [44.5 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-libidn-perl amd64 0.12.ds-3build6 [18.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 perl-openssl-defaults amd64 5build2 [7542 B]
+Get:16 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-ssleay-perl amd64 1.92-1build2 [327 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy/main amd64 libperl4-corelibs-perl all 0.004-2 [37.4 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/universe amd64 swaks all 20201014.0-2 [85.9 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 9081 kB in 5s (1880 kB/s)
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7659 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.4_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../03-libperl5.34_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking perl (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package libdigest-bubblebabble-perl.
+Preparing to unpack .../05-libdigest-bubblebabble-perl_0.02-2.1_all.deb ...
+Unpacking libdigest-bubblebabble-perl (0.02-2.1) ...
+Selecting previously unselected package libdigest-hmac-perl.
+Preparing to unpack .../06-libdigest-hmac-perl_1.04+dfsg-1_all.deb ...
+Unpacking libdigest-hmac-perl (1.04+dfsg-1) ...
+Selecting previously unselected package libidn12:amd64.
+Preparing to unpack .../07-libidn12_1.38-4ubuntu1_amd64.deb ...
+Unpacking libidn12:amd64 (1.38-4ubuntu1) ...
+Selecting previously unselected package libsocket6-perl.
+Preparing to unpack .../08-libsocket6-perl_0.29-1build4_amd64.deb ...
+Unpacking libsocket6-perl (0.29-1build4) ...
+Selecting previously unselected package libio-socket-inet6-perl.
+Preparing to unpack .../09-libio-socket-inet6-perl_2.73-1_all.deb ...
+Unpacking libio-socket-inet6-perl (2.73-1) ...
+Selecting previously unselected package libnet-ip-perl.
+Preparing to unpack .../10-libnet-ip-perl_1.26-2ubuntu0.22.04.1_all.deb ...
+Unpacking libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Selecting previously unselected package libnet-dns-perl.
+Preparing to unpack .../11-libnet-dns-perl_1.33-1_all.deb ...
+Unpacking libnet-dns-perl (1.33-1) ...
+Selecting previously unselected package libnet-dns-sec-perl.
+Preparing to unpack .../12-libnet-dns-sec-perl_1.19-1build2_amd64.deb ...
+Unpacking libnet-dns-sec-perl (1.19-1build2) ...
+Selecting previously unselected package libnet-libidn-perl.
+Preparing to unpack .../13-libnet-libidn-perl_0.12.ds-3build6_amd64.deb ...
+Unpacking libnet-libidn-perl (0.12.ds-3build6) ...
+Selecting previously unselected package perl-openssl-defaults:amd64.
+Preparing to unpack .../14-perl-openssl-defaults_5build2_amd64.deb ...
+Unpacking perl-openssl-defaults:amd64 (5build2) ...
+Selecting previously unselected package libnet-ssleay-perl:amd64.
+Preparing to unpack .../15-libnet-ssleay-perl_1.92-1build2_amd64.deb ...
+Unpacking libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Selecting previously unselected package libperl4-corelibs-perl.
+Preparing to unpack .../16-libperl4-corelibs-perl_0.004-2_all.deb ...
+Unpacking libperl4-corelibs-perl (0.004-2) ...
+Selecting previously unselected package swaks.
+Preparing to unpack .../17-swaks_20201014.0-2_all.deb ...
+Unpacking swaks (20201014.0-2) ...
+Setting up perl-openssl-defaults:amd64 (5build2) ...
+Setting up perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Setting up libidn12:amd64 (1.38-4ubuntu1) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Setting up perl (5.34.0-3ubuntu1.4) ...
+Setting up libdigest-hmac-perl (1.04+dfsg-1) ...
+Setting up libsocket6-perl (0.29-1build4) ...
+Setting up libnet-libidn-perl (0.12.ds-3build6) ...
+Setting up swaks (20201014.0-2) ...
+Setting up libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Setting up libdigest-bubblebabble-perl (0.02-2.1) ...
+Setting up libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Setting up libperl4-corelibs-perl (0.004-2) ...
+Setting up libnet-dns-perl (1.33-1) ...
+Setting up libio-socket-inet6-perl (2.73-1) ...
+Setting up libnet-dns-sec-perl (1.19-1build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[✔] SMTP client ready. Use swaks to send emails, e.g.:
+swaks --to test@example.com --server <smtp-server-ip>
+Copying and executing setup_client_http.sh in container mn.d10...
+[*] Installing HTTP client tools (curl and wget)...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4630 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3295 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+Fetched 38.7 MB in 6s (6576 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.81.0-1ubuntu1.20).
+wget is already the newest version (1.21.2-2ubuntu1.1).
+0 upgraded, 0 newly installed, 0 to remove and 11 not upgraded.
+[✔] HTTP clients are ready (you can use 'curl http://host:port' or 'wget http://host:port').
+Copying and executing setup_client_ssh.sh in container mn.d10...
+[*] Installing OpenSSH client...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
+  libxext6 libxmuu1 xauth
+Suggested packages:
+  keychain libpam-ssh monkeysphere ssh-askpass
+The following NEW packages will be installed:
+  libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
+  libxext6 libxmuu1 openssh-client sshpass xauth
+0 upgraded, 12 newly installed, 0 to remove and 11 not upgraded.
+Need to get 1945 kB of archives.
+After this operation, 6938 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcbor0.8 amd64 0.8.0-2ubuntu1 [24.6 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfido2-1 amd64 1.10.0-1 [82.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxau6 amd64 1:1.0.9-1build5 [7634 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu5 [10.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb1 amd64 1.14-3ubuntu3 [49.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-data all 2:1.7.5-1ubuntu0.3 [120 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-6 amd64 2:1.7.5-1ubuntu0.3 [667 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxext6 amd64 2:1.3.4-1build1 [31.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxmuu1 amd64 2:1.1.3-3 [10.2 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client amd64 1:8.9p1-3ubuntu0.13 [903 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 1945 kB in 3s (749 kB/s)
+Selecting previously unselected package libcbor0.8:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
+Preparing to unpack .../00-libcbor0.8_0.8.0-2ubuntu1_amd64.deb ...
+Unpacking libcbor0.8:amd64 (0.8.0-2ubuntu1) ...
+Selecting previously unselected package libfido2-1:amd64.
+Preparing to unpack .../01-libfido2-1_1.10.0-1_amd64.deb ...
+Unpacking libfido2-1:amd64 (1.10.0-1) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../02-libxau6_1%3a1.0.9-1build5_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1build5) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../03-libxdmcp6_1%3a1.1.3-0ubuntu5_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../04-libxcb1_1.14-3ubuntu3_amd64.deb ...
+Unpacking libxcb1:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../05-libx11-data_2%3a1.7.5-1ubuntu0.3_all.deb ...
+Unpacking libx11-data (2:1.7.5-1ubuntu0.3) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../06-libx11-6_2%3a1.7.5-1ubuntu0.3_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../07-libxext6_2%3a1.3.4-1build1_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1build1) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../08-libxmuu1_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package openssh-client.
+Preparing to unpack .../09-openssh-client_1%3a8.9p1-3ubuntu0.13_amd64.deb ...
+Unpacking openssh-client (1:8.9p1-3ubuntu0.13) ...
+Selecting previously unselected package xauth.
+Preparing to unpack .../10-xauth_1%3a1.1-1build2_amd64.deb ...
+Unpacking xauth (1:1.1-1build2) ...
+Selecting previously unselected package sshpass.
+Preparing to unpack .../11-sshpass_1.09-1_amd64.deb ...
+Unpacking sshpass (1.09-1) ...
+Setting up libxau6:amd64 (1:1.0.9-1build5) ...
+Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Setting up libxcb1:amd64 (1.14-3ubuntu3) ...
+Setting up libcbor0.8:amd64 (0.8.0-2ubuntu1) ...
+Setting up sshpass (1.09-1) ...
+Setting up libx11-data (2:1.7.5-1ubuntu0.3) ...
+Setting up libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
+Setting up libfido2-1:amd64 (1.10.0-1) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3) ...
+Setting up openssh-client (1:8.9p1-3ubuntu0.13) ...
+update-alternatives: using /usr/bin/ssh to provide /usr/bin/rsh (rsh) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/rsh.1.gz because associated file /usr/share/man/man1/ssh.1.gz (of link group rsh) doesn't exist
+update-alternatives: using /usr/bin/slogin to provide /usr/bin/rlogin (rlogin) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/rlogin.1.gz because associated file /usr/share/man/man1/slogin.1.gz (of link group rlogin) doesn't exist
+update-alternatives: using /usr/bin/scp to provide /usr/bin/rcp (rcp) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/rcp.1.gz because associated file /usr/share/man/man1/scp.1.gz (of link group rcp) doesn't exist
+Setting up libxext6:amd64 (2:1.3.4-1build1) ...
+Setting up xauth (1:1.1-1build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[✔] SSH client is ready (you can use 'ssh user@host').
+⚠️  Script not found: setup_client_video.sh, skipping for container mn.d10
+Copying and executing setup_client_mail.sh in container mn.d10...
+[*] Installing swaks SMTP client tool...
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl netbase perl perl-modules-5.34
+  perl-openssl-defaults
+Suggested packages:
+  gdbm-l10n perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+  make libtap-harness-archive-perl libauthen-ntlm-perl libauthen-sasl-perl
+The following NEW packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl netbase perl perl-modules-5.34
+  perl-openssl-defaults swaks
+0 upgraded, 19 newly installed, 0 to remove and 11 not upgraded.
+Need to get 9093 kB of archives.
+After this operation, 51.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.4 [2977 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.4 [4820 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.4 [232 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 netbase all 6.3 [12.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-bubblebabble-perl all 0.02-2.1 [7160 B]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-hmac-perl all 1.04+dfsg-1 [10.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libidn12 amd64 1.38-4ubuntu1 [60.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsocket6-perl amd64 0.29-1build4 [19.7 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 libio-socket-inet6-perl all 2.73-1 [14.7 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnet-ip-perl all 1.26-2ubuntu0.22.04.1 [28.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-perl all 1.33-1 [350 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-sec-perl amd64 1.19-1build2 [44.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-libidn-perl amd64 0.12.ds-3build6 [18.4 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy/main amd64 perl-openssl-defaults amd64 5build2 [7542 B]
+Get:17 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-ssleay-perl amd64 1.92-1build2 [327 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 libperl4-corelibs-perl all 0.004-2 [37.4 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/universe amd64 swaks all 20201014.0-2 [85.9 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 9093 kB in 4s (2039 kB/s)
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7614 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.4_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../03-libperl5.34_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking perl (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../05-netbase_6.3_all.deb ...
+Unpacking netbase (6.3) ...
+Selecting previously unselected package libdigest-bubblebabble-perl.
+Preparing to unpack .../06-libdigest-bubblebabble-perl_0.02-2.1_all.deb ...
+Unpacking libdigest-bubblebabble-perl (0.02-2.1) ...
+Selecting previously unselected package libdigest-hmac-perl.
+Preparing to unpack .../07-libdigest-hmac-perl_1.04+dfsg-1_all.deb ...
+Unpacking libdigest-hmac-perl (1.04+dfsg-1) ...
+Selecting previously unselected package libidn12:amd64.
+Preparing to unpack .../08-libidn12_1.38-4ubuntu1_amd64.deb ...
+Unpacking libidn12:amd64 (1.38-4ubuntu1) ...
+Selecting previously unselected package libsocket6-perl.
+Preparing to unpack .../09-libsocket6-perl_0.29-1build4_amd64.deb ...
+Unpacking libsocket6-perl (0.29-1build4) ...
+Selecting previously unselected package libio-socket-inet6-perl.
+Preparing to unpack .../10-libio-socket-inet6-perl_2.73-1_all.deb ...
+Unpacking libio-socket-inet6-perl (2.73-1) ...
+Selecting previously unselected package libnet-ip-perl.
+Preparing to unpack .../11-libnet-ip-perl_1.26-2ubuntu0.22.04.1_all.deb ...
+Unpacking libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Selecting previously unselected package libnet-dns-perl.
+Preparing to unpack .../12-libnet-dns-perl_1.33-1_all.deb ...
+Unpacking libnet-dns-perl (1.33-1) ...
+Selecting previously unselected package libnet-dns-sec-perl.
+Preparing to unpack .../13-libnet-dns-sec-perl_1.19-1build2_amd64.deb ...
+Unpacking libnet-dns-sec-perl (1.19-1build2) ...
+Selecting previously unselected package libnet-libidn-perl.
+Preparing to unpack .../14-libnet-libidn-perl_0.12.ds-3build6_amd64.deb ...
+Unpacking libnet-libidn-perl (0.12.ds-3build6) ...
+Selecting previously unselected package perl-openssl-defaults:amd64.
+Preparing to unpack .../15-perl-openssl-defaults_5build2_amd64.deb ...
+Unpacking perl-openssl-defaults:amd64 (5build2) ...
+Selecting previously unselected package libnet-ssleay-perl:amd64.
+Preparing to unpack .../16-libnet-ssleay-perl_1.92-1build2_amd64.deb ...
+Unpacking libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Selecting previously unselected package libperl4-corelibs-perl.
+Preparing to unpack .../17-libperl4-corelibs-perl_0.004-2_all.deb ...
+Unpacking libperl4-corelibs-perl (0.004-2) ...
+Selecting previously unselected package swaks.
+Preparing to unpack .../18-swaks_20201014.0-2_all.deb ...
+Unpacking swaks (20201014.0-2) ...
+Setting up perl-openssl-defaults:amd64 (5build2) ...
+Setting up perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Setting up libidn12:amd64 (1.38-4ubuntu1) ...
+Setting up netbase (6.3) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Setting up perl (5.34.0-3ubuntu1.4) ...
+Setting up libdigest-hmac-perl (1.04+dfsg-1) ...
+Setting up libsocket6-perl (0.29-1build4) ...
+Setting up libnet-libidn-perl (0.12.ds-3build6) ...
+Setting up swaks (20201014.0-2) ...
+Setting up libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Setting up libdigest-bubblebabble-perl (0.02-2.1) ...
+Setting up libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Setting up libperl4-corelibs-perl (0.004-2) ...
+Setting up libnet-dns-perl (1.33-1) ...
+Setting up libio-socket-inet6-perl (2.73-1) ...
+Setting up libnet-dns-sec-perl (1.19-1build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[✔] SMTP client ready. Use swaks to send emails, e.g.:
+swaks --to test@example.com --server <smtp-server-ip>
+Copying and executing setup_client_http.sh in container mn.d11...
+[*] Installing HTTP client tools (curl and wget)...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [47.7 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2979 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4468 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1245 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1553 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3295 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4630 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [55.7 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+Fetched 38.7 MB in 4s (9537 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.81.0-1ubuntu1.20).
+wget is already the newest version (1.21.2-2ubuntu1.1).
+0 upgraded, 0 newly installed, 0 to remove and 11 not upgraded.
+[✔] HTTP clients are ready (you can use 'curl http://host:port' or 'wget http://host:port').
+Copying and executing setup_client_ssh.sh in container mn.d11...
+[*] Installing OpenSSH client...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
+  libxext6 libxmuu1 xauth
+Suggested packages:
+  keychain libpam-ssh monkeysphere ssh-askpass
+The following NEW packages will be installed:
+  libcbor0.8 libfido2-1 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6
+  libxext6 libxmuu1 openssh-client sshpass xauth
+0 upgraded, 12 newly installed, 0 to remove and 11 not upgraded.
+Need to get 1945 kB of archives.
+After this operation, 6938 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcbor0.8 amd64 0.8.0-2ubuntu1 [24.6 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfido2-1 amd64 1.10.0-1 [82.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxau6 amd64 1:1.0.9-1build5 [7634 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu5 [10.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb1 amd64 1.14-3ubuntu3 [49.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-data all 2:1.7.5-1ubuntu0.3 [120 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-6 amd64 2:1.7.5-1ubuntu0.3 [667 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxext6 amd64 2:1.3.4-1build1 [31.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxmuu1 amd64 2:1.1.3-3 [10.2 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client amd64 1:8.9p1-3ubuntu0.13 [903 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 1945 kB in 2s (897 kB/s)
+Selecting previously unselected package libcbor0.8:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7252 files and directories currently installed.)
+Preparing to unpack .../00-libcbor0.8_0.8.0-2ubuntu1_amd64.deb ...
+Unpacking libcbor0.8:amd64 (0.8.0-2ubuntu1) ...
+Selecting previously unselected package libfido2-1:amd64.
+Preparing to unpack .../01-libfido2-1_1.10.0-1_amd64.deb ...
+Unpacking libfido2-1:amd64 (1.10.0-1) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../02-libxau6_1%3a1.0.9-1build5_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1build5) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../03-libxdmcp6_1%3a1.1.3-0ubuntu5_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../04-libxcb1_1.14-3ubuntu3_amd64.deb ...
+Unpacking libxcb1:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../05-libx11-data_2%3a1.7.5-1ubuntu0.3_all.deb ...
+Unpacking libx11-data (2:1.7.5-1ubuntu0.3) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../06-libx11-6_2%3a1.7.5-1ubuntu0.3_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../07-libxext6_2%3a1.3.4-1build1_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1build1) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../08-libxmuu1_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package openssh-client.
+Preparing to unpack .../09-openssh-client_1%3a8.9p1-3ubuntu0.13_amd64.deb ...
+Unpacking openssh-client (1:8.9p1-3ubuntu0.13) ...
+Selecting previously unselected package xauth.
+Preparing to unpack .../10-xauth_1%3a1.1-1build2_amd64.deb ...
+Unpacking xauth (1:1.1-1build2) ...
+Selecting previously unselected package sshpass.
+Preparing to unpack .../11-sshpass_1.09-1_amd64.deb ...
+Unpacking sshpass (1.09-1) ...
+Setting up libxau6:amd64 (1:1.0.9-1build5) ...
+Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Setting up libxcb1:amd64 (1.14-3ubuntu3) ...
+Setting up libcbor0.8:amd64 (0.8.0-2ubuntu1) ...
+Setting up sshpass (1.09-1) ...
+Setting up libx11-data (2:1.7.5-1ubuntu0.3) ...
+Setting up libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
+Setting up libfido2-1:amd64 (1.10.0-1) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3) ...
+Setting up openssh-client (1:8.9p1-3ubuntu0.13) ...
+update-alternatives: using /usr/bin/ssh to provide /usr/bin/rsh (rsh) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/rsh.1.gz because associated file /usr/share/man/man1/ssh.1.gz (of link group rsh) doesn't exist
+update-alternatives: using /usr/bin/slogin to provide /usr/bin/rlogin (rlogin) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/rlogin.1.gz because associated file /usr/share/man/man1/slogin.1.gz (of link group rlogin) doesn't exist
+update-alternatives: using /usr/bin/scp to provide /usr/bin/rcp (rcp) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/rcp.1.gz because associated file /usr/share/man/man1/scp.1.gz (of link group rcp) doesn't exist
+Setting up libxext6:amd64 (2:1.3.4-1build1) ...
+Setting up xauth (1:1.1-1build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[✔] SSH client is ready (you can use 'ssh user@host').
+⚠️  Script not found: setup_client_video.sh, skipping for container mn.d11
+Copying and executing setup_client_ftp.sh in container mn.d11...
+[*] Installing FTP clients...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  netbase tnftp
+The following NEW packages will be installed:
+  ftp lftp netbase tnftp
+0 upgraded, 4 newly installed, 0 to remove and 11 not upgraded.
+Need to get 843 kB of archives.
+After this operation, 2263 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 netbase all 6.3 [12.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 tnftp amd64 20210827-4build1 [105 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 ftp all 20210827-4build1 [4812 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 lftp amd64 4.9.2-1build1 [720 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 843 kB in 1s (642 kB/s)
+Selecting previously unselected package netbase.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7614 files and directories currently installed.)
+Preparing to unpack .../archives/netbase_6.3_all.deb ...
+Unpacking netbase (6.3) ...
+Selecting previously unselected package tnftp.
+Preparing to unpack .../tnftp_20210827-4build1_amd64.deb ...
+Unpacking tnftp (20210827-4build1) ...
+Selecting previously unselected package ftp.
+Preparing to unpack .../ftp_20210827-4build1_all.deb ...
+Unpacking ftp (20210827-4build1) ...
+Selecting previously unselected package lftp.
+Preparing to unpack .../lftp_4.9.2-1build1_amd64.deb ...
+Unpacking lftp (4.9.2-1build1) ...
+Setting up netbase (6.3) ...
+Setting up tnftp (20210827-4build1) ...
+update-alternatives: using /usr/bin/tnftp to provide /usr/bin/ftp (ftp) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/ftp.1.gz because associated file /usr/share/man/man1/tnftp.1.gz (of link group ftp) doesn't exist
+Setting up lftp (4.9.2-1build1) ...
+Setting up ftp (20210827-4build1) ...
+[✔] FTP clients ready. You can now connect using:
+  ftp <server-ip>
+  or
+  lftp ftpuser@<server-ip>
+Copying and executing setup_client_mail.sh in container mn.d11...
+[*] Installing swaks SMTP client tool...
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl perl perl-modules-5.34 perl-openssl-defaults
+Suggested packages:
+  gdbm-l10n perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+  make libtap-harness-archive-perl libauthen-ntlm-perl libauthen-sasl-perl
+The following NEW packages will be installed:
+  libdigest-bubblebabble-perl libdigest-hmac-perl libgdbm-compat4 libgdbm6
+  libidn12 libio-socket-inet6-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn-perl libnet-ssleay-perl libperl4-corelibs-perl
+  libperl5.34 libsocket6-perl perl perl-modules-5.34 perl-openssl-defaults
+  swaks
+0 upgraded, 18 newly installed, 0 to remove and 11 not upgraded.
+Need to get 9081 kB of archives.
+After this operation, 51.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.4 [2977 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.4 [4820 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.4 [232 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-bubblebabble-perl all 0.02-2.1 [7160 B]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdigest-hmac-perl all 1.04+dfsg-1 [10.8 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libidn12 amd64 1.38-4ubuntu1 [60.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsocket6-perl amd64 0.29-1build4 [19.7 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 libio-socket-inet6-perl all 2.73-1 [14.7 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnet-ip-perl all 1.26-2ubuntu0.22.04.1 [28.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-perl all 1.33-1 [350 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-dns-sec-perl amd64 1.19-1build2 [44.5 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-libidn-perl amd64 0.12.ds-3build6 [18.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 perl-openssl-defaults amd64 5build2 [7542 B]
+Get:16 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnet-ssleay-perl amd64 1.92-1build2 [327 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy/main amd64 libperl4-corelibs-perl all 0.004-2 [37.4 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/universe amd64 swaks all 20201014.0-2 [85.9 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 9081 kB in 5s (1888 kB/s)
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7659 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.4_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../03-libperl5.34_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking perl (5.34.0-3ubuntu1.4) ...
+Selecting previously unselected package libdigest-bubblebabble-perl.
+Preparing to unpack .../05-libdigest-bubblebabble-perl_0.02-2.1_all.deb ...
+Unpacking libdigest-bubblebabble-perl (0.02-2.1) ...
+Selecting previously unselected package libdigest-hmac-perl.
+Preparing to unpack .../06-libdigest-hmac-perl_1.04+dfsg-1_all.deb ...
+Unpacking libdigest-hmac-perl (1.04+dfsg-1) ...
+Selecting previously unselected package libidn12:amd64.
+Preparing to unpack .../07-libidn12_1.38-4ubuntu1_amd64.deb ...
+Unpacking libidn12:amd64 (1.38-4ubuntu1) ...
+Selecting previously unselected package libsocket6-perl.
+Preparing to unpack .../08-libsocket6-perl_0.29-1build4_amd64.deb ...
+Unpacking libsocket6-perl (0.29-1build4) ...
+Selecting previously unselected package libio-socket-inet6-perl.
+Preparing to unpack .../09-libio-socket-inet6-perl_2.73-1_all.deb ...
+Unpacking libio-socket-inet6-perl (2.73-1) ...
+Selecting previously unselected package libnet-ip-perl.
+Preparing to unpack .../10-libnet-ip-perl_1.26-2ubuntu0.22.04.1_all.deb ...
+Unpacking libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Selecting previously unselected package libnet-dns-perl.
+Preparing to unpack .../11-libnet-dns-perl_1.33-1_all.deb ...
+Unpacking libnet-dns-perl (1.33-1) ...
+Selecting previously unselected package libnet-dns-sec-perl.
+Preparing to unpack .../12-libnet-dns-sec-perl_1.19-1build2_amd64.deb ...
+Unpacking libnet-dns-sec-perl (1.19-1build2) ...
+Selecting previously unselected package libnet-libidn-perl.
+Preparing to unpack .../13-libnet-libidn-perl_0.12.ds-3build6_amd64.deb ...
+Unpacking libnet-libidn-perl (0.12.ds-3build6) ...
+Selecting previously unselected package perl-openssl-defaults:amd64.
+Preparing to unpack .../14-perl-openssl-defaults_5build2_amd64.deb ...
+Unpacking perl-openssl-defaults:amd64 (5build2) ...
+Selecting previously unselected package libnet-ssleay-perl:amd64.
+Preparing to unpack .../15-libnet-ssleay-perl_1.92-1build2_amd64.deb ...
+Unpacking libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Selecting previously unselected package libperl4-corelibs-perl.
+Preparing to unpack .../16-libperl4-corelibs-perl_0.004-2_all.deb ...
+Unpacking libperl4-corelibs-perl (0.004-2) ...
+Selecting previously unselected package swaks.
+Preparing to unpack .../17-swaks_20201014.0-2_all.deb ...
+Unpacking swaks (20201014.0-2) ...
+Setting up perl-openssl-defaults:amd64 (5build2) ...
+Setting up perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Setting up libidn12:amd64 (1.38-4ubuntu1) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Setting up perl (5.34.0-3ubuntu1.4) ...
+Setting up libdigest-hmac-perl (1.04+dfsg-1) ...
+Setting up libsocket6-perl (0.29-1build4) ...
+Setting up libnet-libidn-perl (0.12.ds-3build6) ...
+Setting up swaks (20201014.0-2) ...
+Setting up libnet-ip-perl (1.26-2ubuntu0.22.04.1) ...
+Setting up libdigest-bubblebabble-perl (0.02-2.1) ...
+Setting up libnet-ssleay-perl:amd64 (1.92-1build2) ...
+Setting up libperl4-corelibs-perl (0.004-2) ...
+Setting up libnet-dns-perl (1.33-1) ...
+Setting up libio-socket-inet6-perl (2.73-1) ...
+Setting up libnet-dns-sec-perl (1.19-1build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+[✔] SMTP client ready. Use swaks to send emails, e.g.:
+swaks --to test@example.com --server <smtp-server-ip>
+Copying and executing setup_client_voip.sh in container mn.d11...
 [*] Installing iperf3...
 Reading package lists...
 Building dependency tree...
@@ -1152,9 +2581,9 @@ Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsctp1 amd64 1.0.19+df
 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libiperf0 amd64 3.9-1+deb11u1build0.22.04.1 [81.6 kB]
 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 iperf3 amd64 3.9-1+deb11u1build0.22.04.1 [14.6 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 106 kB in 1s (122 kB/s)
+Fetched 106 kB in 1s (129 kB/s)
 Selecting previously unselected package libsctp1:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7654 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10105 files and directories currently installed.)
 Preparing to unpack .../libsctp1_1.0.19+dfsg-1build1_amd64.deb ...
 Unpacking libsctp1:amd64 (1.0.19+dfsg-1build1) ...
 Selecting previously unselected package libiperf0:amd64.
@@ -1171,13 +2600,9 @@ Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
 iperf3 -c <voip-server-ip> -u -b 512k -t 10 -p 5061 --tos 184
 === End Processing Client Configs ===
 ✅ All scripts processed. All the Servers and Clients are ready now
-tee: script_run.log: Permission denied
 Finished 02_init_servers_and_clients.sh
-tee: script_run.log: Permission denied
 ------------------------
-tee: script_run.log: Permission denied
 Running 03_init_gateways.sh ...
-tee: script_run.log: Permission denied
 Processing mn.d1 ...
   d1-eth0 IP: 192.168.0.1
   eth0 IP: 172.17.0.2
@@ -1185,13 +2610,13 @@ RTNETLINK answers: File exists
   Default Gateway and Routing updated in mn.d1.
 
 Processing mn.d2 ...
-  d2-eth0 IP: 192.168.1.1
+  d2-eth0 IP: 192.168.2.1
   eth0 IP: 172.17.0.3
 RTNETLINK answers: File exists
   Default Gateway and Routing updated in mn.d2.
 
 Processing mn.d3 ...
-  d3-eth0 IP: 192.168.1.2
+  d3-eth0 IP: 192.168.1.1
   eth0 IP: 172.17.0.4
 RTNETLINK answers: File exists
   Default Gateway and Routing updated in mn.d3.
@@ -1203,21 +2628,211 @@ RTNETLINK answers: File exists
   Default Gateway and Routing updated in mn.d4.
 
 Processing mn.d5 ...
-  d5-eth0 IP: 10.0.0.1
+  d5-eth0 IP: 192.168.1.2
   eth0 IP: 172.17.0.6
 RTNETLINK answers: File exists
   Default Gateway and Routing updated in mn.d5.
 
-tee: script_run.log: Permission denied
+Processing mn.d6 ...
+  d6-eth0 IP: 192.168.2.2
+  eth0 IP: 172.17.0.7
+RTNETLINK answers: File exists
+  Default Gateway and Routing updated in mn.d6.
+
+Processing mn.d7 ...
+  d7-eth0 IP: 192.168.3.1
+  eth0 IP: 172.17.0.8
+RTNETLINK answers: File exists
+  Default Gateway and Routing updated in mn.d7.
+
+Processing mn.d8 ...
+  d8-eth0 IP: 192.168.3.2
+  eth0 IP: 172.17.0.9
+RTNETLINK answers: File exists
+  Default Gateway and Routing updated in mn.d8.
+
+Processing mn.d9 ...
+  d9-eth0 IP: 192.168.4.1
+  eth0 IP: 172.17.0.10
+RTNETLINK answers: File exists
+  Default Gateway and Routing updated in mn.d9.
+
+Processing mn.d10 ...
+  d10-eth0 IP: 192.168.4.2
+  eth0 IP: 172.17.0.11
+RTNETLINK answers: File exists
+  Default Gateway and Routing updated in mn.d10.
+
+Processing mn.d11 ...
+  d11-eth0 IP: 10.0.0.1
+  eth0 IP: 172.17.0.12
+RTNETLINK answers: File exists
+  Default Gateway and Routing updated in mn.d11.
+
 Finished 03_init_gateways.sh
-tee: script_run.log: Permission denied
 ------------------------
-tee: script_run.log: Permission denied
 Running 04_init_monitoring.sh ...
-tee: script_run.log: Permission denied
 Attaching prometheus server to the monitoring network...
-Starting Monitoring Exportes in mn.d1...
-Starting Monitoring Exportes in mn.d2...
-Starting Monitoring Exportes in mn.d3...
-Starting Monitoring Exportes in mn.d4...
-Starting Monitoring Exportes in mn.d5...
+Starting Monitoring Exports in mn.d1...
+Starting Monitoring Exports in mn.d2...
+Starting Monitoring Exports in mn.d3...
+Starting Monitoring Exports in mn.d4...
+Starting Monitoring Exports in mn.d5...
+Starting Monitoring Exports in mn.d6...
+Starting Monitoring Exports in mn.d7...
+Starting Monitoring Exports in mn.d8...
+Starting Monitoring Exports in mn.d9...
+Starting Monitoring Exports in mn.d10...
+Starting Monitoring Exports in mn.d11...
+Finished 04_init_monitoring.sh
+------------------------
+Skipping run_all.sh
+All scripts completed. Logs saved in script_run.log.
+Finished run_all.sh in 04_init_hosts/
+==========================
+==========================
+Running run_all.sh in 05_init_intents/
+--------------------------
+📜 Starting script execution at Wed Jun  4 11:57:59 AM +0530 2025
+======================================
+
+▶️ Running 01_view_onos_hosts.sh ...
+------------------------
+Warning: Permanently added '[localhost]:8101' (RSA) to the list of known hosts.
+Connection to localhost closed.
+✅ Finished 01_view_onos_hosts.sh
+========================
+
+▶️ Running 03_format_onos_hosts.sh ...
+------------------------
+✅ Formatted output written to 04_formatted_hosts.csv
+✅ Finished 03_format_onos_hosts.sh
+========================
+
+▶️ Running 06_relpace_with_host_ids.sh ...
+------------------------
+Replacement done. See 07_init_intents_replaced.txt
+✅ Finished 06_relpace_with_host_ids.sh
+========================
+
+▶️ Running 08_init_intents_exec.sh ...
+------------------------
+Failed to add the host to the list of known hosts (/home/sdn/.ssh/known_hosts).
+Welcome to Open Network Operating System (ONOS)!
+[1;31m     ____  _  ______  ____     [0m
+[1;31m    / __ \/ |/ / __ \/ #__/   [0m
+[1;31m   / /_/ /    / /_/ /\ \      [0m
+[1;31m   \____/_/|_/\____/___/     [0m
+[1;31m                               [0m
+Documentation: wiki.onosproject.org      
+eTutorials:     tutorials.onosproject.org 
+Mailing lists: lists.onosproject.org     
+
+Come help out! Find out how at: contribute.onosproject.org 
+
+Hit '[1m<tab>[0xm' for a list of available commands
+and '[1m[cmd] --help[0m' for help on a specific command.
+Hit '[1m<ctrl-d>[0m' or type '[1mlogout[0m' to exit ONOS session.
+e
+cute intents for switching
+add-host-intent 0E:42:7C:1E:9D:D2/None 06:42:BE:4F:91:B4/None
+add-host-intent DA:1E:7A:56:F9:7C/None 8A:62:4A:CE:E3:37/None
+add-host-intent 3A:90:71:4C:2A:A1/None D2:98:BC:BF:F7:8A/None
+add-host-intent EE:27:90:9C:8B:AB/None 22:38:8D:AC:ED:E1/None
+add-host-intent BE:99:4D:A1:AE:27/None 12:38:20:17:75:B0/None
+
+# execute intents for routing
+add-host-intent EE:27:90:9C:8B:AB/None 0E:42:7C:1E:9D:D2/None
+add-host-intent EE:27:90:9C:8B:AB/None DA:1E:7A:56:F9:7C/None
+add-host-intent 22:38:8D:AC:ED:E1/None 0E:42:7C:1E:9D:D2/None
+add-host-intent 22:38:8D:AC:ED:E1/None DA:1E:7A:56:F9:7C/None
+add-host-intent BE:99:4D:A1:AE:27/None 0E:42:7C:1E:9D:D2/None
+add-host-intent BE:99:4D:A1:AE:27/None DA:1E:7A:56:F9:7C/None
+add-host-intent BE:99:4D:A1:AE:27/None 06:42:BE:4F:91:B4/None
+add-host-intent 12:38:20:17:75:B0/None 0E:42:7C:1E:9D:D2/None
+add-host-intent 12:38:20:17:75:B0/None DA:1E:7A:56:F9:7C/None
+add-host-intent 12:38:20:17:75:B0/None 8A:62:4A:CE:E3:37/None
+add-host-intent 0E:42:7C:1E:9D:D[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:27:59[0m[12C#[Cexecute[Cintents[Cfor[Cswitching
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:27:59[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m0[0m0E:42:7C:1E:9D:D2/None[C[32m0[0m[32m6[0m06:42:BE:4F:91:B4/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x0, key=0x0, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[0E:42:7C:1E:9D:D2/None, 06:42:BE:4F:91:B4/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=0E:42:7C:1E:9D:D2/None, two=06:42:BE:4F:91:B4/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CDA:1E:7A:56:F9:7C/None[C[32m8[0m8A:62:4A:CE:E3:37/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x5, key=0x5, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[DA:1E:7A:56:F9:7C/None, 8A:62:4A:CE:E3:37/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=DA:1E:7A:56:F9:7C/None, two=8A:62:4A:CE:E3:37/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m3[0m3A:90:71:4C:2A:A1/None[CD2:98:BC:BF:F7:8A/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0xa, key=0xa, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[3A:90:71:4C:2A:A1/None, D2:98:BC:BF:F7:8A/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=3A:90:71:4C:2A:A1/None, two=D2:98:BC:BF:F7:8A/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CEE:27:90:9C:8B:AB/None[C[32m2[0m[32m2[0m22:38:8D:AC:ED:E1/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0xf, key=0xf, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[EE:27:90:9C:8B:AB/None, 22:38:8D:AC:ED:E1/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=EE:27:90:9C:8B:AB/None, two=22:38:8D:AC:ED:E1/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CBE:99:4D:A1:AE:27/None[C[32m1[0m[32m2[0m12:38:20:17:75:B0/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x14, key=0x14, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[BE:99:4D:A1:AE:27/None, 12:38:20:17:75:B0/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=BE:99:4D:A1:AE:27/None, two=12:38:20:17:75:B0/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C#[Cexecute[Cintents[Cfor[Crouting
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CEE:27:90:9C:8B:AB/None[C[32m0[0m0E:42:7C:1E:9D:D2/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x19, key=0x19, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[EE:27:90:9C:8B:AB/None, 0E:42:7C:1E:9D:D2/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=EE:27:90:9C:8B:AB/None, two=0E:42:7C:1E:9D:D2/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CEE:27:90:9C:8B:AB/None[CDA:1E:7A:56:F9:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x1e, key=0x1e, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[EE:27:90:9C:8B:AB/None, DA:1E:7A:56:F9:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=EE:27:90:9C:8B:AB/None, two=DA:1E:7A:56:F9:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m2[0m[32m2[0m22:38:8D:AC:ED:E1/None[C[32m0[0m0E:42:7C:1E:9D:D2/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x23, key=0x23, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[22:38:8D:AC:ED:E1/None, 0E:42:7C:1E:9D:D2/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=22:38:8D:AC:ED:E1/None, two=0E:42:7C:1E:9D:D2/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m2[0m[32m2[0m22:38:8D:AC:ED:E1/None[CDA:1E:7A:56:F9:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x28, key=0x28, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[22:38:8D:AC:ED:E1/None, DA:1E:7A:56:F9:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=22:38:8D:AC:ED:E1/None, two=DA:1E:7A:56:F9:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CBE:99:4D:A1:AE:27/None[C[32m0[0m0E:42:7C:1E:9D:D2/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x2d, key=0x2d, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[BE:99:4D:A1:AE:27/None, 0E:42:7C:1E:9D:D2/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=BE:99:4D:A1:AE:27/None, two=0E:42:7C:1E:9D:D2/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CBE:99:4D:A1:AE:27/None[CDA:1E:7A:56:F9:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x32, key=0x32, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[BE:99:4D:A1:AE:27/None, DA:1E:7A:56:F9:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=BE:99:4D:A1:AE:27/None, two=DA:1E:7A:56:F9:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CBE:99:4D:A1:AE:27/None[C[32m0[0m[32m6[0m06:42:BE:4F:91:B4/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x37, key=0x37, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[BE:99:4D:A1:AE:27/None, 06:42:BE:4F:91:B4/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=BE:99:4D:A1:AE:27/None, two=06:42:BE:4F:91:B4/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m1[0m[32m2[0m12:38:20:17:75:B0/None[C[32m0[0m0E:42:7C:1E:9D:D2/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x3c, key=0x3c, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[12:38:20:17:75:B0/None, 0E:42:7C:1E:9D:D2/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=12:38:20:17:75:B0/None, two=0E:42:7C:1E:9D:D2/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m1[0m[32m2[0m12:38:20:17:75:B0/None[CDA:1E:7A:56:F9:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x41, key=0x41, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[12:38:20:17:75:B0/None, DA:1E:7A:56:F9:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=12:38:20:17:75:B0/None, two=DA:1E:7A:56:F9:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m1[0m[32m2[0m12:38:20:17:75:B0/None[C[32m8[0m8A:62:4A:CE:E3:37/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x46, key=0x46, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[12:38:20:17:75:B0/None, 8A:62:4A:CE:E3:37/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=12:38:20:17:75:B0/None, two=8A:62:4A:CE:E3:37/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m0[0m0E:42:7C:1E:9D:D2/None[CEA:CA:F9:FA:62:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x4b, key=0x4b, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[0E:42:7C:1E:9D:D2/None, EA:CA:F9:FA:62:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=0E:42:7C:1E:9D:D2/None, two=EA:CA:F9:FA:62:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m0[0m[32m6[0m06:42:BE:4F:91:B4/None[CEA:CA:F9:FA:62:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x50, key=0x50, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[06:42:BE:4F:91:B4/None, EA:CA:F9:FA:62:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=06:42:BE:4F:91:B4/None, two=EA:CA:F9:FA:62:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CDA:1E:7A:56:F9:7C/None[CEA:CA:F9:FA:62:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x55, key=0x55, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[DA:1E:7A:56:F9:7C/None, EA:CA:F9:FA:62:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=DA:1E:7A:56:F9:7C/None, two=EA:CA:F9:FA:62:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m8[0m8A:62:4A:CE:E3:37/None[CEA:CA:F9:FA:62:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x5a, key=0x5a, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[8A:62:4A:CE:E3:37/None, EA:CA:F9:FA:62:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=8A:62:4A:CE:E3:37/None, two=EA:CA:F9:FA:62:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m3[0m3A:90:71:4C:2A:A1/None[CEA:CA:F9:FA:62:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x5f, key=0x5f, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[3A:90:71:4C:2A:A1/None, EA:CA:F9:FA:62:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=3A:90:71:4C:2A:A1/None, two=EA:CA:F9:FA:62:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CD2:98:BC:BF:F7:8A/None[CEA:CA:F9:FA:62:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x64, key=0x64, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[D2:98:BC:BF:F7:8A/None, EA:CA:F9:FA:62:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=D2:98:BC:BF:F7:8A/None, two=EA:CA:F9:FA:62:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[CEE:27:90:9C:8B:AB/None[CEA:CA:F9:FA:62:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x69, key=0x69, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[EE:27:90:9C:8B:AB/None, EA:CA:F9:FA:62:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=EE:27:90:9C:8B:AB/None, two=EA:CA:F9:FA:62:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91ma[0m[91md[0m[91md[0m[91m-[0m[91mh[0m[91mo[0m[91ms[0m[91mt[0m[91m-[0m[91mi[0m[91mn[0m[91mt[0m[91me[0m[91mn[0m[14D[94madd-host-intent[0m[C[32m2[0m[32m2[0m22:38:8D:AC:ED:E1/None[CEA:CA:F9:FA:62:7C/N[Kone
+[?1l>[?1000l[?2004lHost to Host intent submitted:
+HostToHostIntent{id=0x6e, key=0x6e, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[22:38:8D:AC:ED:E1/None, EA:CA:F9:FA:62:7C/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=22:38:8D:AC:ED:E1/None, two=EA:CA:F9:FA:62:7C/None}
+[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C[91me[0m[91mx[0m[91mi[0m[94mexit[0m
+[?1l>[?1000l[?2004l[?1h=[90m~[0m                                                                                [?2004h[32monos@root > [0m                                                            [90m06:28:00[0m[12C
+[?1l>[?1000l[?2004lConnection to localhost closed.
+✅ Finished 08_init_intents_exec.sh
+========================
+⏭️  Skipping run_all.sh
+
+✅ All scripts completed at Wed Jun  4 11:58:00 AM +0530 2025.
+📁 Logs saved in: script_run.log
+Finished run_all.sh in 05_init_intents/
+==========================

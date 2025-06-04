@@ -1,0 +1,35 @@
+Cleaning the related tmux sessions
+error connecting to /tmp/tmux-1000/default (No such file or directory)
+🧹 Running docker-compose down (if any compose files are active)...
+ Container onos  Stopping
+ Container grafana  Stopping
+ Container containernet  Stopping
+ Container prometheus  Stopping
+ Container containernet  Stopped
+ Container containernet  Removing
+ Container containernet  Removed
+ Container prometheus  Stopped
+ Container prometheus  Removing
+ Container prometheus  Removed
+ Container grafana  Stopped
+ Container grafana  Removing
+ Container grafana  Removed
+ Container onos  Stopped
+ Container onos  Removing
+ Container onos  Removed
+ Network 01_init_setup_default  Removing
+ Network 01_init_setup_default  Removed
+🛑 Stopping all Docker containers...
+🗑️  Removing all Docker containers...
+🔗 Removing custom Docker networks (if any)...
+Deleted Networks:
+trex_net
+
+📦 Removing dangling Docker volumes (if any)...
+Deleted Volumes:
+a07e553ee8c1d1d1c76542e19cc7c94a17cecf8609c1ec77aa9668ada6cc24c2
+e79103e42cac87cf40ee14ce995c8137feff9254031c7e2b39ae01ec9944f56f
+2951777e9550ea7e672b037497f6954ebfd3d63cdc540bcf342a7c29f01127c3
+
+Total reclaimed space: 7.074MB
+✅ Docker cluster cleanup completed.

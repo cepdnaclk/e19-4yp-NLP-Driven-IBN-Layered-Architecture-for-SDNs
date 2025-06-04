@@ -1,5 +1,0 @@
-mn.d1,http,ssh
-mn.d2,voip
-mn.d3,penTest
-mn.d4,db,ftp
-mn.d5,external

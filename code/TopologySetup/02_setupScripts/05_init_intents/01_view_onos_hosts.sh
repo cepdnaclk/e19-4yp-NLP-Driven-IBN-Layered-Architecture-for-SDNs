@@ -3,14 +3,11 @@
 # Remove stale SSH host entry
 ssh-keygen -f ~/.ssh/known_hosts -R '[localhost]:8101' 2>/dev/null
 
-# Timestamp for output file
-timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
-
 # Run command on ONOS CLI via SSH
 sshpass -p 'rocks' ssh -tt -p 8101 \
   -o StrictHostKeyChecking=no \
   -o UserKnownHostsFile=/dev/null \
-  onos@localhost << EOF > "02_onos_hosts_$timestamp.txt"
+  onos@localhost << EOF > "02_onos_hosts.txt"
 hosts
 exit
 EOF

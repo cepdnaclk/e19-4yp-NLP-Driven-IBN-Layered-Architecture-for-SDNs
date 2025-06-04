@@ -1,5 +1,11 @@
 mn.d1,db,ftp
 mn.d2,_
-mn.d3,voip
+mn.d3,_
 mn.d4,http,ssh
-mn.d5,http,ssh,ftp,voip
+mn.d5,mail
+mn.d6,_
+mn.d7,http,ssh,mail
+mn.d8,mail
+mn.d9,http,ssh,ftp,mail
+mn.d10,http,ssh,video,mail
+mn.d11,http,ssh,video,ftp,mail,voip
