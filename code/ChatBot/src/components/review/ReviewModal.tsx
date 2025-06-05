@@ -216,7 +216,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
                 : 'bg-green-600 hover:bg-green-700 text-white'
             }`}
           >
-            {isPushing ? 'Pushing...' : 'Push Intent'}
+            {isPushing ? 'Pushing...' : 'Push Configuration'}
           </button>
         </div>
       </div>
