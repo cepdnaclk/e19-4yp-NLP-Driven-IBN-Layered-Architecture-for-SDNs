@@ -3839,3 +3839,261 @@ prometheus    | time=2025-06-04T11:00:05.460Z level=INFO source=compact.go:602 m
 prometheus    | time=2025-06-04T11:00:05.462Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.264005ms
 grafana       | logger=cleanup t=2025-06-04T11:00:09.516802434Z level=info msg="Completed cleanup jobs" duration=30.833105ms
 grafana       | logger=plugins.update.checker t=2025-06-04T11:00:10.758863566Z level=info msg="Update check succeeded" duration=637.988961ms
+grafana       | logger=cleanup t=2025-06-04T11:10:09.539625606Z level=info msg="Completed cleanup jobs" duration=53.262025ms
+grafana       | logger=plugins.update.checker t=2025-06-04T11:10:10.7624189Z level=info msg="Update check succeeded" duration=640.578585ms
+grafana       | logger=cleanup t=2025-06-04T11:20:09.505546086Z level=info msg="Completed cleanup jobs" duration=19.436628ms
+grafana       | logger=plugins.update.checker t=2025-06-04T11:20:10.764651349Z level=info msg="Update check succeeded" duration=643.81045ms
+grafana       | logger=infra.usagestats t=2025-06-04T11:21:41.502197794Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T11:30:09.501945914Z level=info msg="Completed cleanup jobs" duration=15.941911ms
+grafana       | logger=plugins.update.checker t=2025-06-04T11:30:10.753025732Z level=info msg="Update check succeeded" duration=631.229247ms
+grafana       | logger=cleanup t=2025-06-04T11:40:09.503932361Z level=info msg="Completed cleanup jobs" duration=18.062284ms
+grafana       | logger=plugins.update.checker t=2025-06-04T11:40:10.766849694Z level=info msg="Update check succeeded" duration=645.045623ms
+grafana       | logger=cleanup t=2025-06-04T11:50:09.541313279Z level=info msg="Completed cleanup jobs" duration=54.684404ms
+grafana       | logger=plugins.update.checker t=2025-06-04T11:50:10.754312185Z level=info msg="Update check succeeded" duration=632.836706ms
+grafana       | logger=infra.usagestats t=2025-06-04T11:51:41.499707481Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T12:00:09.583893131Z level=info msg="Completed cleanup jobs" duration=97.187241ms
+grafana       | logger=plugins.update.checker t=2025-06-04T12:00:10.774745143Z level=info msg="Update check succeeded" duration=653.801701ms
+grafana       | logger=cleanup t=2025-06-04T12:10:09.535111676Z level=info msg="Completed cleanup jobs" duration=49.274273ms
+grafana       | logger=plugins.update.checker t=2025-06-04T12:10:10.869180502Z level=info msg="Update check succeeded" duration=747.423356ms
+grafana       | logger=cleanup t=2025-06-04T12:20:09.542330303Z level=info msg="Completed cleanup jobs" duration=56.251762ms
+grafana       | logger=plugins.update.checker t=2025-06-04T12:20:10.752379912Z level=info msg="Update check succeeded" duration=630.79456ms
+grafana       | logger=infra.usagestats t=2025-06-04T12:21:41.500324706Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T12:30:09.541729Z level=info msg="Completed cleanup jobs" duration=55.605374ms
+grafana       | logger=plugins.update.checker t=2025-06-04T12:30:10.768726724Z level=info msg="Update check succeeded" duration=647.678205ms
+grafana       | logger=cleanup t=2025-06-04T12:40:09.554271574Z level=info msg="Completed cleanup jobs" duration=68.427743ms
+grafana       | logger=plugins.update.checker t=2025-06-04T12:40:10.758780146Z level=info msg="Update check succeeded" duration=637.272213ms
+grafana       | logger=cleanup t=2025-06-04T12:50:09.527765869Z level=info msg="Completed cleanup jobs" duration=41.858101ms
+grafana       | logger=plugins.update.checker t=2025-06-04T12:50:10.759073635Z level=info msg="Update check succeeded" duration=637.920221ms
+grafana       | logger=infra.usagestats t=2025-06-04T12:51:41.503344543Z level=info msg="Usage stats are ready to report"
+prometheus    | time=2025-06-04T13:00:05.462Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1749031200268 maxt=1749038400000 ulid=01JWXGE1D23ERNP16T4CCJ1YCG duration=51.77557ms ooo=false
+prometheus    | time=2025-06-04T13:00:05.464Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.613491ms
+grafana       | logger=cleanup t=2025-06-04T13:00:09.564871959Z level=info msg="Completed cleanup jobs" duration=79.018724ms
+grafana       | logger=plugins.update.checker t=2025-06-04T13:00:10.761560554Z level=info msg="Update check succeeded" duration=640.152559ms
+grafana       | logger=cleanup t=2025-06-04T13:10:09.513818664Z level=info msg="Completed cleanup jobs" duration=27.907994ms
+grafana       | logger=plugins.update.checker t=2025-06-04T13:10:10.756416984Z level=info msg="Update check succeeded" duration=634.765868ms
+grafana       | logger=cleanup t=2025-06-04T13:20:09.529477161Z level=info msg="Completed cleanup jobs" duration=43.612883ms
+grafana       | logger=plugins.update.checker t=2025-06-04T13:20:10.764829129Z level=info msg="Update check succeeded" duration=642.990759ms
+grafana       | logger=infra.usagestats t=2025-06-04T13:21:41.499968399Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T13:30:09.512811624Z level=info msg="Completed cleanup jobs" duration=26.571939ms
+grafana       | logger=plugins.update.checker t=2025-06-04T13:30:10.760981855Z level=info msg="Update check succeeded" duration=639.737169ms
+grafana       | logger=cleanup t=2025-06-04T13:40:09.558020543Z level=info msg="Completed cleanup jobs" duration=72.15884ms
+grafana       | logger=plugins.update.checker t=2025-06-04T13:40:10.750644991Z level=info msg="Update check succeeded" duration=629.200735ms
+grafana       | logger=cleanup t=2025-06-04T13:50:09.530225094Z level=info msg="Completed cleanup jobs" duration=44.240592ms
+grafana       | logger=plugins.update.checker t=2025-06-04T13:50:10.760841845Z level=info msg="Update check succeeded" duration=639.598355ms
+grafana       | logger=infra.usagestats t=2025-06-04T13:51:41.502597184Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T14:00:09.518603705Z level=info msg="Completed cleanup jobs" duration=32.607555ms
+grafana       | logger=plugins.update.checker t=2025-06-04T14:00:10.769461146Z level=info msg="Update check succeeded" duration=648.020336ms
+grafana       | logger=cleanup t=2025-06-04T14:10:09.522058875Z level=info msg="Completed cleanup jobs" duration=35.815219ms
+grafana       | logger=plugins.update.checker t=2025-06-04T14:10:10.764078182Z level=info msg="Update check succeeded" duration=642.604584ms
+grafana       | logger=cleanup t=2025-06-04T14:20:09.517572043Z level=info msg="Completed cleanup jobs" duration=31.611204ms
+grafana       | logger=plugins.update.checker t=2025-06-04T14:20:10.759702414Z level=info msg="Update check succeeded" duration=637.995418ms
+grafana       | logger=infra.usagestats t=2025-06-04T14:21:41.499207421Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T14:30:09.522511698Z level=info msg="Completed cleanup jobs" duration=36.605987ms
+grafana       | logger=plugins.update.checker t=2025-06-04T14:30:10.773610635Z level=info msg="Update check succeeded" duration=652.060684ms
+grafana       | logger=cleanup t=2025-06-04T14:40:09.535446041Z level=info msg="Completed cleanup jobs" duration=48.863346ms
+grafana       | logger=plugins.update.checker t=2025-06-04T14:40:10.761544845Z level=info msg="Update check succeeded" duration=640.150759ms
+grafana       | logger=cleanup t=2025-06-04T14:50:09.535172588Z level=info msg="Completed cleanup jobs" duration=49.298694ms
+grafana       | logger=plugins.update.checker t=2025-06-04T14:50:10.757032311Z level=info msg="Update check succeeded" duration=636.128597ms
+grafana       | logger=infra.usagestats t=2025-06-04T14:51:41.499437131Z level=info msg="Usage stats are ready to report"
+prometheus    | time=2025-06-04T15:00:05.443Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1749038400268 maxt=1749045600000 ulid=01JWXQ9RN1V27316Z0M45S4DET duration=34.103909ms ooo=false
+prometheus    | time=2025-06-04T15:00:05.445Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.565527ms
+prometheus    | time=2025-06-04T15:00:05.445Z level=INFO source=checkpoint.go:100 msg="Creating checkpoint" component=tsdb from_segment=0 to_segment=1 mint=1749045600000
+prometheus    | time=2025-06-04T15:00:05.585Z level=INFO source=head.go:1372 msg="WAL checkpoint complete" component=tsdb first=0 last=1 duration=140.036799ms
+grafana       | logger=cleanup t=2025-06-04T15:00:09.541132786Z level=info msg="Completed cleanup jobs" duration=55.125939ms
+grafana       | logger=plugins.update.checker t=2025-06-04T15:00:10.763614193Z level=info msg="Update check succeeded" duration=642.365042ms
+grafana       | logger=cleanup t=2025-06-04T15:10:09.571407357Z level=info msg="Completed cleanup jobs" duration=84.65944ms
+grafana       | logger=plugins.update.checker t=2025-06-04T15:10:10.766491841Z level=info msg="Update check succeeded" duration=645.295ms
+grafana       | logger=cleanup t=2025-06-04T15:20:09.53098098Z level=info msg="Completed cleanup jobs" duration=45.125852ms
+grafana       | logger=plugins.update.checker t=2025-06-04T15:20:10.766024473Z level=info msg="Update check succeeded" duration=644.165451ms
+grafana       | logger=infra.usagestats t=2025-06-04T15:21:41.49961126Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T15:30:09.521655024Z level=info msg="Completed cleanup jobs" duration=35.78151ms
+grafana       | logger=plugins.update.checker t=2025-06-04T15:30:10.757680143Z level=info msg="Update check succeeded" duration=635.923201ms
+grafana       | logger=cleanup t=2025-06-04T15:40:09.552297732Z level=info msg="Completed cleanup jobs" duration=66.282779ms
+grafana       | logger=plugins.update.checker t=2025-06-04T15:40:10.755770459Z level=info msg="Update check succeeded" duration=633.936723ms
+grafana       | logger=cleanup t=2025-06-04T15:50:09.550446408Z level=info msg="Completed cleanup jobs" duration=64.390954ms
+grafana       | logger=plugins.update.checker t=2025-06-04T15:50:10.749463131Z level=info msg="Update check succeeded" duration=627.715406ms
+grafana       | logger=infra.usagestats t=2025-06-04T15:51:41.499517957Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T16:00:09.5108363Z level=info msg="Completed cleanup jobs" duration=25.010247ms
+grafana       | logger=plugins.update.checker t=2025-06-04T16:00:10.762786218Z level=info msg="Update check succeeded" duration=641.947807ms
+grafana       | logger=cleanup t=2025-06-04T16:10:09.542512452Z level=info msg="Completed cleanup jobs" duration=56.603635ms
+grafana       | logger=plugins.update.checker t=2025-06-04T16:10:10.775335267Z level=info msg="Update check succeeded" duration=653.638095ms
+grafana       | logger=cleanup t=2025-06-04T16:20:09.56158471Z level=info msg="Completed cleanup jobs" duration=75.707439ms
+grafana       | logger=plugins.update.checker t=2025-06-04T16:20:10.757052294Z level=info msg="Update check succeeded" duration=636.06795ms
+grafana       | logger=infra.usagestats t=2025-06-04T16:21:41.499262328Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T16:30:09.500328168Z level=info msg="Completed cleanup jobs" duration=14.509687ms
+grafana       | logger=plugins.update.checker t=2025-06-04T16:30:10.75128093Z level=info msg="Update check succeeded" duration=629.787455ms
+grafana       | logger=cleanup t=2025-06-04T16:40:09.528671375Z level=info msg="Completed cleanup jobs" duration=42.495403ms
+grafana       | logger=plugins.update.checker t=2025-06-04T16:40:10.763930388Z level=info msg="Update check succeeded" duration=642.306123ms
+grafana       | logger=cleanup t=2025-06-04T16:50:09.551363133Z level=info msg="Completed cleanup jobs" duration=64.708248ms
+grafana       | logger=plugins.update.checker t=2025-06-04T16:50:10.802459753Z level=info msg="Update check succeeded" duration=681.045979ms
+grafana       | logger=infra.usagestats t=2025-06-04T16:51:41.503938396Z level=info msg="Usage stats are ready to report"
+prometheus    | time=2025-06-04T17:00:05.464Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1749045600268 maxt=1749052800000 ulid=01JWXY5FX18Q2FQ9JJPSFAR7QQ duration=54.297604ms ooo=false
+prometheus    | time=2025-06-04T17:00:05.466Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.540065ms
+prometheus    | time=2025-06-04T17:00:05.513Z level=INFO source=compact.go:541 msg="compact blocks" component=tsdb count=3 mint=1749018012793 maxt=1749038400000 ulid=01JWXY5FYTZ5GBQAQ7VHQYM5FP sources="[01JWX3VEKXCA2MXGC6MFG57WVG 01JWX9JA52QS26VKPHTA8QHXE6 01JWXGE1D23ERNP16T4CCJ1YCG]" duration=47.409368ms
+prometheus    | time=2025-06-04T17:00:05.514Z level=INFO source=db.go:1813 msg="Deleting obsolete block" component=tsdb block=01JWX3VEKXCA2MXGC6MFG57WVG
+prometheus    | time=2025-06-04T17:00:05.515Z level=INFO source=db.go:1813 msg="Deleting obsolete block" component=tsdb block=01JWX9JA52QS26VKPHTA8QHXE6
+prometheus    | time=2025-06-04T17:00:05.515Z level=INFO source=db.go:1813 msg="Deleting obsolete block" component=tsdb block=01JWXGE1D23ERNP16T4CCJ1YCG
+grafana       | logger=cleanup t=2025-06-04T17:00:09.528064841Z level=info msg="Completed cleanup jobs" duration=42.044924ms
+grafana       | logger=plugins.update.checker t=2025-06-04T17:00:10.771140938Z level=info msg="Update check succeeded" duration=649.464623ms
+grafana       | logger=cleanup t=2025-06-04T17:10:09.512004624Z level=info msg="Completed cleanup jobs" duration=26.045863ms
+grafana       | logger=plugins.update.checker t=2025-06-04T17:10:10.770364519Z level=info msg="Update check succeeded" duration=649.029097ms
+grafana       | logger=cleanup t=2025-06-04T17:20:09.583710852Z level=info msg="Completed cleanup jobs" duration=97.276597ms
+grafana       | logger=plugins.update.checker t=2025-06-04T17:20:10.768157304Z level=info msg="Update check succeeded" duration=647.128716ms
+grafana       | logger=infra.usagestats t=2025-06-04T17:21:41.503001693Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T17:30:09.538610022Z level=info msg="Completed cleanup jobs" duration=52.234054ms
+grafana       | logger=plugins.update.checker t=2025-06-04T17:30:10.761561061Z level=info msg="Update check succeeded" duration=640.149556ms
+grafana       | logger=cleanup t=2025-06-04T17:40:09.541505388Z level=info msg="Completed cleanup jobs" duration=55.473781ms
+grafana       | logger=plugins.update.checker t=2025-06-04T17:40:10.759857473Z level=info msg="Update check succeeded" duration=638.113881ms
+grafana       | logger=cleanup t=2025-06-04T17:50:09.514447872Z level=info msg="Completed cleanup jobs" duration=28.612948ms
+grafana       | logger=plugins.update.checker t=2025-06-04T17:50:10.770196615Z level=info msg="Update check succeeded" duration=648.325162ms
+grafana       | logger=infra.usagestats t=2025-06-04T17:51:41.499113173Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T18:00:09.549479363Z level=info msg="Completed cleanup jobs" duration=63.220105ms
+grafana       | logger=plugins.update.checker t=2025-06-04T18:00:10.766374881Z level=info msg="Update check succeeded" duration=644.511963ms
+grafana       | logger=cleanup t=2025-06-04T18:10:09.554774092Z level=info msg="Completed cleanup jobs" duration=68.317321ms
+grafana       | logger=plugins.update.checker t=2025-06-04T18:10:10.75805558Z level=info msg="Update check succeeded" duration=636.803807ms
+grafana       | logger=cleanup t=2025-06-04T18:20:09.53823573Z level=info msg="Completed cleanup jobs" duration=52.345031ms
+grafana       | logger=plugins.update.checker t=2025-06-04T18:20:10.761200602Z level=info msg="Update check succeeded" duration=639.658203ms
+grafana       | logger=infra.usagestats t=2025-06-04T18:21:41.499654291Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T18:30:09.522654799Z level=info msg="Completed cleanup jobs" duration=36.644858ms
+grafana       | logger=plugins.update.checker t=2025-06-04T18:30:10.759937916Z level=info msg="Update check succeeded" duration=638.221934ms
+grafana       | logger=cleanup t=2025-06-04T18:40:09.50731949Z level=info msg="Completed cleanup jobs" duration=21.30452ms
+grafana       | logger=plugins.update.checker t=2025-06-04T18:40:10.763141189Z level=info msg="Update check succeeded" duration=641.347079ms
+grafana       | logger=cleanup t=2025-06-04T18:50:09.518483834Z level=info msg="Completed cleanup jobs" duration=32.474546ms
+grafana       | logger=plugins.update.checker t=2025-06-04T18:50:10.757689459Z level=info msg="Update check succeeded" duration=636.153759ms
+grafana       | logger=infra.usagestats t=2025-06-04T18:51:41.507352057Z level=info msg="Usage stats are ready to report"
+prometheus    | time=2025-06-04T19:00:05.463Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1749052800268 maxt=1749060000000 ulid=01JWY51751B2X1JVY0BRTTAPQH duration=53.162737ms ooo=false
+prometheus    | time=2025-06-04T19:00:05.465Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.7928ms
+prometheus    | time=2025-06-04T19:00:05.465Z level=INFO source=checkpoint.go:100 msg="Creating checkpoint" component=tsdb from_segment=2 to_segment=3 mint=1749060000000
+prometheus    | time=2025-06-04T19:00:05.511Z level=INFO source=head.go:1372 msg="WAL checkpoint complete" component=tsdb first=2 last=3 duration=46.423792ms
+grafana       | logger=cleanup t=2025-06-04T19:00:09.532610309Z level=info msg="Completed cleanup jobs" duration=46.380678ms
+grafana       | logger=plugins.update.checker t=2025-06-04T19:00:10.750784913Z level=info msg="Update check succeeded" duration=629.619402ms
+grafana       | logger=cleanup t=2025-06-04T19:10:09.510687936Z level=info msg="Completed cleanup jobs" duration=24.836906ms
+grafana       | logger=plugins.update.checker t=2025-06-04T19:10:10.762633834Z level=info msg="Update check succeeded" duration=641.468316ms
+grafana       | logger=cleanup t=2025-06-04T19:20:09.587724816Z level=info msg="Completed cleanup jobs" duration=101.182658ms
+grafana       | logger=plugins.update.checker t=2025-06-04T19:20:10.761607298Z level=info msg="Update check succeeded" duration=640.04733ms
+grafana       | logger=infra.usagestats t=2025-06-04T19:21:41.498964877Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T19:30:09.520000924Z level=info msg="Completed cleanup jobs" duration=33.835275ms
+grafana       | logger=plugins.update.checker t=2025-06-04T19:30:10.759364534Z level=info msg="Update check succeeded" duration=638.045923ms
+grafana       | logger=cleanup t=2025-06-04T19:40:09.515194846Z level=info msg="Completed cleanup jobs" duration=28.796151ms
+grafana       | logger=plugins.update.checker t=2025-06-04T19:40:10.760751858Z level=info msg="Update check succeeded" duration=639.266669ms
+grafana       | logger=cleanup t=2025-06-04T19:50:09.525115848Z level=info msg="Completed cleanup jobs" duration=39.019207ms
+grafana       | logger=plugins.update.checker t=2025-06-04T19:50:10.757512795Z level=info msg="Update check succeeded" duration=636.05627ms
+grafana       | logger=infra.usagestats t=2025-06-04T19:51:41.499549371Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T20:00:09.537743146Z level=info msg="Completed cleanup jobs" duration=51.35616ms
+grafana       | logger=plugins.update.checker t=2025-06-04T20:00:10.753437443Z level=info msg="Update check succeeded" duration=632.202862ms
+grafana       | logger=cleanup t=2025-06-04T20:10:09.529219152Z level=info msg="Completed cleanup jobs" duration=42.705892ms
+grafana       | logger=plugins.update.checker t=2025-06-04T20:10:10.751328672Z level=info msg="Update check succeeded" duration=630.205994ms
+grafana       | logger=cleanup t=2025-06-04T20:20:09.55477705Z level=info msg="Completed cleanup jobs" duration=68.314111ms
+grafana       | logger=plugins.update.checker t=2025-06-04T20:20:10.785092581Z level=info msg="Update check succeeded" duration=663.569082ms
+grafana       | logger=infra.usagestats t=2025-06-04T20:21:41.502154744Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T20:30:09.509062726Z level=info msg="Completed cleanup jobs" duration=22.944964ms
+grafana       | logger=plugins.update.checker t=2025-06-04T20:30:10.758205206Z level=info msg="Update check succeeded" duration=637.092947ms
+grafana       | logger=cleanup t=2025-06-04T20:40:09.560096015Z level=info msg="Completed cleanup jobs" duration=73.648552ms
+grafana       | logger=plugins.update.checker t=2025-06-04T20:40:10.755672091Z level=info msg="Update check succeeded" duration=634.473408ms
+grafana       | logger=cleanup t=2025-06-04T20:50:09.525257395Z level=info msg="Completed cleanup jobs" duration=38.818533ms
+grafana       | logger=plugins.update.checker t=2025-06-04T20:50:10.754990267Z level=info msg="Update check succeeded" duration=633.400152ms
+grafana       | logger=infra.usagestats t=2025-06-04T20:51:41.500383392Z level=info msg="Usage stats are ready to report"
+prometheus    | time=2025-06-04T21:00:05.506Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1749060000268 maxt=1749067200000 ulid=01JWYBWYD0WSGX0B7VTN5MWTVM duration=97.684742ms ooo=false
+prometheus    | time=2025-06-04T21:00:05.508Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=2.008123ms
+grafana       | logger=cleanup t=2025-06-04T21:00:09.534677513Z level=info msg="Completed cleanup jobs" duration=48.586898ms
+grafana       | logger=plugins.update.checker t=2025-06-04T21:00:10.762494884Z level=info msg="Update check succeeded" duration=641.597322ms
+grafana       | logger=cleanup t=2025-06-04T21:10:09.519846469Z level=info msg="Completed cleanup jobs" duration=33.99496ms
+grafana       | logger=plugins.update.checker t=2025-06-04T21:10:10.755388377Z level=info msg="Update check succeeded" duration=633.834159ms
+grafana       | logger=cleanup t=2025-06-04T21:20:09.605775037Z level=info msg="Completed cleanup jobs" duration=118.952242ms
+grafana       | logger=plugins.update.checker t=2025-06-04T21:20:10.948800103Z level=info msg="Update check succeeded" duration=827.097421ms
+grafana       | logger=infra.usagestats t=2025-06-04T21:21:41.499944072Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T21:30:09.50315501Z level=info msg="Completed cleanup jobs" duration=17.038268ms
+grafana       | logger=plugins.update.checker t=2025-06-04T21:30:10.752672343Z level=info msg="Update check succeeded" duration=631.18312ms
+grafana       | logger=cleanup t=2025-06-04T21:40:09.541494685Z level=info msg="Completed cleanup jobs" duration=55.660325ms
+grafana       | logger=plugins.update.checker t=2025-06-04T21:40:10.761456357Z level=info msg="Update check succeeded" duration=640.029909ms
+grafana       | logger=cleanup t=2025-06-04T21:50:09.51917835Z level=info msg="Completed cleanup jobs" duration=33.153577ms
+grafana       | logger=plugins.update.checker t=2025-06-04T21:50:10.760118456Z level=info msg="Update check succeeded" duration=639.239684ms
+grafana       | logger=infra.usagestats t=2025-06-04T21:51:41.499506497Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T22:00:09.520084971Z level=info msg="Completed cleanup jobs" duration=33.768608ms
+grafana       | logger=plugins.update.checker t=2025-06-04T22:00:10.758905177Z level=info msg="Update check succeeded" duration=637.389101ms
+grafana       | logger=cleanup t=2025-06-04T22:10:09.533660325Z level=info msg="Completed cleanup jobs" duration=47.186636ms
+grafana       | logger=plugins.update.checker t=2025-06-04T22:10:10.76390553Z level=info msg="Update check succeeded" duration=642.056951ms
+grafana       | logger=cleanup t=2025-06-04T22:20:09.511974529Z level=info msg="Completed cleanup jobs" duration=25.672279ms
+grafana       | logger=plugins.update.checker t=2025-06-04T22:20:10.76238716Z level=info msg="Update check succeeded" duration=640.721284ms
+grafana       | logger=infra.usagestats t=2025-06-04T22:21:41.495818163Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T22:30:09.526288673Z level=info msg="Completed cleanup jobs" duration=40.148192ms
+grafana       | logger=plugins.update.checker t=2025-06-04T22:30:10.7566587Z level=info msg="Update check succeeded" duration=635.652416ms
+grafana       | logger=cleanup t=2025-06-04T22:40:09.50485201Z level=info msg="Completed cleanup jobs" duration=18.725873ms
+grafana       | logger=plugins.update.checker t=2025-06-04T22:40:11.968179274Z level=info msg="Update check succeeded" duration=1.8466018s
+grafana       | logger=cleanup t=2025-06-04T22:50:09.558590663Z level=info msg="Completed cleanup jobs" duration=72.693054ms
+grafana       | logger=plugins.update.checker t=2025-06-04T22:50:10.768687764Z level=info msg="Update check succeeded" duration=647.813677ms
+grafana       | logger=infra.usagestats t=2025-06-04T22:51:41.503257165Z level=info msg="Usage stats are ready to report"
+prometheus    | time=2025-06-04T23:00:05.489Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1749067200268 maxt=1749074400000 ulid=01JWYJRNN48YKZJK75F04YYYMK duration=77.028658ms ooo=false
+prometheus    | time=2025-06-04T23:00:05.490Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.649657ms
+prometheus    | time=2025-06-04T23:00:05.491Z level=INFO source=checkpoint.go:100 msg="Creating checkpoint" component=tsdb from_segment=4 to_segment=5 mint=1749074400000
+prometheus    | time=2025-06-04T23:00:05.574Z level=INFO source=head.go:1372 msg="WAL checkpoint complete" component=tsdb first=4 last=5 duration=83.694918ms
+prometheus    | time=2025-06-04T23:00:05.667Z level=INFO source=compact.go:541 msg="compact blocks" component=tsdb count=3 mint=1749038400268 maxt=1749060000000 ulid=01JWYJRNT7SPTNP7A2X6S5XXFH sources="[01JWXQ9RN1V27316Z0M45S4DET 01JWXY5FX18Q2FQ9JJPSFAR7QQ 01JWY51751B2X1JVY0BRTTAPQH]" duration=92.08846ms
+prometheus    | time=2025-06-04T23:00:05.668Z level=INFO source=db.go:1813 msg="Deleting obsolete block" component=tsdb block=01JWXQ9RN1V27316Z0M45S4DET
+prometheus    | time=2025-06-04T23:00:05.669Z level=INFO source=db.go:1813 msg="Deleting obsolete block" component=tsdb block=01JWXY5FX18Q2FQ9JJPSFAR7QQ
+prometheus    | time=2025-06-04T23:00:05.671Z level=INFO source=db.go:1813 msg="Deleting obsolete block" component=tsdb block=01JWY51751B2X1JVY0BRTTAPQH
+grafana       | logger=cleanup t=2025-06-04T23:00:09.518930381Z level=info msg="Completed cleanup jobs" duration=32.610962ms
+grafana       | logger=plugins.update.checker t=2025-06-04T23:00:10.773436491Z level=info msg="Update check succeeded" duration=651.83002ms
+grafana       | logger=cleanup t=2025-06-04T23:10:09.508254186Z level=info msg="Completed cleanup jobs" duration=21.837563ms
+grafana       | logger=plugins.update.checker t=2025-06-04T23:10:10.760984769Z level=info msg="Update check succeeded" duration=639.262156ms
+grafana       | logger=cleanup t=2025-06-04T23:20:09.559809898Z level=info msg="Completed cleanup jobs" duration=73.22895ms
+grafana       | logger=plugins.update.checker t=2025-06-04T23:20:10.756692835Z level=info msg="Update check succeeded" duration=635.253121ms
+grafana       | logger=infra.usagestats t=2025-06-04T23:21:41.499704064Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T23:30:09.51653564Z level=info msg="Completed cleanup jobs" duration=30.482691ms
+grafana       | logger=plugins.update.checker t=2025-06-04T23:30:10.756487317Z level=info msg="Update check succeeded" duration=635.437323ms
+grafana       | logger=cleanup t=2025-06-04T23:40:09.542076614Z level=info msg="Completed cleanup jobs" duration=55.941ms
+grafana       | logger=plugins.update.checker t=2025-06-04T23:40:10.755990147Z level=info msg="Update check succeeded" duration=634.163957ms
+grafana       | logger=cleanup t=2025-06-04T23:50:09.527926608Z level=info msg="Completed cleanup jobs" duration=41.95568ms
+grafana       | logger=plugins.update.checker t=2025-06-04T23:50:10.971799894Z level=info msg="Update check succeeded" duration=850.56232ms
+grafana       | logger=infra.usagestats t=2025-06-04T23:51:41.500019777Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-05T00:00:09.521412975Z level=info msg="Completed cleanup jobs" duration=35.584362ms
+grafana       | logger=plugins.update.checker t=2025-06-05T00:00:10.794373478Z level=info msg="Update check succeeded" duration=673.004079ms
+grafana       | logger=cleanup t=2025-06-05T00:10:09.518472011Z level=info msg="Completed cleanup jobs" duration=32.224935ms
+grafana       | logger=plugins.update.checker t=2025-06-05T00:10:10.760231152Z level=info msg="Update check succeeded" duration=639.00993ms
+grafana       | logger=cleanup t=2025-06-05T00:20:09.561772254Z level=info msg="Completed cleanup jobs" duration=75.307914ms
+grafana       | logger=plugins.update.checker t=2025-06-05T00:20:10.762156186Z level=info msg="Update check succeeded" duration=641.296761ms
+grafana       | logger=infra.usagestats t=2025-06-05T00:21:41.498028617Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-05T00:30:09.520769848Z level=info msg="Completed cleanup jobs" duration=34.595974ms
+grafana       | logger=plugins.update.checker t=2025-06-05T00:30:10.755582298Z level=info msg="Update check succeeded" duration=633.863765ms
+grafana       | logger=cleanup t=2025-06-05T00:40:09.538015087Z level=info msg="Completed cleanup jobs" duration=51.549962ms
+grafana       | logger=plugins.update.checker t=2025-06-05T00:40:10.756658057Z level=info msg="Update check succeeded" duration=635.506821ms
+grafana       | logger=cleanup t=2025-06-05T00:50:09.514535796Z level=info msg="Completed cleanup jobs" duration=28.58283ms
+grafana       | logger=plugins.update.checker t=2025-06-05T00:50:10.754577081Z level=info msg="Update check succeeded" duration=633.440047ms
+grafana       | logger=infra.usagestats t=2025-06-05T00:51:41.498953852Z level=info msg="Usage stats are ready to report"
+prometheus    | time=2025-06-05T01:00:05.442Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1749074400268 maxt=1749081600000 ulid=01JWYSMCX2XBEC23FTZZ5QRYHE duration=32.670485ms ooo=false
+prometheus    | time=2025-06-05T01:00:05.444Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.565936ms
+grafana       | logger=cleanup t=2025-06-05T01:00:09.544703693Z level=info msg="Completed cleanup jobs" duration=58.192181ms
+grafana       | logger=plugins.update.checker t=2025-06-05T01:00:10.763788958Z level=info msg="Update check succeeded" duration=642.005438ms
+grafana       | logger=cleanup t=2025-06-05T01:10:09.526006049Z level=info msg="Completed cleanup jobs" duration=40.050592ms
+grafana       | logger=plugins.update.checker t=2025-06-05T01:10:10.763259814Z level=info msg="Update check succeeded" duration=642.390064ms
+grafana       | logger=cleanup t=2025-06-05T01:20:09.521915035Z level=info msg="Completed cleanup jobs" duration=35.377409ms
+grafana       | logger=plugins.update.checker t=2025-06-05T01:20:10.763029003Z level=info msg="Update check succeeded" duration=641.354407ms
+grafana       | logger=infra.usagestats t=2025-06-05T01:21:41.506939146Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-05T01:30:09.511578874Z level=info msg="Completed cleanup jobs" duration=25.590519ms
+grafana       | logger=plugins.update.checker t=2025-06-05T01:30:10.799847536Z level=info msg="Update check succeeded" duration=678.175173ms
+grafana       | logger=cleanup t=2025-06-05T01:40:09.510990025Z level=info msg="Completed cleanup jobs" duration=25.126777ms
+grafana       | logger=plugins.update.checker t=2025-06-05T01:40:10.762872131Z level=info msg="Update check succeeded" duration=641.633913ms
+grafana       | logger=cleanup t=2025-06-05T01:50:09.522046767Z level=info msg="Completed cleanup jobs" duration=35.553281ms
+grafana       | logger=plugins.update.checker t=2025-06-05T01:50:10.759893644Z level=info msg="Update check succeeded" duration=638.141107ms
+grafana       | logger=infra.usagestats t=2025-06-05T01:51:41.503005262Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-05T02:00:09.543822437Z level=info msg="Completed cleanup jobs" duration=57.276202ms
+grafana       | logger=plugins.update.checker t=2025-06-05T02:00:10.755907024Z level=info msg="Update check succeeded" duration=634.022399ms
+grafana       | logger=cleanup t=2025-06-05T02:10:09.508169011Z level=info msg="Completed cleanup jobs" duration=22.313059ms
+grafana       | logger=plugins.update.checker t=2025-06-05T02:10:10.752475451Z level=info msg="Update check succeeded" duration=630.996882ms
+grafana       | logger=cleanup t=2025-06-05T02:20:09.532065596Z level=info msg="Completed cleanup jobs" duration=46.234888ms
+grafana       | logger=plugins.update.checker t=2025-06-05T02:20:10.760072711Z level=info msg="Update check succeeded" duration=638.29192ms
+grafana       | logger=infra.usagestats t=2025-06-05T02:21:41.500009446Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-05T02:30:09.539530604Z level=info msg="Completed cleanup jobs" duration=53.252584ms
+grafana       | logger=plugins.update.checker t=2025-06-05T02:30:10.785104439Z level=info msg="Update check succeeded" duration=663.645504ms
+grafana       | logger=cleanup t=2025-06-05T02:40:09.559142152Z level=info msg="Completed cleanup jobs" duration=73.028162ms
+grafana       | logger=plugins.update.checker t=2025-06-05T02:40:11.029516823Z level=info msg="Update check succeeded" duration=908.42193ms
+grafana       | logger=context userId=1 orgId=1 uname=admin t=2025-06-05T02:45:12.434395964Z level=info msg="Request Completed" method=GET path=/apis/provisioning.grafana.app/v0alpha1/namespaces/default/settings status=404 remote_addr=192.168.0.1 time_ms=3 duration=3.997273ms size=19 referer="http://localhost:3000/d/4f00f4f2-d610-4423-870f-772231ceac4a/passive-metrics-dashboard?from=now-30m&orgId=1&refresh=auto&timezone=browser&to=now" handler=/apis/* status_source=server
+grafana       | logger=context userId=1 orgId=1 uname=admin t=2025-06-05T02:45:13.616751844Z level=info msg="Request Completed" method=GET path=/apis/provisioning.grafana.app/v0alpha1/namespaces/default/settings status=404 remote_addr=192.168.0.1 time_ms=1 duration=1.41803ms size=19 referer=http://localhost:3000/dashboards handler=/apis/* status_source=server
+grafana       | logger=cleanup t=2025-06-05T02:50:09.512632397Z level=info msg="Completed cleanup jobs" duration=26.20328ms
+grafana       | logger=plugins.update.checker t=2025-06-05T02:50:10.75318733Z level=info msg="Update check succeeded" duration=631.985795ms
+grafana       | logger=infra.usagestats t=2025-06-05T02:51:41.499009675Z level=info msg="Usage stats are ready to report"
+prometheus    | time=2025-06-05T03:00:05.455Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1749081600268 maxt=1749088800000 ulid=01JWZ0G4525Q8KR9CD5R043B2T duration=44.996557ms ooo=false
+prometheus    | time=2025-06-05T03:00:05.457Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.427784ms
+prometheus    | time=2025-06-05T03:00:05.457Z level=INFO source=checkpoint.go:100 msg="Creating checkpoint" component=tsdb from_segment=6 to_segment=7 mint=1749088800000
+prometheus    | time=2025-06-05T03:00:05.521Z level=INFO source=head.go:1372 msg="WAL checkpoint complete" component=tsdb first=6 last=7 duration=64.409878ms
+grafana       | logger=cleanup t=2025-06-05T03:00:09.535819162Z level=info msg="Completed cleanup jobs" duration=49.746349ms
+grafana       | logger=plugins.update.checker t=2025-06-05T03:00:10.75670722Z level=info msg="Update check succeeded" duration=635.653535ms
