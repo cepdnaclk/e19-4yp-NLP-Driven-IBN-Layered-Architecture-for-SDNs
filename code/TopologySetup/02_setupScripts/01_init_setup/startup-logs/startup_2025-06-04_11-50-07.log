@@ -4086,3 +4086,14 @@ grafana       | logger=cleanup t=2025-06-05T02:30:09.539530604Z level=info msg="
 grafana       | logger=plugins.update.checker t=2025-06-05T02:30:10.785104439Z level=info msg="Update check succeeded" duration=663.645504ms
 grafana       | logger=cleanup t=2025-06-05T02:40:09.559142152Z level=info msg="Completed cleanup jobs" duration=73.028162ms
 grafana       | logger=plugins.update.checker t=2025-06-05T02:40:11.029516823Z level=info msg="Update check succeeded" duration=908.42193ms
+grafana       | logger=context userId=1 orgId=1 uname=admin t=2025-06-05T02:45:12.434395964Z level=info msg="Request Completed" method=GET path=/apis/provisioning.grafana.app/v0alpha1/namespaces/default/settings status=404 remote_addr=192.168.0.1 time_ms=3 duration=3.997273ms size=19 referer="http://localhost:3000/d/4f00f4f2-d610-4423-870f-772231ceac4a/passive-metrics-dashboard?from=now-30m&orgId=1&refresh=auto&timezone=browser&to=now" handler=/apis/* status_source=server
+grafana       | logger=context userId=1 orgId=1 uname=admin t=2025-06-05T02:45:13.616751844Z level=info msg="Request Completed" method=GET path=/apis/provisioning.grafana.app/v0alpha1/namespaces/default/settings status=404 remote_addr=192.168.0.1 time_ms=1 duration=1.41803ms size=19 referer=http://localhost:3000/dashboards handler=/apis/* status_source=server
+grafana       | logger=cleanup t=2025-06-05T02:50:09.512632397Z level=info msg="Completed cleanup jobs" duration=26.20328ms
+grafana       | logger=plugins.update.checker t=2025-06-05T02:50:10.75318733Z level=info msg="Update check succeeded" duration=631.985795ms
+grafana       | logger=infra.usagestats t=2025-06-05T02:51:41.499009675Z level=info msg="Usage stats are ready to report"
+prometheus    | time=2025-06-05T03:00:05.455Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1749081600268 maxt=1749088800000 ulid=01JWZ0G4525Q8KR9CD5R043B2T duration=44.996557ms ooo=false
+prometheus    | time=2025-06-05T03:00:05.457Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.427784ms
+prometheus    | time=2025-06-05T03:00:05.457Z level=INFO source=checkpoint.go:100 msg="Creating checkpoint" component=tsdb from_segment=6 to_segment=7 mint=1749088800000
+prometheus    | time=2025-06-05T03:00:05.521Z level=INFO source=head.go:1372 msg="WAL checkpoint complete" component=tsdb first=6 last=7 duration=64.409878ms
+grafana       | logger=cleanup t=2025-06-05T03:00:09.535819162Z level=info msg="Completed cleanup jobs" duration=49.746349ms
+grafana       | logger=plugins.update.checker t=2025-06-05T03:00:10.75670722Z level=info msg="Update check succeeded" duration=635.653535ms
