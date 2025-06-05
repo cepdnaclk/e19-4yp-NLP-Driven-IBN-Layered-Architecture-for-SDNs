@@ -1713,3 +1713,598 @@ grafana       | logger=live t=2025-06-03T20:41:21.466746155Z level=info msg="Ini
 grafana       | logger=context userId=1 orgId=1 uname=admin t=2025-06-03T20:41:26.151324504Z level=info msg="Request Completed" method=GET path=/apis/provisioning.grafana.app/v0alpha1/namespaces/default/settings status=404 remote_addr=172.18.0.1 time_ms=1 duration=1.947601ms size=19 referer=http://localhost:3000/dashboards handler=/apis/* status_source=server
 grafana       | logger=cleanup t=2025-06-03T20:49:54.259379293Z level=info msg="Completed cleanup jobs" duration=31.034205ms
 grafana       | logger=plugins.update.checker t=2025-06-03T20:49:54.980857324Z level=info msg="Update check succeeded" duration=384.110196ms
+grafana       | logger=cleanup t=2025-06-03T20:59:54.267452668Z level=info msg="Completed cleanup jobs" duration=39.111465ms
+grafana       | logger=plugins.update.checker t=2025-06-03T20:59:55.043667174Z level=info msg="Update check succeeded" duration=446.876075ms
+grafana       | logger=infra.usagestats t=2025-06-03T21:00:24.250984595Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-03T21:09:54.260340504Z level=info msg="Completed cleanup jobs" duration=32.013856ms
+grafana       | logger=plugins.update.checker t=2025-06-03T21:09:55.023308733Z level=info msg="Update check succeeded" duration=426.247229ms
+grafana       | logger=cleanup t=2025-06-03T21:19:54.273411151Z level=info msg="Completed cleanup jobs" duration=45.029487ms
+grafana       | logger=plugins.update.checker t=2025-06-03T21:19:55.001160728Z level=info msg="Update check succeeded" duration=404.196655ms
+grafana       | logger=cleanup t=2025-06-03T21:29:54.307080543Z level=info msg="Completed cleanup jobs" duration=78.694973ms
+grafana       | logger=plugins.update.checker t=2025-06-03T21:29:55.07608082Z level=info msg="Update check succeeded" duration=479.270183ms
+grafana       | logger=infra.usagestats t=2025-06-03T21:30:24.248635507Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-03T21:39:54.271292831Z level=info msg="Completed cleanup jobs" duration=42.411874ms
+grafana       | logger=plugins.update.checker t=2025-06-03T21:39:55.237327169Z level=info msg="Update check succeeded" duration=639.9963ms
+grafana       | logger=cleanup t=2025-06-03T21:49:54.285055158Z level=info msg="Completed cleanup jobs" duration=56.655928ms
+grafana       | logger=plugins.update.checker t=2025-06-03T21:49:55.065427407Z level=info msg="Update check succeeded" duration=468.447021ms
+grafana       | logger=cleanup t=2025-06-03T21:59:54.254049678Z level=info msg="Completed cleanup jobs" duration=25.49416ms
+grafana       | logger=plugins.update.checker t=2025-06-03T21:59:55.014899988Z level=info msg="Update check succeeded" duration=417.927234ms
+grafana       | logger=infra.usagestats t=2025-06-03T22:00:24.25215682Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-03T22:09:54.275969238Z level=info msg="Completed cleanup jobs" duration=47.616516ms
+grafana       | logger=plugins.update.checker t=2025-06-03T22:09:55.075747389Z level=info msg="Update check succeeded" duration=478.680831ms
+grafana       | logger=cleanup t=2025-06-03T22:19:54.257200526Z level=info msg="Completed cleanup jobs" duration=28.785494ms
+grafana       | logger=plugins.update.checker t=2025-06-03T22:19:54.968533333Z level=info msg="Update check succeeded" duration=371.555394ms
+grafana       | logger=cleanup t=2025-06-03T22:29:54.2507699Z level=info msg="Completed cleanup jobs" duration=22.431043ms
+grafana       | logger=plugins.update.checker t=2025-06-03T22:29:55.053615538Z level=info msg="Update check succeeded" duration=456.594235ms
+grafana       | logger=infra.usagestats t=2025-06-03T22:30:24.247133286Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-03T22:39:54.307541126Z level=info msg="Completed cleanup jobs" duration=79.202567ms
+grafana       | logger=plugins.update.checker t=2025-06-03T22:39:55.028619061Z level=info msg="Update check succeeded" duration=431.679787ms
+grafana       | logger=cleanup t=2025-06-03T22:49:54.271089125Z level=info msg="Completed cleanup jobs" duration=42.761187ms
+grafana       | logger=plugins.update.checker t=2025-06-03T22:49:55.206394343Z level=info msg="Update check succeeded" duration=609.197984ms
+grafana       | logger=cleanup t=2025-06-03T22:59:54.272387324Z level=info msg="Completed cleanup jobs" duration=43.997534ms
+grafana       | logger=plugins.update.checker t=2025-06-03T22:59:54.971036278Z level=info msg="Update check succeeded" duration=374.091312ms
+grafana       | logger=infra.usagestats t=2025-06-03T23:00:24.248743472Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-03T23:09:54.24641651Z level=info msg="Completed cleanup jobs" duration=17.958059ms
+grafana       | logger=plugins.update.checker t=2025-06-03T23:09:55.044453169Z level=info msg="Update check succeeded" duration=447.980403ms
+grafana       | logger=cleanup t=2025-06-03T23:19:54.258038947Z level=info msg="Completed cleanup jobs" duration=29.55799ms
+grafana       | logger=plugins.update.checker t=2025-06-03T23:19:55.01725208Z level=info msg="Update check succeeded" duration=420.530584ms
+grafana       | logger=cleanup t=2025-06-03T23:29:54.257163913Z level=info msg="Completed cleanup jobs" duration=28.835446ms
+grafana       | logger=plugins.update.checker t=2025-06-03T23:29:55.096498103Z level=info msg="Update check succeeded" duration=499.106481ms
+prometheus    | time=2025-06-03T23:29:59.234Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1748982598780 maxt=1748988000000 ulid=01JWW22PCDGY58VAXRX46P3X57 duration=53.311616ms ooo=false
+prometheus    | time=2025-06-03T23:29:59.236Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.14275ms
+grafana       | logger=infra.usagestats t=2025-06-03T23:30:24.251223831Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-03T23:39:54.255454296Z level=info msg="Completed cleanup jobs" duration=27.027349ms
+grafana       | logger=plugins.update.checker t=2025-06-03T23:39:55.070779321Z level=info msg="Update check succeeded" duration=473.701837ms
+grafana       | logger=cleanup t=2025-06-03T23:49:54.2586178Z level=info msg="Completed cleanup jobs" duration=30.226751ms
+grafana       | logger=plugins.update.checker t=2025-06-03T23:49:55.043908153Z level=info msg="Update check succeeded" duration=446.504413ms
+grafana       | logger=cleanup t=2025-06-03T23:59:54.246573781Z level=info msg="Completed cleanup jobs" duration=18.18569ms
+grafana       | logger=plugins.update.checker t=2025-06-03T23:59:54.992277593Z level=info msg="Update check succeeded" duration=395.165498ms
+grafana       | logger=infra.usagestats t=2025-06-04T00:00:24.248665835Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T00:09:54.266428859Z level=info msg="Completed cleanup jobs" duration=37.862879ms
+grafana       | logger=plugins.update.checker t=2025-06-04T00:09:55.246425704Z level=info msg="Update check succeeded" duration=649.210668ms
+grafana       | logger=cleanup t=2025-06-04T00:19:54.280003743Z level=info msg="Completed cleanup jobs" duration=51.582673ms
+grafana       | logger=plugins.update.checker t=2025-06-04T00:19:55.102248973Z level=info msg="Update check succeeded" duration=504.818247ms
+grafana       | logger=cleanup t=2025-06-04T00:29:54.292662694Z level=info msg="Completed cleanup jobs" duration=64.296853ms
+grafana       | logger=plugins.update.checker t=2025-06-04T00:29:55.065989444Z level=info msg="Update check succeeded" duration=469.209145ms
+grafana       | logger=infra.usagestats t=2025-06-04T00:30:24.255630375Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T00:39:54.272024998Z level=info msg="Completed cleanup jobs" duration=43.333993ms
+grafana       | logger=plugins.update.checker t=2025-06-04T00:39:55.046920039Z level=info msg="Update check succeeded" duration=450.37632ms
+grafana       | logger=cleanup t=2025-06-04T00:49:54.295006355Z level=info msg="Completed cleanup jobs" duration=66.524977ms
+grafana       | logger=plugins.update.checker t=2025-06-04T00:49:55.120936198Z level=info msg="Update check succeeded" duration=523.554466ms
+grafana       | logger=cleanup t=2025-06-04T00:59:54.261435027Z level=info msg="Completed cleanup jobs" duration=32.407721ms
+grafana       | logger=plugins.update.checker t=2025-06-04T00:59:55.089044125Z level=info msg="Update check succeeded" duration=491.823199ms
+prometheus    | time=2025-06-04T01:00:03.522Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1748988000021 maxt=1748995200000 ulid=01JWW77M0EFMB7S6R27ZJYZHKV duration=52.55846ms ooo=false
+prometheus    | time=2025-06-04T01:00:03.524Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=1.318742ms
+grafana       | logger=infra.usagestats t=2025-06-04T01:00:24.249537202Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T01:09:54.247996016Z level=info msg="Completed cleanup jobs" duration=19.633933ms
+grafana       | logger=plugins.update.checker t=2025-06-04T01:09:55.035647944Z level=info msg="Update check succeeded" duration=438.471842ms
+grafana       | logger=cleanup t=2025-06-04T01:19:54.273886759Z level=info msg="Completed cleanup jobs" duration=45.551308ms
+grafana       | logger=plugins.update.checker t=2025-06-04T01:19:55.208204016Z level=info msg="Update check succeeded" duration=610.937508ms
+grafana       | logger=cleanup t=2025-06-04T01:29:54.272431647Z level=info msg="Completed cleanup jobs" duration=43.862806ms
+grafana       | logger=plugins.update.checker t=2025-06-04T01:29:55.047172833Z level=info msg="Update check succeeded" duration=450.265839ms
+grafana       | logger=infra.usagestats t=2025-06-04T01:30:24.247997033Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T01:39:54.271133393Z level=info msg="Completed cleanup jobs" duration=42.582926ms
+grafana       | logger=plugins.update.checker t=2025-06-04T01:39:55.119825113Z level=info msg="Update check succeeded" duration=523.068497ms
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:57:14.002633323Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=7 duration=7.840544ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+onos          | [90m02:57:14.979[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalClusterListener@2b53c9e2 not registered
+onos          | [90m02:57:14.982[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalMastershipListener@601e48b9 not registered
+onos          | [90m02:57:14.982[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalDeviceListener@3ae3c5e1 not registered
+onos          | [90m02:57:14.983[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalLinkListener@7a98702a not registered
+onos          | [90m02:57:14.983[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalHostListener@4fb1ba42 not registered
+onos          | [90m02:57:14.983[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalIntentListener@5d78688d not registered
+onos          | [90m02:57:14.983[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalFlowListener@7910720e not registered
+onos          | [90m02:57:14.988[0m [1;32mINFO [m [90m[UiWebSocket][0m Session token revoked
+onos          | [90m02:57:14.989[0m [1;32mINFO [m [90m[UiSharedTopologyModel][0m Unregistering topology session {UiTopoSession for user <onos>}
+onos          | [90m02:57:14.989[0m [1;32mINFO [m [90m[UiWebSocket][0m GUI client disconnected [close-code=1006, message=Disconnected]
+onos          | [90m02:57:14.992[0m [1;32mINFO [m [90m[UiSharedTopologyModel][0m Registering topology session {UiTopoSession for user <unknown>}
+onos          | [90m02:57:14.997[0m [1;33mWARN [m [90m[Topo2OverlayCache][0m added overlay: UiTopo2Overlay{id="traffic-2-overlay", class="Traffic2Overlay"}
+onos          | [90m02:57:14.999[0m [1;32mINFO [m [90m[UiWebSocket][0m GUI client connected -- user <unknown>
+onos          | [90m02:57:15.000[0m [1;33mWARN [m [90m[UiWebSocket][0m Invalid Authentication Token: {"event":"authentication","payload":{"token":"1s50ifa2hdkpbh97ems4e2v2d2"}}
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:57:16.012079744Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.409086ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:57:18.011900216Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.354393ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:57:18.588698149Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.255608ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:57:21.097675211Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.372256ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:57:29.102414722Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.600104ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:57:44.107554079Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=0 duration=985.248µs size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:58:01.272616754Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.676458ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:58:08.301300472Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.393179ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:58:17.323013885Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.605638ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:58:27.078160051Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.39886ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:58:46.335674908Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.381281ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:59:08.275414157Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.596907ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T02:59:41.18146336Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.462872ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+prometheus    | time=2025-06-04T03:00:03.916Z level=INFO source=compact.go:602 msg="write block" component=tsdb mint=1748995200021 maxt=1749002400000 ulid=01JWWE3BM3MNQ4AVG19SAPP0WP duration=73.233317ms ooo=false
+prometheus    | time=2025-06-04T03:00:03.920Z level=INFO source=head.go:1410 msg="Head GC completed" component=tsdb caller=truncateMemory duration=3.176024ms
+grafana       | logger=context userId=0 orgId=0 uname= t=2025-06-04T03:00:30.535969253Z level=info msg="Request Completed" method=GET path=/api/live/ws status=401 remote_addr=172.18.0.1 time_ms=1 duration=1.909007ms size=105 referer= handler=/api/live/ws status_source=server errorReason=Unauthorized errorMessageID=session.token.rotate error="token needs to be rotated"
+grafana       | logger=context userId=1 orgId=1 uname=admin t=2025-06-04T03:01:30.588713021Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=47 duration=47.803988ms size=0 referer= handler=/api/live/ws status_source=server
+grafana       | logger=cleanup t=2025-06-04T03:02:54.587163183Z level=info msg="Completed cleanup jobs" duration=43.347994ms
+grafana       | logger=plugins.update.checker t=2025-06-04T03:02:59.941634341Z level=info msg="Update check succeeded" duration=5.028959365s
+grafana       | logger=context userId=1 orgId=1 uname=admin t=2025-06-04T03:03:51.498557591Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=10 duration=10.697866ms size=0 referer= handler=/api/live/ws status_source=server
+grafana       | logger=cleanup t=2025-06-04T03:12:54.626068933Z level=info msg="Completed cleanup jobs" duration=82.179197ms
+grafana       | logger=plugins.update.checker t=2025-06-04T03:13:00.844557539Z level=info msg="Update check succeeded" duration=5.932699487s
+grafana       | logger=infra.usagestats t=2025-06-04T03:13:24.568362978Z level=info msg="Usage stats are ready to report"
+grafana       | logger=cleanup t=2025-06-04T03:22:54.607836978Z level=info msg="Completed cleanup jobs" duration=64.157951ms
+grafana       | logger=plugins.update.checker t=2025-06-04T03:22:55.695687887Z level=info msg="Update check succeeded" duration=783.348816ms
+onos          | [90m03:23:33.480[0m [1;32mINFO [m [90m[UiWebSocket][0m Session token revoked
+onos          | [90m03:23:33.481[0m [1;32mINFO [m [90m[UiSharedTopologyModel][0m Unregistering topology session {UiTopoSession for user <unknown>}
+onos          | [90m03:23:33.481[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalClusterListener@721a3c15 not registered
+onos          | [90m03:23:33.481[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalMastershipListener@6ad0a39e not registered
+onos          | [90m03:23:33.481[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalDeviceListener@694a28cc not registered
+onos          | [90m03:23:33.481[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalLinkListener@523c77a7 not registered
+onos          | [90m03:23:33.482[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalHostListener@71e50361 not registered
+onos          | [90m03:23:33.482[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalIntentListener@1e468290 not registered
+onos          | [90m03:23:33.482[0m [1;33mWARN [m [90m[ListenerRegistry][0m Listener org.onosproject.ui.impl.TopologyViewMessageHandler$InternalFlowListener@2672d5dc not registered
+onos          | [90m03:23:33.483[0m [1;32mINFO [m [90m[UiWebSocket][0m GUI client disconnected [close-code=1001, message=null]
+containernet  | ]0;root@947e8b086dfe: /containernetroot@947e8b086dfe:/containernet# exit
+prometheus    | time=2025-06-04T03:23:48.503Z level=WARN source=main.go:1053 msg="Received an OS signal, exiting gracefully..." signal=terminated
+prometheus    | time=2025-06-04T03:23:48.503Z level=INFO source=main.go:1078 msg="Stopping scrape discovery manager..."
+prometheus    | time=2025-06-04T03:23:48.503Z level=INFO source=main.go:1092 msg="Stopping notify discovery manager..."
+prometheus    | time=2025-06-04T03:23:48.503Z level=INFO source=manager.go:189 msg="Stopping rule manager..." component="rule manager"
+prometheus    | time=2025-06-04T03:23:48.504Z level=INFO source=manager.go:205 msg="Rule manager stopped" component="rule manager"
+prometheus    | time=2025-06-04T03:23:48.504Z level=INFO source=main.go:1129 msg="Stopping scrape manager..."
+prometheus    | time=2025-06-04T03:23:48.504Z level=INFO source=main.go:1074 msg="Scrape discovery manager stopped"
+prometheus    | time=2025-06-04T03:23:48.504Z level=INFO source=main.go:1088 msg="Notify discovery manager stopped"
+prometheus    | time=2025-06-04T03:23:48.505Z level=INFO source=main.go:1121 msg="Scrape manager stopped"
+grafana       | logger=server t=2025-06-04T03:23:48.508756937Z level=info msg="Shutdown started" reason="System signal: terminated"
+grafana       | logger=ticker t=2025-06-04T03:23:48.508995626Z level=info msg=stopped last_tick=2025-06-04T03:23:40Z
+grafana       | logger=tracing t=2025-06-04T03:23:48.509021223Z level=info msg="Closing tracing"
+grafana       | logger=grafana-apiserver t=2025-06-04T03:23:48.509347101Z level=info msg="StorageObjectCountTracker pruner is exiting"
+prometheus    | time=2025-06-04T03:23:48.517Z level=INFO source=manager.go:540 msg="Stopping notification manager..." component=notifier
+prometheus    | time=2025-06-04T03:23:48.517Z level=INFO source=manager.go:282 msg="Draining any remaining notifications..." component=notifier
+prometheus    | time=2025-06-04T03:23:48.517Z level=INFO source=manager.go:288 msg="Remaining notifications drained" component=notifier
+prometheus    | time=2025-06-04T03:23:48.517Z level=INFO source=manager.go:218 msg="Notification manager stopped" component=notifier
+prometheus    | time=2025-06-04T03:23:48.517Z level=INFO source=main.go:1399 msg="Notifier manager stopped"
+prometheus    | time=2025-06-04T03:23:48.519Z level=INFO source=main.go:1413 msg="See you next time!"
+onos          | [90m03:23:48.531[0m [1;32mINFO [m [90m[OFChannelHandler][0m Switch disconnected callback for sw:NiciraSwitchHandshaker{session=172.18.0.4:37616, dpid=00:00:00:00:00:00:00:04}. Cleaning up ...
+onos          | [90m03:23:48.531[0m [1;32mINFO [m [90m[OFChannelHandler][0m Switch disconnected callback for sw:NiciraSwitchHandshaker{session=172.18.0.4:37598, dpid=00:00:00:00:00:00:00:02}. Cleaning up ...
+onos          | [90m03:23:48.532[0m [1;33mWARN [m [90m[OFChannelHandler][0m Dispatcher interrupted
+onos          | [90m03:23:48.532[0m [1;33mWARN [m [90m[OFChannelHandler][0m Dispatcher interrupted
+onos          | [90m03:23:48.532[0m [1;32mINFO [m [90m[OFChannelHandler][0m NiciraSwitchHandshaker{session=172.18.0.4:37598, dpid=00:00:00:00:00:00:00:02}:removal called
+onos          | [90m03:23:48.532[0m [1;32mINFO [m [90m[OFChannelHandler][0m Switch disconnected callback for sw:NiciraSwitchHandshaker{session=172.18.0.4:37594, dpid=00:00:00:00:00:00:00:01}. Cleaning up ...
+onos          | [90m03:23:48.531[0m [1;32mINFO [m [90m[OFChannelHandler][0m Switch disconnected callback for sw:NiciraSwitchHandshaker{session=172.18.0.4:37608, dpid=00:00:00:00:00:00:00:03}. Cleaning up ...
+onos          | [90m03:23:48.532[0m [1;33mWARN [m [90m[OFChannelHandler][0m Dispatcher interrupted
+onos          | [90m03:23:48.534[0m [1;32mINFO [m [90m[PortStatsCollector][0m Stopping Port Stats collection thread for 00:00:00:00:00:00:00:02
+onos          | [90m03:23:48.534[0m [1;32mINFO [m [90m[OFChannelHandler][0m NiciraSwitchHandshaker{session=172.18.0.4:37608, dpid=00:00:00:00:00:00:00:03}:removal called
+onos          | [90m03:23:48.534[0m [1;32mINFO [m [90m[OFChannelHandler][0m NiciraSwitchHandshaker{session=172.18.0.4:37616, dpid=00:00:00:00:00:00:00:04}:removal called
+onos          | [90m03:23:48.533[0m [1;32mINFO [m [90m[OFChannelHandler][0m NiciraSwitchHandshaker{session=172.18.0.4:37594, dpid=00:00:00:00:00:00:00:01}:removal called
+onos          | [90m03:23:48.533[0m [1;33mWARN [m [90m[OFChannelHandler][0m Dispatcher interrupted
+onos          | [90m03:23:48.534[0m [1;32mINFO [m [90m[DeviceManager][0m Device of:0000000000000002 disconnected from this node: 172.18.0.2
+onos          | [90m03:23:48.538[0m [1;32mINFO [m [90m[DeviceManager][0m Device of:0000000000000002 is fully disconnected from the cluster
+onos          | [90m03:23:48.540[0m [1;32mINFO [m [90m[PortStatsCollector][0m Stopping Port Stats collection thread for 00:00:00:00:00:00:00:03
+onos          | [90m03:23:48.540[0m [1;32mINFO [m [90m[PortStatsCollector][0m Stopping Port Stats collection thread for 00:00:00:00:00:00:00:04
+onos          | [90m03:23:48.540[0m [1;32mINFO [m [90m[PortStatsCollector][0m Stopping Port Stats collection thread for 00:00:00:00:00:00:00:01
+onos          | [90m03:23:48.540[0m [1;32mINFO [m [90m[DeviceManager][0m Device of:0000000000000003 disconnected from this node: 172.18.0.2
+onos          | [90m03:23:48.540[0m [1;32mINFO [m [90m[DeviceManager][0m Device of:0000000000000004 disconnected from this node: 172.18.0.2
+onos          | [90m03:23:48.541[0m [1;32mINFO [m [90m[DeviceManager][0m Device of:0000000000000001 disconnected from this node: 172.18.0.2
+onos          | [90m03:23:48.541[0m [1;32mINFO [m [90m[DeviceManager][0m Device of:0000000000000003 is fully disconnected from the cluster
+onos          | [90m03:23:48.542[0m [1;32mINFO [m [90m[DeviceManager][0m Device of:0000000000000004 is fully disconnected from the cluster
+onos          | [90m03:23:48.542[0m [1;32mINFO [m [90m[DeviceManager][0m Device of:0000000000000001 is fully disconnected from the cluster
+onos          | [90m03:23:48.543[0m [1;32mINFO [m [90m[MeterStatsCollector][0m Stopping Meter Stats collection thread for 00:00:00:00:00:00:00:03
+onos          | [90m03:23:48.543[0m [1;32mINFO [m [90m[MeterStatsCollector][0m Stopping Meter Stats collection thread for 00:00:00:00:00:00:00:02
+onos          | [90m03:23:48.544[0m [1;32mINFO [m [90m[MeterStatsCollector][0m Stopping Meter Stats collection thread for 00:00:00:00:00:00:00:04
+onos          | [90m03:23:48.544[0m [1;32mINFO [m [90m[GroupStatsCollector][0m Stopping Group Stats collection thread for 00:00:00:00:00:00:00:03
+onos          | [90m03:23:48.544[0m [1;32mINFO [m [90m[GroupStatsCollector][0m Stopping Group Stats collection thread for 00:00:00:00:00:00:00:04
+onos          | [90m03:23:48.544[0m [1;32mINFO [m [90m[GroupStatsCollector][0m Stopping Group Stats collection thread for 00:00:00:00:00:00:00:02
+onos          | [90m03:23:48.547[0m [1;32mINFO [m [90m[MeterStatsCollector][0m Stopping Meter Stats collection thread for 00:00:00:00:00:00:00:01
+onos          | [90m03:23:48.548[0m [1;32mINFO [m [90m[GroupStatsCollector][0m Stopping Group Stats collection thread for 00:00:00:00:00:00:00:01
+onos          | [90m03:23:48.584[0m [1;32mINFO [m [90m[TopologyManager][0m Topology DefaultTopology{time=58242949169326, creationTime=1749007428572, computeCost=186777, clusters=0, devices=0, links=0} changed
+onos          | [90m03:23:48.601[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xf, key=0xf, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[C6:48:19:12:1A:82/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=C6:48:19:12:1A:82/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=C6:48:19:12:1A:82/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.602[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x5, key=0x5, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, 26:D2:95:C4:A8:81/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=26:D2:95:C4:A8:81/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=26:D2:95:C4:A8:81/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.605[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xa, key=0xa, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.605[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x0, key=0x0, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, C6:48:19:12:1A:82/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=C6:48:19:12:1A:82/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=C6:48:19:12:1A:82/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.604[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x14, key=0x14, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.600[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x19, key=0x19, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[26:D2:95:C4:A8:81/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=26:D2:95:C4:A8:81/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=26:D2:95:C4:A8:81/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.649[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x19, key=0x19, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[26:D2:95:C4:A8:81/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=26:D2:95:C4:A8:81/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=26:D2:95:C4:A8:81/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.650[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xa, key=0xa, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.652[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x0, key=0x0, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, C6:48:19:12:1A:82/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=C6:48:19:12:1A:82/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=C6:48:19:12:1A:82/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.651[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xf, key=0xf, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[C6:48:19:12:1A:82/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=C6:48:19:12:1A:82/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=C6:48:19:12:1A:82/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.650[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x14, key=0x14, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.654[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x5, key=0x5, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, 26:D2:95:C4:A8:81/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=26:D2:95:C4:A8:81/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=26:D2:95:C4:A8:81/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.679[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x19, key=0x19, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[26:D2:95:C4:A8:81/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=26:D2:95:C4:A8:81/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=26:D2:95:C4:A8:81/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.682[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x14, key=0x14, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.683[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xa, key=0xa, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.684[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x0, key=0x0, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, C6:48:19:12:1A:82/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=C6:48:19:12:1A:82/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=C6:48:19:12:1A:82/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.684[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x5, key=0x5, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, 26:D2:95:C4:A8:81/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=26:D2:95:C4:A8:81/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=26:D2:95:C4:A8:81/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.683[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xf, key=0xf, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[C6:48:19:12:1A:82/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=C6:48:19:12:1A:82/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=C6:48:19:12:1A:82/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.701[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x14, key=0x14, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.701[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xf, key=0xf, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[C6:48:19:12:1A:82/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=C6:48:19:12:1A:82/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=C6:48:19:12:1A:82/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.701[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x19, key=0x19, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[26:D2:95:C4:A8:81/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=26:D2:95:C4:A8:81/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=26:D2:95:C4:A8:81/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.702[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x0, key=0x0, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, C6:48:19:12:1A:82/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=C6:48:19:12:1A:82/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=C6:48:19:12:1A:82/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.701[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xa, key=0xa, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.702[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x5, key=0x5, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, 26:D2:95:C4:A8:81/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=26:D2:95:C4:A8:81/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=26:D2:95:C4:A8:81/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.723[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x0, key=0x0, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, C6:48:19:12:1A:82/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=C6:48:19:12:1A:82/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=C6:48:19:12:1A:82/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.722[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x14, key=0x14, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.723[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x5, key=0x5, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[5A:0D:CF:C1:4C:2D/None, 26:D2:95:C4:A8:81/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=5A:0D:CF:C1:4C:2D/None, two=26:D2:95:C4:A8:81/None} due to:
+onos          | PathNotFoundException{source=5A:0D:CF:C1:4C:2D/None, destination=26:D2:95:C4:A8:81/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.722[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xa, key=0xa, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[42:17:33:66:5B:A5/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=42:17:33:66:5B:A5/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=42:17:33:66:5B:A5/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.722[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0xf, key=0xf, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[C6:48:19:12:1A:82/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=C6:48:19:12:1A:82/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=C6:48:19:12:1A:82/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
+onos          | [90m03:23:48.722[0m [1;33mWARN [m [90m[Compiling][0m Unable to compile intent HostToHostIntent{id=0x19, key=0x19, appId=DefaultApplicationId{id=2, name=org.onosproject.cli}, priority=100, resources=[26:D2:95:C4:A8:81/None, AE:8D:80:2A:04:85/None], selector=DefaultTrafficSelector{criteria=[]}, treatment=DefaultTrafficTreatment{immediate=[NOACTION], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}, constraints=[LinkTypeConstraint{inclusive=false, types=[OPTICAL]}], resourceGroup=null, one=26:D2:95:C4:A8:81/None, two=AE:8D:80:2A:04:85/None} due to:
+onos          | PathNotFoundException{source=26:D2:95:C4:A8:81/None, destination=AE:8D:80:2A:04:85/None}
+onos          | 	at org.onosproject.net.intent.impl.compiler.ConnectivityIntentCompiler.getPathOrException(ConnectivityIntentCompiler.java:131)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:86)
+onos          | 	at org.onosproject.net.intent.impl.compiler.HostToHostIntentCompiler.compile(HostToHostIntentCompiler.java:57)
+onos          | 	at org.onosproject.net.intent.impl.CompilerRegistry.compile(CompilerRegistry.java:91)
+onos          | 	at org.onosproject.net.intent.impl.IntentManager$InternalIntentProcessor.compile(IntentManager.java:610)
+onos          | 	at org.onosproject.net.intent.impl.phase.Compiling.execute(Compiling.java:57)
+onos          | 	at org.onosproject.net.intent.impl.phase.IntentProcessPhase.process(IntentProcessPhase.java:67)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+onos          | 	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+onos          | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+onos          | 	at java.base/java.lang.Thread.run(Thread.java:829)
