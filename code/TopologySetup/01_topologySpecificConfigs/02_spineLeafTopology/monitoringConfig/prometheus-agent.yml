@@ -4,7 +4,7 @@ global:
 
 # Remote write to the central prometheus
 remote_write:
-  - url: "http://172.17.0.7:9090/api/v1/write"
+  - url: "http://172.17.0.9:9090/api/v1/write"
 
 scrape_configs:
   - job_name: 'node'
@@ -17,10 +17,12 @@ scrape_configs:
       module: [http_2xx]  # Use the http_2xx probe module by default
     static_configs:
       - targets:
-          - 192.168.0.1
-          - 192.168.0.2
-          - 192.168.1.1
-          - 192.168.1.2
+          - 192.168.0.1 
+          - 192.168.0.2 
+          - 192.168.1.1 
+          - 192.168.1.2 
+          - 192.168.2.1 
+          - 192.168.2.2 
           - 10.0.0.1
     relabel_configs:
       - source_labels: [__address__]

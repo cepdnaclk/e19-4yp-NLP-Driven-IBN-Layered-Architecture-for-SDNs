@@ -11,6 +11,7 @@
 	- prometheus.yml (setup job host ips correctly)
 	- prometheus-agent.yml (edit promethues server-ip,
 			setup active probe host ips for each host)
+	- datasources/promethues.yml (for grafana)
 
 5. Cd to ../02_setupScripts and run ./init-all.sh <xx>
 	Where xx is topology number

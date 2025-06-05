@@ -1,0 +1,27 @@
+{
+  "intent": "Deny all ICMP traffic to sensitive subnet 10.100.0.0/24",
+  "config": {
+    "intent_id": "INTENT-006",
+    "user_role": "security-ops",
+    "timestamp": "2024-07-01T16:00:00Z",
+    "QoS": {},
+    "ACL": {
+      "destination_ip": "10.100.0.0/24",
+      "protocol": "icmp",
+      "action": "deny"
+    },
+    "logs": {
+      "enable": true,
+      "log_type": "alert",
+      "match_conditions": [
+        {
+          "destination_ip": "10.100.0.0/24"
+        },
+        {
+          "protocol": "icmp"
+        }
+      ],
+      "retention_period": "90d"
+    }
+  }
+}

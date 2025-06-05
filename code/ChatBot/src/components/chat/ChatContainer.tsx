@@ -32,8 +32,8 @@ const ChatContainer: React.FC = () => {
         
         // Generate mock intent
         const mockIntentRaw = JSON.stringify({
-          name: "Example Network Intent",
-          description: "This is an example network intent generated from your request",
+          name: "Example Network Configuration",
+          description: "This is an example network configuration generated from your request",
           source: "192.168.1.0/24",
           destination: "10.0.0.0/24",
           protocol: "TCP",
@@ -50,7 +50,7 @@ const ChatContainer: React.FC = () => {
         
         // Add intent message
         addIntentMessage(
-          'Here\'s the generated intent according to your request. You can edit it or push it to the network.',
+          'Here\'s the generated configuration according to your request. You can edit it or push it to the network.',
           {
             raw: mockIntentRaw,
             format: 'json',
@@ -66,8 +66,8 @@ const ChatContainer: React.FC = () => {
         // Set current intent in context
         setCurrentIntent({
           id: Math.random().toString(36).substring(2, 9),
-          name: "Example Network Intent",
-          description: "This is an example network intent generated from your request",
+          name: "Example Network configuration",
+          description: "This is an example network configuration generated from your request",
           raw: mockIntentRaw,
           format: 'json',
           metadata: {

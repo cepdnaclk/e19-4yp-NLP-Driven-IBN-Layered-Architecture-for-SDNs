@@ -19,7 +19,7 @@ const IntentEditor: React.FC = () => {
     return (
       <div className="p-6 flex items-center justify-center h-full">
         <p className="text-gray-500 dark:text-gray-400">
-          No intent selected. Generate an intent from the chat to begin.
+          No configuration selected. Generate an configuration from the chat to begin.
         </p>
       </div>
     );
@@ -111,7 +111,7 @@ const IntentEditor: React.FC = () => {
                 onClick={handleEdit}
                 className="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
               >
-                Edit Intent
+                Edit
               </button>
               <button
                 onClick={resetIntent}

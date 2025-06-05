@@ -1,0 +1,27 @@
+{
+  "intent": "Isolate IoT devices in subnet 192.168.99.0/24 from the corporate network",
+  "config": {
+    "intent_id": "INTENT-012",
+    "user_role": "iot-admin",
+    "timestamp": "2024-07-01T17:30:00Z",
+    "QoS": {},
+    "ACL": {
+      "source_ip": "192.168.99.0/24",
+      "destination_ip": "10.0.0.0/8",
+      "action": "deny"
+    },
+    "logs": {
+      "enable": true,
+      "log_type": "isolation",
+      "match_conditions": [
+        {
+          "source_ip": "192.168.99.0/24"
+        },
+        {
+          "destination_ip": "10.0.0.0/8"
+        }
+      ],
+      "retention_period": "60d"
+    }
+  }
+}

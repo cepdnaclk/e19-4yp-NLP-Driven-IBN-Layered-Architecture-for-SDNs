@@ -1,10 +1,26 @@
 # execute intents for switching
-add-host-intent 42:17:33:66:5B:A5/None C6:48:19:12:1A:82/None
-add-host-intent 5A:0D:CF:C1:4C:2D/None 26:D2:95:C4:A8:81/None
+add-host-intent 0E:42:7C:1E:9D:D2/None 06:42:BE:4F:91:B4/None
+add-host-intent DA:1E:7A:56:F9:7C/None 8A:62:4A:CE:E3:37/None
+add-host-intent 3A:90:71:4C:2A:A1/None D2:98:BC:BF:F7:8A/None
+add-host-intent EE:27:90:9C:8B:AB/None 22:38:8D:AC:ED:E1/None
+add-host-intent BE:99:4D:A1:AE:27/None 12:38:20:17:75:B0/None
 
 # execute intents for routing
-add-host-intent 42:17:33:66:5B:A5/None AE:8D:80:2A:04:85/None
-add-host-intent C6:48:19:12:1A:82/None AE:8D:80:2A:04:85/None
-add-host-intent 5A:0D:CF:C1:4C:2D/None AE:8D:80:2A:04:85/None
-add-host-intent 26:D2:95:C4:A8:81/None AE:8D:80:2A:04:85/None
-
+add-host-intent EE:27:90:9C:8B:AB/None 0E:42:7C:1E:9D:D2/None
+add-host-intent EE:27:90:9C:8B:AB/None DA:1E:7A:56:F9:7C/None
+add-host-intent 22:38:8D:AC:ED:E1/None 0E:42:7C:1E:9D:D2/None
+add-host-intent 22:38:8D:AC:ED:E1/None DA:1E:7A:56:F9:7C/None
+add-host-intent BE:99:4D:A1:AE:27/None 0E:42:7C:1E:9D:D2/None
+add-host-intent BE:99:4D:A1:AE:27/None DA:1E:7A:56:F9:7C/None
+add-host-intent BE:99:4D:A1:AE:27/None 06:42:BE:4F:91:B4/None
+add-host-intent 12:38:20:17:75:B0/None 0E:42:7C:1E:9D:D2/None
+add-host-intent 12:38:20:17:75:B0/None DA:1E:7A:56:F9:7C/None
+add-host-intent 12:38:20:17:75:B0/None 8A:62:4A:CE:E3:37/None
+add-host-intent 0E:42:7C:1E:9D:D2/None EA:CA:F9:FA:62:7C/None
+add-host-intent 06:42:BE:4F:91:B4/None EA:CA:F9:FA:62:7C/None
+add-host-intent DA:1E:7A:56:F9:7C/None EA:CA:F9:FA:62:7C/None
+add-host-intent 8A:62:4A:CE:E3:37/None EA:CA:F9:FA:62:7C/None
+add-host-intent 3A:90:71:4C:2A:A1/None EA:CA:F9:FA:62:7C/None
+add-host-intent D2:98:BC:BF:F7:8A/None EA:CA:F9:FA:62:7C/None
+add-host-intent EE:27:90:9C:8B:AB/None EA:CA:F9:FA:62:7C/None
+add-host-intent 22:38:8D:AC:ED:E1/None EA:CA:F9:FA:62:7C/None

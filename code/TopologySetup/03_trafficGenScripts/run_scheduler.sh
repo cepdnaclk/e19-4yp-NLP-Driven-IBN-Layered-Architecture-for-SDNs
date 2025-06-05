@@ -28,7 +28,7 @@ for config_file in "$CONFIG_DIR"/trafficConfig_d*.txt; do
     docker cp "$config_file" "$container_name":/root/trafficConfig.txt
 
     # Run the scheduler in the background inside the container
-    docker exec -d "$container_name" bash -c "cd /root && chmod +x schedular.sh && ./schedular.sh > traffic.log 2>&1 &"
+    docker exec -d "$container_name" bash -c "cd /root && chmod +x scheduler.sh && ./scheduler.sh > traffic.log 2>&1 &"
 
     echo "[✔] Deployment complete for $container_name"
 done
