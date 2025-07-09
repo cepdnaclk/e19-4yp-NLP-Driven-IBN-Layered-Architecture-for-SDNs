@@ -1,3 +1,4 @@
+*.log
 /02_setupScripts/01_init_setup/configs/prometheus.yml
 /02_setupScripts/01_init_setup/configs/datasources/prometheus.yml
 /02_setupScripts/02_init_deps/topo/topo-*.py
@@ -8,3 +9,4 @@
 /02_setupScripts/06_init_dashboards/dashboards/*
 !/02_setupScripts/06_init_dashboards/dashboards/passive.json
 /03_trafficGenScripts/trafficConfig/*
+

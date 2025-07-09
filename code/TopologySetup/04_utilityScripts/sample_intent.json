@@ -1,12 +1,12 @@
 {
-    "intent": "Block all HTTP traffic reaching the HTTP server at 192.168.0.1/24", 
+    "intent": "Block all HTTP traffic reaching the HTTP server at 192.168.0.1/32", 
     "config": {
       "intent_id": "INTENT-001",
       "user_role": "admin",
       "timestamp": "2024-07-01T14:30:00Z",
       "QoS": {},
       "ACL": {
-        "source_ip": "192.168.0.1/24", 
+        "source_ip": "192.168.0.1/32", 
         "destination_port": "80",
         "protocol": "tcp",
         "action": "deny"
@@ -16,7 +16,7 @@
         "log_type": "flow",
         "match_conditions": [
           {
-            "source_ip": "192.168.0.1/24" 
+            "source_ip": "192.168.0.1/32" 
           },
           {
             "destination_port": 80
