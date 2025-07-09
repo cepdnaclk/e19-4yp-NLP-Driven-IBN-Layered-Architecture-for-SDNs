@@ -1,4 +1,6 @@
 {
+  "intent": "<Sample Intent in Natural Language>",
+  "config": {
   "intent_id": "<INTENT_ID>",
   "user_role": "<USER_ROLE>",
   "timestamp": "<TIMESTAMP>",
@@ -17,11 +19,6 @@
         "end": "<END_TIME>",
         "days": ["<DAY_1>", "<DAY_2>", "<DAY_3>"]
       }
-    },
-    "routing": {
-      "primary_path": "<PRIMARY_PATH>",
-      "backup_path": "<BACKUP_PATH>",
-      "dynamic_routing": "<DYNAMIC_ROUTING_BOOLEAN>"
     }
   },
   "ACL": {
@@ -62,4 +59,5 @@
     "destination": "<LOG_DESTINATION>",
     "log_retention_days": "<RETENTION_DAYS>"
   }
+}
 }
