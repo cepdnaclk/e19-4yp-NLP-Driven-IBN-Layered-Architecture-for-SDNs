@@ -1,0 +1,64 @@
+{
+    "intent": "Ensure high-priority, low-latency video conferencing for employees during working hours on weekdays; block social media and log video traffic performance.",
+    "config": {
+      "intent_id": "intent_1023",
+      "user_role": "network_admin",
+      "timestamp": "2025-07-09T13:45:00Z",
+      "QoS": {
+        "application": "video_conferencing",
+        "category": "real_time",
+        "latency": "50ms",
+        "bandwidth": "5Mbps",
+        "jitter": "10ms",
+        "packet_loss": "1%",
+        "priority": "high",
+        "enforce": true,
+        "time_constraints": {
+          "active_period": {
+            "start": "09:00",
+            "end": "17:00",
+            "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+          }
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "source": "192.168.1.0/24",
+            "destination": "video.conf.example.com",
+            "ports": ["443", "3478"],
+            "protocols": ["TCP", "UDP"],
+            "action": "allow"
+          }
+        ],
+        "deny_rules": [
+          {
+            "source": "192.168.1.0/24",
+            "destination": "socialmedia.com",
+            "ports": ["80", "443"],
+            "protocols": ["TCP"],
+            "action": "deny"
+          }
+        ],
+        "schedule": {
+          "start": "09:00",
+          "end": "17:00",
+          "timezone": "Asia/Colombo"
+        }
+      },
+      "logs": {
+        "fetch": true,
+        "filter": {
+          "application": "video_conferencing",
+          "parameters": ["latency", "bandwidth", "jitter"],
+          "thresholds": {
+            "latency": "60ms",
+            "bandwidth": "4Mbps"
+          }
+        },
+        "destination": "http://logserver.local/video-logs",
+        "log_retention_days": "30"
+      }
+    }
+  }
+  
