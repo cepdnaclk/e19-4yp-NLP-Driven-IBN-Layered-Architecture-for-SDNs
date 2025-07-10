@@ -5,7 +5,7 @@
     "user_role": "admin",
     "timestamp": "2024-07-01T14:30:00Z",
     "ACL": {
-      "allow_rules": [
+      "rules": [
         {
           "action": "deny",
           "source_ip": "192.168.1.0/24",

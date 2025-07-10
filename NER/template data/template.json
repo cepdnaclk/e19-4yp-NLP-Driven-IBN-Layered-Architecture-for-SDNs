@@ -2,35 +2,35 @@
   "intent": "<Sample Intent in Natural Language>",
   "config": {
     "intent_id": "<INTENT_ID>",
-    "user_role": "<USER_ROLE>", // e.g., "admin", "user", "guest"
-    "timestamp": "<TIMESTAMP>",
+    "user_role": "<USER_ROLE>", // default=>"admin"; "user","guest"
+    "timestamp": "<TIMESTAMP>", 
     "QOS": {
-      "application": "<APPLICATION>", // e.g.,  "VOIP", "ZOOM", "YouTube", "Netflix", "Web Browsing"
-      "category": "<TRAFFIC_CATEGORY>", // e.g., "video", "voice", "web", "file"
-      "latency": "<LATENCY_THRESHOLD>",
-      "bandwidth": "<BANDWIDTH_THRESHOLD>",
-      "jitter": "<JITTER_THRESHOLD>",
-      "priority": "<PRIORITY_LEVEL>", // e.g., "high", "medium", "low" ??
+      "application": "<APPLICATION>", // default=>"Web Browsing"; "ZOOM","YouTube","Netflix"
+      "category": "<TRAFFIC_CATEGORY>", // default=>"web"; "video", "voice", "file"
+      "latency": "<LATENCY_THRESHOLD>", // default=>TBD
+      "bandwidth": "<BANDWIDTH_THRESHOLD>",// default =>TBD
+      "jitter": "<JITTER_THRESHOLD>", // default =>TBD
+      "priority": "<PRIORITY_LEVEL>", // defualt=>"low"; "high","medium"
       "time_constraints": {
-        "start": "<START_TIME>",
-        "end": "<END_TIME>",
-        "days": ["<DAY_1>", "<DAY_2>", "<DAY_3>"] // e.g., "Monday", "Tuesday", "Wednesday"
+        "start": "<START_TIME>", // default=> now
+        "end": "<END_TIME>",  // default=> 1 hour later
+        "days": ["<DAY_1>", "<DAY_2>", "<DAY_3>"] // default=>"Only Today"; "Monday","Tuesday"
       }
     },
     "ACL": {
-      "allow_rules": [
+      "rules": [
         {
-          "action": "<ACTION>", // e.g., "allow", "deny"
-          "source_ip": "<SOURCE_IP>",
-          "destination_ip": "<DESTINATION_IP>",
-          "source_port": "<SOURCE_PORT>",
-          "destination_port": "<DESTINATION_PORT>",
-          "protocols": ["<ALLOW_PROTOCOL_1>", "<ALLOW_PROTOCOL_2>"] // e.g., "HTTP", "HTTPS"
+          "action": "<ACTION>", // "allow", "deny" 
+          "source_ip": "<SOURCE_IP>", // default=>any 0.0.0.0/0
+          "destination_ip": "<DESTINATION_IP>", // default=>any 0.0.0.0/0
+          "source_port": "<SOURCE_PORT>", // default=> any
+          "destination_port": "<DESTINATION_PORT>", // default=> any
+          "protocols": ["<ALLOW_PROTOCOL_1>", "<ALLOW_PROTOCOL_2>"] // default=>["HTTP"]; "FTP","SMTP"
         }
       ],
       "schedule": {
-        "start": "<ACL_START_TIME>", // e.g., "2023-09-01T00:00:00Z"
-        "end": "<ACL_END_TIME>" // e.g., "2023-10-01T00:00:00Z"
+        "start": "<ACL_START_TIME>", // default=>now; "2023-09-01T00:00:00Z"
+        "end": "<ACL_END_TIME>" // default=>24h later; "2023-10-01T00:00:00Z"
       }
     },
     "LOGS": {
@@ -38,8 +38,8 @@
         {
           "hosts": "<HOST_IP>", // e.g., "192.168.1.1"
           "ports": "<FILTER_PORT>", // e.g., 80, 443, 8080
-          "application": "<FILTER_APPLICATION>", // e.g., "WEB", "VIDEO", "VOICE", "ZOOM" | OR DSCP Value ??
-          "time_window": "<TIME_WINDOW>" // e.g., "6h" ->last_6_hours, "30s" ->last_30_seconds
+          "application": "<FILTER_APPLICATION>", // default=>any; "WEB", "VIDEO", "VOICE", "ZOOM" | OR DSCP Value ??
+          "time_window": "<TIME_WINDOW>" // default=>5min; "6h" ->last_6_hours, "30s" ->last_30_seconds
         }
       ]
     }
