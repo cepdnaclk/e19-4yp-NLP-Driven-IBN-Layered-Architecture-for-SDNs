@@ -1,15 +1,15 @@
 {
-  "intent": "<Sample Intent in Natural Language>", 
+  "intent": "<Sample Intent in Natural Language>",
   "config": {
     "intent_id": "<INTENT_ID>",
     "user_role": "<USER_ROLE>", // e.g., "admin", "user", "guest"
     "timestamp": "<TIMESTAMP>",
     "QOS": {
       "application": "<APPLICATION>", // e.g.,  "VOIP", "ZOOM", "YouTube", "Netflix", "Web Browsing"
-      "category": "<TRAFFIC_CATEGORY>", // e.g., "video", "voice", "web", "file"   
+      "category": "<TRAFFIC_CATEGORY>", // e.g., "video", "voice", "web", "file"
       "latency": "<LATENCY_THRESHOLD>",
       "bandwidth": "<BANDWIDTH_THRESHOLD>",
-      "jitter": "<JITTER_THRESHOLD>", 
+      "jitter": "<JITTER_THRESHOLD>",
       "priority": "<PRIORITY_LEVEL>", // e.g., "high", "medium", "low" ??
       "time_constraints": {
         "start": "<START_TIME>",
@@ -21,9 +21,10 @@
       "allow_rules": [
         {
           "action": "<ACTION>", // e.g., "allow", "deny"
-          "source": "<ALLOW_SOURCE_IP>", 
-          "destination": "<ALLOW_DESTINATION_IP>",
-          "ports": ["<ALLOW_PORT_1>", "<ALLOW_PORT_2>"], // e.g., "80", "443"
+          "source_ip": "<SOURCE_IP>",
+          "destination_ip": "<DESTINATION_IP>",
+          "source_port": "<SOURCE_PORT>",
+          "destination_port": "<DESTINATION_PORT>",
           "protocols": ["<ALLOW_PROTOCOL_1>", "<ALLOW_PROTOCOL_2>"] // e.g., "HTTP", "HTTPS"
         }
       ],
