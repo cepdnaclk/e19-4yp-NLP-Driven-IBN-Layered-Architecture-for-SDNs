@@ -1,0 +1,28 @@
+{
+  "intent": "Throttle video streaming from guest network 172.16.10.0/24",
+  "config": {
+    "intent_id": "INTENT-003",
+    "user_role": "netadmin",
+    "timestamp": "2024-07-01T15:15:00Z",
+    "QoS": {
+      "source_ip": "172.16.10.0/24",
+      "application": "video-streaming",
+      "max_bandwidth": "1Mbps",
+      "priority": "low"
+    },
+    "ACL": {},
+    "logs": {
+      "enable": true,
+      "log_type": "traffic",
+      "match_conditions": [
+        {
+          "source_ip": "172.16.10.0/24"
+        },
+        {
+          "application": "video-streaming"
+        }
+      ],
+      "retention_period": "14d"
+    }
+  }
+}
