@@ -4,7 +4,7 @@
     "intent_id": "<INTENT_ID>",
     "user_role": "<USER_ROLE>", // e.g., "admin", "user", "guest"
     "timestamp": "<TIMESTAMP>",
-    "QoS": {
+    "QOS": {
       "application": "<APPLICATION>", // e.g.,  "VOIP", "ZOOM", "YouTube", "Netflix", "Web Browsing"
       "category": "<TRAFFIC_CATEGORY>", // e.g., "video", "voice", "web", "file"   
       "latency": "<LATENCY_THRESHOLD>",
@@ -32,7 +32,7 @@
         "end": "<ACL_END_TIME>" // e.g., "2023-10-01T00:00:00Z"
       }
     },
-    "logs": {
+    "LOGS": {
       "filters": [
         {
           "hosts": "<HOST_IP>", // e.g., "192.168.1.1"
