@@ -36,10 +36,13 @@ sudo systemctl enable docker
 sudo systemctl start docker
 
 echo "[+] Installing Docker Compose..."
-DOCKER_COMPOSE_VERSION="2.24.5"
-sudo curl -L "https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" \
-  -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+mkdir -p ~/.docker/cli-plugins
+LATEST_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep '"tag_name":' | cut -d '"' -f 4)
+curl -SL "https://github.com/docker/compose/releases/download/${LATEST_VERSION}/docker-compose-$(uname -s)-$(uname -m)" \
+  -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+sudo systemctl restart docker
+docker compose version
 
 echo "[+] Adding current user to docker group..."
 sudo usermod -aG docker $USER
