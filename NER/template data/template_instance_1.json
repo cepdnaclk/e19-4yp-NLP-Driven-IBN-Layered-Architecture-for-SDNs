@@ -4,28 +4,25 @@
     "intent_id": "INTENT-001",
     "user_role": "admin",
     "timestamp": "2024-07-01T14:30:00Z",
-    "QoS": {},
     "ACL": {
-      "source_ip": "192.168.1.0/24",
-      "destination_port": "80",
-      "protocol": "tcp",
-      "action": "deny"
-    },
-    "logs": {
-      "enable": true,
-      "log_type": "flow",
-      "match_conditions": [
+      "rules": [
         {
-          "source_ip": "192.168.1.0/24"
-        },
-        {
-          "destination_port": 80
-        },
-        {
-          "protocol": "tcp"
+          "action": "deny",
+          "source_ip": "192.168.1.0/24",
+          "destination_ip": "0.0.0.0/0",
+          "source_port": "80",
+          "destination_port": "any",
+          "protocols": ["http"]
         }
-      ],
-      "retention_period": "7d"
+      ]
+    },
+    "LOGS": {
+      "filters": [
+        {
+          "hosts": "192.168.1.0/24",
+          "ports": "80"
+        }
+      ]
     }
   }
 }
