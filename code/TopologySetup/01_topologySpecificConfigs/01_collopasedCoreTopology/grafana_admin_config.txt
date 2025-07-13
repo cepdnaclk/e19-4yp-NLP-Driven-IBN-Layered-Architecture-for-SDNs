@@ -1,3 +1,2 @@
 username: admin
 password: admin
-ip: 172.17.0.14

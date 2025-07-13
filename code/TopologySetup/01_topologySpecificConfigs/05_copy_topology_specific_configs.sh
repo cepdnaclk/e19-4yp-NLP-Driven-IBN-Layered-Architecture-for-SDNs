@@ -49,9 +49,12 @@ cp -r "${FOLDER}/trafficConfig/"* "../03_trafficGenScripts/trafficConfig/"
 
 # Copy dashboards directory
 mkdir -p "../02_setupScripts/06_init_dashboards/dashboards"
-cp -r "${FOLDER}/dashboards/"* "../02_setupScripts/06_init_dashboards/dashboards/"
+cp -r "${FOLDER}/dashboards/"* "${DEST_ROOT}/06_init_dashboards/dashboards/"
 
 # Copy routingAndSwitching.txt
 cp "${FOLDER}/routingAndSwitching.txt" "${DEST_ROOT}/05_init_intents/05_init_intents.txt"
+
+# Copy grafana_admin_config.txt
+cp "${FOLDER}/grafana_admin_config.txt" "${DEST_ROOT}/06_init_dashboards/02_grafana_config.txt"
 
 echo "✅ All files copied successfully from $FOLDER."
