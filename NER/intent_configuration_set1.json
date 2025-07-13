@@ -1,0 +1,1822 @@
+
+  {
+    "intent": "Deploy low-latency online education services, with the firewall activated between 9:00 AM and 13:00 PM",
+    "config": {
+      "intent_id": "INTENT-001",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "video",
+        "latency": "50ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "13:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T03:30:00Z",
+          "end": "2025-07-12T07:30:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that VoIP calls have bandwidth of at least 100Mbps, with a packet loss rate below 0.029%",
+    "config": {
+      "intent_id": "INTENT-002",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "VOIP",
+        "category": "voice",
+        "bandwidth": "100Mbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "VOIP",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 7:00 to 17:00 daily, web browsing requires ensuring network latency below 14ms and using a content filter to block harmful content",
+    "config": {
+      "intent_id": "INTENT-003",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "14ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "07:00:00",
+          "end": "17:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          },
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T01:30:00Z",
+          "end": "2025-07-12T11:30:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 10:00 to 14:00, ensure jitter for video conferencing does not exceed 90ms, and use a load balancer to distribute traffic",
+    "config": {
+      "intent_id": "INTENT-004",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "jitter": "90ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "10:00:00",
+          "end": "14:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 7:00 to 22:00, ensure jitter for video conferencing does not exceed 10ms, and use a load balancer to distribute traffic",
+    "config": {
+      "intent_id": "INTENT-005",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "jitter": "10ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "07:00:00",
+          "end": "22:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 12:00 to 13:00, File Transfer services require stable bandwidth, latency below 87ms, and traffic distribution with a load balancer",
+    "config": {
+      "intent_id": "INTENT-006",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "File Transfer",
+        "category": "file_transfer",
+        "latency": "87ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "12:00:00",
+          "end": "13:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "The network transaction service must be accessible from the user location within 46ms, with an optional 5Gbps download bandwidth provided from the service to its cloud backend",
+    "config": {
+      "intent_id": "INTENT-007",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Network Transaction",
+        "category": "web",
+        "latency": "46ms",
+        "bandwidth": "5Gbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that VoIP calls have bandwidth of at least 1Gbps, with a packet loss rate below 0.099%",
+    "config": {
+      "intent_id": "INTENT-008",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "VOIP",
+        "category": "voice",
+        "bandwidth": "1Gbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "VOIP",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 8:00 to 22:00, keep the e-commerce platform's network utilization below 94% to avoid congestion",
+    "config": {
+      "intent_id": "INTENT-009",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "E-commerce",
+        "category": "web",
+        "priority": "high",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "22:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "E-commerce",
+            "time_window": "14h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Online lab courses require high bandwidth and low packet loss rate, with bandwidth not less than 10Gbps, and packet loss rate below 0.033%",
+    "config": {
+      "intent_id": "INTENT-010",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Lab Courses",
+        "category": "web",
+        "bandwidth": "10Gbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Online Lab Courses",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Deploy low-latency gaming services, with the firewall activated between 8:00 AM and 22:00 PM",
+    "config": {
+      "intent_id": "INTENT-011",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Gaming",
+        "category": "gaming",
+        "latency": "50ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "22:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T02:30:00Z",
+          "end": "2025-07-12T16:30:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Online educational streaming courses during weekdays from 6:00 to 19:00 require latency below 5ms, and packet loss rate below 0.033%",
+    "config": {
+      "intent_id": "INTENT-012",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "video",
+        "latency": "5ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "06:00:00",
+          "end": "19:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Online Education",
+            "time_window": "13h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Online multiplayer games during peak hours from 10:00 to 22:00 require low-latency network support, with latency not exceeding 99ms, and traffic optimization with a load balancer",
+    "config": {
+      "intent_id": "INTENT-013",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Gaming",
+        "category": "gaming",
+        "latency": "99ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "10:00:00",
+          "end": "22:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Video conferencing services must ensure low packet loss rate, not exceeding 0.098%, with performance enhancement through a network adapter",
+    "config": {
+      "intent_id": "INTENT-014",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Video Conferencing",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "The online reading platform must ensure low latency from 6:00 to 13:00, with latency below 12ms, and performance enhancement with a network adapter",
+    "config": {
+      "intent_id": "INTENT-015",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Reading",
+        "category": "web",
+        "latency": "12ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "06:00:00",
+          "end": "13:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 11:00 to 14:00 daily, web browsing requires ensuring network latency below 18ms and using a content filter to block harmful content",
+    "config": {
+      "intent_id": "INTENT-016",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "18ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "11:00:00",
+          "end": "14:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T05:30:00Z",
+          "end": "2025-07-12T08:30:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "To maintain smooth web browsing for 4hours, network latency must be below 85ms, jitter under 100ms, and a middlebox load balancer should be added",
+    "config": {
+      "intent_id": "INTENT-017",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "85ms",
+        "jitter": "100ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "00:00:00",
+          "end": "04:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 9:00 to 19:00, VR/AR services require stable bandwidth, latency below 51ms, and traffic distribution with a load balancer",
+    "config": {
+      "intent_id": "INTENT-018",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "latency": "51ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "19:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Optimize the network to prioritize video conferencing traffic, ensuring bandwidth of at least 70Mbps, and latency below 16ms",
+    "config": {
+      "intent_id": "INTENT-019",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "latency": "16ms",
+        "bandwidth": "70Mbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 12:00 to 17:00, optimize the network to reduce LISTSERV packet loss rate to below 0.081%, ensuring the reliability of email delivery",
+    "config": {
+      "intent_id": "INTENT-020",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "priority": "low",
+        "time_constraints": {
+          "start": "12:00:00",
+          "end": "17:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "LISTSERV",
+            "time_window": "5h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Optimize the network to prioritize streaming media service traffic, reducing latency to below 50ms, and ensuring jitter does not exceed 5ms",
+    "config": {
+      "intent_id": "INTENT-021",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "latency": "50ms",
+        "jitter": "5ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "On weekends from 7:00 to 18:00, cloud gaming platforms require high bandwidth, not less than 80Mbps, to ensure a smooth experience",
+    "config": {
+      "intent_id": "INTENT-022",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Cloud Gaming",
+        "category": "gaming",
+        "latency": "50ms",
+        "bandwidth": "80Mbps",
+        "priority": "high",
+        "time_constraints": {
+          "start": "07:00:00",
+          "end": "18:00:00",
+          "days": ["Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide reliable network services for AR medical assistance from 6:00 to 22:00, with latency below 85ms, packet loss rate under 0.025%, and use a traffic monitor to track network conditions in real time",
+    "config": {
+      "intent_id": "INTENT-023",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "AR Medical Assistance",
+        "category": "video",
+        "latency": "85ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "06:00:00",
+          "end": "22:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "AR Medical Assistance",
+            "time_window": "16h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Online educational streaming courses during weekdays from 8:00 to 14:00 require latency below 46ms, and packet loss rate below 0.028%",
+    "config": {
+      "intent_id": "INTENT-024",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "video",
+        "latency": "46ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "14:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Online Education",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 9:00 to 15:00, online transactions services require stable bandwidth, latency below 33ms, and traffic distribution with a load balancer",
+    "config": {
+      "intent_id": "INTENT-025",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Transactions",
+        "category": "web",
+        "latency": "33ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "15:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 9:00 to 18:00, keep the e-commerce platform's network utilization below 94% to avoid congestion",
+    "config": {
+      "intent_id": "INTENT-026",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "E-commerce",
+        "category": "web",
+        "priority": "high",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "18:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "E-commerce",
+            "time_window": "9h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Optimize the network to prioritize digital publishing traffic, reducing latency to below 24ms, and ensuring jitter does not exceed 6ms",
+    "config": {
+      "intent_id": "INTENT-027",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Digital Publishing",
+        "category": "web",
+        "latency": "24ms",
+        "jitter": "6ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that from 7:00 to 15:00, network latency of streaming media service does not exceed 74ms, and packet loss rate remains under 0.098%",
+    "config": {
+      "intent_id": "INTENT-028",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "latency": "74ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "07:00:00",
+          "end": "15:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Streaming Media",
+            "time_window": "8h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Big data processing tasks are performed daily from 7:00 to 13:00, requiring latency below 64ms, jitter not exceeding 30ms, and traffic optimization with deep packet inspection (DPI)",
+    "config": {
+      "intent_id": "INTENT-029",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Big Data Processing",
+        "category": "web",
+        "latency": "64ms",
+        "jitter": "30ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "07:00:00",
+          "end": "13:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Use FTP for high-speed file transfer to the business department, with latency less than 69ms and bandwidth of at least 1Gbps",
+    "config": {
+      "intent_id": "INTENT-030",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "category": "file_transfer",
+        "latency": "69ms",
+        "bandwidth": "1Gbps",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Online educational streaming courses during weekdays from 11:00 to 20:00 require latency below 77ms, and packet loss rate below 0.011%",
+    "config": {
+      "intent_id": "INTENT-031",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "video",
+        "latency": "77ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "11:00:00",
+          "end": "20:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Online Education",
+            "time_window": "9h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure that jitter for email does not exceed 100ms, and packet loss rate remains under 0.037%",
+    "config": {
+      "intent_id": "INTENT-032",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "jitter": "100ms",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Email",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 7:00 to 21:00, optimize the network to reduce LISTSERV packet loss rate to below 0.085%, ensuring the reliability of email delivery",
+    "config": {
+      "intent_id": "INTENT-033",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "priority": "high",
+        "time_constraints": {
+          "start": "07:00:00",
+          "end": "21:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "LISTSERV",
+            "time_window": "14h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 7:00 to 23:00 on weekdays, email services require low latency network support, with latency not exceeding 10ms, and resource distribution optimization with a load balancer",
+    "config": {
+      "intent_id": "INTENT-034",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "latency": "10ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "07:00:00",
+          "end": "23:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that the cloud computing services's packet loss rate stays below 0.016%, and distribute traffic with a load balancer for 1hours",
+    "config": {
+      "intent_id": "INTENT-035",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Cloud Computing",
+        "category": "web",
+        "priority": "high",
+        "time_constraints": {
+          "start": "00:00:00",
+          "end": "01:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Cloud Computing",
+            "time_window": "1h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 12:00 to 20:00, optimize the network to reduce LISTSERV packet loss rate to below 0.042%, ensuring the reliability of email delivery",
+    "config": {
+      "intent_id": "INTENT-036",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "priority": "low",
+        "time_constraints": {
+          "start": "12:00:00",
+          "end": "20:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "LISTSERV",
+            "time_window": "8h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Online lab courses require high bandwidth and low packet loss rate, with bandwidth not less than 500Mbps, and packet loss rate below 0.041%",
+    "config": {
+      "intent_id": "INTENT-037",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Lab Courses",
+        "category": "video",
+        "bandwidth": "500Mbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Online Lab Courses",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "The online reading platform must ensure low latency from 12:00 to 19:00, with latency below 51ms, and performance enhancement with a network adapter",
+    "config": {
+      "intent_id": "INTENT-038",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Reading",
+        "category": "web",
+        "latency": "51ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "12:00:00",
+          "end": "19:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 10:00 to 21:00 daily, web browsing requires ensuring network latency below 59ms and using a content filter to block harmful content",
+    "config": {
+      "intent_id": "INTENT-039",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "59ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "10:00:00",
+          "end": "21:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          },
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T04:30:00Z",
+          "end": "2025-07-12T15:30:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "On weekends from 8:00 to 21:00, cloud gaming platforms require high bandwidth, not less than 90Mbps, to ensure a smooth experience",
+    "config": {
+      "intent_id": "INTENT-040",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Cloud Gaming",
+        "category": "gaming",
+        "bandwidth": "90Mbps",
+        "priority": "high",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "21:00:00",
+          "days": ["Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 6:00 to 17:00, optimize the network to reduce LISTSERV packet loss rate to below 0.089%, ensuring the reliability of email delivery",
+    "config": {
+      "intent_id": "INTENT-041",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "priority": "low",
+        "time_constraints": {
+          "start": "06:00:00",
+          "end": "17:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "LISTSERV",
+            "time_window": "11h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure that the email's packet loss rate stays below 0.063%, and distribute traffic with a load balancer for 19hours",
+    "config": {
+      "intent_id": "INTENT-042",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "priority": "low",
+        "time_constraints": {
+          "start": "00:00:00",
+          "end": "19:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Email",
+            "time_window": "19h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 8:00 to 19:00 daily, web browsing requires ensuring network latency below 63ms and using a content filter to block harmful content",
+    "config": {
+      "intent_id": "INTENT-043",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "63ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "19:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          },
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T02:30:00Z",
+          "end": "2025-07-12T13:30:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Big data processing tasks are performed daily from 12:00 to 18:00, requiring latency below 88ms, jitter not exceeding 80ms, and traffic optimization with deep packet inspection (DPI)",
+    "config": {
+      "intent_id": "INTENT-044",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Big Data Processing",
+        "category": "web",
+        "latency": "88ms",
+        "jitter": "80ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "12:00:00",
+          "end": "18:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "On weekends from 6:00 to 19:00, cloud gaming platforms require high bandwidth, not less than 1Gbps, to ensure a smooth experience",
+    "config": {
+      "intent_id": "INTENT-045",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Cloud Gaming",
+        "category": "gaming",
+        "bandwidth": "1Gbps",
+        "priority": "high",
+        "time_constraints": {
+          "start": "06:00:00",
+          "end": "19:00:00",
+          "days": ["Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Optimize the network to prioritize Internet Relay Chat (IRC) traffic, reducing latency to below 27ms, and ensuring jitter does not exceed 4ms",
+    "config": {
+      "intent_id": "INTENT-046",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "IRC",
+        "category": "chat",
+        "latency": "27ms",
+        "jitter": "4ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that jitter for email does not exceed 40ms, and packet loss rate remains under 0.02%",
+    "config": {
+      "intent_id": "INTENT-047",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "jitter": "40ms",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Email",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide reliable network services for AR medical assistance from 9:00 to 16:00, with latency below 25ms, packet loss rate under 0.028%, and use a traffic monitor to track network conditions in real time",
+    "config": {
+      "intent_id": "INTENT-048",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "AR Medical Assistance",
+        "category": "video",
+        "latency": "25ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "16:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "AR Medical Assistance",
+            "time_window": "7h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure that jitter for video conferencing does not exceed 40ms, and packet loss rate remains under 0.014%",
+    "config": {
+      "intent_id": "INTENT-049",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "jitter": "40ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Video Conferencing",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Optimize the network to prioritize cloud computing services traffic, reducing latency to below 58ms, and ensuring jitter does not exceed 8ms",
+    "config": {
+      "intent_id": "INTENT-050",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Cloud Computing",
+        "category": "web",
+        "latency": "58ms",
+        "jitter": "8ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that the email's packet loss rate stays below 0.042%, and distribute traffic with a load balancer for 5hours",
+    "config": {
+      "intent_id": "INTENT-051",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "priority": "low",
+        "time_constraints": {
+          "start": "00:00:00",
+          "end": "05:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Email",
+            "time_window": "5h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 10:00 to 15:00 on weekdays, web browsing services require low latency network support, with latency not exceeding 87ms, and resource distribution optimization with a load balancer",
+    "config": {
+      "intent_id": "INTENT-052",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "87ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "10:00:00",
+          "end": "15:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "VR/AR services must ensure low packet loss rate, not exceeding 0.015%, with performance enhancement through a network adapter",
+    "config": {
+      "intent_id": "INTENT-053",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "VR/AR",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 9:00 to 17:00, gaming services require stable bandwidth, latency below 82ms, and traffic distribution with a load balancer",
+    "config": {
+      "intent_id": "INTENT-054",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Gaming",
+        "category": "gaming",
+        "latency": "82ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "17:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 8:00 to 17:00, ensure jitter for video conferencing does not exceed 50ms, and use a load balancer to distribute traffic",
+    "config": {
+      "intent_id": "INTENT-055",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "jitter": "50ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "17:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 10:00 to 16:00, VR/AR services require stable bandwidth, latency below 41ms, and traffic distribution with a load balancer",
+    "config": {
+      "intent_id": "INTENT-056",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "latency": "41ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "10:00:00",
+          "end": "16:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Deploy low-latency e-commerce services, with the firewall activated between 10:00 AM and 18:00 PM",
+    "config": {
+      "intent_id": "INTENT-057",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "E-commerce",
+        "category": "web",
+        "latency": "50ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "10:00:00",
+          "end": "18:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T04:30:00Z",
+          "end": "2025-07-12T12:30:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Optimize the network to prioritize cloud computing services traffic, reducing latency to below 72ms, and ensuring jitter does not exceed 90ms",
+    "config": {
+      "intent_id": "INTENT-058",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Cloud Computing",
+        "category": "web",
+        "latency": "72ms",
+        "jitter": "90ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 10:00 to 13:00, keep the e-commerce platform's network utilization below 92% to avoid congestion",
+    "config": {
+      "intent_id": "INTENT-059",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "E-commerce",
+        "category": "web",
+        "priority": "high",
+        "time_constraints": {
+          "start": "10:00:00",
+          "end": "13:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "E-commerce",
+            "time_window": "3h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure that from 8:00 to 16:00, network latency of File Transfer does not exceed 31ms, and packet loss rate remains under 0.083%",
+    "config": {
+      "intent_id": "INTENT-060",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "File Transfer",
+        "category": "file_transfer",
+        "latency": "31ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "16:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "File Transfer",
+            "time_window": "8h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "From 6:00 to 20:00, ensure jitter for video conferencing does not exceed 4ms, and use a load balancer to distribute traffic",
+    "config": {
+      "intent_id": "INTENT-061",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "jitter": "4ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "06:00:00",
+          "end": "20:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "On weekends from 6:00 to 20:00, cloud gaming platforms require high bandwidth, not less than 10Gbps, to ensure a smooth experience",
+    "config": {
+      "intent_id": "INTENT-062",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Cloud Gaming",
+        "category": "gaming",
+        "bandwidth": "10Gbps",
+        "priority": "high",
+        "time_constraints": {
+          "start": "06:00:00",
+          "end": "20:00:00",
+          "days": ["Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "The online reading platform must ensure low latency from 11:00 to 15:00, with latency below 84ms, and performance enhancement with a network adapter",
+    "config": {
+      "intent_id": "INTENT-063",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Reading",
+        "category": "web",
+        "latency": "84ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "11:00:00",
+          "end": "15:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 8:00 to 23:00 on weekdays, online transactions services require low latency network support, with latency not exceeding 16ms, and resource distribution optimization with a load balancer",
+    "config": {
+      "intent_id": "INTENT-064",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Transactions",
+        "category": "web",
+        "latency": "16ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "23:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Use FTP for high-speed file transfer to the business department, with latency less than 48ms and bandwidth of at least 500Mbps",
+    "config": {
+      "intent_id": "INTENT-065",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "category": "file_transfer",
+        "latency": "48ms",
+        "bandwidth": "500Mbps",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "From 8:00 to 15:00 daily, web browsing requires ensuring network latency below 18ms and using a content filter to block harmful content",
+    "config": {
+      "intent_id": "INTENT-066",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "18ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "15:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T02:30:00Z",
+          "end": "2025-07-12T09:30:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Online educational streaming courses during weekdays from 8:00 to 23:00 require latency below 45ms, and packet loss rate below 0.069%",
+    "config": {
+      "intent_id": "INTENT-067",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "video",
+        "latency": "45ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "23:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Online Education",
+            "time_window": "15h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "The online reading platform must ensure low latency from 9:00 to 16:00, with latency below 80ms, and performance enhancement with a network adapter",
+    "config": {
+      "intent_id": "INTENT-068",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Reading",
+        "category": "web",
+        "latency": "80ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "16:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Optimize the network to prioritize video conferencing traffic, ensuring bandwidth of at least 10Gbps, and latency below 95ms",
+    "config": {
+      "intent_id": "INTENT-069",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "latency": "95ms",
+        "bandwidth": "10Gbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "The online reading platform must ensure low latency from 9:00 to 22:00, with latency below 71ms, and performance enhancement with a network adapter",
+    "config": {
+      "intent_id": "INTENT-070",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Reading",
+        "category": "web",
+        "latency": "71ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "22:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Use FTP for high-speed file transfer to the business department, with latency less than 89ms and bandwidth of at least 20Mbps",
+    "config": {
+      "intent_id": "INTENT-071",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "category": "file_transfer",
+        "latency": "89ms",
+        "bandwidth": "20Mbps",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Use FTP for high-speed file transfer to the business department, with latency less than 68ms and bandwidth of at least 300Mbps",
+    "config": {
+      "intent_id": "INTENT-072",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "category": "file_transfer",
+        "latency": "68ms",
+        "bandwidth": "300Mbps",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Big data processing tasks are performed daily from 9:00 to 19:00, requiring latency below 62ms, jitter not exceeding 2ms, and traffic optimization with deep packet inspection (DPI)",
+    "config": {
+      "intent_id": "INTENT-073",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Big Data Processing",
+        "category": "web",
+        "latency": "62ms",
+        "jitter": "2ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "19:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  }
