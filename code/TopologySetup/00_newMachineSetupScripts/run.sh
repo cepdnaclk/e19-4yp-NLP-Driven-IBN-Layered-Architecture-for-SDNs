@@ -54,6 +54,8 @@ docker pull containernet/containernet
 docker pull prom/prometheus
 docker pull grafana/grafana
 
+sudo chown -R $(whoami):$(whoami) ../../TopologySetup/02_setupScripts/01_init_setup/configs
+
 echo "[+] Making all the scripts executable"
 sudo find ../../TopologySetup -type f -name "*.sh" -exec chmod +x {} +
 

@@ -27,6 +27,7 @@ echo "Using source folder: $FOLDER"
 DEST_ROOT="../02_setupScripts"
 
 # Copy prometheus.yml
+mkdir -p "${DEST_ROOT}/01_init_setup/configs/datasources"
 cp "${FOLDER}/monitoringConfig/prometheus.yml" "${DEST_ROOT}/01_init_setup/configs/prometheus.yml"
 
 # Copy Grafana datascources.yml
