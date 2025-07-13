@@ -12,5 +12,5 @@
 /02_setupScripts/05_init_intents/02_onos_hosts.txt
 /02_setupScripts/05_init_intents/04_formatted_hosts.csv
 /02_setupScripts/05_init_intents/07_init_intents_replaced.txt
-/06_init_dashboards/02_grafana_config.txt
+/02_setupScripts/06_init_dashboards/02_grafana_config.txt
 
