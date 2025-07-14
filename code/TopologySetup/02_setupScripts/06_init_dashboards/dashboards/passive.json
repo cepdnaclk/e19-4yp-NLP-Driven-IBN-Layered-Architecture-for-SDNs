@@ -7,8 +7,8 @@
       "gridPos": {"h": 6, "w": 8, "x": 0, "y": 0},
       "targets": [
         {
-          "expr": "cpu_usage_percent{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "CPU - {{instance}}"
+		  "expr": "label_replace(cpu_usage_percent{job=\"hosts-passive-metrics\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+          "legendFormat": "{{alias}}"
         }
       ]
     },
@@ -18,8 +18,8 @@
       "gridPos": {"h": 6, "w": 8, "x": 8, "y": 0},
       "targets": [
         {
-          "expr": "memory_usage_percent{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "Memory - {{instance}}"
+		  "expr": "label_replace(memory_usage_percent{job=\"hosts-passive-metrics\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+          "legendFormat": "{{alias}}"
         }
       ]
     },
@@ -29,8 +29,8 @@
       "gridPos": {"h": 6, "w": 8, "x": 16, "y": 0},
       "targets": [
         {
-          "expr": "disk_usage_percent{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "Disk - {{instance}}"
+          "expr": "label_replace(sum by (instance) (disk_usage_percent{job=\"hosts-passive-metrics\"}), \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+          "legendFormat": "{{alias}}"
         }
       ]
     },
@@ -40,12 +40,12 @@
       "gridPos": {"h": 6, "w": 12, "x": 0, "y": 6},
       "targets": [
         {
-          "expr": "process_virtual_memory_bytes{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "Virtual - {{instance}}"
+		  "expr": "label_replace(process_virtual_memory_bytes{job=\"hosts-passive-metrics\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+          "legendFormat": "virtual-{{alias}}"
         },
         {
-          "expr": "process_resident_memory_bytes{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "Resident - {{instance}}"
+		  "expr": "label_replace(process_resident_memory_bytes{job=\"hosts-passive-metrics\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+          "legendFormat": "resident-{{alias}}"
         }
       ]
     },
@@ -55,8 +55,8 @@
       "gridPos": {"h": 6, "w": 12, "x": 12, "y": 6},
       "targets": [
         {
-          "expr": "process_cpu_seconds_total{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "CPU Time - {{instance}}"
+		  "expr": "label_replace(process_cpu_seconds_total{job=\"hosts-passive-metrics\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+          "legendFormat": "{{alias}}"
         }
       ]
     },
@@ -66,8 +66,8 @@
       "gridPos": {"h": 6, "w": 12, "x": 0, "y": 12},
       "targets": [
         {
-          "expr": "net_rx_bytes{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "RX - {{interface}} - {{instance}}"
+          "expr": "net_rx_bytes{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\"}",
+          "legendFormat": "{{interface}}"
         }
       ]
     },
@@ -77,8 +77,8 @@
       "gridPos": {"h": 6, "w": 12, "x": 12, "y": 12},
       "targets": [
         {
-          "expr": "net_tx_bytes{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "TX - {{interface}} - {{instance}}"
+          "expr": "net_tx_bytes{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\"}",
+          "legendFormat": "{{interface}}"
         }
       ]
     },
@@ -88,8 +88,8 @@
       "gridPos": {"h": 6, "w": 12, "x": 0, "y": 18},
       "targets": [
         {
-          "expr": "net_rx_packets{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "RX Packets - {{interface}} - {{instance}}"
+          "expr": "net_rx_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\"}",
+          "legendFormat": "{{interface}}"
         }
       ]
     },
@@ -99,8 +99,8 @@
       "gridPos": {"h": 6, "w": 12, "x": 12, "y": 18},
       "targets": [
         {
-          "expr": "net_tx_packets{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "TX Packets - {{interface}} - {{instance}}"
+          "expr": "net_tx_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\"}",
+          "legendFormat": "{{interface}}"
         }
       ]
     },
@@ -110,8 +110,8 @@
   "gridPos": { "h": 6, "w": 12, "x": 0, "y": 30 },
   "targets": [
     {
-      "expr": "net_tx_errors{job=\"hosts-passive-metrics\"}",
-      "legendFormat": "TX Errors - {{interface}} - {{instance}}"
+      "expr": "net_tx_errors{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\"}",
+      "legendFormat": "{{interface}}"
     }
   ]
 },
@@ -121,23 +121,380 @@
   "gridPos": { "h": 6, "w": 12, "x": 12, "y": 30 },
   "targets": [
     {
-      "expr": "net_tx_drops{job=\"hosts-passive-metrics\"}",
-      "legendFormat": "TX Drops - {{interface}} - {{instance}}"
+      "expr": "net_tx_drops{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\"}",
+      "legendFormat": "{{interface}}"
     }
   ]
-}
-,
-    {
-      "type": "timeseries",
-      "title": "TCP Connection States",
-      "gridPos": {"h": 6, "w": 24, "x": 0, "y": 24},
-      "targets": [
-        {
-          "expr": "tcp_connection_states{job=\"hosts-passive-metrics\"}",
-          "legendFormat": "{{state}} - {{instance}}"
-        }
-      ]
+},
+{
+  "type": "stat",
+  "title": "TCP State: LISTEN",
+  "gridPos": { "h": 4, "w": 12, "x": 0, "y": 36 },
+  "options": {
+    "reduceOptions": {
+      "calcs": ["lastNotNull"],
+      "fields": "",
+      "values": false
+    },
+    "orientation": "vertical",
+    "textMode": "value_and_name",
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "color": { "mode": "palette-classic" },
+    "text": { "valueSize": 26 },
+    "sparkline": { "show": false },
+    "showPercentChange": true
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": { "mode": "thresholds" },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          { "color": "green", "value": null },
+          { "color": "yellow", "value": 50 },
+          { "color": "red", "value": 100 }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "targets": [
+    {	
+	  "expr": "label_replace(tcp_connection_states{job=\"hosts-passive-metrics\", state=\"LISTEN\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+      "legendFormat": "{{alias}}"
     }
+  ]
+},
+{
+  "type": "stat",
+  "title": "TCP State: SYN_SENT",
+  "gridPos": { "h": 4, "w": 12, "x": 12, "y": 36 },
+  "options": {
+    "reduceOptions": {
+      "calcs": ["lastNotNull"],
+      "fields": "",
+      "values": false
+    },
+    "orientation": "vertical",
+    "textMode": "value_and_name",
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "color": { "mode": "palette-classic" },
+    "text": { "valueSize": 26 },
+    "sparkline": { "show": false },
+    "showPercentChange": true
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": { "mode": "thresholds" },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          { "color": "green", "value": null },
+          { "color": "yellow", "value": 50 },
+          { "color": "red", "value": 100 }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "targets": [
+    {
+	  "expr": "label_replace(tcp_connection_states{job=\"hosts-passive-metrics\", state=\"SYN_SENT\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+	  "legendFormat": "{{alias}}"
+	}
+  ]
+},
+{
+  "type": "stat",
+  "title": "TCP State: SYN_RECV",
+  "gridPos": { "h": 4, "w": 12, "x": 0, "y": 40 },
+  "options": {
+    "reduceOptions": {
+      "calcs": ["lastNotNull"],
+      "fields": "",
+      "values": false
+    },
+    "orientation": "vertical",
+    "textMode": "value_and_name",
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "color": { "mode": "palette-classic" },
+    "text": { "valueSize": 26 },
+    "sparkline": { "show": false },
+    "showPercentChange": true
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": { "mode": "thresholds" },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          { "color": "green", "value": null },
+          { "color": "yellow", "value": 50 },
+          { "color": "red", "value": 100 }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "targets": [
+    {
+	  "expr": "label_replace(tcp_connection_states{job=\"hosts-passive-metrics\", state=\"SYN_RECV\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+	  "legendFormat": "{{alias}}"
+	}
+  ]
+},
+{
+  "type": "stat",
+  "title": "TCP State: ESTABLISHED",
+  "gridPos": { "h": 4, "w": 12, "x": 12, "y": 40 },
+  "options": {
+    "reduceOptions": {
+      "calcs": ["lastNotNull"],
+      "fields": "",
+      "values": false
+    },
+    "orientation": "vertical",
+    "textMode": "value_and_name",
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "color": { "mode": "palette-classic" },
+    "text": { "valueSize": 26 },
+    "sparkline": { "show": false },
+    "showPercentChange": true
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": { "mode": "thresholds" },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          { "color": "green", "value": null },
+          { "color": "yellow", "value": 50 },
+          { "color": "red", "value": 100 }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "targets": [
+    {
+	  "expr": "label_replace(tcp_connection_states{job=\"hosts-passive-metrics\", state=\"ESTABLISHED\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+	  "legendFormat": "{{alias}}"
+	}
+  ]
+},
+{
+  "type": "stat",
+  "title": "TCP State: FIN_WAIT1",
+  "gridPos": { "h": 4, "w": 12, "x": 0, "y": 44 },
+  "options": {
+    "reduceOptions": {
+      "calcs": ["lastNotNull"],
+      "fields": "",
+      "values": false
+    },
+    "orientation": "vertical",
+    "textMode": "value_and_name",
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "color": { "mode": "palette-classic" },
+    "text": { "valueSize": 26 },
+    "sparkline": { "show": false },
+    "showPercentChange": true
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": { "mode": "thresholds" },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          { "color": "green", "value": null },
+          { "color": "yellow", "value": 50 },
+          { "color": "red", "value": 100 }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "targets": [
+    {
+	  "expr": "label_replace(tcp_connection_states{job=\"hosts-passive-metrics\", state=\"FIN_WAIT1\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+	  "legendFormat": "{{alias}}"
+	}
+  ]
+},
+{
+  "type": "stat",
+  "title": "TCP State: CLOSE_WAIT",
+  "gridPos": { "h": 4, "w": 12, "x": 12, "y": 44 },
+  "options": {
+    "reduceOptions": {
+      "calcs": ["lastNotNull"],
+      "fields": "",
+      "values": false
+    },
+    "orientation": "vertical",
+    "textMode": "value_and_name",
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "color": { "mode": "palette-classic" },
+    "text": { "valueSize": 26 },
+    "sparkline": { "show": false },
+    "showPercentChange": true
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": { "mode": "thresholds" },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          { "color": "green", "value": null },
+          { "color": "yellow", "value": 50 },
+          { "color": "red", "value": 100 }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "targets": [
+    {
+	  "expr": "label_replace(tcp_connection_states{job=\"hosts-passive-metrics\", state=\"CLOSE_WAIT\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+	  "legendFormat": "{{alias}}"
+	}
+  ]
+},
+{
+  "type": "stat",
+  "title": "TCP State: FIN_WAIT2",
+  "gridPos": { "h": 4, "w": 12, "x": 0, "y": 48 },
+  "options": {
+    "reduceOptions": {
+      "calcs": ["lastNotNull"],
+      "fields": "",
+      "values": false
+    },
+    "orientation": "vertical",
+    "textMode": "value_and_name",
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "color": { "mode": "palette-classic" },
+    "text": { "valueSize": 26 },
+    "sparkline": { "show": false },
+    "showPercentChange": true
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": { "mode": "thresholds" },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          { "color": "green", "value": null },
+          { "color": "yellow", "value": 50 },
+          { "color": "red", "value": 100 }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "targets": [
+    {
+	  "expr": "label_replace(tcp_connection_states{job=\"hosts-passive-metrics\", state=\"FIN_WAIT2\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+	  "legendFormat": "{{alias}}"
+	}
+  ]
+},
+{
+  "type": "stat",
+  "title": "TCP State: LAST_ACK",
+  "gridPos": { "h": 4, "w": 12, "x": 12, "y": 48 },
+  "options": {
+    "reduceOptions": {
+      "calcs": ["lastNotNull"],
+      "fields": "",
+      "values": false
+    },
+    "orientation": "vertical",
+    "textMode": "value_and_name",
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "color": { "mode": "palette-classic" },
+    "text": { "valueSize": 26 },
+    "sparkline": { "show": false },
+    "showPercentChange": true
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": { "mode": "thresholds" },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          { "color": "green", "value": null },
+          { "color": "yellow", "value": 50 },
+          { "color": "red", "value": 100 }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "targets": [
+    {
+	  "expr": "label_replace(tcp_connection_states{job=\"hosts-passive-metrics\", state=\"LAST_ACK\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+	  "legendFormat": "{{alias}}"
+	}
+  ]
+},
+{
+  "type": "stat",
+  "title": "TCP State: TIME_WAIT",
+  "gridPos": { "h": 4, "w": 12, "x": 0, "y": 52 },
+  "options": {
+    "reduceOptions": {
+      "calcs": ["lastNotNull"],
+      "fields": "",
+      "values": false
+    },
+    "orientation": "vertical",
+    "textMode": "value_and_name",
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "color": { "mode": "palette-classic" },
+    "text": { "valueSize": 26 },
+    "sparkline": { "show": false },
+    "showPercentChange": true
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": { "mode": "thresholds" },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          { "color": "green", "value": null },
+          { "color": "yellow", "value": 50 },
+          { "color": "red", "value": 100 }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "targets": [
+    {
+	  "expr": "label_replace(tcp_connection_states{job=\"hosts-passive-metrics\", state=\"TIME_WAIT\"}, \"alias\", \"d${1}\", \"instance\", \"^.*\\\\.(\\\\d+):8000$\")",
+	  "legendFormat": "{{alias}}"
+	}
+  ]
+}
   ],
   "schemaVersion": 27,
   "version": 1,

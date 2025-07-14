@@ -49,7 +49,7 @@ mkdir -p "../03_trafficGenScripts/trafficConfig"
 cp -r "${FOLDER}/trafficConfig/"* "../03_trafficGenScripts/trafficConfig/"
 
 # Copy dashboards directory
-mkdir -p "../02_setupScripts/06_init_dashboards/dashboards"
+find "${DEST_ROOT}/06_init_dashboards/dashboards/" -maxdepth 1 -type f -name 'd*.json' -exec rm -f {} \;
 cp -r "${FOLDER}/dashboards/"* "${DEST_ROOT}/06_init_dashboards/dashboards/"
 
 # Copy routingAndSwitching.txt
