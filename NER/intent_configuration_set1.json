@@ -7184,7 +7184,7 @@
         ]
       }
     }
-  },///////////////////////////////////////////////
+  },
   {
     "intent": "allow service file transfer, protocol SIP from endpoint 192.168.88.237 to endpoint 172.10.100.48",
     "config": {
@@ -7294,7 +7294,7 @@
   {
     "intent": "Limit the bandwidth between host 10.0.1.92 and host 10.0.1.132 to 1Gbps",
     "config": {
-      "intent_id": "INTENT-304",
+      "intent_id": "INTENT-302",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7321,7 +7321,7 @@
   {
     "intent": "Allocate 5Mbps bandwidth to LISTSERV, the mail list processing latency does not exceed 10seconds, the server ip address is 10.0.5.23, and the communication uses an encrypted protocol",
     "config": {
-      "intent_id": "INTENT-306",
+      "intent_id": "INTENT-303",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7349,7 +7349,7 @@
   {
     "intent": "Prioritize VoIP traffic, ensuring bandwidth is at least 64kbps, latency is less than 90milliseconds, and jitter is less than 80milliseconds",
     "config": {
-      "intent_id": "INTENT-308",
+      "intent_id": "INTENT-304",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7367,7 +7367,7 @@
   {
     "intent": "Allocate 100Mbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 80ms. The server ip address is 10.0.1.13",
     "config": {
-      "intent_id": "INTENT-309",
+      "intent_id": "INTENT-305",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7395,7 +7395,7 @@
   {
     "intent": "Add content filter from gateway to backend for client B, with latency less than 9ms and 20Mbps of bandwidth, and allow HTTPS only, everyday from 00:34 to 19:22",
     "config": {
-      "intent_id": "INTENT-310",
+      "intent_id": "INTENT-306",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7432,7 +7432,7 @@
   {
     "intent": "Prioritize allocating 40Mbps of bandwidth to the online education platform, ensuring that the latency is less than 7milliseconds",
     "config": {
-      "intent_id": "INTENT-311",
+      "intent_id": "INTENT-307",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7449,7 +7449,7 @@
   {
     "intent": "allow the security monitoring center network to use the VoIP service and the UDP protocol",
     "config": {
-      "intent_id": "INTENT-312",
+      "intent_id": "INTENT-308",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7475,7 +7475,7 @@
   {
     "intent": "Provide VR/AR service for the industrial internet, optimize bandwidth to 5Mbps, ensure latency below 120ms, and improve virtual experience",
     "config": {
-      "intent_id": "INTENT-313",
+      "intent_id": "INTENT-309",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7492,7 +7492,7 @@
   {
     "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 40Mbps and the latency is less than 9ms",
     "config": {
-      "intent_id": "INTENT-314",
+      "intent_id": "INTENT-310",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7521,7 +7521,7 @@
   {
     "intent": "Allocate 5Mbps bandwidth for IRC service, message transmission latency is less than 120ms, server ip address is 192.168.4.41-192.168.4.110, message packet loss rate is less than 0.05%",
     "config": {
-      "intent_id": "INTENT-315",
+      "intent_id": "INTENT-311",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7558,7 +7558,7 @@
   {
     "intent": "remove middlebox network border system between endpoint 192.168.158.104 and endpoint 172.10.85.235, allow service instant messaging",
     "config": {
-      "intent_id": "INTENT-316",
+      "intent_id": "INTENT-312",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7584,7 +7584,7 @@
   {
     "intent": "Provide online education service for the campus, ensure latency is less than 180milliseconds and the jitter is less than 60milliseconds",
     "config": {
-      "intent_id": "INTENT-319",
+      "intent_id": "INTENT-313",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7601,7 +7601,7 @@
   {
     "intent": "Configure a dedicated network for industrial internet devices to ensure that the data transmission rate reaches 500Mbps and the packet loss rate is less than 0.000001%",
     "config": {
-      "intent_id": "INTENT-320",
+      "intent_id": "INTENT-314",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7626,7 +7626,7 @@
   {
     "intent": "Limit the bandwidth between host 10.0.1.21 and host 10.0.1.146 to 2Gbps",
     "config": {
-      "intent_id": "INTENT-321",
+      "intent_id": "INTENT-315",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7653,7 +7653,7 @@
   {
     "intent": "Optimize device configuration to ensure that the bandwidth of the core switch reaches 3Gbps. The jitter is less than 100milliseconds",
     "config": {
-      "intent_id": "INTENT-322",
+      "intent_id": "INTENT-316",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7670,7 +7670,7 @@
   {
     "intent": "adjust work island 4 PLC to Mobile Robot AGV communication, accepting packet interval jitter <= 4ms 99.966%, average delay <6ms/s, maximum delay <13ms",
     "config": {
-      "intent_id": "INTENT-323",
+      "intent_id": "INTENT-317",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7687,7 +7687,7 @@
   {
     "intent": "block the library network to use the Telnet service and the TCP/IP protocol",
     "config": {
-      "intent_id": "INTENT-324",
+      "intent_id": "INTENT-318",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {},
@@ -7709,7 +7709,7 @@
   {
     "intent": "Allocate 90Mbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 70ms. The server ip address is 10.0.1.47",
     "config": {
-      "intent_id": "INTENT-325",
+      "intent_id": "INTENT-319",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
@@ -7734,1550 +7734,4613 @@
       "LOGS": {}
     }
   },
-  // {
-  //   "intent": "Assign the highest priority to web browsing traffic, ensuring a latency of no more than 90ms and a guaranteed bandwidth of 2Gbps to provide seamless web browsing experiences",
-  //   "config": {
-  //     "intent_id": "INTENT-326",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Web Browsing",
-  //       "category": "web",
-  //       "latency": "90ms",
-  //       "bandwidth": "2Gbps",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Ensure VPN connection bandwidth is at least 60Mbps, ensure connection stability, and latency is less than 30milliseconds",
-  //   "config": {
-  //     "intent_id": "INTENT-327",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "VPN",
-  //       "category": "remote_access",
-  //       "bandwidth": "60Mbps",
-  //       "latency": "30ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Provide video diagnostic service for telemedicine, optimize bandwidth usage to 20Mbps, and reduce latency to 50ms",
-  //   "config": {
-  //     "intent_id": "INTENT-328",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Telemedicine",
-  //       "category": "video",
-  //       "bandwidth": "20Mbps",
-  //       "latency": "50ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Configure the gateway to ensure the isolation of the internal and external networks, control the data traffic within 20Gbps, and achieve network resource utilization of 91%",
-  //   "config": {
-  //     "intent_id": "INTENT-329",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Gateway",
-  //       "category": "remote_access",
-  //       "bandwidth": "20Gbps",
-  //       "network_utilization": "91%",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": null
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "allow service file transfer, protocol SIP from endpoint 192.168.88.237 to endpoint 172.10.100.48, add middlebox proxy server",
-  //   "config": {
-  //     "intent_id": "INTENT-330",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "File Transfer",
-  //       "category": "file_transfer",
-  //       "priority": "medium"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "192.168.88.237",
-  //           "destination_ip": "172.10.100.48",
-  //           "source_port": null,
-  //           "destination_port": ["5060", "5061"],
-  //           "protocols": ["SIP"],
-  //           "proxy": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "block the student network to use the cloud computing service and the UDP protocol",
-  //   "config": {
-  //     "intent_id": "INTENT-331",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Cloud Computing",
-  //       "category": "database",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "deny",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": ["UDP"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Provide streaming media service through HTTP/HTTPS protocol, latency less than 4ms, Sip server ip address is 10.0.2.70, call packet loss rate is kept below 0.0001%",
-  //   "config": {
-  //     "intent_id": "INTENT-332",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Streaming Media",
-  //       "category": "video",
-  //       "latency": "4ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": "10.0.2.70",
-  //           "source_port": null,
-  //           "destination_port": ["80", "443"],
-  //           "protocols": ["HTTP", "HTTPS"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": ["10.0.2.70"],
-  //           "ports": ["5060", "5061"],
-  //           "application": "Streaming Media",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "Create a path between the router(192.168.1.40) and the switch(192.168.1.163)",
-  //   "config": {
-  //     "intent_id": "INTENT-333",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Path",
-  //       "category": "remote_access",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "192.168.1.40",
-  //           "destination_ip": "192.168.1.163",
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": []
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "remove the middlebox intrusion detection system and deep packet inspection for the teacher network, remove middlebox firewall",
-  //   "config": {
-  //     "intent_id": "INTENT-334",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Teacher Network",
-  //       "category": "remote_access",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "adjust work island PLC 7 communicates with Common IO (Valve Island), jitter reliability 7ms@99.915%, average delay <11ms/s, delay reliability 8ms@99.915%",
-  //   "config": {
-  //     "intent_id": "INTENT-335",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Industrial Internet",
-  //       "category": "database",
-  //       "latency": "11ms",
-  //       "jitter": "7ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Industrial Internet",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "Limit the bandwidth between host 10.0.1.92 and host 10.0.1.132 to 1Gbps",
-  //   "config": {
-  //     "intent_id": "INTENT-336",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Path",
-  //       "category": "remote_access",
-  //       "bandwidth": "1Gbps",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "10.0.1.92",
-  //           "destination_ip": "10.0.1.132",
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": []
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Implement network monitoring and automatic repair mechanisms, with fault alarm time less than 2minutes and fault repair time less than 9minutes",
-  //   "config": {
-  //     "intent_id": "INTENT-337",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Monitoring",
-  //       "category": "remote_access",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Network Monitoring",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "Allocate 5Mbps bandwidth to LISTSERV, the mail list processing latency does not exceed 10seconds, the server ip address is 10.0.5.23, and the communication uses an encrypted protocol",
-  //   "config": {
-  //     "intent_id": "INTENT-338",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "LISTSERV",
-  //       "category": "email",
-  //       "latency": "10000ms",
-  //       "bandwidth": "5Mbps",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": "10.0.5.23",
-  //           "source_port": null,
-  //           "destination_port": ["25"],
-  //           "protocols": ["SMTP"],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "By optimizing routing and network devices, ensure that the bandwidth reaches 200Mbps and the packet loss rate is lower than 0.1%",
-  //   "config": {
-  //     "intent_id": "INTENT-339",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Optimization",
-  //       "category": "remote_access",
-  //       "bandwidth": "200Mbps",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Network Optimization",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "Prioritize VoIP traffic, ensuring bandwidth is at least 64kbps, latency is less than 90milliseconds, and jitter is less than 80milliseconds",
-  //   "config": {
-  //     "intent_id": "INTENT-340",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "VOIP",
-  //       "category": "voice",
-  //       "bandwidth": "64kbps",
-  //       "latency": "90ms",
-  //       "jitter": "80ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Allocate 100Mbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 80ms. The server ip address is 10.0.1.13",
-  //   "config": {
-  //     "intent_id": "INTENT-341",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "E-commerce",
-  //       "category": "web",
-  //       "bandwidth": "100Mbps",
-  //       "latency": "80ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": "10.0.1.13",
-  //           "source_port": null,
-  //           "destination_port": ["80", "443"],
-  //           "protocols": ["HTTP", "HTTPS"],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Add content filter and proxy server from gateway to backend for client B, with latency less than 9ms and 20Mbps of bandwidth, and allow HTTPS only, everyday from 00:34 to 19:22",
-  //   "config": {
-  //     "intent_id": "INTENT-342",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Web Browsing",
-  //       "category": "web",
-  //       "latency": "9ms",
-  //       "bandwidth": "20Mbps",
-  //       "priority": "medium",
-  //       "time_constraints": {
-  //         "start": "00:34:00",
-  //         "end": "19:22:00",
-  //         "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-  //       }
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": ["443"],
-  //           "protocols": ["HTTPS"],
-  //           "proxy": true
-  //         },
-  //         {
-  //           "action": "deny",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": ["80"],
-  //           "protocols": ["HTTP"]
-  //         }
-  //       ],
-  //       "schedule": {
-  //         "start": "2025-07-12T19:04:00Z",
-  //         "end": "2025-07-13T13:52:00Z"
-  //       }
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Prioritize allocating 40Mbps of bandwidth to the online education platform, ensuring that the latency is less than 7milliseconds",
-  //   "config": {
-  //     "intent_id": "INTENT-343",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Online Education",
-  //       "category": "video",
-  //       "bandwidth": "40Mbps",
-  //       "latency": "7ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "allow the security monitoring center network to use the VoIP service and the UDP protocol",
-  //   "config": {
-  //     "intent_id": "INTENT-344",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "VOIP",
-  //       "category": "voice",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": ["5060", "5061"],
-  //           "protocols": ["UDP"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Provide VR/AR service for the industrial internet, optimize bandwidth to 5Mbps, ensure latency below 120ms, and improve virtual experience",
-  //   "config": {
-  //     "intent_id": "INTENT-345",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "VR/AR",
-  //       "category": "video",
-  //       "bandwidth": "5Mbps",
-  //       "latency": "120ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 40Mbps and the latency is less than 9ms",
-  //   "config": {
-  //     "intent_id": "INTENT-346",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Security",
-  //       "category": "remote_access",
-  //       "bandwidth": "40Mbps",
-  //       "latency": "9ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": [],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Allocate 5Mbps bandwidth for IRC service, message transmission latency is less than 120ms, server ip address is 192.168.4.41-192.168.4.110, message packet loss rate is less than 0.05%",
-  //   "config": {
-  //     "intent_id": "INTENT-347",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "IRC",
-  //       "category": "voice",
-  //       "bandwidth": "5Mbps",
-  //       "latency": "120ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": "192.168.4.41-192.168.4.110",
-  //           "source_port": null,
-  //           "destination_port": ["6667"],
-  //           "protocols": ["IRC"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": ["192.168.4.41-192.168.4.110"],
-  //           "ports": ["6667"],
-  //           "application": "IRC",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "remove middlebox network border system between endpoint 192.168.158.104 and endpoint 172.10.85.235, allow service instant messaging",
-  //   "config": {
-  //     "intent_id": "INTENT-348",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Instant Messaging",
-  //       "category": "voice",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "192.168.158.104",
-  //           "destination_ip": "172.10.85.235",
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": []
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Optimize device configuration to ensure that the bandwidth of the core switch reaches 20Mbps. The jitter is less than 5milliseconds",
-  //   "config": {
-  //     "intent_id": "INTENT-349",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Core Switch",
-  //       "category": "remote_access",
-  //       "bandwidth": "20Mbps",
-  //       "jitter": "5ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Real-time monitoring of network equipment, fault alarm time is less than 1minutes, and repair time is less than 5minutes",
-  //   "config": {
-  //     "intent_id": "INTENT-350",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Monitoring",
-  //       "category": "remote_access",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Network Monitoring",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "Provide online education service for the campus,ensure latency is less than 180milliseconds and the jitter is less than 60milliseconds",
-  //   "config": {
-  //     "intent_id": "INTENT-351",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Online Education",
-  //       "category": "video",
-  //       "latency": "180ms",
-  //       "jitter": "60ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Configure a dedicated network for industrial internet devices to ensure that the data transmission rate reaches 500Mbps and the packet loss rate is less than 0.000001%",
-  //   "config": {
-  //     "intent_id": "INTENT-352",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Industrial Internet",
-  //       "category": "database",
-  //       "bandwidth": "500Mbps",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Industrial Internet",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "Limit the bandwidth between host 10.0.1.21 and host 10.0.1.146 to 2Gbps",
-  //   "config": {
-  //     "intent_id": "INTENT-353",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Path",
-  //       "category": "remote_access",
-  //       "bandwidth": "2Gbps",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "10.0.1.21",
-  //           "destination_ip": "10.0.1.146",
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": []
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Optimize device configuration to ensure that the bandwidth of the core switch reaches 3Gbps. The jitter is less than 100milliseconds",
-  //   "config": {
-  //     "intent_id": "INTENT-354",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Core Switch",
-  //       "category": "remote_access",
-  //       "bandwidth": "3Gbps",
-  //       "jitter": "100ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "adjust work island 4 PLC to Mobile Robot AGV communication, accepting packet interval jitter <= 4ms 99.966%, average delay <6ms/s, maximum delay <13ms",
-  //   "config": {
-  //     "intent_id": "INTENT-355",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Industrial Internet",
-  //       "category": "database",
-  //       "latency": "6ms",
-  //       "jitter": "4ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Industrial Internet",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "block the library network to use the Telnet service and the TCP/IP protocol",
-  //   "config": {
-  //     "intent_id": "INTENT-356",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Telnet",
-  //       "category": "remote_access",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "deny",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": ["23"],
-  //           "protocols": ["TCP"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Allocate 90Mbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 70ms. The server ip address is 10.0.1.47",
-  //   "config": {
-  //     "intent_id": "INTENT-357",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "E-commerce",
-  //       "category": "web",
-  //       "bandwidth": "90Mbps",
-  //       "latency": "70ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": "10.0.1.47",
-  //           "source_port": null,
-  //           "destination_port": ["80", "443"],
-  //           "protocols": ["HTTP", "HTTPS"],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Assign the highest priority to web browsing traffic, ensuring a latency of no more than 90ms and a guaranteed bandwidth of 2Gbps to provide seamless web browsing experiences",
-  //   "config": {
-  //     "intent_id": "INTENT-358",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Web Browsing",
-  //       "category": "web",
-  //       "latency": "90ms",
-  //       "bandwidth": "2Gbps",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": ["80", "443"],
-  //           "protocols": ["HTTP", "HTTPS"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Ensure VPN connection bandwidth is at least 60Mbps, ensure connection stability, and latency is less than 30milliseconds",
-  //   "config": {
-  //     "intent_id": "INTENT-359",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "VPN",
-  //       "category": "remote_access",
-  //       "bandwidth": "60Mbps",
-  //       "latency": "30ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Provide video diagnostic service for telemedicine, optimize bandwidth usage to 20Mbps, and reduce latency to 50ms",
-  //   "config": {
-  //     "intent_id": "INTENT-360",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Telemedicine",
-  //       "category": "video",
-  //       "bandwidth": "20Mbps",
-  //       "latency": "50ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Configure the gateway to ensure the isolation of the internal and external networks, control the data traffic within 20Gbps, and achieve network resource utilization of 91%",
-  //   "config": {
-  //     "intent_id": "INTENT-361",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Isolation",
-  //       "category": "remote_access",
-  //       "bandwidth": "20Gbps",
-  //       "network_utilization": "91%",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Configure a dedicated network for industrial internet devices to ensure that the data transmission rate reaches 20Gbps and the packet loss rate is less than 0.1%",
-  //   "config": {
-  //     "intent_id": "INTENT-362",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Industrial Internet",
-  //       "category": "database",
-  //       "bandwidth": "20Gbps",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Industrial Internet",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "adjust work island PLC 7 communicates with Mobile Robot AGV, average delay <18ms/s, jitter reliability 7ms@99.952%, delay reliability 9ms@99.952%",
-  //   "config": {
-  //     "intent_id": "INTENT-363",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Industrial Internet",
-  //       "category": "database",
-  //       "latency": "18ms",
-  //       "jitter": "7ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Industrial Internet",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "remove the middlebox firewall and content filter between endpoint 172.10.139.78 and endpoint 192.168.67.21",
-  //   "config": {
-  //     "intent_id": "INTENT-364",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Path",
-  //       "category": "remote_access",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "172.10.139.78",
-  //           "destination_ip": "192.168.67.21",
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": []
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Limit the bandwidth between host 10.0.1.89 and host 10.0.1.131 to 50Mbps",
-  //   "config": {
-  //     "intent_id": "INTENT-365",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Path",
-  //       "category": "remote_access",
-  //       "bandwidth": "50Mbps",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "10.0.1.89",
-  //           "destination_ip": "10.0.1.131",
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": []
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "allow service LISTSERV, protocol DNS from endpoint 172.10.211.3 to endpoint 192.168.123.116, remove middlebox network border system",
-  //   "config": {
-  //     "intent_id": "INTENT-366",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "LISTSERV",
-  //       "category": "email",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "172.10.211.3",
-  //           "destination_ip": "192.168.123.116",
-  //           "source_port": null,
-  //           "destination_port": ["53"],
-  //           "protocols": ["DNS"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 80Mbps and the latency is less than 40ms",
-  //   "config": {
-  //     "intent_id": "INTENT-367",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Security",
-  //       "category": "remote_access",
-  //       "bandwidth": "80Mbps",
-  //       "latency": "40ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": [],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Allocate 20Mbps of bandwidth to the CRM system, ensuring the response time is less than 8seconds",
-  //   "config": {
-  //     "intent_id": "INTENT-368",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "CRM",
-  //       "category": "web",
-  //       "bandwidth": "20Mbps",
-  //       "latency": "8000ms",
-  //       "priority": "medium"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "allow service CRM, protocol UDP from endpoint 192.168.81.207 to endpoint 172.10.187.173, add middlebox content filter",
-  //   "config": {
-  //     "intent_id": "INTENT-369",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "CRM",
-  //       "category": "web",
-  //       "priority": "medium"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "192.168.81.207",
-  //           "destination_ip": "172.10.187.173",
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": ["UDP"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "remove the middlebox proxy server for the teaching building network, start time 08:20, end time 19:14",
-  //   "config": {
-  //     "intent_id": "INTENT-370",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Teaching Network",
-  //       "category": "remote_access",
-  //       "priority": "low",
-  //       "time_constraints": {
-  //         "start": "08:20:00",
-  //         "end": "19:14:00",
-  //         "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-  //       }
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Provide the Email server through SMTP/POP3/IMAP protocols , ensure that the latency in sending and receiving Emails does not exceed 6seconds, the server ip address is 10.0.4.15-10.0.1.251, and use SMTP/POP3/IMAP protocol encryption",
-  //   "config": {
-  //     "intent_id": "INTENT-371",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Email",
-  //       "category": "email",
-  //       "latency": "6000ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": "10.0.4.15-10.0.1.251",
-  //           "source_port": null,
-  //           "destination_port": ["25", "110", "143"],
-  //           "protocols": ["SMTP", "POP3", "IMAP"],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Provide VR/AR service for the industrial internet, optimize bandwidth to 1Gbps, ensure latency below 40ms, and improve virtual experience",
-  //   "config": {
-  //     "intent_id": "INTENT-372",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "VR/AR",
-  //       "category": "video",
-  //       "bandwidth": "1Gbps",
-  //       "latency": "40ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Set the max bandwidth from endpoint 192.168.158.104 to endpoint 172.10.85.235 to 3Gbps, start time 02:20, end time 23:56",
-  //   "config": {
-  //     "intent_id": "INTENT-373",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Path",
-  //       "category": "remote_access",
-  //       "bandwidth": "3Gbps",
-  //       "priority": "low",
-  //       "time_constraints": {
-  //         "start": "02:20:00",
-  //         "end": "23:56:00",
-  //         "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-  //       }
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "192.168.158.104",
-  //           "destination_ip": "172.10.85.235",
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": []
-  //         }
-  //       ],
-  //       "schedule": {
-  //         "start": "2025-07-12T20:50:00Z",
-  //         "end": "2025-07-13T18:26:00Z"
-  //       }
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "remove the middlebox overuse notification between endpoint 192.168.135.36 and endpoint 172.10.194.58",
-  //   "config": {
-  //     "intent_id": "INTENT-374",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Path",
-  //       "category": "remote_access",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": "192.168.135.36",
-  //           "destination_ip": "172.10.194.58",
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": []
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Allocate 3Gbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 5ms. The server ip address is 10.0.1.11",
-  //   "config": {
-  //     "intent_id": "INTENT-375",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "E-commerce",
-  //       "category": "web",
-  //       "bandwidth": "3Gbps",
-  //       "latency": "5ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": "10.0.1.11",
-  //           "source_port": null,
-  //           "destination_port": ["80", "443"],
-  //           "protocols": ["HTTP", "HTTPS"],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "remove the middlebox copyright monitoring and load balancer for the teacher network, remove middlebox load balancer",
-  //   "config": {
-  //     "intent_id": "INTENT-376",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Teacher Network",
-  //       "category": "remote_access",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Production line 9 to work island 2 set bandwidth at least 80Mbps, delay reliability at least 90ms@99.63%, average delay <12ms, start time (10:30), end time (20:30)",
-  //   "config": {
-  //     "intent_id": "INTENT-377",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Industrial Internet",
-  //       "category": "database",
-  //       "bandwidth": "80Mbps",
-  //       "latency": "12ms",
-  //       "priority": "high",
-  //       "time_constraints": {
-  //         "start": "10:30:00",
-  //         "end": "20:30:00",
-  //         "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-  //       }
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": []
-  //         }
-  //       ],
-  //       "schedule": {
-  //         "start": "2025-07-13T05:00:00Z",
-  //         "end": "2025-07-13T15:00:00Z"
-  //       }
-  //     },
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Industrial Internet",
-  //           "time_window": "10h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "Restrict Telnet access to the 192.168.2.44/24 subnet and ensure that Telnet connection response time does not exceed 10ms",
-  //   "config": {
-  //     "intent_id": "INTENT-378",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Telnet",
-  //       "category": "remote_access",
-  //       "latency": "10ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "deny",
-  //           "source_ip": null,
-  //           "destination_ip": "192.168.2.44/24",
-  //           "source_port": null,
-  //           "destination_port": ["23"],
-  //           "protocols": ["TCP"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Ensure that all network transaction are encrypted using the HTTPS protocol, that the transmission latency of transaction data does not exceed 150ms, that the ip address of the transaction server is 10.0.0.25, and that 5Gbps bandwidth is reserved",
-  //   "config": {
-  //     "intent_id": "INTENT-379",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Transaction",
-  //       "category": "web",
-  //       "latency": "150ms",
-  //       "bandwidth": "5Gbps",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": "10.0.0.25",
-  //           "source_port": null,
-  //           "destination_port": ["443"],
-  //           "protocols": ["HTTPS"],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Restrict Telnet access to the 192.168.2.86/24 subnet and ensure that Telnet connection response time does not exceed 10ms",
-  //   "config": {
-  //     "intent_id": "INTENT-380",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Telnet",
-  //       "category": "remote_access",
-  //       "latency": "10ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "deny",
-  //           "source_ip": null,
-  //           "destination_ip": "192.168.2.86/24",
-  //           "source_port": null,
-  //           "destination_port": ["23"],
-  //           "protocols": ["TCP"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Set the min bandwidth of the classroom network to 10Gbps, download quota to 3gb/wk",
-  //   "config": {
-  //     "intent_id": "INTENT-381",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Classroom Network",
-  //       "category": "remote_access",
-  //       "bandwidth": "10Gbps",
-  //       "download_quota": "3gb/wk",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Real-time monitoring of network equipment, fault alarm time is less than 2minutes, and repair time is less than 3minutes",
-  //   "config": {
-  //     "intent_id": "INTENT-382",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Monitoring",
-  //       "category": "remote_access",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {
-  //       "filters": [
-  //         {
-  //           "hosts": null,
-  //           "ports": null,
-  //           "application": "Network Monitoring",
-  //           "time_window": "24h"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
-  // {
-  //   "intent": "Prioritize VoIP traffic, ensuring bandwidth is at least 64kbps, latency is less than 70milliseconds, and jitter is less than 50milliseconds",
-  //   "config": {
-  //     "intent_id": "INTENT-383",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "VOIP",
-  //       "category": "voice",
-  //       "bandwidth": "64kbps",
-  //       "latency": "70ms",
-  //       "jitter": "50ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {},
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Allocate 30Mbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 1ms. The server ip address is 10.0.1.19",
-  //   "config": {
-  //     "intent_id": "INTENT-384",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "E-commerce",
-  //       "category": "web",
-  //       "bandwidth": "30Mbps",
-  //       "latency": "1ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": "10.0.1.19",
-  //           "source_port": null,
-  //           "destination_port": ["80", "443"],
-  //           "protocols": ["HTTP", "HTTPS"],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 30Mbps and the latency is less than 50ms",
-  //   "config": {
-  //     "intent_id": "INTENT-385",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Network Security",
-  //       "category": "remote_access",
-  //       "bandwidth": "30Mbps",
-  //       "latency": "50ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": [],
-  //           "encrypted": true
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Restrict Telnet access to the 192.168.2.16/24 subnet and ensure that Telnet connection response time does not exceed 120ms",
-  //   "config": {
-  //     "intent_id": "INTENT-386",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Telnet",
-  //       "category": "remote_access",
-  //       "latency": "120ms",
-  //       "priority": "low"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "deny",
-  //           "source_ip": null,
-  //           "destination_ip": "192.168.2.16/24",
-  //           "source_port": null,
-  //           "destination_port": ["23"],
-  //           "protocols": ["TCP"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // },
-  // {
-  //   "intent": "Provide instant messaging service on campus through TCP/IP protocol, optimize distributed processing, and reduce latency to 100ms",
-  //   "config": {
-  //     "intent_id": "INTENT-387",
-  //     "user_role": "admin",
-  //     "timestamp": "2025-07-13T18:24:00+05:30",
-  //     "QOS": {
-  //       "application": "Instant Messaging",
-  //       "category": "voice",
-  //       "latency": "100ms",
-  //       "priority": "high"
-  //     },
-  //     "ACL": {
-  //       "allow_rules": [
-  //         {
-  //           "action": "allow",
-  //           "source_ip": null,
-  //           "destination_ip": null,
-  //           "source_port": null,
-  //           "destination_port": null,
-  //           "protocols": ["TCP"]
-  //         }
-  //       ]
-  //     },
-  //     "LOGS": {}
-  //   }
-  // }
-
+  {
+    "intent": "Assign the highest priority to web browsing traffic, ensuring a latency of no more than 90ms and a guaranteed bandwidth of 2Gbps to provide seamless web browsing experiences",
+    "config": {
+      "intent_id": "INTENT-320",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "90ms",
+        "bandwidth": "2Gbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure VPN connection bandwidth is at least 60Mbps, ensure connection stability, and latency is less than 30milliseconds",
+    "config": {
+      "intent_id": "INTENT-321",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "VPN",
+        "category": "remote_access",
+        "bandwidth": "60Mbps",
+        "latency": "30ms",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide video diagnostic service for telemedicine, optimize bandwidth usage to 20Mbps, and reduce latency to 50ms",
+    "config": {
+      "intent_id": "INTENT-322",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Telemedicine",
+        "category": "video",
+        "bandwidth": "20Mbps",
+        "latency": "50ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow service file transfer, protocol SIP from endpoint 192.168.88.237 to endpoint 172.10.100.48",
+    "config": {
+      "intent_id": "INTENT-323",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "File Transfer",
+        "category": "file_transfer",
+        "priority": "medium"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.88.237",
+            "destination_ip": "172.10.100.48",
+            "source_port": null,
+            "destination_port": ["5060", "5061"],
+            "protocols": ["SIP"],
+            "proxy": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide streaming media service through HTTP/HTTPS protocol, latency less than 4ms, Sip server ip address is 10.0.2.70, call packet loss rate is kept below 0.0001%",
+    "config": {
+      "intent_id": "INTENT-324",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "latency": "4ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.2.70",
+            "source_port": null,
+            "destination_port": ["80", "443","5060", "5061"],
+            "protocols": ["HTTP", "HTTPS","SIP"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["10.0.2.70"],
+            "ports": ["5060", "5061"],
+            "application": "Streaming Media",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "adjust work island PLC 7 communicates with Common IO (Valve Island), jitter reliability 7ms@99.915%, average delay <11ms/s, delay reliability 8ms@99.915%",
+    "config": {
+      "intent_id": "INTENT-325",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "latency": "11ms",
+        "jitter": "7ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Limit the bandwidth between host 10.0.1.92 and host 10.0.1.132 to 1Gbps",
+    "config": {
+      "intent_id": "INTENT-326",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "1Gbps",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.1.92",
+            "destination_ip": "10.0.1.132",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 5Mbps bandwidth to LISTSERV, the mail list processing latency does not exceed 10seconds, the server ip address is 10.0.5.23, and the communication uses an encrypted protocol",
+    "config": {
+      "intent_id": "INTENT-327",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "latency": "10000ms",
+        "bandwidth": "5Mbps",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.5.23",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "By optimizing routing and network devices, ensure that the bandwidth reaches 200Mbps and the packet loss rate is lower than 0.1%",
+    "config": {
+      "intent_id": "INTENT-328",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Optimization",
+        "category": "remote_access",
+        "bandwidth": "200Mbps",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Network Optimization",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Prioritize VoIP traffic, ensuring bandwidth is at least 64kbps, latency is less than 90milliseconds, and jitter is less than 80milliseconds",
+    "config": {
+      "intent_id": "INTENT-329",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "VOIP",
+        "category": "voice",
+        "bandwidth": "64kbps",
+        "latency": "90ms",
+        "jitter": "80ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 100Mbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 80ms. The server ip address is 10.0.1.13",
+    "config": {
+      "intent_id": "INTENT-330",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "E-commerce",
+        "category": "web",
+        "bandwidth": "100Mbps",
+        "latency": "80ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.1.13",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Add content filter and proxy server from gateway to backend for client B, with latency less than 9ms and 20Mbps of bandwidth, and allow HTTPS only, everyday from 00:34 to 19:22",
+    "config": {
+      "intent_id": "INTENT-331",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "9ms",
+        "bandwidth": "20Mbps",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "00:34:00",
+          "end": "19:22:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS"],
+            "proxy": true
+          },
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80"],
+            "protocols": ["HTTP"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T19:04:00Z",
+          "end": "2025-07-13T13:52:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Prioritize allocating 40Mbps of bandwidth to the online education platform, ensuring that the latency is less than 7milliseconds",
+    "config": {
+      "intent_id": "INTENT-332",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "video",
+        "bandwidth": "40Mbps",
+        "latency": "7ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow the security monitoring center network to use the VoIP service and the UDP protocol",
+    "config": {
+      "intent_id": "INTENT-333",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "VOIP",
+        "category": "voice",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["5060", "5061"],
+            "protocols": ["UDP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide VR/AR service for the industrial internet, optimize bandwidth to 5Mbps, ensure latency below 120ms, and improve virtual experience",
+    "config": {
+      "intent_id": "INTENT-334",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "bandwidth": "5Mbps",
+        "latency": "120ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 40Mbps and the latency is less than 9ms",
+    "config": {
+      "intent_id": "INTENT-335",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Security",
+        "category": "remote_access",
+        "bandwidth": "40Mbps",
+        "latency": "9ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": [],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 5Mbps bandwidth for IRC service, message transmission latency is less than 120ms, server ip address is 192.168.4.41-192.168.4.110, message packet loss rate is less than 0.05%",
+    "config": {
+      "intent_id": "INTENT-336",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "IRC",
+        "category": "voice",
+        "bandwidth": "5Mbps",
+        "latency": "120ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "192.168.4.41-192.168.4.110",
+            "source_port": null,
+            "destination_port": ["6667"],
+            "protocols": ["IRC"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["192.168.4.41-192.168.4.110"],
+            "ports": ["6667"],
+            "application": "IRC",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Optimize device configuration to ensure that the bandwidth of the core switch reaches 20Mbps. The jitter is less than 5milliseconds",
+    "config": {
+      "intent_id": "INTENT-337",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Core Switch",
+        "category": "remote_access",
+        "bandwidth": "20Mbps",
+        "jitter": "5ms",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Real-time monitoring of network equipment, fault alarm time is less than 1minutes, and repair time is less than 5minutes",
+    "config": {
+      "intent_id": "INTENT-338",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Monitoring",
+        "category": "remote_access",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Network Monitoring",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide online education service for the campus,ensure latency is less than 180milliseconds and the jitter is less than 60milliseconds",
+    "config": {
+      "intent_id": "INTENT-339",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "video",
+        "latency": "180ms",
+        "jitter": "60ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure a dedicated network for industrial internet devices to ensure that the data transmission rate reaches 500Mbps and the packet loss rate is less than 0.000001%",
+    "config": {
+      "intent_id": "INTENT-340",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "bandwidth": "500Mbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Limit the bandwidth between host 10.0.1.21 and host 10.0.1.146 to 2Gbps",
+    "config": {
+      "intent_id": "INTENT-341",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "2Gbps",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.1.21",
+            "destination_ip": "10.0.1.146",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Optimize device configuration to ensure that the bandwidth of the core switch reaches 3Gbps. The jitter is less than 100milliseconds",
+    "config": {
+      "intent_id": "INTENT-342",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Core Switch",
+        "category": "remote_access",
+        "bandwidth": "3Gbps",
+        "jitter": "100ms",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "adjust work island 4 PLC to Mobile Robot AGV communication, accepting packet interval jitter <= 4ms 99.966%, average delay <6ms/s, maximum delay <13ms",
+    "config": {
+      "intent_id": "INTENT-343",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "latency": "6ms",
+        "jitter": "4ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "block the library network to use the Telnet service and the TCP/IP protocol",
+    "config": {
+      "intent_id": "INTENT-344",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["23"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 90Mbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 70ms. The server ip address is 10.0.1.47",
+    "config": {
+      "intent_id": "INTENT-345",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "E-commerce",
+        "category": "web",
+        "bandwidth": "90Mbps",
+        "latency": "70ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.1.47",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Assign the highest priority to web browsing traffic, ensuring a latency of no more than 90ms and a guaranteed bandwidth of 2Gbps to provide seamless web browsing experiences",
+    "config": {
+      "intent_id": "INTENT-346",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "latency": "90ms",
+        "bandwidth": "2Gbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure VPN connection bandwidth is at least 60Mbps, ensure connection stability, and latency is less than 30milliseconds",
+    "config": {
+      "intent_id": "INTENT-347",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "VPN",
+        "category": "remote_access",
+        "bandwidth": "60Mbps",
+        "latency": "30ms",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide video diagnostic service for telemedicine, optimize bandwidth usage to 20Mbps, and reduce latency to 50ms",
+    "config": {
+      "intent_id": "INTENT-348",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Telemedicine",
+        "category": "video",
+        "bandwidth": "20Mbps",
+        "latency": "50ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure the gateway to ensure the isolation of the internal and external networks, control the data traffic within 20Gbps, and achieve network resource utilization of 91%",
+    "config": {
+      "intent_id": "INTENT-349",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Isolation",
+        "category": "remote_access",
+        "bandwidth": "20Gbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure a dedicated network for industrial internet devices to ensure that the data transmission rate reaches 20Gbps and the packet loss rate is less than 0.1%",
+    "config": {
+      "intent_id": "INTENT-350",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "bandwidth": "20Gbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "adjust work island PLC 7 communicates with Mobile Robot AGV, average delay <18ms/s, jitter reliability 7ms@99.952%, delay reliability 9ms@99.952%",
+    "config": {
+      "intent_id": "INTENT-351",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "latency": "18ms",
+        "jitter": "7ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Limit the bandwidth between host 10.0.1.89 and host 10.0.1.131 to 50Mbps",
+    "config": {
+      "intent_id": "INTENT-352",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "50Mbps",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.1.89",
+            "destination_ip": "10.0.1.131",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow service LISTSERV, protocol DNS from endpoint 172.10.211.3 to endpoint 192.168.123.116",
+    "config": {
+      "intent_id": "INTENT-353",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.10.211.3",
+            "destination_ip": "192.168.123.116",
+            "source_port": null,
+            "destination_port": ["53"],
+            "protocols": ["DNS"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 80Mbps and the latency is less than 40ms",
+    "config": {
+      "intent_id": "INTENT-354",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Security",
+        "category": "remote_access",
+        "bandwidth": "80Mbps",
+        "latency": "40ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": [],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 20Mbps of bandwidth to the CRM system, ensuring the response time is less than 8seconds",
+    "config": {
+      "intent_id": "INTENT-355",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "CRM",
+        "category": "web",
+        "bandwidth": "20Mbps",
+        "latency": "8000ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow service CRM, protocol UDP from endpoint 192.168.81.207 to endpoint 172.10.187.173",
+    "config": {
+      "intent_id": "INTENT-356",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "CRM",
+        "category": "web",
+        "priority": "medium"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.81.207",
+            "destination_ip": "172.10.187.173",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": ["UDP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "remove the middlebox proxy server for the teaching building network, start time 08:20, end time 19:14",
+    "config": {
+      "intent_id": "INTENT-357",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Teaching Network",
+        "category": "remote_access",
+        "priority": "low",
+        "time_constraints": {
+          "start": "08:20:00",
+          "end": "19:14:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide the Email server through SMTP/POP3/IMAP protocols , ensure that the latency in sending and receiving Emails does not exceed 6seconds, the server ip address is 10.0.4.15-10.0.1.251, and use SMTP/POP3/IMAP protocol encryption",
+    "config": {
+      "intent_id": "INTENT-358",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "latency": "6000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": ["10.0.4.0/24", "10.0.1.0/24"],
+            "source_port": null,
+            "destination_port": ["25", "110", "143"],
+            "protocols": ["SMTP", "POP3", "IMAP"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide VR/AR service for the industrial internet, optimize bandwidth to 1Gbps, ensure latency below 40ms, and improve virtual experience",
+    "config": {
+      "intent_id": "INTENT-359",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "bandwidth": "1Gbps",
+        "latency": "40ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Set the max bandwidth from endpoint 192.168.158.104 to endpoint 172.10.85.235 to 3Gbps, start time 02:20, end time 23:56",
+    "config": {
+      "intent_id": "INTENT-360",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "3Gbps",
+        "priority": "low",
+        "time_constraints": {
+          "start": "02:20:00",
+          "end": "23:56:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.158.104",
+            "destination_ip": "172.10.85.235",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T20:50:00Z",
+          "end": "2025-07-13T18:26:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "remove the middlebox overuse notification between endpoint 192.168.135.36 and endpoint 172.10.194.58",
+    "config": {
+      "intent_id": "INTENT-361",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.135.36",
+            "destination_ip": "172.10.194.58",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 3Gbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 5ms. The server ip address is 10.0.1.11",
+    "config": {
+      "intent_id": "INTENT-362",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "E-commerce",
+        "category": "web",
+        "bandwidth": "3Gbps",
+        "latency": "5ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.1.11",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "remove the middlebox copyright monitoring and load balancer for the teacher network, remove middlebox load balancer",
+    "config": {
+      "intent_id": "INTENT-363",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Teacher Network",
+        "category": "remote_access",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Production line 9 to work island 2 set bandwidth at least 80Mbps, delay reliability at least 90ms@99.63%, average delay <12ms, start time (10:30), end time (20:30)",
+    "config": {
+      "intent_id": "INTENT-364",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "bandwidth": "80Mbps",
+        "latency": "12ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "10:30:00",
+          "end": "20:30:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-13T05:00:00Z",
+          "end": "2025-07-13T15:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "10h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Restrict Telnet access to the 192.168.2.44/24 subnet and ensure that Telnet connection response time does not exceed 10ms",
+    "config": {
+      "intent_id": "INTENT-365",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Telnet",
+        "category": "remote_access",
+        "latency": "10ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": "192.168.2.44/24",
+            "source_port": null,
+            "destination_port": ["23"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that all network transaction are encrypted using the HTTPS protocol, that the transmission latency of transaction data does not exceed 150ms, that the ip address of the transaction server is 10.0.0.25, and that 5Gbps bandwidth is reserved",
+    "config": {
+      "intent_id": "INTENT-366",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Transaction",
+        "category": "web",
+        "latency": "150ms",
+        "bandwidth": "5Gbps",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.0.25",
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Restrict Telnet access to the 192.168.2.86/24 subnet and ensure that Telnet connection response time does not exceed 10ms",
+    "config": {
+      "intent_id": "INTENT-367",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Telnet",
+        "category": "remote_access",
+        "latency": "10ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": "192.168.2.86/24",
+            "source_port": null,
+            "destination_port": ["23"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Set the min bandwidth of the classroom network to 10Gbps, download quota to 3gb/wk",
+    "config": {
+      "intent_id": "INTENT-368",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Classroom Network",
+        "category": "web",
+        "bandwidth": "10Gbps",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Prioritize VoIP traffic, ensuring bandwidth is at least 64kbps, latency is less than 70milliseconds, and jitter is less than 50milliseconds",
+    "config": {
+      "intent_id": "INTENT-369",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "VOIP",
+        "category": "voice",
+        "bandwidth": "64kbps",
+        "latency": "70ms",
+        "jitter": "50ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 30Mbps bandwidth to the e-commerce platform to ensure website stability during peak hours and protect transaction data. The data transmission latency does not exceed 1ms. The server ip address is 10.0.1.19",
+    "config": {
+      "intent_id": "INTENT-370",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "E-commerce",
+        "category": "web",
+        "bandwidth": "30Mbps",
+        "latency": "1ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.1.19",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 30Mbps and the latency is less than 50ms",
+    "config": {
+      "intent_id": "INTENT-371",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Network Security",
+        "category": "remote_access",
+        "bandwidth": "30Mbps",
+        "latency": "50ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": [],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Restrict Telnet access to the 192.168.2.16/24 subnet and ensure that Telnet connection response time does not exceed 120ms",
+    "config": {
+      "intent_id": "INTENT-372",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Telnet",
+        "category": "remote_access",
+        "latency": "120ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": "192.168.2.16/24",
+            "source_port": null,
+            "destination_port": ["23"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide instant messaging service on campus through TCP/IP protocol, optimize distributed processing, and reduce latency to 100ms",
+    "config": {
+      "intent_id": "INTENT-373",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:24:00+05:30",
+      "QOS": {
+        "application": "Instant Messaging",
+        "category": "web",
+        "latency": "100ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },//////////////////////////
+  
+  {
+    "intent": "remove middlebox proxy server between endpoint 192.168.32.103 and endpoint 192.168.155.142, block service LISTSERV",
+    "config": {
+      "intent_id": "INTENT-374",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": "192.168.32.103",
+            "destination_ip": "192.168.155.142",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 3Gbps bandwidth for IRC service, message transmission latency is less than 100ms, server ip address is 192.168.4.91-192.168.4.234, message packet loss rate is less than 0.01%",
+    "config": {
+      "intent_id": "INTENT-375",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "IRC",
+        "category": "voice",
+        "bandwidth": "3Gbps",
+        "latency": "100ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "192.168.4.0/24",
+            "source_port": null,
+            "destination_port": ["6667"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.4.0/24",
+            "ports": ["6667"],
+            "application": "IRC",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide VR/AR service for the industrial internet, optimize bandwidth to 2Mbps, ensure latency below 35ms, and improve virtual experience",
+    "config": {
+      "intent_id": "INTENT-376",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "bandwidth": "2Mbps",
+        "latency": "35ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "block the multimedia classroom network to use the digital publishing service and the DNS protocol",
+    "config": {
+      "intent_id": "INTENT-377",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["53", "80", "443"],
+            "protocols": ["DNS", "HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "ensure work island 9 PLC to Safety Scanner communication, accepting packet interval jitter <= 9ms 99.929%, average delay <7ms/s, maximum delay <16ms",
+    "config": {
+      "intent_id": "INTENT-378",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "database",
+        "latency": "7ms",
+        "jitter": "9ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Production line 4 to work island 3 set bandwidth at least 90Mbps, delay reliability at least 40ms@99.42%, average delay <18ms, start time (7:00), end time (14:00)",
+    "config": {
+      "intent_id": "INTENT-379",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "database",
+        "bandwidth": "90Mbps",
+        "latency": "18ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "07:00:00",
+          "end": "14:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-13T01:30:00Z",
+          "end": "2025-07-13T08:30:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "7h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "allow the study room network to use the VR/AR service and the SIP protocol",
+    "config": {
+      "intent_id": "INTENT-380",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["5060", "5061"],
+            "protocols": ["SIP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure QoS policy, set video conferencing traffic priority to the highest, optimize bandwidth to 100Mbps, and latency to less than 30milliseconds",
+    "config": {
+      "intent_id": "INTENT-381",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "bandwidth": "100Mbps",
+        "latency": "30ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide electronic library service for the campus, increase bandwidth to 1Gbps, reduce latency to 150ms, and improve access speed",
+    "config": {
+      "intent_id": "INTENT-382",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Electronic Library",
+        "category": "web",
+        "bandwidth": "1Gbps",
+        "latency": "150ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 60Mbps bandwidth to LISTSERV, the mail list processing latency does not exceed 2seconds, the server ip address is 10.0.5.61, and the communication uses an encrypted protocol",
+    "config": {
+      "intent_id": "INTENT-383",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "bandwidth": "60Mbps",
+        "latency": "2000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.5.61",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide electronic library service for the campus, increase bandwidth to 10Gbps, reduce latency to 6ms, and improve access speed",
+    "config": {
+      "intent_id": "INTENT-384",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Electronic Library",
+        "category": "web",
+        "bandwidth": "10Gbps",
+        "latency": "6ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Production line 4 to work island 3 set bandwidth to 60Mbps, delay reliability at least 40ms@99.66%, average delay <6ms",
+    "config": {
+      "intent_id": "INTENT-385",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "bandwidth": "60Mbps",
+        "latency": "6ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Restrict Telnet access to the 192.168.2.35/24 subnet and ensure that Telnet connection response time does not exceed 10ms",
+    "config": {
+      "intent_id": "INTENT-386",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Telnet",
+        "category": "remote_access",
+        "latency": "10ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": "192.168.2.35/24",
+            "source_port": null,
+            "destination_port": ["23"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Restrict Telnet access to the 192.168.2.42/24 subnet and ensure that Telnet connection response time does not exceed 150ms",
+    "config": {
+      "intent_id": "INTENT-387",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Telnet",
+        "category": "remote_access",
+        "latency": "150ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": "192.168.2.42/24",
+            "source_port": null,
+            "destination_port": ["23"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Set the max bandwidth from endpoint 172.10.98.124 to endpoint 172.10.154.75 to 40Mbps, start time 01:47, end time 21:46",
+    "config": {
+      "intent_id": "INTENT-388",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "40Mbps",
+        "priority": "low",
+        "time_constraints": {
+          "start": "01:47:00",
+          "end": "21:46:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.10.98.124",
+            "destination_ip": "172.10.154.75",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T20:17:00Z",
+          "end": "2025-07-13T16:16:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide streaming media service through HTTP/HTTPS protocol, latency less than 20ms, Sip server ip address is 10.0.2.33, call packet loss rate is kept below 0.01%",
+    "config": {
+      "intent_id": "INTENT-389",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "latency": "20ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.2.33",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["10.0.2.33"],
+            "ports": ["5060", "5061"],
+            "application": "Streaming Media",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "add middlebox network border system between endpoint 172.10.210.172 and endpoint 192.168.4.204, allow service streaming media",
+    "config": {
+      "intent_id": "INTENT-390",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.10.210.172",
+            "destination_ip": "192.168.4.204",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow the classroom network to use the web browsing service and the Telnet protocol",
+    "config": {
+      "intent_id": "INTENT-391",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": { },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443", "23"],
+            "protocols": ["HTTP", "HTTPS", "TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "ensure work island PLC 2 communicates with Robot Control Cabinet, average delay <15ms/s, jitter reliability 2ms@99.954%, delay reliability 7ms@99.954%",
+    "config": {
+      "intent_id": "INTENT-392",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "latency": "15ms",
+        "jitter": "2ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure gold level users experience consistently high quality of service with a minimum bandwidth of 30Mbps and a maximum latency of 8ms to guarantee seamless and premium service delivery",
+    "config": {
+      "intent_id": "INTENT-393",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Gold Level Service",
+        "category": "web",
+        "bandwidth": "30Mbps",
+        "latency": "8ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Limit the bandwidth between host 10.0.1.71 and host 10.0.1.233 to 10Gbps",
+    "config": {
+      "intent_id": "INTENT-394",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "10Gbps",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.1.71",
+            "destination_ip": "10.0.1.233",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "optimize work island PLC 5 communicates with Mobile Robot AGV, average delay <12ms/s, jitter reliability 5ms@99.973%, delay reliability 10ms@99.973%",
+    "config": {
+      "intent_id": "INTENT-395",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "latency": "12ms",
+        "jitter": "5ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide VR/AR service for the industrial internet, optimize bandwidth to 2Gbps, ensure latency below 90ms, and improve virtual experience",
+    "config": {
+      "intent_id": "INTENT-396",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "bandwidth": "2Gbps",
+        "latency": "90ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 30Mbps and the latency is less than 35ms",
+    "config": {
+      "intent_id": "INTENT-397",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Network Security",
+        "category": "remote_access",
+        "bandwidth": "30Mbps",
+        "latency": "35ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide video conferencing service for telemedicine, optimize bandwidth usage to 60Mbps, reduce round-trip time to 230ms, and improve diagnosis and treatment results",
+    "config": {
+      "intent_id": "INTENT-398",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Telemedicine",
+        "category": "video",
+        "bandwidth": "60Mbps",
+        "latency": "115ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide the Email server through SMTP/POP3/IMAP protocols , ensure that the latency in sending and receiving Emails does not exceed 3seconds, the server ip address is 10.0.4.28-10.0.1.179, and use SMTP/POP3/IMAP protocol encryption",
+    "config": {
+      "intent_id": "INTENT-399",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "latency": "3000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.4.0/24",
+            "source_port": null,
+            "destination_port": ["25", "110", "143"],
+            "protocols": ["SMTP", "POP3", "IMAP"],
+            "encrypted": true
+          },
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.1.0/24",
+            "source_port": null,
+            "destination_port": ["25", "110", "143"],
+            "protocols": ["SMTP", "POP3", "IMAP"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide streaming media service through HTTP/HTTPS protocol, latency less than 4ms, Sip server ip address is 10.0.2.21, call packet loss rate is kept below 0.2%",
+    "config": {
+      "intent_id": "INTENT-400",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "latency": "4ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.2.21",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.0.2.21",
+            "ports": ["5060", "5061"],
+            "application": "Streaming Media",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allocate 2Gbps bandwidth to LISTSERV, the mail list processing latency does not exceed 4seconds, the server ip address is 10.0.5.94, and the communication uses an encrypted protocol",
+    "config": {
+      "intent_id": "INTENT-401",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "bandwidth": "2Gbps",
+        "latency": "4000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.5.94",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 60Mbps bandwidth for IRC service, message transmission latency is less than 30ms, server ip address is 192.168.4.34-192.168.4.248, message packet loss rate is less than 0.02%",
+    "config": {
+      "intent_id": "INTENT-402",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "IRC",
+        "category": "voice",
+        "bandwidth": "60Mbps",
+        "latency": "30ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "192.168.4.0/24",
+            "source_port": null,
+            "destination_port": ["6667"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["192.168.4.0/24"],
+            "ports": ["6667"],
+            "application": "IRC",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide data analysis service through VPN protocol, implement data encryption, ensure latency is less than 20ms, and improve data security",
+    "config": {
+      "intent_id": "INTENT-403",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Data Analysis",
+        "category": "database",
+        "latency": "20ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": ["VPN"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure the FTP server to ensure that the file transfer speed reaches 3Gbps and the packet loss rate is less than 0.001%",
+    "config": {
+      "intent_id": "INTENT-404",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "category": "file_transfer",
+        "bandwidth": "3Gbps",
+        "priority": "medium"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["21"],
+            "protocols": ["FTP"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": ["21"],
+            "application": "FTP",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allocate 10Mbps of bandwidth to ensure that the latency for telemedicine applications is less than 60milliseconds",
+    "config": {
+      "intent_id": "INTENT-405",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Telemedicine",
+        "category": "video",
+        "bandwidth": "10Mbps",
+        "latency": "60ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 5Mbps bandwidth to LISTSERV, the mail list processing latency does not exceed 7seconds, the server ip address is 10.0.5.69, and the communication uses an encrypted protocol",
+    "config": {
+      "intent_id": "INTENT-406",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "bandwidth": "5Mbps",
+        "latency": "7000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.5.69",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide the Email server through SMTP/POP3/IMAP protocols , ensure that the latency in sending and receiving Emails does not exceed 4seconds, the server ip address is 10.0.4.64-10.0.1.220, and use SMTP/POP3/IMAP protocol encryption",
+    "config": {
+      "intent_id": "INTENT-407",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "latency": "4000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.4.0/24",
+            "source_port": null,
+            "destination_port": ["25", "110", "143"],
+            "protocols": ["SMTP", "POP3", "IMAP"],
+            "encrypted": true
+          },{
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip":  "10.0.1.0/24",
+            "source_port": null,
+            "destination_port": ["25", "110", "143"],
+            "protocols": ["SMTP", "POP3", "IMAP"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Set the min bandwidth from endpoint 192.168.235.125 to endpoint 172.10.109.143 to 1Gbps",
+    "config": {
+      "intent_id": "INTENT-408",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "1Gbps",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.235.125",
+            "destination_ip": "172.10.109.143",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Restrict Telnet access to the 192.168.2.96/24 subnet and ensure that Telnet connection response time does not exceed 7ms",
+    "config": {
+      "intent_id": "INTENT-409",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Telnet",
+        "category": "remote_access",
+        "latency": "7ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": "192.168.2.96/24",
+            "source_port": null,
+            "destination_port": ["23"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow the classroom network to use the gaming service and the VPN protocol",
+    "config": {
+      "intent_id": "INTENT-410",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": ["VPN"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 5Mbps and the latency is less than 3ms",
+    "config": {
+      "intent_id": "INTENT-411",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Network Security",
+        "category": "remote_access",
+        "bandwidth": "5Mbps",
+        "latency": "3ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": [],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow communication between hosts h1 172.10.45.113 and h2 172.10.223.91",
+    "config": {
+      "intent_id": "INTENT-412",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.10.45.113",
+            "destination_ip": "172.10.223.91",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "adjust work island PLC 2 communicates with Robot Control Cabinet, average delay <9ms/s, jitter reliability 2ms@99.963%, delay reliability 9ms@99.963%",
+    "config": {
+      "intent_id": "INTENT-413",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "latency": "9ms",
+        "jitter": "2ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Implement network monitoring and automatic repair mechanisms, with fault alarm time less than 3minutes and fault repair time less than 5minutes",
+    "config": {
+      "intent_id": "INTENT-414",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Network Monitoring",
+        "category": "remote_access",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Network Monitoring",
+            "fault_alarm_time": "3m",
+            "fault_repair_time": "5m",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide streaming media service through HTTP/HTTPS protocol, latency less than 70ms, Sip server ip address is 10.0.2.18, call packet loss rate is less than 0.001%",
+    "config": {
+      "intent_id": "INTENT-415",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "latency": "70ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.2.18",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["10.0.2.18"],
+            "ports": ["5060", "5061"],
+            "application": "Streaming Media",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allocate 1Gbps bandwidth to LISTSERV, the mail list processing latency does not exceed 9seconds, the server ip address is 10.0.5.37, and the communication uses an encrypted protocol",
+    "config": {
+      "intent_id": "INTENT-416",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "bandwidth": "1Gbps",
+        "latency": "9000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.5.37",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Restrict Telnet access to the 192.168.2.94/24 subnet and ensure that Telnet connection response time does not exceed 120ms",
+    "config": {
+      "intent_id": "INTENT-417",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Telnet",
+        "category": "remote_access",
+        "latency": "120ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": "192.168.2.94/24",
+            "source_port": null,
+            "destination_port": ["23"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide streaming media service through HTTP/HTTPS protocol, latency less than 70ms, Sip server ip address is 10.0.2.71, call packet loss rate is kept below 0.03%",
+    "config": {
+      "intent_id": "INTENT-418",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "latency": "70ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.2.71",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["10.0.2.71"],
+            "ports": ["5060", "5061"],
+            "application": "Streaming Media",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allocate 30Mbps bandwidth for IRC service, message transmission latency is less than 25ms, server ip address is 192.168.4.26-192.168.4.244, message packet loss rate is less than 0.3%",
+    "config": {
+      "intent_id": "INTENT-419",
+      "user_role": "admin",
+      "timestamp": "2025-07-13T18:37:00+05:30",
+      "QOS": {
+        "application": "IRC",
+        "category": "message",
+        "bandwidth": "30Mbps",
+        "latency": "25ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "192.168.4.0/24",
+            "source_port": null,
+            "destination_port": ["6667"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["192.168.4.0/24"],
+            "ports": ["6667"],
+            "application": "IRC",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Production line 1 to work island 9 set bandwidth to 40Mbps, delay reliability at least 10ms@99.66%, average delay <15ms",
+    "config": {
+      "intent_id": "INTENT-420",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "bandwidth": "40Mbps",
+        "latency": "15ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Configure the FTP server to ensure that the file transfer speed reaches 300Mbps and the packet loss rate is less than 0.01%",
+    "config": {
+      "intent_id": "INTENT-421",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "category": "file_transfer",
+        "bandwidth": "300Mbps",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": ["21"],
+            "application": "FTP",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Set the max bandwidth of the teaching building network to 300Mbps, upload quota to 2gb/wk",
+    "config": {
+      "intent_id": "INTENT-422",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Teaching Network",
+        "category": "remote_access",
+        "bandwidth": "300Mbps",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Implement strict access control and encryption measures to ensure that the bandwidth reaches 20Mbps and the latency is less than 20ms",
+    "config": {
+      "intent_id": "INTENT-423",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Security",
+        "category": "remote_access",
+        "bandwidth": "20Mbps",
+        "latency": "20ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": [],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide video diagnostic service for telemedicine, optimize bandwidth usage to 60Mbps, and reduce latency to 70ms",
+    "config": {
+      "intent_id": "INTENT-424",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Telemedicine",
+        "category": "video",
+        "bandwidth": "60Mbps",
+        "latency": "70ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Production line 9 to work island 2 set bandwidth to 60Mbps, delay reliability at least 90ms@99.58%, average delay <5ms",
+    "config": {
+      "intent_id": "INTENT-425",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "database",
+        "bandwidth": "60Mbps",
+        "latency": "5ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "remove middlebox network adapter between endpoint 192.168.157.85 and endpoint 172.10.173.110, block service e-commerce",
+    "config": {
+      "intent_id": "INTENT-426",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": "192.168.157.85",
+            "destination_ip": "172.10.173.110",
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Prioritize allocating 500Mbps of bandwidth to the online education platform, ensuring that the latency is less than 25milliseconds",
+    "config": {
+      "intent_id": "INTENT-427",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "web",
+        "bandwidth": "500Mbps",
+        "latency": "25ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Request network service for customer A(IP 192.168.1.59) with a latency guarantee of no more than 180ms",
+    "config": {
+      "intent_id": "INTENT-428",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Customer Service",
+        "category": "remote_access",
+        "latency": "180ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.1.59",
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide electronic library service for the campus, increase bandwidth to 40Mbps, reduce latency to 60ms, and improve access speed",
+    "config": {
+      "intent_id": "INTENT-429",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Electronic Library",
+        "category": "web",
+        "bandwidth": "40Mbps",
+        "latency": "60ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide at least 80Mbps bandwidth for VR/AR applications and ensure latency is less than 9ms",
+    "config": {
+      "intent_id": "INTENT-430",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "bandwidth": "80Mbps",
+        "latency": "9ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "During business hours from 04:32 to 14:02, Alice(192.168.21.222)'s traffic is routed to Bob(192.168.84.121) with a bandwidth of 2Gbps and a latency of less than 100 milliseconds through firewall and IP encryption",
+    "config": {
+      "intent_id": "INTENT-431",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "2Gbps",
+        "latency": "100ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "04:32:00",
+          "end": "14:02:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.21.222",
+            "destination_ip": "192.168.84.121",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": [],
+            "encrypted": true
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-13T23:02:00Z",
+          "end": "2025-07-14T08:32:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "By optimizing routing and network devices, ensure that the bandwidth reaches 80Mbps and the packet loss rate is lower than 0.001%",
+    "config": {
+      "intent_id": "INTENT-432",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Optimization",
+        "category": "remote_access",
+        "bandwidth": "80Mbps",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Network Optimization",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Optimize the bandwidth of streaming media service to 60Mbps and reduce the packet loss rate to 0.1%. Improve data transmission efficiency",
+    "config": {
+      "intent_id": "INTENT-433",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "bandwidth": "60Mbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": ["80", "443"],
+            "application": "Streaming Media",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "allow the security monitoring center network access to service security and service instant messaging",
+    "config": {
+      "intent_id": "INTENT-434",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["443", "5222"],
+            "protocols": ["HTTPS", "XMPP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide at least 5Gbps bandwidth for VR/AR applications and ensure latency is less than 2ms",
+    "config": {
+      "intent_id": "INTENT-435",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "bandwidth": "5Gbps",
+        "latency": "2ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "block service gaming, protocol VPN from endpoint 172.10.189.122 to endpoint 192.168.149.29",
+    "config": {
+      "intent_id": "INTENT-436",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Gaming",
+        "category": "video",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": "172.10.189.122",
+            "destination_ip": "192.168.149.29",
+            "source_port": null,
+            "destination_port": ["1194", "500", "4500"],
+            "protocols": ["VPN","UDP", "TCP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "By optimizing network devices, ensure that the bandwidth reaches 1Gbps and the packet loss rate is lower than 0.001%",
+    "config": {
+      "intent_id": "INTENT-437",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Optimization",
+        "category": "remote_access",
+        "bandwidth": "1Gbps",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Network Optimization",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure gold level users experience consistently high quality of service with a minimum bandwidth of 20Mbps and a maximum latency of 50ms to guarantee seamless and premium service delivery",
+    "config": {
+      "intent_id": "INTENT-438",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Gold Level Service",
+        "category": "web",
+        "bandwidth": "20Mbps",
+        "latency": "50ms",
+        "priority": "high"
+      },
+      "ACL": {
+         "allow_rules":[{
+          "action": "allow",
+          "source_ip": "GOLD_USER_SUBNET",
+          "destination_ip": "ANY",
+          "source_ports": null,
+          "destination_ports": null,
+          "protocols": ["ANY"]
+        }]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that all network transaction are encrypted using the HTTPS protocol, that the transmission latency of transaction data does not exceed 100ms, that the ip address of the transaction server is 10.0.0.94, and that 70Mbps bandwidth is reserved",
+    "config": {
+      "intent_id": "INTENT-439",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Transaction",
+        "category": "web",
+        "bandwidth": "70Mbps",
+        "latency": "100ms",
+        "priority": "medium"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.0.94",
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure a dedicated network for industrial internet devices to ensure that the data transmission rate reaches 5Gbps and the packet loss rate is less than 0.02%",
+    "config": {
+      "intent_id": "INTENT-440",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "bandwidth": "5Gbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Limit the bandwidth between host 10.0.1.35 and host 10.0.1.202 to 500Mbps",
+    "config": {
+      "intent_id": "INTENT-441",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "500Mbps",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.1.35",
+            "destination_ip": "10.0.1.202",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "During business hours from 14:57 to 22:17, Alice(172.10.16.80)'s traffic is routed to Bob(172.10.73.165) with a bandwidth of 1Gbps and a latency of less than 100 milliseconds through overuse notification and IP encryption",
+    "config": {
+      "intent_id": "INTENT-442",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "1Gbps",
+        "latency": "100ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "14:57:00",
+          "end": "22:17:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.10.16.80",
+            "destination_ip": "172.10.73.165",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-14T09:27:00Z",
+          "end": "2025-07-14T16:47:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Prioritize VoIP traffic, ensuring bandwidth is at least 64kbps, latency is less than 4milliseconds, and jitter is less than 30milliseconds",
+    "config": {
+      "intent_id": "INTENT-443",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "VOIP",
+        "category": "voice",
+        "bandwidth": "64kbps",
+        "latency": "4ms",
+        "jitter": "30ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 3Gbps bandwidth for IRC service, message transmission latency is less than 150ms, server ip address is 192.168.4.77-192.168.4.146, message packet loss rate is less than 0.5%",
+    "config": {
+      "intent_id": "INTENT-444",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "IRC",
+        "category": "message",
+        "bandwidth": "3Gbps",
+        "latency": "150ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "192.168.4.0/24",
+            "source_port": null,
+            "destination_port": ["6667"],
+            "protocols": ["TCP"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["192.168.4.0/24"],
+            "ports": ["6667"],
+            "application": "IRC",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "block the laboratory network access to service IRC and service VR/AR",
+    "config": {
+      "intent_id": "INTENT-445",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["6667", "3478", "19302"],
+            "protocols": ["TCP", "UDP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow communication between hosts h1 192.168.237.110 and h2 192.168.164.250",
+    "config": {
+      "intent_id": "INTENT-446",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.237.110",
+            "destination_ip": "192.168.164.250",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 3Gbps of bandwidth to the CRM system, ensuring the response time is less than 8seconds",
+    "config": {
+      "intent_id": "INTENT-447",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "CRM",
+        "category": "web",
+        "bandwidth": "3Gbps",
+        "latency": "8000ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 100Mbps bandwidth to LISTSERV, the mail list processing latency does not exceed 10seconds, the server ip address is 10.0.5.94, ",
+    "config": {
+      "intent_id": "INTENT-448",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "bandwidth": "100Mbps",
+        "latency": "10000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.5.94",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "add middlebox network border system between endpoint 192.168.123.53 and endpoint 172.10.169.165, allow service e-commerce",
+    "config": {
+      "intent_id": "INTENT-449",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "E-commerce",
+        "category": "web",
+        "priority": "medium"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.123.53",
+            "destination_ip": "172.10.169.165",
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 100Mbps of bandwidth to ensure that the latency for telemedicine applications is less than 60milliseconds",
+    "config": {
+      "intent_id": "INTENT-450",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Telemedicine",
+        "category": "video",
+        "bandwidth": "100Mbps",
+        "latency": "60ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 300Mbps of bandwidth to the CRM system, ensuring the response time is less than 8seconds",
+    "config": {
+      "intent_id": "INTENT-451",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "CRM",
+        "category": "web",
+        "bandwidth": "300Mbps",
+        "latency": "8000ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Add intrusion detection system and content filter from gateway to backend for client B, with latency less than 7ms and 10Gbps of bandwidth, and allow HTTPS only, everyday from 07:31 to 12:12",
+    "config": {
+      "intent_id": "INTENT-452",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Security",
+        "category": "remote_access",
+        "bandwidth": "10Gbps",
+        "latency": "7ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "07:31:00",
+          "end": "12:12:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS"],
+            "intrusion_detection": true,
+            "content_filter": true
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-14T02:01:00Z",
+          "end": "2025-07-14T06:42:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure QoS policy, set video conferencing traffic priority to the highest, optimize bandwidth to 70Mbps, and latency to less than 30milliseconds",
+    "config": {
+      "intent_id": "INTENT-453",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "bandwidth": "70Mbps",
+        "latency": "30ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure QoS policy, set video conferencing traffic priority to the highest, optimize bandwidth to 5Mbps, and latency to less than 30milliseconds",
+    "config": {
+      "intent_id": "INTENT-454",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "bandwidth": "5Mbps",
+        "latency": "30ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "remove the middlebox proxy server for the teaching building network, allow protocol FTP",
+    "config": {
+      "intent_id": "INTENT-455",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "category": "file_transfer",
+        "priority": "medium"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["21"],
+            "protocols": ["FTP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 3Gbps bandwidth to the streaming media service, ensuring the buffering time is less than 2seconds",
+    "config": {
+      "intent_id": "INTENT-456",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "bandwidth": "3Gbps",
+        "latency": "2000ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Limit the bandwidth between host 10.0.1.98 and host 10.0.1.118 to 30Mbps",
+    "config": {
+      "intent_id": "INTENT-457",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Path",
+        "category": "remote_access",
+        "bandwidth": "30Mbps",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.1.98",
+            "destination_ip": "10.0.1.118",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide streaming media service through HTTP/HTTPS protocol, latency less than 90ms, Sip server ip address is 10.0.2.45, call packet loss rate is kept below 0.01%",
+    "config": {
+      "intent_id": "INTENT-458",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "latency": "90ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.2.45",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["10.0.2.45"],
+            "ports": ["5060", "5061"],
+            "application": "Streaming Media",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Request network service for customer A(IP 192.168.1.42) with a latency guarantee of no more than 120ms",
+    "config": {
+      "intent_id": "INTENT-459",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Customer Service",
+        "category": "remote_access",
+        "latency": "120ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.1.42",
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure a dedicated network for industrial internet devices to ensure that the data transmission rate reaches 200Mbps and the packet loss rate is less than 0.5%",
+    "config": {
+      "intent_id": "INTENT-460",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "database",
+        "bandwidth": "200Mbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide online education service for the campus, ensure latency is less than 25milliseconds and the jitter is less than 1milliseconds",
+    "config": {
+      "intent_id": "INTENT-461",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "web",
+        "latency": "25ms",
+        "jitter": "1ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that all network transaction are encrypted using the HTTPS protocol, that the transmission latency of transaction data does not exceed 9ms, that the ip address of the transaction server is 10.0.0.62, and that 500Mbps bandwidth is reserved",
+    "config": {
+      "intent_id": "INTENT-462",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Transaction",
+        "category": "web",
+        "bandwidth": "500Mbps",
+        "latency": "9ms",
+        "priority": "medium"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.0.62",
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide the Email server through SMTP/POP3/IMAP protocols, ensure that the latency in sending and receiving Emails does not exceed 3seconds, the server ip address is 10.0.4.99-10.0.1.117, and use SMTP/POP3/IMAP protocol encryption",
+    "config": {
+      "intent_id": "INTENT-463",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "latency": "3000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.4.0/24",
+            "source_port": null,
+            "destination_port": ["25", "110", "143"],
+            "protocols": ["SMTP", "POP3", "IMAP"]
+            },
+            {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.1.0/24",
+            "source_port": null,
+            "destination_port": ["25", "110", "143"],
+            "protocols": ["SMTP", "POP3", "IMAP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that the instant messaging message transmission latency is less than 5ms and allocate 200Mbps bandwidth",
+    "config": {
+      "intent_id": "INTENT-464",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Instant Messaging",
+        "category": "message",
+        "bandwidth": "200Mbps",
+        "latency": "5ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["5222"],
+            "protocols": ["XMPP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "remove middlebox overuse notification between endpoint 192.168.96.10 and endpoint 192.168.226.26, allow service web browsing",
+    "config": {
+      "intent_id": "INTENT-465",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.96.10",
+            "destination_ip": "192.168.226.26",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Limit the bandwidth between host 10.0.1.94 and host 10.0.1.106 to 100Mbps",
+    "config": {
+      "intent_id": "INTENT-466",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": { },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.1.94",
+            "destination_ip": "10.0.1.106",
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure VPN connection bandwidth is at least 20Mbps, ensure connection stability, and latency is less than 9milliseconds",
+    "config": {
+      "intent_id": "INTENT-467",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "VPN",
+        "category": "remote_access",
+        "bandwidth": "20Mbps",
+        "latency": "9ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": ["VPN"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "remove the middlebox deep packet inspection and network border system for the laboratory network",
+    "config": {
+      "intent_id": "INTENT-468",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Laboratory Network",
+        "category": "remote_access",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 100Mbps bandwidth to LISTSERV, the mail list processing latency does not exceed 4seconds, the server ip address is 10.0.5.85",
+    "config": {
+      "intent_id": "INTENT-469",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "bandwidth": "100Mbps",
+        "latency": "4000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.5.85",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Assign the highest priority to web browsing traffic, ensuring a latency of no more than 25ms and a guaranteed bandwidth of 100Mbps to provide seamless web browsing experiences",
+    "config": {
+      "intent_id": "INTENT-470",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "category": "web",
+        "bandwidth": "100Mbps",
+        "latency": "25ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 1Gbps bandwidth to the streaming media service, ensuring the buffering time is less than 3seconds",
+    "config": {
+      "intent_id": "INTENT-471",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "bandwidth": "1Gbps",
+        "latency": "3000ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 1Mbps bandwidth to LISTSERV, the mail list processing latency does not exceed 5seconds, the server ip address is 10.0.5.98",
+    "config": {
+      "intent_id": "INTENT-472",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "bandwidth": "1Mbps",
+        "latency": "5000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.5.98",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Set the max bandwidth of the classroom network to 300Mbps",
+    "config": {
+      "intent_id": "INTENT-473",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Classroom Network",
+        "category": "web",
+        "bandwidth": "300Mbps",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 1Gbps bandwidth to the streaming media service, ensuring the buffering time is less than 2seconds",
+    "config": {
+      "intent_id": "INTENT-474",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "bandwidth": "1Gbps",
+        "latency": "2000ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide VR/AR service for the industrial internet, optimize bandwidth to 20Mbps, ensure latency below 7ms, and improve virtual experience",
+    "config": {
+      "intent_id": "INTENT-475",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "VR/AR",
+        "category": "video",
+        "bandwidth": "20Mbps",
+        "latency": "7ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 2Mbps bandwidth to the streaming media service, ensuring the buffering time is less than 4seconds",
+    "config": {
+      "intent_id": "INTENT-476",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "bandwidth": "2Mbps",
+        "latency": "4000ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure the gateway to ensure the isolation of the internal and external networks, control the data traffic within 70Mbps, and achieve network resource utilization of 94%",
+    "config": {
+      "intent_id": "INTENT-477",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Gateway Isolation",
+        "category": "remote_access",
+        "bandwidth": "70Mbps",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide the Email server through SMTP/POP3/IMAP protocols, ensure that the latency in sending and receiving Emails does not exceed 10seconds, the server ip address is 10.0.4.0/24",
+    "config": {
+      "intent_id": "INTENT-478",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "category": "email",
+        "latency": "10000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.4.0/24",
+            "source_port": null,
+            "destination_port": ["25", "110", "143"],
+            "protocols": ["SMTP", "POP3", "IMAP"],
+            "encrypted": true
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "block service security, protocol IMAP from endpoint 192.168.224.40 to endpoint 172.10.120.17, start time 04:24, end time 09:15",
+    "config": {
+      "intent_id": "INTENT-479",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Security Service",
+        "category": "web",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "04:24:00",
+          "end": "09:15:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "deny",
+            "source_ip": "192.168.224.40",
+            "destination_ip": "172.10.120.17",
+            "source_port": null,
+            "destination_port": ["143"],
+            "protocols": ["IMAP"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-13T04:24:00Z",
+          "end": "2025-07-13T09:15:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow the library network to use the e-commerce service and the VPN protocol",
+    "config": {
+      "intent_id": "INTENT-480",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS", "VPN"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 100Mbps bandwidth to the streaming media service, ensuring the buffering time is less than 5seconds",
+    "config": {
+      "intent_id": "INTENT-481",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "bandwidth": "100Mbps",
+        "latency": "5000ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow the guest network to use the LISTSERV service and the HTTP/HTTPS protocol",
+    "config": {
+      "intent_id": "INTENT-482",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {},
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["25", "80", "443"],
+            "protocols": ["SMTP", "HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure the gateway to ensure the isolation of the internal and external networks, control the data traffic within 500Mbps, and achieve network resource utilization of 97%",
+    "config": {
+      "intent_id": "INTENT-483",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Gateway Isolation",
+        "category": "remote_access",
+        "bandwidth": "500Mbps",
+        "network_utilization": "97%",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 2Mbps bandwidth to LISTSERV, the mail list processing latency does not exceed 1seconds, the server ip address is 10.0.5.43, and the communication uses an encrypted protocol",
+    "config": {
+      "intent_id": "INTENT-484",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "LISTSERV",
+        "category": "email",
+        "bandwidth": "2Mbps",
+        "latency": "1000ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.5.43",
+            "source_port": null,
+            "destination_port": ["25"],
+            "protocols": ["SMTP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "add the middlebox traffic monitor for the classroom network, start time 00:54, end time 13:33",
+    "config": {
+      "intent_id": "INTENT-485",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": { },
+      "ACL": { },
+      "LOGS": {
+         "filters": [{
+          "hosts": "CLASSROOM_SUBNET",    
+          "ports": "ANY",
+          "application": "ANY",
+          "time_window": "6h"
+        }]
+      }
+    }
+  },
+  {
+    "intent": "Provide streaming media service through HTTP/HTTPS protocol, latency less than 40ms, Sip server ip address is 10.0.2.10, call packet loss rate is kept below 0.001%",
+    "config": {
+      "intent_id": "INTENT-486",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "latency": "40ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": "10.0.2.10",
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": ["10.0.2.10"],
+            "ports": ["5060", "5061"],
+            "application": "Streaming Media",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Request network service for customer A(IP 192.168.1.11) with a latency guarantee of no more than 200ms",
+    "config": {
+      "intent_id": "INTENT-487",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Customer Service",
+        "category": "remote_access",
+        "latency": "200ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.1.11",
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": null,
+            "protocols": []
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 20Gbps of bandwidth to ensure that the latency for telemedicine applications is less than 40milliseconds",
+    "config": {
+      "intent_id": "INTENT-488",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Telemedicine",
+        "category": "video",
+        "bandwidth": "20Gbps",
+        "latency": "40ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 100Mbps of bandwidth to the CRM system, ensuring the response time is less than 5seconds",
+    "config": {
+      "intent_id": "INTENT-489",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "CRM",
+        "category": "web",
+        "bandwidth": "100Mbps",
+        "latency": "5000ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Add intrusion detection system and content filter from gateway to backend for client B, with latency less than 5ms and 1Gbps of bandwidth, and allow HTTPS only, everyday from 08:00 to 18:00",
+    "config": {
+      "intent_id": "INTENT-490",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Network Security",
+        "category": "remote_access",
+        "bandwidth": "1Gbps",
+        "latency": "5ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "08:00:00",
+          "end": "18:00:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS"],
+            "intrusion_detection": true,
+            "content_filter": true
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-14T02:01:00Z",
+          "end": "2025-07-14T06:42:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure QoS policy, set video conferencing traffic priority to the highest, optimize bandwidth to 100Mbps, and latency to less than 20milliseconds",
+    "config": {
+      "intent_id": "INTENT-491",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "bandwidth": "100Mbps",
+        "latency": "20ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure QoS policy, set video conferencing traffic priority to the highest, optimize bandwidth to 10Mbps, and latency to less than 20milliseconds",
+    "config": {
+      "intent_id": "INTENT-492",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Video Conferencing",
+        "category": "video",
+        "bandwidth": "10Mbps",
+        "latency": "20ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "remove the middlebox proxy server for the teaching building network, allow protocol FTP and SFTP",
+    "config": {
+      "intent_id": "INTENT-493",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "",
+        "category": "",
+        "priority": ""
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["21", "22"],
+            "protocols": ["'FTP'", "SFTP"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 5Gbps bandwidth to the streaming media service, ensuring the buffering time is less than 1seconds",
+    "config": {
+      "intent_id": "INTENT-494",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T08:33:00+05:30",
+      "QOS": {
+        "application": "Streaming Media",
+        "category": "video",
+        "bandwidth": "5Gbps",
+        "latency": "1000ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide electronic library service for the campus, increase bandwidth to 20Gbps, reduce latency to 20ms, and improve access speed",
+    "config": {
+      "intent_id": "INTENT-495",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Electronic Library",
+        "category": "web",
+        "bandwidth": "20Gbps",
+        "latency": "20ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that the latency of the online education service is less than 15milliseconds, and allocate 50Mbps bandwidth",
+    "config": {
+      "intent_id": "INTENT-496",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "web",
+        "bandwidth": "50Mbps",
+        "latency": "15ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that the latency of the online education service is less than 10milliseconds, and allocate 100Mbps bandwidth",
+    "config": {
+      "intent_id": "INTENT-497",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "web",
+        "bandwidth": "100Mbps",
+        "latency": "10ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that the latency of the online education service is less than 5milliseconds, and allocate 200Mbps bandwidth",
+    "config": {
+      "intent_id": "INTENT-498",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "web",
+        "bandwidth": "200Mbps",
+        "latency": "5ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Allocate 10Mbps of bandwidth to ensure that the latency for telemedicine applications is less than 2milliseconds",
+    "config": {
+      "intent_id": "INTENT-499",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Telemedicine",
+        "category": "video",
+        "bandwidth": "10Mbps",
+        "latency": "2ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Configure the FTP server to ensure that the file transfer speed reaches 70Mbps and the packet loss rate is less than 0.0001%",
+    "config": {
+      "intent_id": "INTENT-500",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "category": "file_transfer",
+        "bandwidth": "70Mbps",
+        "priority": "medium"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["21"],
+            "protocols": ["FTP"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": ["21"],
+            "application": "FTP",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Production line 5 to work island 9 set bandwidth to 20Mbps, delay reliability at least 50ms@99.76%, average delay <11ms",
+    "config": {
+      "intent_id": "INTENT-501",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Industrial Internet",
+        "category": "web",
+        "bandwidth": "20Mbps",
+        "latency": "11ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "Industrial Internet",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Configure the gateway to ensure the isolation of the internal and external networks, control the data traffic within 200Mbps, and achieve network resource utilization of 91%",
+    "config": {
+      "intent_id": "INTENT-502",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Gateway Isolation",
+        "category": "remote_access",
+        "bandwidth": "200Mbps",
+        "network_utilization": "91%",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Provide video diagnostic service for telemedicine, optimize bandwidth usage to 2Gbps, and reduce latency to 10ms",
+    "config": {
+      "intent_id": "INTENT-503",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Telemedicine",
+        "category": "video",
+        "bandwidth": "2Gbps",
+        "latency": "10ms",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Optimize device configuration to ensure that the bandwidth of the core switch reaches 300Mbps. The jitter is less than 7milliseconds",
+    "config": {
+      "intent_id": "INTENT-504",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Core Switch",
+        "category": "remote_access",
+        "bandwidth": "300Mbps",
+        "jitter": "7ms",
+        "priority": "low"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "allow the guest network to use the gaming service and the VPN protocol",
+    "config": {
+      "intent_id": "INTENT-505",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Gaming",
+        "category": "web",
+        "priority": "medium"
+      },
+      "ACL": {
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["443"],
+            "protocols": ["HTTPS", "VPN"]
+          }
+        ]
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that the latency of the online education service is less than 30milliseconds, and allocate 150Mbps bandwidth",
+    "config": {
+      "intent_id": "INTENT-506",
+      "user_role": "admin",
+      "timestamp": "2025-07-14T14:14:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "web",
+        "bandwidth": "150Mbps",
+        "latency": "30ms",
+        "priority": "medium"
+      },
+      "ACL": {},
+      "LOGS": {}
+    }
+  }
+  
 ]
