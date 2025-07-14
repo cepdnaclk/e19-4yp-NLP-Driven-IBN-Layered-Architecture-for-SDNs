@@ -1,1 +1,4 @@
 intents set1.txt
+NER/extracted_texts.txt
+NER/generate_intents.py
+NER/extracted_texts.txt
