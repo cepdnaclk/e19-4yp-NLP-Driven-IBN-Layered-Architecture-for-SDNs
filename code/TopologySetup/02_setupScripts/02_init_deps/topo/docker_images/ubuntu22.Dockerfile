@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Python Prometheus libraries
-RUN pip3 install psutil prometheus_client
+RUN pip3 install psutil prometheus_client scapy
 
 # Set DNS resolver (in case of internal DNS issues)
 # RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf

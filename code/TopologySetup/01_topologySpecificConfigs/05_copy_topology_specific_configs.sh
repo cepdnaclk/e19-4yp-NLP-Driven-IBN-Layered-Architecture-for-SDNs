@@ -45,6 +45,7 @@ cp "${FOLDER}/serverHostConfig.txt" "${DEST_ROOT}/04_init_hosts/"
 cp "${FOLDER}/clientHostConfig.txt" "${DEST_ROOT}/04_init_hosts/"
 
 # Copy trafficConfig directory
+rm -rf "../03_trafficGenScripts/trafficConfig"
 mkdir -p "../03_trafficGenScripts/trafficConfig"
 cp -r "${FOLDER}/trafficConfig/"* "../03_trafficGenScripts/trafficConfig/"
 

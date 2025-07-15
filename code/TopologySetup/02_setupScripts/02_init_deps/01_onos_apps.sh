@@ -29,8 +29,7 @@ mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
 # Remove existing SSH host key entry (to avoid authenticity errors)
-ssh-keygen -f ~/.ssh/known_hosts -R '[$HOST]:$PORT' 2>/dev/null
-#  ssh-keygen -f '/home/sdn/.ssh/known_hosts' -R '[localhost]:8101'
+ssh-keygen -f ~/.ssh/known_hosts -R "[$HOST]:$PORT" 2>/dev/null
 
 # Wait for ONOS CLI to be ready
 echo "⏳ Waiting for ONOS CLI to become available..."
