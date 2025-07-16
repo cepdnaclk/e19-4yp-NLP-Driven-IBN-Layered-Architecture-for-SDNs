@@ -1,0 +1,72 @@
+{
+  "title": "Host Resource Overview",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "CPU Usage (%)",
+      "gridPos": {"h": 6, "w": 8, "x": 0, "y": 0},
+      "targets": [
+        {
+		  "expr": "cpu_usage_percent{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "{{alias}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Memory Usage (%)",
+      "gridPos": {"h": 6, "w": 8, "x": 8, "y": 0},
+      "targets": [
+        {
+		  "expr": "memory_usage_percent{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "{{alias}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Disk Usage (%)",
+      "gridPos": {"h": 6, "w": 8, "x": 16, "y": 0},
+      "targets": [
+        {
+          "expr": "sum by (alias) (disk_usage_percent{job=\"hosts-passive-metrics\"})",
+          "legendFormat": "{{alias}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Process Virtual & Resident Memory (Bytes)",
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 6},
+      "targets": [
+        {
+		  "expr": "process_virtual_memory_bytes{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "virtual-{{alias}}"
+        },
+        {
+		  "expr": "process_resident_memory_bytes{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "resident-{{alias}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Process CPU Time (Seconds)",
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 6},
+      "targets": [
+        {
+		  "expr": "process_cpu_seconds_total{job=\"hosts-passive-metrics\"}",
+          "legendFormat": "{{alias}}"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 27,
+  "version": 1,
+  "refresh": "30s",
+  "timezone": "browser",
+  "time": {
+	  "from": "now-15m",
+	  "to": "now"
+  }
+}

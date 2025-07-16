@@ -3,14 +3,17 @@
 /02_setupScripts/01_init_setup/configs/datasources/prometheus.yml
 /02_setupScripts/02_init_deps/topo/topo-*.py
 /02_setupScripts/02_init_deps/topo/docker_images/prometheus-agent.yml
-/02_setupScripts/04_init_hosts/serverHostConfig.txt
-/02_setupScripts/04_init_hosts/clientHostConfig.txt
-/02_setupScripts/05_init_intents/05_init_intents.txt
-/02_setupScripts/06_init_dashboards/dashboards/*
-!/02_setupScripts/06_init_dashboards/dashboards/passive.json
+/02_setupScripts/05_init_hosts/serverHostConfig.txt
+/02_setupScripts/05_init_hosts/clientHostConfig.txt
+/02_setupScripts/06_init_intents/02_onos_hosts.txt
+/02_setupScripts/06_init_intents/04_formatted_hosts.csv
+/02_setupScripts/06_init_intents/05_init_intents.txt
+/02_setupScripts/06_init_intents/07_init_intents_replaced.txt
+/02_setupScripts/07_init_dashboards/02_grafana_config.txt
+/02_setupScripts/07_init_dashboards/dashboards/*
+!/02_setupScripts/07_init_dashboards/dashboards/hostResourceOverview.json
+!/02_setupScripts/07_init_dashboards/dashboards/networkOverview.json
+!/02_setupScripts/07_init_dashboards/dashboards/qosOverview.json
 /03_trafficGenScripts/trafficConfig/*
-/02_setupScripts/05_init_intents/02_onos_hosts.txt
-/02_setupScripts/05_init_intents/04_formatted_hosts.csv
-/02_setupScripts/05_init_intents/07_init_intents_replaced.txt
-/02_setupScripts/06_init_dashboards/02_grafana_config.txt
+
 

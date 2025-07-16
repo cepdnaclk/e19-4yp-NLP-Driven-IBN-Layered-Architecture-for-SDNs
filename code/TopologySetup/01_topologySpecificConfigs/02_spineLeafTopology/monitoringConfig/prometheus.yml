@@ -9,12 +9,32 @@ scrape_configs:
       
   - job_name: 'hosts-passive-metrics'
     static_configs:
-      - targets: ['172.17.0.2:8000', '172.17.0.3:8000', '172.17.0.4:8000', '172.17.0.5:8000', '172.17.0.6:8000','172.17.0.7:8000','172.17.0.8:8000']
+      - targets: ['172.17.0.2:8000']
+        labels:
+          alias: d1
+      - targets: ['172.17.0.3:8000']
+        labels:
+          alias: d2
+      - targets: ['172.17.0.4:8000']
+        labels:
+          alias: d3
+      - targets: ['172.17.0.5:8000']
+        labels:
+          alias: d4
+      - targets: ['172.17.0.6:8000']
+        labels:
+          alias: d5
+      - targets: ['172.17.0.7:8000']
+        labels:
+          alias: d6
+      - targets: ['172.17.0.8:8000']
+        labels:
+          alias: d7
       
   - job_name: 'd1-active-metrics'
     metrics_path: /probe
     params:
-      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+      module: [icmp]  # Change to relevent module (icmp, tcp_connect, dns, etc.)
     static_configs:
       - targets:
           - 192.168.0.1 
@@ -30,12 +50,12 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 172.17.0.2:9115  # Replace with IP or DNS of Blackbox Exporter
+        replacement: 172.17.0.2:9115  # IP or DNS of Blackbox Exporter
         
   - job_name: 'd2-active-metrics'
     metrics_path: /probe
     params:
-      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+      module: [icmp]  # Change to relevent module (icmp, tcp_connect, dns, etc.)
     static_configs:
       - targets:
           - 192.168.0.1 
@@ -51,12 +71,12 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 172.17.0.3:9115  # Replace with IP or DNS of Blackbox Exporter
+        replacement: 172.17.0.3:9115  # IP or DNS of Blackbox Exporter
 
   - job_name: 'd3-active-metrics'
     metrics_path: /probe
     params:
-      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+      module: [icmp]  # Change to relevent module (icmp, tcp_connect, dns, etc.)
     static_configs:
       - targets:
           - 192.168.0.1 
@@ -72,12 +92,12 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 172.17.0.4:9115  # Replace with IP or DNS of Blackbox Exporter
+        replacement: 172.17.0.4:9115  # IP or DNS of Blackbox Exporter
         
   - job_name: 'd4-active-metrics'
     metrics_path: /probe
     params:
-      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+      module: [icmp]  # Change to relevent module (icmp, tcp_connect, dns, etc.)
     static_configs:
       - targets:
           - 192.168.0.1 
@@ -93,12 +113,12 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 172.17.0.5:9115  # Replace with IP or DNS of Blackbox Exporter
+        replacement: 172.17.0.5:9115  # IP or DNS of Blackbox Exporter
 
   - job_name: 'd5-active-metrics'
     metrics_path: /probe
     params:
-      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+      module: [icmp]  # Change to relevent module (icmp, tcp_connect, dns, etc.)
     static_configs:
       - targets:
           - 192.168.0.1 
@@ -114,12 +134,12 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 172.17.0.6:9115  # Replace with IP or DNS of Blackbox Exporter
+        replacement: 172.17.0.6:9115  # IP or DNS of Blackbox Exporter
         
   - job_name: 'd6-active-metrics'
     metrics_path: /probe
     params:
-      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+      module: [icmp]  # Change to relevent module (icmp, tcp_connect, dns, etc.)
     static_configs:
       - targets:
           - 192.168.0.1 
@@ -135,13 +155,13 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 172.17.0.7:9115  # Replace with IP or DNS of Blackbox Exporter
+        replacement: 172.17.0.7:9115  # IP or DNS of Blackbox Exporter
         
         
   - job_name: 'd7-active-metrics'
     metrics_path: /probe
     params:
-      module: [icmp]  # Change to your module (e.g., icmp, tcp_connect, dns, etc.)
+      module: [icmp]  # Change to relevent module (icmp, tcp_connect, dns, etc.)
     static_configs:
       - targets:
           - 192.168.0.1 
@@ -157,6 +177,6 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 172.17.0.8:9115  # Replace with IP or DNS of Blackbox Exporter
+        replacement: 172.17.0.8:9115  # IP or DNS of Blackbox Exporter
         
 

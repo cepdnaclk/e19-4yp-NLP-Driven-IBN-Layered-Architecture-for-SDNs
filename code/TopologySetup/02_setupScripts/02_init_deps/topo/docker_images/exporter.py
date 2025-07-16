@@ -1,4 +1,6 @@
 from prometheus_client import start_http_server, Gauge
+from scapy.all import sniff, IP
+import threading
 import time
 import psutil
 import os
@@ -37,16 +39,17 @@ def sniff_packets(interface):
             tos = str(packet[IP].tos)
             direction = ''
             if packet[IP].src in local_ips:
-				direction = 'tx'
-			elif packet[IP].dst in local_ips:
-				direction = 'rx'
-				
+                direction = 'tx'
+            elif packet[IP].dst in local_ips:
+                direction = 'rx'
+
             if direction == 'rx':
                 tos_rx_count[(interface, tos)] = tos_rx_count.get((interface, tos), 0) + 1
             else:
                 tos_tx_count[(interface, tos)] = tos_tx_count.get((interface, tos), 0) + 1
 
     sniff(iface=interface, prn=process, store=False)
+
 
 def start_sniffing():
     for iface in interfaces:

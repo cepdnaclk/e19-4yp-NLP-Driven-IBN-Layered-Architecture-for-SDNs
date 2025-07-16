@@ -1,0 +1,384 @@
+{
+  "title": "Network QoS Overview",
+  "panels": [
+  	{
+	  "type": "text",
+	  "title": "",
+	  "gridPos": { "h": 2, "w": 24, "x": 0, "y": 0 },
+	  "options": {
+		"content": "<h2 style='text-align:center; color:#FFFFFF; padding-top:10px;'>☎ VOIP Traffic</h2>",
+		"mode": "html"
+	  }
+	},
+    {
+      "type": "timeseries",
+      "title": "VOIP(EF): Received Total Packets - Cumulative",
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 2},
+      "targets": [
+        {
+          "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"184\"}",
+          "legendFormat": "{{interface}}"
+        }
+      ]
+    },
+    {
+	  "type": "timeseries",
+	  "title": "VOIP(EF): Received Packet Throughput (Packets/sec)",
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 2},
+	  "targets": [
+		{
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"184\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+    {
+      "type": "timeseries",
+      "title": "VOIP(EF): Transmitted Total Packets - Cumulative",
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 8},
+      "targets": [
+        {
+          "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"184\"}",
+          "legendFormat": "{{interface}}"
+        }
+      ]
+    },
+    {
+	  "type": "timeseries",
+	  "title": "VOIP(EF): Transmitted Packet Throughput (Packets/sec)",
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 8},
+	  "targets": [
+		{
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"184\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "text",
+	  "title": "",
+	  "gridPos": { "h": 2, "w": 24, "x": 0, "y": 14 },
+	  "options": {
+		"content": "<h2 style='text-align:center; color:#FFFFFF; padding-top:10px;'>📽 Video Traffic</h2>",
+		"mode": "html"
+	  }
+	},
+    {
+      "type": "timeseries",
+      "title": "Video(AF41): Received Total Packets - Cumulative",
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 16},
+      "targets": [
+        {
+          "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"136\"}",
+          "legendFormat": "{{interface}}"
+        }
+      ]
+    },
+    {
+	  "type": "timeseries",
+	  "title": "Video(AF41): Received Packet Throughput (Packets/sec)",
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 16},
+	  "targets": [
+		{
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"136\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+    {
+      "type": "timeseries",
+      "title": "Video(AF41): Transmitted Total Packets - Cumulative",
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 22},
+      "targets": [
+        {
+          "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"136\"}",
+          "legendFormat": "{{interface}}"
+        }
+      ]
+    },
+    {
+	  "type": "timeseries",
+	  "title": "Video(AF41): Transmitted Packet Throughput (Packets/sec)",
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 22},
+	  "targets": [
+		{
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"136\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "text",
+	  "title": "",
+	  "gridPos": { "h": 2, "w": 24, "x": 0, "y": 28 },
+	  "options": {
+		"content": "<h2 style='text-align:center; color:#FFFFFF; padding-top:10px;'>🌐  Web Browsing Traffic (HTTP)</h2>",
+		"mode": "html"
+	  }
+	},
+	{
+	  "type": "timeseries",
+	  "title": "HTTP(AF21): Received Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 30 },
+	  "targets": [
+		{
+		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"72\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "HTTP(AF21): Received Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 30 },
+	  "targets": [
+		{
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"72\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "HTTP(AF21): Transmitted Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 36 },
+	  "targets": [
+		{
+		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"72\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "HTTP(AF21): Transmitted Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 36 },
+	  "targets": [
+		{
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"72\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "text",
+	  "title": "",
+	  "gridPos": { "h": 2, "w": 24, "x": 0, "y": 42 },
+	  "options": {
+		"content": "<h2 style='text-align:center; color:#FFFFFF; padding-top:10px;'>🛢 Database Query Traffic</h2>",
+		"mode": "html"
+	  }
+	},
+	{
+	  "type": "timeseries",
+	  "title": "DB(CS1): Received Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 44 },
+	  "targets": [
+		{
+		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"32\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "DB(CS1): Received Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 44 },
+	  "targets": [
+		{
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"32\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "DB(CS1): Transmitted Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 50 },
+	  "targets": [
+		{
+		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"32\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "DB(CS1): Transmitted Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 50 },
+	  "targets": [
+		{
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"32\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "text",
+	  "title": "",
+	  "gridPos": { "h": 2, "w": 24, "x": 0, "y": 56 },
+	  "options": {
+		"content": "<h2 style='text-align:center; color:#FFFFFF; padding-top:10px;'>⌨️ SSH Traffic</h2>",
+		"mode": "html"
+	  }
+	},
+	{
+	  "type": "timeseries",
+	  "title": "SSH(CS2): Received Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 58 },
+	  "targets": [
+		{
+		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"16\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "SSH(CS2): Received Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 58 },
+	  "targets": [
+		{
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"16\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "SSH(CS2): Transmitted Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 64 },
+	  "targets": [
+		{
+		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"16\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "SSH(CS2): Transmitted Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 64 },
+	  "targets": [
+		{
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"16\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "text",
+	  "title": "",
+	  "gridPos": { "h": 2, "w": 24, "x": 0, "y": 70 },
+	  "options": {
+		"content": "<h2 style='text-align:center; color:#FFFFFF; padding-top:10px;'>✉️ E-MAIL Traffic (SMTP)</h2>",
+		"mode": "html"
+	  }
+	},
+	{
+	  "type": "timeseries",
+	  "title": "SMTP(CS6): Received Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 72 },
+	  "targets": [
+		{
+		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"48\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "SMTP(CS6): Received Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 72 },
+	  "targets": [
+		{
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"48\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "SMTP(CS6): Transmitted Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 78 },
+	  "targets": [
+		{
+		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"48\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "SMTP(CS6): Transmitted Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 78 },
+	  "targets": [
+		{
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"48\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "text",
+	  "title": "",
+	  "gridPos": { "h": 2, "w": 24, "x": 0, "y": 84 },
+	  "options": {
+		"content": "<h2 style='text-align:center; color:#FFFFFF; padding-top:10px;'>📂 Bulk File Transfer Traffic (FTP)</h2>",
+		"mode": "html"
+	  }
+	},
+	{
+	  "type": "timeseries",
+	  "title": "FTP(AF11): Received Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 86 },
+	  "targets": [
+		{
+		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"10\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "FTP(AF11): Received Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 86 },
+	  "targets": [
+		{
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"10\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "FTP(AF11): Transmitted Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 92 },
+	  "targets": [
+		{
+		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"10\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "FTP(AF11): Transmitted Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 92 },
+	  "targets": [
+		{
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"10\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	}
+  ],
+  "schemaVersion": 27,
+  "version": 1,
+  "refresh": "30s",
+  "timezone": "browser",
+      "time": {
+	  "from": "now-15m",
+	  "to": "now"
+  }
+}
