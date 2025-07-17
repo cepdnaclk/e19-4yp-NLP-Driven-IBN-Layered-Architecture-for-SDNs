@@ -1,4 +1,5 @@
-[{
+[
+  {
     "intent": "Deploy low-latency online education services, with the firewall activated between 9:00 AM and 13:00 PM",
     "config": {
       "intent_id": "INTENT-001",
@@ -12,7 +13,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -73,7 +82,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -117,7 +134,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -138,7 +163,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -159,7 +192,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -221,7 +262,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -276,7 +325,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -342,7 +399,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -387,7 +452,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -408,12 +481,19 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-          
           {
             "action": "deny",
             "source_ip": null,
@@ -446,7 +526,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "04:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -467,7 +555,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -504,7 +600,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -573,7 +677,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -633,7 +745,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -653,7 +773,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -700,7 +828,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -731,7 +867,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -823,7 +967,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -873,7 +1025,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "01:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -902,7 +1062,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -957,7 +1125,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -978,7 +1154,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -1042,7 +1226,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1071,7 +1263,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1101,7 +1301,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -1146,7 +1354,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1230,7 +1446,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1301,7 +1525,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "05:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1376,7 +1608,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1397,7 +1637,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1418,7 +1666,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1439,7 +1695,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -1491,7 +1755,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1521,7 +1793,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1551,7 +1831,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1593,7 +1881,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1652,7 +1948,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -1718,7 +2022,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1756,7 +2068,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1812,14 +2132,21 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
       "LOGS": {}
     }
   },
-  [
   {
     "intent": "Deploy low-latency VPN services for remote access, with firewall activated between 8:00 AM and 18:00 PM",
     "config": {
@@ -1834,7 +2161,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -1940,7 +2275,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1960,7 +2303,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "12:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -1991,7 +2342,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2012,7 +2371,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -2145,7 +2512,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -2207,7 +2582,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2262,7 +2645,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -2298,7 +2689,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2319,7 +2718,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2340,7 +2747,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2369,7 +2784,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2400,7 +2823,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2422,7 +2853,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "09:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2468,7 +2907,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2489,7 +2936,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -2542,12 +2997,19 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-          
           {
             "action": "deny",
             "source_ip": null,
@@ -2578,7 +3040,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2609,7 +3079,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2702,7 +3180,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2749,7 +3235,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -2861,7 +3355,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -2899,7 +3401,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3032,7 +3542,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3068,7 +3586,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3123,7 +3649,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3212,7 +3746,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3350,7 +3892,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3371,7 +3921,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3414,7 +3972,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3435,7 +4001,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3480,7 +4054,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3509,7 +4091,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3587,7 +4177,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3608,7 +4206,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3629,7 +4235,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "23:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3731,12 +4345,20 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-           {
+          {
             "action": "deny",
             "source_ip": null,
             "destination_ip": null,
@@ -3767,7 +4389,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -3841,7 +4471,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3897,7 +4535,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3918,7 +4564,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3940,7 +4594,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3962,7 +4624,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -3983,7 +4653,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4055,7 +4733,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4075,7 +4761,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4106,7 +4800,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4128,7 +4830,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4174,12 +4884,19 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-
           {
             "action": "deny",
             "source_ip": null,
@@ -4212,7 +4929,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4234,7 +4959,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4279,7 +5012,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4309,12 +5050,19 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-        
           {
             "action": "deny",
             "source_ip": null,
@@ -4346,12 +5094,19 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-
           {
             "action": "deny",
             "source_ip": null,
@@ -4383,12 +5138,19 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-
           {
             "action": "deny",
             "source_ip": null,
@@ -4437,7 +5199,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4495,7 +5265,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4525,7 +5303,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -4561,7 +5347,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4582,7 +5376,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4628,7 +5430,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "23:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4716,7 +5526,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "07:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4746,7 +5564,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4766,7 +5592,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "23:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4813,7 +5647,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4919,7 +5761,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -4974,7 +5824,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5029,7 +5887,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5074,7 +5940,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5105,7 +5979,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5125,7 +6007,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5217,7 +6107,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -5253,12 +6151,19 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-
           {
             "action": "deny",
             "source_ip": null,
@@ -5324,7 +6229,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5345,7 +6258,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "23:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5375,7 +6296,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5404,7 +6333,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5455,7 +6392,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5502,7 +6447,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "23:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5523,12 +6476,19 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-
           {
             "action": "deny",
             "source_ip": null,
@@ -5561,7 +6521,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5582,7 +6550,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5655,7 +6631,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5692,7 +6676,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5723,7 +6715,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "23:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -5887,7 +6887,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6009,7 +7017,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6040,7 +7056,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6061,7 +7085,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6082,7 +7114,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6103,7 +7143,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6207,7 +7255,15 @@
         "time_constraints": {
           "start": "00:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6237,7 +7293,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6257,7 +7321,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6287,7 +7359,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "21:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6317,7 +7397,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "23:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6362,12 +7450,19 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-
           {
             "action": "deny",
             "source_ip": null,
@@ -6399,7 +7494,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6453,7 +7556,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6508,7 +7619,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6537,7 +7656,15 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6601,12 +7728,19 @@
         "time_constraints": {
           "start": "09:00:00",
           "end": "19:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-
           {
             "action": "deny",
             "source_ip": null,
@@ -6638,7 +7772,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "20:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6817,7 +7959,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6868,7 +8018,15 @@
         "time_constraints": {
           "start": "10:00:00",
           "end": "17:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6889,12 +8047,19 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
-
           {
             "action": "deny",
             "source_ip": null,
@@ -6977,7 +8142,15 @@
         "time_constraints": {
           "start": "06:00:00",
           "end": "16:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -6997,7 +8170,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "15:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -7043,7 +8224,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "13:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -7073,7 +8262,15 @@
         "time_constraints": {
           "start": "11:00:00",
           "end": "22:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -7111,7 +8308,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -7153,7 +8358,15 @@
         "time_constraints": {
           "start": "12:00:00",
           "end": "23:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -7407,14 +8620,22 @@
         "time_constraints": {
           "start": "00:34:00",
           "end": "19:22:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
         "allow_rules": [
           {
             "action": "allow",
-            "source_ip":"CLIENT_B_IP",
+            "source_ip": "CLIENT_B_IP",
             "destination_ip": "BACKEND_IP",
             "source_port": null,
             "destination_port": ["443"],
@@ -7695,7 +8916,7 @@
         "allow_rules": [
           {
             "action": "deny",
-            "source_ip":"LIBRARY_NETWORK_SUBNET",
+            "source_ip": "LIBRARY_NETWORK_SUBNET",
             "destination_ip": null,
             "source_port": null,
             "destination_port": ["23"],
@@ -7831,8 +9052,8 @@
             "source_ip": null,
             "destination_ip": "10.0.2.70",
             "source_port": null,
-            "destination_port": ["80", "443","5060", "5061"],
-            "protocols": ["HTTP", "HTTPS","SIP"]
+            "destination_port": ["80", "443", "5060", "5061"],
+            "protocols": ["HTTP", "HTTPS", "SIP"]
           }
         ]
       },
@@ -8017,7 +9238,15 @@
         "time_constraints": {
           "start": "00:34:00",
           "end": "19:22:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -8634,7 +9863,15 @@
         "time_constraints": {
           "start": "08:20:00",
           "end": "19:14:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {},
@@ -8700,7 +9937,15 @@
         "time_constraints": {
           "start": "02:20:00",
           "end": "23:56:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -8807,7 +10052,15 @@
         "time_constraints": {
           "start": "10:30:00",
           "end": "20:30:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -9066,8 +10319,8 @@
       },
       "LOGS": {}
     }
-  },//////////////////////////
-  
+  },
+
   {
     "intent": "remove middlebox proxy server between endpoint 192.168.32.103 and endpoint 192.168.155.142, block service LISTSERV",
     "config": {
@@ -9211,7 +10464,15 @@
         "time_constraints": {
           "start": "07:00:00",
           "end": "14:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -9437,7 +10698,15 @@
         "time_constraints": {
           "start": "01:47:00",
           "end": "21:46:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -9523,7 +10792,7 @@
       "intent_id": "INTENT-391",
       "user_role": "admin",
       "timestamp": "2025-07-13T18:37:00+05:30",
-      "QOS": { },
+      "QOS": {},
       "ACL": {
         "allow_rules": [
           {
@@ -9968,10 +11237,11 @@
             "destination_port": ["25", "110", "143"],
             "protocols": ["SMTP", "POP3", "IMAP"],
             "encrypted": true
-          },{
+          },
+          {
             "action": "allow",
             "source_ip": null,
-            "destination_ip":  "10.0.1.0/24",
+            "destination_ip": "10.0.1.0/24",
             "source_port": null,
             "destination_port": ["25", "110", "143"],
             "protocols": ["SMTP", "POP3", "IMAP"],
@@ -10580,7 +11850,15 @@
         "time_constraints": {
           "start": "04:32:00",
           "end": "14:02:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -10711,7 +11989,7 @@
             "destination_ip": "192.168.149.29",
             "source_port": null,
             "destination_port": ["1194", "500", "4500"],
-            "protocols": ["VPN","UDP", "TCP"]
+            "protocols": ["VPN", "UDP", "TCP"]
           }
         ]
       },
@@ -10757,14 +12035,16 @@
         "priority": "high"
       },
       "ACL": {
-         "allow_rules":[{
-          "action": "allow",
-          "source_ip": "GOLD_USER_SUBNET",
-          "destination_ip": "ANY",
-          "source_ports": null,
-          "destination_ports": null,
-          "protocols": ["ANY"]
-        }]
+        "allow_rules": [
+          {
+            "action": "allow",
+            "source_ip": "GOLD_USER_SUBNET",
+            "destination_ip": "ANY",
+            "source_ports": null,
+            "destination_ports": null,
+            "protocols": ["ANY"]
+          }
+        ]
       },
       "LOGS": {}
     }
@@ -10865,7 +12145,15 @@
         "time_constraints": {
           "start": "14:57:00",
           "end": "22:17:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -11106,7 +12394,15 @@
         "time_constraints": {
           "start": "07:31:00",
           "end": "12:12:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -11388,8 +12684,8 @@
             "source_port": null,
             "destination_port": ["25", "110", "143"],
             "protocols": ["SMTP", "POP3", "IMAP"]
-            },
-            {
+          },
+          {
             "action": "allow",
             "source_ip": null,
             "destination_ip": "10.0.1.0/24",
@@ -11458,7 +12754,7 @@
       "intent_id": "INTENT-466",
       "user_role": "admin",
       "timestamp": "2025-07-14T08:33:00+05:30",
-      "QOS": { },
+      "QOS": {},
       "ACL": {
         "allow_rules": [
           {
@@ -11742,7 +13038,15 @@
         "time_constraints": {
           "start": "04:24:00",
           "end": "09:15:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -11876,15 +13180,17 @@
       "intent_id": "INTENT-485",
       "user_role": "admin",
       "timestamp": "2025-07-14T08:33:00+05:30",
-      "QOS": { },
-      "ACL": { },
+      "QOS": {},
+      "ACL": {},
       "LOGS": {
-         "filters": [{
-          "hosts": "CLASSROOM_SUBNET",    
-          "ports": "ANY",
-          "application": "ANY",
-          "time_window": "6h"
-        }]
+        "filters": [
+          {
+            "hosts": "CLASSROOM_SUBNET",
+            "ports": "ANY",
+            "application": "ANY",
+            "time_window": "6h"
+          }
+        ]
       }
     }
   },
@@ -12000,7 +13306,15 @@
         "time_constraints": {
           "start": "08:00:00",
           "end": "18:00:00",
-          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
         }
       },
       "ACL": {
@@ -12342,5 +13656,4 @@
       "LOGS": {}
     }
   }
-  
 ]
