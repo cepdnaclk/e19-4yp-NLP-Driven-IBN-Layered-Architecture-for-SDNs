@@ -34,41 +34,35 @@ get_repeats_and_delay() {
   esac
 }
 
-readarray -t clients < <(yq e 'keys | .[]' "$PROFILE")
+entry_count=$(yq e 'length' "$PROFILE")
 
-for client in "${clients[@]}"; do
-  mapfile -t entries < <(yq e ".\"$client\"[]" "$PROFILE")
+for ((i = 0; i < entry_count; i++)); do
+  base=".[$i]"
+  target_ip=$(yq e "$base.server-ip" "$PROFILE")
+  tos=$(yq e "$base.tos" "$PROFILE")
+  duration=$(yq e "$base.duration" "$PROFILE")
+  bandwidth=$(yq e "$base.bandwidth" "$PROFILE")
+  is_udp=$(yq e "$base.udp" "$PROFILE")
+  mapfile -t ports < <(yq e "$base.server-port[]" "$PROFILE")
 
-  for i in "${!entries[@]}"; do
-    base=".\"$client\"[$i]"
-    target_ip=$(yq e "$base.server-ip" "$PROFILE")
-    tos=$(yq e "$base.tos-value" "$PROFILE")
-    duration=$(yq e "$base.duration" "$PROFILE")
-    bandwidth=$(yq e "$base.bandwidth" "$PROFILE")
-    is_udp=$(yq e "$base.udp" "$PROFILE")
-    mapfile -t ports < <(yq e "$base.server-port[]" "$PROFILE")
-    
-    read repeat min_delay max_delay <<< $(get_repeats_and_delay)
+  read repeat min_delay max_delay <<< $(get_repeats_and_delay)
 
-    if [[ "$PHASE" == "burst" ]]; then
-      # Use only the first port
-      port="${ports[0]}"
+  if [[ "$PHASE" == "burst" ]]; then
+    port="${ports[0]}"
+    for ((k=0; k<repeat; k++)); do
+      send_traffic "$target_ip" "$tos" "$duration" "$bandwidth" "$is_udp" "$port"
+      sleep "$max_delay"
+    done
+  else
+    for ((j=1; j<${#ports[@]}; j++)); do
+      port="${ports[$j]}"
       for ((k=0; k<repeat; k++)); do
         send_traffic "$target_ip" "$tos" "$duration" "$bandwidth" "$is_udp" "$port"
-        sleep "$max_delay"
+        delay=$((RANDOM % (max_delay - min_delay + 1) + min_delay))
+        sleep "$delay"
       done
-    else
-      # Use ports excluding the first one
-      for ((j=1; j<${#ports[@]}; j++)); do
-        port="${ports[$j]}"
-        for ((k=0; k<repeat; k++)); do
-          send_traffic "$target_ip" "$tos" "$duration" "$bandwidth" "$is_udp" "$port"
-          delay=$((RANDOM % (max_delay - min_delay + 1) + min_delay))
-          sleep "$delay"
-        done
-      done
-    fi
-  done
+    done
+  fi
 done
 
 wait

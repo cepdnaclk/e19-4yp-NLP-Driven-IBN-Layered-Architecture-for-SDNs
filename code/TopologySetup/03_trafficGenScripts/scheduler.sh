@@ -1,17 +1,5 @@
 #!/bin/bash
 
-CONFIG_FILE="trafficConfig.txt"
-
-# Traffic script map
-declare -A TRAFFIC_SCRIPTS
-TRAFFIC_SCRIPTS["http"]="./trafficGen/http_traffic.sh"
-TRAFFIC_SCRIPTS["voip"]="./trafficGen/voip_traffic.sh"
-TRAFFIC_SCRIPTS["db"]="./trafficGen/db_traffic.sh"
-TRAFFIC_SCRIPTS["video"]="./trafficGen/video_traffic.sh"
-TRAFFIC_SCRIPTS["ftp"]="./trafficGen/ftp_traffic.sh"
-TRAFFIC_SCRIPTS["ssh"]="./trafficGen/ssh_traffic.sh"
-TRAFFIC_SCRIPTS["mail"]="./trafficGen/mail_traffic.sh"
-
 # Phase by time
 get_phase_by_time() {
     hour=$(date +%H)
@@ -25,30 +13,36 @@ get_phase_by_time() {
     fi
 }
 
+log_phase() {
+    echo "=== Phase: $1 ($(date '+%Y-%m-%d %H:%M:%S')) ==="
+}
+
+# Trap cleanup on Ctrl+C
+cleanup() {
+    echo "Stopping traffic scheduler..."
+    pkill -f send_traffic.sh
+    exit 0
+}
+trap cleanup SIGINT
+
 # Main loop
 while true; do
     current_phase=$(get_phase_by_time)
-    echo "=== Phase: $current_phase ($(date)) ==="
+    log_phase "$current_phase"
 
-    # Read each line from the config file
-    while IFS=, read -r raw_ip traffic_type; do
-        ip=$(echo "$raw_ip" | tr -d '"')
+    # Occasionally trigger burst traffic (10% chance per cycle)
+    if (( RANDOM % 10 == 0 )); then
+        echo "--- Triggering burst traffic ---"
+        ./send_traffic.sh burst &
+    fi
 
-        script=${TRAFFIC_SCRIPTS[$traffic_type]}
-        if [[ -x "$script" ]]; then
-            echo "Starting $traffic_type traffic to $ip"
-            bash "$script" "$current_phase" "$ip" &
-            
-            # Occasionally inject burst
-            if (( RANDOM % 4 == 0 )); then
-                echo ">>> Burst for $traffic_type to $ip"
-                bash "$script" burst "$ip" &
-            fi
-        else
-            echo "Warning: Script for traffic type '$traffic_type' not found or not executable."
-        fi
-    done < "$CONFIG_FILE"
+    # Send regular traffic
+    ./send_traffic.sh "$current_phase" &
 
-    wait
-    sleep 2
+    # Wait for the duration of regular traffic phase before next cycle
+    case "$current_phase" in
+        offpeak) sleep 90 ;;
+        normal)  sleep 60 ;;
+        peak)    sleep 45 ;;
+    esac
 done
