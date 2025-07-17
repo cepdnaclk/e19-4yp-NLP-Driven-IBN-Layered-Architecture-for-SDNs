@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Get the number of client containers from the file
-end=$(wc -l < clientHostConfig.txt)
+# Get the total number of hosts
+end=$(grep '^totalHosts:' serverProfile.yaml | cut -d':' -f2 | tr -d ' ')
 
 for x in $(seq 1 "$end"); do
     echo "Processing mn.d$x ..."

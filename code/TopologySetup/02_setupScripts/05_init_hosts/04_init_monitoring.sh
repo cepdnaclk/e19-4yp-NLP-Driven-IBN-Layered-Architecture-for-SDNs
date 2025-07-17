@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Get the number of client containers from non-empty lines in the config file
-end=$(grep -cve '^\s*$' clientHostConfig.txt)
+# Get the total number of hosts
+end=$(grep '^totalHosts:' serverProfile.yaml | cut -d':' -f2 | tr -d ' ')
 
 echo "Attaching prometheus server to the monitoring network..."
 docker network connect bridge prometheus

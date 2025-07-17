@@ -40,14 +40,9 @@ cp "${FOLDER}"/topo*.py "${DEST_ROOT}/02_init_deps/topo/"
 # Copy prometheus-agent.yml
 cp "${FOLDER}/monitoringConfig/prometheus-agent.yml" "${DEST_ROOT}/02_init_deps/topo/docker_images/prometheus-agent.yml"
 
-# Copy serverHostConfig.txt and clientHostConfig.txt
-cp "${FOLDER}/serverHostConfig.txt" "${DEST_ROOT}/05_init_hosts/"
-cp "${FOLDER}/clientHostConfig.txt" "${DEST_ROOT}/05_init_hosts/"
-
-# Copy trafficConfig directory
-rm -rf "../03_trafficGenScripts/trafficConfig"
-mkdir -p "../03_trafficGenScripts/trafficConfig"
-cp -r "${FOLDER}/trafficConfig/"* "../03_trafficGenScripts/trafficConfig/"
+# Move serverProfile.yaml and clientTrafficProfile.yaml
+mv "${FOLDER}/serverProfile.yaml" "${DEST_ROOT}/05_init_hosts/serverProfile.yaml"
+mv "${FOLDER}/clientTrafficProfile.yaml" "../03_trafficGenScripts/clientTrafficProfile.yaml"
 
 # Copy dashboards directory
 find "${DEST_ROOT}/07_init_dashboards/dashboards/" -maxdepth 1 -type f -name 'd*.json' -exec rm -f {} \;
@@ -57,6 +52,9 @@ cp -r "${FOLDER}/dashboards/"* "${DEST_ROOT}/07_init_dashboards/dashboards/"
 cp "${FOLDER}/routingAndSwitching.txt" "${DEST_ROOT}/06_init_intents/05_init_intents.txt"
 
 # Copy grafana_admin_config.txt
-cp "${FOLDER}/grafana_admin_config.txt" "${DEST_ROOT}/07_init_dashboards/02_grafana_config.txt"
+cp "./common/grafana_admin_config.txt" "${DEST_ROOT}/07_init_dashboards/02_grafana_config.txt"
+
+# remove temporary files
+cp "${FOLDER}/__hostIpMapping.txt"
 
 echo "✅ All files copied successfully from $FOLDER."

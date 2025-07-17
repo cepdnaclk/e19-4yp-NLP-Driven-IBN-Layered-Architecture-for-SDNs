@@ -1,4 +1,8 @@
 *.log
+**/__hostIpMapping.txt
+**/serverProfile.yaml
+**/clientTrafficProfile.yaml
+/01_topologySpecificConfigs/**/dashboard/
 /02_setupScripts/01_init_setup/configs/prometheus.yml
 /02_setupScripts/01_init_setup/configs/datasources/prometheus.yml
 /02_setupScripts/02_init_deps/topo/topo-*.py
@@ -14,6 +18,5 @@
 !/02_setupScripts/07_init_dashboards/dashboards/hostResourceOverview.json
 !/02_setupScripts/07_init_dashboards/dashboards/networkOverview.json
 !/02_setupScripts/07_init_dashboards/dashboards/qosOverview.json
-/03_trafficGenScripts/trafficConfig/*
 
 

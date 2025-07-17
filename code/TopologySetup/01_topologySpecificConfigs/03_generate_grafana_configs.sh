@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TEMPLATE_FILE="__generic_active_dashboard.json"
+TEMPLATE_FILE="../common/generic_active_dashboard.json"
 MAPPING_FILE="__hostIpMapping.txt"
 
 # Validate input
