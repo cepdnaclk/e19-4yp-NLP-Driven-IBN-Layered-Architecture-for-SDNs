@@ -1,7 +1,7 @@
 *.log
 **/__hostIpMapping.txt
-**/__ipServerMapping.txt
-**/trafficConfig/**
+**/serverProfile.yaml
+**/clientTrafficProfile.yaml
 /01_topologySpecificConfigs/**/dashboard/
 /02_setupScripts/01_init_setup/configs/prometheus.yml
 /02_setupScripts/01_init_setup/configs/datasources/prometheus.yml

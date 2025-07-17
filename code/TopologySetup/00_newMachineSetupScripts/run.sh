@@ -18,7 +18,8 @@ sudo apt install -y \
     git \
     tmux \
     python3-pip \
-    jq
+    jq \
+    yq 
 
 echo "[+] Installing Docker..."
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg

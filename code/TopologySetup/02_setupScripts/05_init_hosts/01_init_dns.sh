@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Get the total number of lines in the file
-end=$(wc -l < clientHostConfig.txt)
+# Get the total number of hosts
+end=$(grep '^totalHosts:' serverProfile.yaml | cut -d':' -f2 | tr -d ' ')
 
 # Iterate from 1 to total lines (assumed container suffixes)
 for i in $(seq 1 "$end"); do

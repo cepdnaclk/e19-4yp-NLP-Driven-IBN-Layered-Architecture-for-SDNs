@@ -1,0 +1,433 @@
+{
+  "intent": "Allow unrestricted web browsing access for all users.",
+  "config": {
+    "intent_id": "intent_001",
+    "user_role": "user",
+    "timestamp": "2025-07-17T04:30:00Z",
+    "ACL": {
+      "rules": [
+        {
+          "action": "allow",
+          "source_ip": "0.0.0.0/0",
+          "destination_ip": "192.168.10.10",
+          "destination_port": "80",
+          "protocols": ["HTTP"]
+        }
+      ],
+      "schedule": {
+        "start": "2025-07-17T04:30:00Z",
+        "end": "2025-07-18T04:30:00Z"
+      }
+    }
+  }
+},
+{
+  "intent": "Allow SSH access to admin server only from internal network.",
+  "config": {
+    "intent_id": "intent_002",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T05:00:00Z",
+    "ACL": {
+      "rules": [
+        {
+          "action": "allow",
+          "source_ip": "192.168.1.0/24",
+          "destination_ip": "192.168.10.20",
+          "destination_port": "22",
+          "protocols": ["TCP"]
+        }
+      ],
+      "schedule": {
+        "start": "2025-07-17T05:00:00Z",
+        "end": "2025-07-18T05:00:00Z"
+      }
+    }
+  }
+},
+{
+  "intent": "Monitor outgoing mail traffic from the mail server.",
+  "config": {
+    "intent_id": "intent_003",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T05:30:00Z",
+    "LOGS": {
+      "filters": [
+        {
+          "hosts": "192.168.10.30",
+          "ports": "25",
+          "application": "MAIL",
+          "time_window": "1h"
+        }
+      ]
+    }
+  }
+},
+{
+  "intent": "Block external access to the internal database server.",
+  "config": {
+    "intent_id": "intent_004",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T06:00:00Z",
+    "ACL": {
+      "rules": [
+        {
+          "action": "deny",
+          "source_ip": "0.0.0.0/0",
+          "destination_ip": "192.168.10.40",
+          "destination_port": "3306",
+          "protocols": ["TCP"]
+        }
+      ],
+      "schedule": {
+        "start": "2025-07-17T06:00:00Z",
+        "end": "2025-07-18T06:00:00Z"
+      }
+    }
+  }
+},
+{
+  "intent": "Allow FTP access for backup and prioritize during off-hours.",
+  "config": {
+    "intent_id": "intent_005",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T06:30:00Z",
+    "QOS": {
+      "application": "BackupFTP",
+      "category": "file",
+      "latency": "500ms",
+      "bandwidth": "10Mbps",
+      "jitter": "100ms",
+      "priority": "medium",
+      "time_constraints": {
+        "start": "00:00",
+        "end": "06:00",
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+      }
+    },
+    "ACL": {
+      "rules": [
+        {
+          "action": "allow",
+          "source_ip": "192.168.2.0/24",
+          "destination_ip": "192.168.10.50",
+          "destination_port": "21",
+          "protocols": ["FTP"]
+        }
+      ],
+      "schedule": {
+        "start": "2025-07-17T00:00:00Z",
+        "end": "2025-07-17T06:00:00Z"
+      }
+    }
+  }
+},
+{
+  "intent": "Prioritize VoIP traffic during office hours with strict latency.",
+  "config": {
+    "intent_id": "intent_006",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T07:00:00Z",
+    "QOS": {
+      "application": "CiscoVoIP",
+      "category": "voice",
+      "latency": "50ms",
+      "bandwidth": "512Kbps",
+      "jitter": "10ms",
+      "priority": "high",
+      "time_constraints": {
+        "start": "09:00",
+        "end": "17:00",
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+      }
+    }
+  }
+},
+{
+  "intent": "Monitor and restrict YouTube streaming outside working hours.",
+  "config": {
+    "intent_id": "intent_007",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T07:30:00Z",
+    "ACL": {
+      "rules": [
+        {
+          "action": "deny",
+          "source_ip": "192.168.1.0/24",
+          "destination_ip": "192.168.10.70",
+          "destination_port": "443",
+          "protocols": ["TCP"]
+        }
+      ],
+      "schedule": {
+        "start": "2025-07-17T18:00:00Z",
+        "end": "2025-07-18T08:00:00Z"
+      }
+    },
+    "LOGS": {
+      "filters": [
+        {
+          "hosts": "192.168.10.70",
+          "ports": "443",
+          "application": "YouTube",
+          "time_window": "30m"
+        }
+      ]
+    }
+  }
+},
+{
+  "intent": "Prioritize Zoom traffic for team leads during daily standups on weekdays at 9:00–9:30 AM with strict latency and jitter constraints.",
+  "config": {
+    "intent_id": "intent_101",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T08:00:00Z",
+    "QOS": {
+      "application": "ZOOM",
+      "category": "video",
+      "latency": "40ms",
+      "bandwidth": "3Mbps",
+      "jitter": "10ms",
+      "priority": "high",
+      "time_constraints": {
+        "start": "09:00",
+        "end": "09:30",
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+      }
+    }
+  }
+},
+{
+  "intent": "Block FTP access to the backup server from outside and log attempts on weekends.",
+  "config": {
+    "intent_id": "intent_102",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T08:10:00Z",
+    "ACL": {
+      "rules": [
+        {
+          "action": "deny",
+          "source_ip": "0.0.0.0/0",
+          "destination_ip": "192.168.10.50",
+          "destination_port": "21",
+          "protocols": ["FTP"]
+        }
+      ],
+      "schedule": {
+        "start": "2025-07-20T00:00:00Z",
+        "end": "2025-07-21T00:00:00Z"
+      }
+    },
+    "LOGS": {
+      "filters": [
+        {
+          "hosts": "192.168.10.50",
+          "ports": "21",
+          "application": "FTP",
+          "time_window": "6h"
+        }
+      ]
+    }
+  }
+},
+{
+  "intent": "Ensure reliable VoIP service for remote employees in the evenings with medium QoS guarantees.",
+  "config": {
+    "intent_id": "intent_103",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T08:20:00Z",
+    "QOS": {
+      "application": "RemoteVoIP",
+      "category": "voice",
+      "latency": "100ms",
+      "bandwidth": "512Kbps",
+      "jitter": "20ms",
+      "priority": "medium",
+      "time_constraints": {
+        "start": "18:00",
+        "end": "23:00",
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+      }
+    }
+  }
+},
+{
+  "intent": "Log YouTube traffic from student VLANs during the day and alert on abnormal usage.",
+  "config": {
+    "intent_id": "intent_104",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T08:30:00Z",
+    "LOGS": {
+      "filters": [
+        {
+          "hosts": "192.168.3.0/24",
+          "ports": "443",
+          "application": "YouTube",
+          "time_window": "1h"
+        }
+      ]
+    }
+  }
+},
+{
+  "intent": "Restrict DB SSH access outside work hours and store logs of access attempts for 7 days.",
+  "config": {
+    "intent_id": "intent_105",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T08:40:00Z",
+    "ACL": {
+      "rules": [
+        {
+          "action": "deny",
+          "source_ip": "0.0.0.0/0",
+          "destination_ip": "192.168.10.40",
+          "destination_port": "22",
+          "protocols": ["TCP"]
+        }
+      ],
+      "schedule": {
+        "start": "18:00",
+        "end": "08:00"
+      }
+    },
+    "LOGS": {
+      "filters": [
+        {
+          "hosts": "192.168.10.40",
+          "ports": "22",
+          "application": "SSH",
+          "time_window": "30s"
+        }
+      ]
+    }
+  }
+},
+{
+  "intent": "Make sure video calls always work smoothly during important meetings.",
+  "config": {
+    "intent_id": "intent_201",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T09:00:00Z",
+    "QOS": {
+      "application": "ZOOM",
+      "category": "video",
+      "latency": "50ms",
+      "bandwidth": "2Mbps",
+      "jitter": "20ms",
+      "priority": "high",
+      "time_constraints": {
+        "start": "09:00",
+        "end": "17:00",
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+      }
+    }
+  }
+},
+{
+  "intent": "Limit distractions for students during school hours.",
+  "config": {
+    "intent_id": "intent_202",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T09:05:00Z",
+    "ACL": {
+      "rules": [
+        {
+          "action": "deny",
+          "source_ip": "192.168.4.0/24",
+          "destination_ip": "YouTube",
+          "destination_port": "443",
+          "protocols": ["TCP"]
+        }
+      ],
+      "schedule": {
+        "start": "08:00",
+        "end": "15:00"
+      }
+    }
+  }
+},
+{
+  "intent": "Track any unusual activity on our critical servers.",
+  "config": {
+    "intent_id": "intent_203",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T09:10:00Z",
+    "LOGS": {
+      "filters": [
+        {
+          "hosts": "192.168.10.20",  
+          "ports": "22",  
+          "application": "SSH",
+          "time_window": "30s"
+        },
+        {
+          "hosts": "192.168.10.40",
+          "ports": "3306",
+          "application": "DB",
+          "time_window": "30s"
+        }
+      ]
+    }
+  }
+},
+{
+  "intent": "Speed up the internet for managers when they’re working remotely.",
+  "config": {
+    "intent_id": "intent_204",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T09:15:00Z",
+    "QOS": {
+      "application": "Web Browsing",
+      "category": "web",
+      "latency": "100ms",
+      "bandwidth": "5Mbps",
+      "jitter": "30ms",
+      "priority": "medium",
+      "time_constraints": {
+        "start": "18:00",
+        "end": "23:00",
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday"]
+      }
+    }
+  }
+},
+{
+  "intent": "Keep the database safe but accessible to authorized staff.",
+  "config": {
+    "intent_id": "intent_205",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T09:20:00Z",
+    "ACL": {
+      "rules": [
+        {
+          "action": "allow",
+          "source_ip": "192.168.100.0/24",
+          "destination_ip": "192.168.10.40",
+          "destination_port": "3306",
+          "protocols": ["TCP"]
+        },
+        {
+          "action": "deny",
+          "source_ip": "0.0.0.0/0",
+          "destination_ip": "192.168.10.40",
+          "destination_port": "3306",
+          "protocols": ["TCP"]
+        }
+      ],
+      "schedule": {
+        "start": "00:00",
+        "end": "23:59"
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
