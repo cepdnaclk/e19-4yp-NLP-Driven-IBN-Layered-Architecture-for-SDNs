@@ -1,6 +1,6 @@
 #!/bin/bash
 
-iface="s1-eth1"
+iface="$1"
 speed=$(ethtool $iface 2>/dev/null | grep Speed | awk '{print $2}' | sed 's/Mb\/s//')
 bps=$((speed * 1000000))
 

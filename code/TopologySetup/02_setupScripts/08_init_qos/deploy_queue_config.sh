@@ -1,19 +1,16 @@
 #!/bin/bash
 
-# Hardcoded container name and script
-CONTAINER_NAME="containernet"                 
-SCRIPT_PATH="./init_queues.sh"       
-DEST_PATH="/tmp/init_queues.sh"
+CONTAINER_NAME="containernet"
+INIT_SCRIPT="./init_queues.sh"
+ITER_SCRIPT="./iterate_through_interfaces.sh"
 
-# Step 1: Copy the script into the container
-echo "Copying init_queues.sh to $CONTAINER_NAME..."
-docker cp "$SCRIPT_PATH" "$CONTAINER_NAME":"$DEST_PATH"
+# Copy both scripts into the container
+docker cp "$INIT_SCRIPT" "$CONTAINER_NAME":/tmp/init_queues.sh
+docker cp "$ITER_SCRIPT" "$CONTAINER_NAME":/tmp/iterate_through_interfaces.sh
 
-# Step 2: Make it executable
-echo "Making script executable..."
-docker exec "$CONTAINER_NAME" chmod +x "$DEST_PATH"
+# Make them executable
+docker exec "$CONTAINER_NAME" chmod +x /tmp/init_queues.sh
+docker exec "$CONTAINER_NAME" chmod +x /tmp/iterate_through_interfaces.sh
 
-# Step 3: Execute the script
-echo "Running the script in $CONTAINER_NAME..."
-docker exec "$CONTAINER_NAME" "$DEST_PATH"
-
+# Run the interface iteration inside the container
+docker exec "$CONTAINER_NAME" /tmp/iterate_through_interfaces.sh
