@@ -228,7 +228,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 58 },
 	  "targets": [
 		{
-		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"16\"}",
+		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"64\"}",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -239,7 +239,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 58 },
 	  "targets": [
 		{
-		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"16\"}[1m])",
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"64\"}[1m])",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -250,7 +250,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 64 },
 	  "targets": [
 		{
-		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"16\"}",
+		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"64\"}",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -261,7 +261,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 64 },
 	  "targets": [
 		{
-		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"16\"}[1m])",
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"64\"}[1m])",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -334,7 +334,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 86 },
 	  "targets": [
 		{
-		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"10\"}",
+		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"40\"}",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -345,7 +345,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 86 },
 	  "targets": [
 		{
-		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"10\"}[1m])",
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"40\"}[1m])",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -356,7 +356,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 92 },
 	  "targets": [
 		{
-		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"10\"}",
+		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"40\"}",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -367,7 +367,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 92 },
 	  "targets": [
 		{
-		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"10\"}[1m])",
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"40\"}[1m])",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]

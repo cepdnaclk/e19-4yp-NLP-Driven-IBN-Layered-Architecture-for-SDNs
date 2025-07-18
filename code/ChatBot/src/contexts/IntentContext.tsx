@@ -108,7 +108,7 @@ export const IntentProvider: React.FC<IntentProviderProps> = ({ children }) => {
     // For now, we'll reset to a default state
     setCurrentIntent({
       ...currentIntent,
-      raw: '{\n  "name": "Example Intent",\n  "description": "This is an example intent"\n}',
+      raw: '{\n  "name": "Intent",\n  "description": "This is an intent"\n}',
       format: 'json',
       validationStatus: {
         isValid: true,

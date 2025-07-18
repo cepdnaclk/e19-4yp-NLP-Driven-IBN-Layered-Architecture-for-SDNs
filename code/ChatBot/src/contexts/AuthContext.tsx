@@ -26,8 +26,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         // For now, we'll simulate with mock data
         const mockUser: User = {
           id: '1',
-          name: 'Test User',
-          email: 'user@example.com',
+          name: 'Admin',
+          email: 'admin@example.com',
           role: 'editor',
           permissions: {
             canEdit: true,

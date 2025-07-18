@@ -24,7 +24,7 @@ for host in $hosts; do
         docker cp scheduler.sh "$host":/root/
         docker cp send_traffic.sh "$host":/root/
         docker cp "$profile_file" "$host":/root/clientTrafficProfile.yaml
-        rm profile_file
+		rm "$profile_file"
         
         # Run the scheduler inside container
         echo "Launching traffic scheduler inside $host..."

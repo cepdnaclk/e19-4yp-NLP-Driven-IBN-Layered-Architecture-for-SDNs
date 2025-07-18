@@ -53,16 +53,25 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       timestamp: new Date(),
     };
 
-    const updatedSession = {
-      ...currentSession,
-      messages: [...currentSession.messages, newMessage],
-      updatedAt: new Date(),
-    };
-
-    setCurrentSession(updatedSession);
+    setCurrentSession(prevSession => {
+      if (!prevSession) return prevSession;
+      
+      const updatedSession = {
+        ...prevSession,
+        messages: [...prevSession.messages, newMessage],
+        updatedAt: new Date(),
+      };
+      
+      return updatedSession;
+    });
+    
     setSessions((prevSessions) =>
       prevSessions.map((session) =>
-        session.id === currentSession.id ? updatedSession : session
+        session.id === currentSession.id ? {
+          ...session,
+          messages: [...session.messages, newMessage],
+          updatedAt: new Date(),
+        } : session
       )
     );
   };
@@ -78,16 +87,25 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       intentData,
     };
 
-    const updatedSession = {
-      ...currentSession,
-      messages: [...currentSession.messages, newMessage],
-      updatedAt: new Date(),
-    };
-
-    setCurrentSession(updatedSession);
+    setCurrentSession(prevSession => {
+      if (!prevSession) return prevSession;
+      
+      const updatedSession = {
+        ...prevSession,
+        messages: [...prevSession.messages, newMessage],
+        updatedAt: new Date(),
+      };
+      
+      return updatedSession;
+    });
+    
     setSessions((prevSessions) =>
       prevSessions.map((session) =>
-        session.id === currentSession.id ? updatedSession : session
+        session.id === currentSession.id ? {
+          ...session,
+          messages: [...session.messages, newMessage],
+          updatedAt: new Date(),
+        } : session
       )
     );
   };
