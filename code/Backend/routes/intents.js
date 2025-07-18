@@ -19,12 +19,12 @@ router.post('/', async (req, res) => {
 
 router.post('/acl', async (req, res) => {
   try {
-    const { config } = req.body;
-    const { user_role } = config;
-    if (user_role !== 'admin' || req.user.role !== 'admin') {
-      return res.status(403).json({ error: 'Only admin users can submit ACL rules' });
-    }
-    await pushAclRule(config);
+    const { intent,config } = req.body;
+    // const { user_role } = config;
+    // if (user_role !== 'admin' || req.user.role !== 'admin') {
+    //   return res.status(403).json({ error: 'Only admin users can submit ACL rules' });
+    // }
+    await pushIntent(config);
     res.status(200).json({ message: 'ACL rule processed successfully' });
   } catch (error) {
     res.status(500).json({ error: `Failed to process ACL rule: ${error.message}` });

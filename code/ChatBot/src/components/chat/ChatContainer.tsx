@@ -3,6 +3,7 @@ import ChatHistory from './ChatHistory';
 import ChatInput from './ChatInput';
 import { useChat } from '../../contexts/ChatContext';
 import { useIntent } from '../../contexts/IntentContext';
+import { chatService } from '../../services/chatService';
 
 const ChatContainer: React.FC = () => {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -12,6 +13,9 @@ const ChatContainer: React.FC = () => {
   const handleSendMessage = async (message: string) => {
     if (!currentSession) return;
     
+    // Get current chat history BEFORE adding the user message
+    const chatHistory = currentSession.messages;
+    
     // Add user message to chat
     addMessage('user', message);
     
@@ -19,72 +23,30 @@ const ChatContainer: React.FC = () => {
     setIsLoading(true);
     
     try {
-      // In a real app, this would call an API endpoint
-      // For now, we'll simulate with a delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Check if message is asking for intent generation
-      if (message.toLowerCase().includes('generate intent') || 
-          message.toLowerCase().includes('create intent')) {
         
         // Add system message
         addMessage('system', 'I\'ve generated a network intent based on your request:');
         
-        // Generate mock intent
-        const mockIntentRaw = JSON.stringify({
-          name: "Example Network Configuration",
-          description: "This is an example network configuration generated from your request",
-          source: "192.168.1.0/24",
-          destination: "10.0.0.0/24",
-          protocol: "TCP",
-          port: 443,
-          qos: {
-            bandwidth: "10Mbps",
-            latency: "50ms"
-          },
-          security: {
-            encryption: "AES-256",
-            authentication: "required"
-          }
-        }, null, 2);
+        // Generate intent using the service with chat history
+        const intentMessage = await chatService.generateIntent(message, chatHistory, 'user1');
         
         // Add intent message
-        addIntentMessage(
-          'Here\'s the generated configuration according to your request. You can edit it or push it to the network.',
-          {
-            raw: mockIntentRaw,
-            format: 'json',
-            metadata: {
-              timestamp: new Date(),
-              author: 'AI Assistant',
-              llmVersion: 'v1.0',
-              status: 'draft'
-            }
-          }
-        );
+        addIntentMessage(intentMessage.content, intentMessage.intentData);
         
         // Set current intent in context
         setCurrentIntent({
           id: Math.random().toString(36).substring(2, 9),
-          name: "Example Network configuration",
-          description: "This is an example network configuration generated from your request",
-          raw: mockIntentRaw,
-          format: 'json',
-          metadata: {
-            timestamp: new Date(),
-            author: 'AI Assistant',
-            llmVersion: 'v1.0',
-            status: 'draft'
-          },
+          name: "Network configuration",
+          description: "This is a network configuration generated from your request",
+          raw: intentMessage.intentData.raw,
+          format: intentMessage.intentData.format,
+          metadata: intentMessage.intentData.metadata,
           validationStatus: {
             isValid: true,
             errors: []
           }
         });
-      } else {
-        // Regular response
-        addMessage('system', 'I understand you want to work with network intents. You can ask me to generate an intent, edit an existing one, or push an intent to the network.');
-      }
+      
     } catch (error) {
       addMessage('error', `An error occurred: ${(error as Error).message}`);
     } finally {

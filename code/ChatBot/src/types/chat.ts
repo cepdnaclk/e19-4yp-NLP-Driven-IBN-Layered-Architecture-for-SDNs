@@ -12,6 +12,7 @@ export interface IntentMessage extends Message {
   intentData: {
     raw: string; // JSON or YAML string
     format: 'json' | 'yaml';
+    reasoning?: string; // LLM reasoning for the intent
     metadata: {
       timestamp: Date;
       author: string;

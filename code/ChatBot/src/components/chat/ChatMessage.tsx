@@ -1,13 +1,32 @@
 import React from 'react';
 import type { Message as MessageType, IntentMessage as IntentMessageType } from '../../types/chat';
+import { useIntent } from '../../contexts/IntentContext';
 
 interface MessageProps {
   message: MessageType;
 }
 
 const ChatMessage: React.FC<MessageProps> = ({ message }) => {
+  const { setCurrentIntent } = useIntent();
   const isIntent = message.role === 'intent';
   const intentMessage = isIntent ? message as IntentMessageType : null;
+
+  const handleEditConfiguration = () => {
+    if (intentMessage) {
+      setCurrentIntent({
+        id: Math.random().toString(36).substring(2, 9),
+        name: "Network configuration",
+        description: "This is a network configuration generated from your request",
+        raw: intentMessage.intentData.raw,
+        format: intentMessage.intentData.format,
+        metadata: intentMessage.intentData.metadata,
+        validationStatus: {
+          isValid: true,
+          errors: []
+        }
+      });
+    }
+  };
 
   return (
     <div 
@@ -57,19 +76,50 @@ const ChatMessage: React.FC<MessageProps> = ({ message }) => {
           
           {isIntent && intentMessage ? (
             <div>
-              <p className="mb-2">{message.content}</p>
-              <div className="border border-gray-200 dark:border-gray-700 rounded-md p-3 bg-gray-50 dark:bg-gray-800 overflow-auto">
-                <pre className="text-sm whitespace-pre-wrap">
-                  {intentMessage.intentData.raw}
-                </pre>
+              {/* Display reasoning/explanation */}
+              <div className="mb-3">
+                <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  Reasoning:
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400 whitespace-pre-wrap">
+                  {message.content}
+                </p>
               </div>
+              
+              {/* Display intent configuration */}
+              <div className="mb-3">
+                <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  Intent Configuration:
+                </h4>
+                <div className="border border-gray-200 dark:border-gray-700 rounded-md p-3 bg-gray-50 dark:bg-gray-800 overflow-auto">
+                  <pre className="text-sm whitespace-pre-wrap text-left">
+                    {intentMessage.intentData.raw}
+                  </pre>
+                </div>
+              </div>
+              
+              {/* Display additional reasoning if available */}
+              {intentMessage.intentData.reasoning && intentMessage.intentData.reasoning !== message.content && (
+                <div className="mb-3">
+                  <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Additional Details:
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 whitespace-pre-wrap">
+                    {intentMessage.intentData.reasoning}
+                  </p>
+                </div>
+              )}
+              
               <div className="mt-2 flex gap-2">
-                <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                <button 
+                  className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                  onClick={handleEditConfiguration}
+                >
                   Edit Configuration
                 </button>
-                <button className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md hover:bg-gray-300 dark:hover:bg-gray-600">
+                {/* <button className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md hover:bg-gray-300 dark:hover:bg-gray-600">
                   Reset
-                </button>
+                </button> */}
               </div>
             </div>
           ) : (
