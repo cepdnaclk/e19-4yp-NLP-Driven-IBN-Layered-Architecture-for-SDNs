@@ -38,6 +38,11 @@ RUN wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.24
 # Create directories for configuration and Prometheus data
 RUN mkdir -p /etc/prometheus /prometheus_data /exporter
 
+
+# Install yq (mikefarah version)
+RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq \
+    && chmod +x /usr/bin/yq
+
 # Copy configuration and Python exporter script
 COPY prometheus-agent.yml /etc/prometheus/prometheus-agent.yml
 COPY blackbox.yml /etc/prometheus/blackbox.yml

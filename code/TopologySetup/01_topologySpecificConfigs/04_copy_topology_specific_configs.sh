@@ -55,6 +55,7 @@ cp "${FOLDER}/routingAndSwitching.txt" "${DEST_ROOT}/06_init_intents/05_init_int
 cp "./common/grafana_admin_config.txt" "${DEST_ROOT}/07_init_dashboards/02_grafana_config.txt"
 
 # remove temporary files
-cp "${FOLDER}/__hostIpMapping.txt"
+rm "${FOLDER}/__hostIpMapping.txt"
+rm -rf "${FOLDER}/dashboards/"
 
 echo "✅ All files copied successfully from $FOLDER."
