@@ -4,7 +4,9 @@ import { onosUrl, onosAuth } from '../config/config.js';
 
 export const pushIntent = async (config) => {
   try {
-    const { intent_id, user_role, QoS, ACL, time_constraints, ...intentData } = config;
+    const { intent_id, user_role, QOS, ACL, time_constraints, ...intentData } = config;
+    console.log('QOS:', QOS);
+    console.log('ACL:', ACL);
     
     // Determine priority based on user role
     // const onosPriority = user_role === 'admin' ? 50000 : 

@@ -3,6 +3,7 @@ from langchain.schema import HumanMessage
 
 import json
 from langchain.schema import Document
+# from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.prompts import ChatPromptTemplate
@@ -139,7 +140,7 @@ def template_generator_agent(user_intent, context, acl_rules):
     """
     # return PROMPT_TEMPLATE.format(user_intent=user_intent, context=context)
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
-    prompt = prompt_template.format(context=context, user_intent=query, acl_rules=acl_rules)
+    prompt = prompt_template.format(context=context, user_intent=user_intent, acl_rules=acl_rules)
 
     chat_history.append(HumanMessage(content=prompt))
 

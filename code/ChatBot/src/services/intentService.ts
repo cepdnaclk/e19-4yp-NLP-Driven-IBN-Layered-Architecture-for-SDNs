@@ -105,7 +105,7 @@ export const intentService = {
       console.log('API base URL:', api.defaults.baseURL);
       
       // Make API call to backend
-      const response = await api.post('/intents/acl', requestBody);
+      const response = await api.post('/intents', requestBody);
       
       console.log('Push response:', response);
       
