@@ -25,14 +25,14 @@ const ChatContainer: React.FC = () => {
     try {
         
         // Add system message
-        addMessage('system', 'I\'ve generated a network intent based on your request:');
+        addMessage('system', 'I\'m processing your request...');
         
         // Generate intent using the service with chat history
-        const intentMessage = await chatService.generateIntent(message, chatHistory, 'user1');
+        const intentMessage = await chatService.generateIntent(message, chatHistory, 'admin');
         
         // Add intent message
         addIntentMessage(intentMessage.content, intentMessage.intentData);
-        
+        console.log('Intent generated:', intentMessage);
         // Set current intent in context
         setCurrentIntent({
           id: Math.random().toString(36).substring(2, 9),

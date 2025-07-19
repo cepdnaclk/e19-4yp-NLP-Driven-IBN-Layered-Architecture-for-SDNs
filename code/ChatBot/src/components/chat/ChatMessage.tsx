@@ -13,6 +13,7 @@ const ChatMessage: React.FC<MessageProps> = ({ message }) => {
 
   const handleEditConfiguration = () => {
     if (intentMessage) {
+      console.log('Editing intent configuration:');
       setCurrentIntent({
         id: Math.random().toString(36).substring(2, 9),
         name: "Network configuration",
@@ -22,7 +23,7 @@ const ChatMessage: React.FC<MessageProps> = ({ message }) => {
         metadata: intentMessage.intentData.metadata,
         validationStatus: {
           isValid: true,
-          errors: []
+          errors: []      
         }
       });
     }

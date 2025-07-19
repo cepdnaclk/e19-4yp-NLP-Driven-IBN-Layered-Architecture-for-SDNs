@@ -1,13 +1,13 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import type { Intent, ValidationError } from '../types/intent';
+import React, { createContext, useContext, useState, ReactNode, useCallback } from 'react';
+import type { Intent } from '../types/intent';
+import { validateIntentSchema, sampleIntentJson } from '../schemas/intentSchema';
 
 interface IntentContextType {
   currentIntent: Intent | null;
   setCurrentIntent: (intent: Intent | null) => void;
   updateIntentRaw: (raw: string) => void;
   updateIntentFormat: (format: 'json' | 'yaml') => void;
-  validateIntent: () => void;
+  validateIntent: () => Promise<void>;
   resetIntent: () => void;
   simulateIntent: () => Promise<boolean>;
   pushIntent: () => Promise<boolean>;
@@ -20,16 +20,54 @@ interface IntentProviderProps {
 }
 
 export const IntentProvider: React.FC<IntentProviderProps> = ({ children }) => {
-  const [currentIntent, setCurrentIntent] = useState<Intent | null>(null);
+  const [currentIntent, setCurrentIntentState] = useState<Intent | null>(null);
+
+  // Enhanced setCurrentIntent that automatically validates when an intent is set
+  const setCurrentIntent = useCallback( async (intent: Intent | null) => {
+    if (!intent) {
+      setCurrentIntentState(null);
+      return;
+    }
+
+    // Set the intent first
+    // setCurrentIntentState(intent);
+
+    // Then validate it automatically
+    try {
+      const validation = await validateIntentSchema(intent.raw);
+      console.log('Intent validation result:', validation);
+      setCurrentIntentState({
+        ...intent,
+        validationStatus: {
+          isValid: validation.isValid,
+          errors: validation.errors,
+        },
+      });
+    } catch (error) {
+      setCurrentIntentState({
+        ...intent,
+        validationStatus: {
+          isValid: false,
+          errors: [
+            {
+              path: 'root',
+              message: `Validation error: ${(error as Error).message}`,
+              severity: 'error',
+            },
+          ],
+        },
+      });
+    }
+  }, []);
 
   const updateIntentRaw = (raw: string) => {
     if (!currentIntent) return;
 
-    setCurrentIntent({
+    setCurrentIntentState({
       ...currentIntent,
       raw,
       validationStatus: {
-        isValid: false, // Reset validation status when content changes
+        isValid: true, // Reset validation status when content changes
         errors: [],
       },
     });
@@ -38,61 +76,35 @@ export const IntentProvider: React.FC<IntentProviderProps> = ({ children }) => {
   const updateIntentFormat = (format: 'json' | 'yaml') => {
     if (!currentIntent) return;
 
-    setCurrentIntent({
+    setCurrentIntentState({
       ...currentIntent,
       format,
     });
   };
 
-  const validateIntent = () => {
+  const validateIntent = async () => {
     if (!currentIntent) return;
 
-    // In a real app, this would use a schema validation library
-    // For now, we'll simulate with basic validation
     try {
-      let parsed;
-      if (currentIntent.format === 'json') {
-        parsed = JSON.parse(currentIntent.raw);
-      } else {
-        // YAML parsing would be implemented here
-        parsed = {}; // Placeholder
-      }
-
-      const errors: ValidationError[] = [];
-
-      // Basic validation checks
-      if (!parsed.name) {
-        errors.push({
-          path: 'name',
-          message: 'Name is required',
-          severity: 'error',
-        });
-      }
-
-      if (!parsed.description) {
-        errors.push({
-          path: 'description',
-          message: 'Description is required',
-          severity: 'error',
-        });
-      }
-
-      setCurrentIntent({
+      // Use the schema validation function
+      const validation = await validateIntentSchema(currentIntent.raw);
+      
+      setCurrentIntentState({
         ...currentIntent,
         validationStatus: {
-          isValid: errors.length === 0,
-          errors,
+          isValid: validation.isValid,
+          errors: validation.errors,
         },
       });
     } catch (error) {
-      setCurrentIntent({
+      setCurrentIntentState({
         ...currentIntent,
         validationStatus: {
           isValid: false,
           errors: [
             {
               path: 'root',
-              message: `Invalid ${currentIntent.format.toUpperCase()} format: ${(error as Error).message}`,
+              message: `Validation error: ${(error as Error).message}`,
               severity: 'error',
             },
           ],
@@ -104,11 +116,10 @@ export const IntentProvider: React.FC<IntentProviderProps> = ({ children }) => {
   const resetIntent = () => {
     if (!currentIntent) return;
 
-    // In a real app, this would fetch the original intent from the API
-    // For now, we'll reset to a default state
-    setCurrentIntent({
+    // Reset to the sample intent from the schema
+    setCurrentIntentState({
       ...currentIntent,
-      raw: '{\n  "name": "Intent",\n  "description": "This is an intent"\n}',
+      raw: sampleIntentJson,
       format: 'json',
       validationStatus: {
         isValid: true,
@@ -124,7 +135,7 @@ export const IntentProvider: React.FC<IntentProviderProps> = ({ children }) => {
     // For now, we'll simulate with a delay
     return new Promise((resolve) => {
       setTimeout(() => {
-        setCurrentIntent({
+        setCurrentIntentState({
           ...currentIntent,
           metadata: {
             ...currentIntent.metadata,
@@ -143,7 +154,7 @@ export const IntentProvider: React.FC<IntentProviderProps> = ({ children }) => {
     // For now, we'll simulate with a delay
     return new Promise((resolve) => {
       setTimeout(() => {
-        setCurrentIntent({
+        setCurrentIntentState({
           ...currentIntent,
           metadata: {
             ...currentIntent.metadata,

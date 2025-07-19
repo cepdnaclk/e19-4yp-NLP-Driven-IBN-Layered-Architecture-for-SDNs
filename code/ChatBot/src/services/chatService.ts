@@ -5,7 +5,7 @@ import { sampleIntentJson } from '../schemas/intentSchema';
 
 // Base API configuration
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000',
+  baseURL: import.meta.env.VITE_CHAT_API_URL || 'http://localhost:8000',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -33,7 +33,7 @@ export const chatService = {
           content: msg.content
         })) : []
       });
-      
+      console.log('LLM response:', response.data);
       return {
         id: uuidv4(),
         role: 'system',

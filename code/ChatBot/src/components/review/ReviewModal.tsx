@@ -1,6 +1,7 @@
 import React from 'react';
 import { useIntent } from '../../contexts/IntentContext';
 import IntentDiff from '../intent/IntentDiff';
+import intentService from '../../services/intentService';
 
 interface ReviewModalProps {
   isOpen: boolean;
@@ -9,9 +10,8 @@ interface ReviewModalProps {
 }
 
 const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSuccess }) => {
-  const { currentIntent, simulateIntent, pushIntent } = useIntent();
+  const { currentIntent } = useIntent();
   const [activeTab, setActiveTab] = React.useState<'code' | 'form'>('code');
-  const [isSimulating, setIsSimulating] = React.useState(false);
   const [isPushing, setIsPushing] = React.useState(false);
   const [simulationResult, setSimulationResult] = React.useState<{
     success: boolean;
@@ -28,34 +28,15 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
 
   if (!isOpen || !currentIntent) return null;
 
-  const handleSimulate = async () => {
-    setIsSimulating(true);
-    setSimulationResult(null);
-    
-    try {
-      const success = await simulateIntent();
-      setSimulationResult({
-        success,
-        message: success 
-          ? 'Simulation successful. The intent is valid and can be pushed to the network.'
-          : 'Simulation failed. Please check the intent for errors.'
-      });
-    } catch (error) {
-      setSimulationResult({
-        success: false,
-        message: `Simulation error: ${(error as Error).message}`
-      });
-    } finally {
-      setIsSimulating(false);
-    }
-  };
+
 
   const handlePush = async () => {
     setIsPushing(true);
     
     try {
-      const success = await pushIntent();
-      if (success) {
+      const resp = await intentService.pushIntent(currentIntent.raw);
+      console.log('Push result:', resp.success);
+      if (resp.success) {
         onPushSuccess();
       } else {
         setSimulationResult({
@@ -117,9 +98,9 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
           {activeTab === 'code' ? (
             <div className="mb-6">
               <h3 className="text-lg font-medium mb-2 text-gray-800 dark:text-white">Intent Code</h3>
-              <pre className="bg-gray-50 dark:bg-gray-900 p-4 rounded-md overflow-auto text-sm font-mono">
+                <pre className="bg-gray-50 dark:bg-gray-900 p-4 rounded-md overflow-auto text-sm font-mono text-left">
                 {currentIntent.raw}
-              </pre>
+                </pre>
             </div>
           ) : (
             <div className="mb-6">
@@ -196,22 +177,11 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
           >
             Cancel
           </button>
-          {/* <button
-            onClick={handleSimulate}
-            disabled={isSimulating || isPushing}
-            className={`px-4 py-2 rounded-md ${
-              isSimulating
-                ? 'bg-purple-400 cursor-not-allowed'
-                : 'bg-purple-600 hover:bg-purple-700 text-white'
-            }`}
-          >
-            {isSimulating ? 'Simulating...' : 'Simulate'}
-          </button> */}
           <button
             onClick={handlePush}
-            disabled={isPushing || isSimulating || (simulationResult?.success === false)}
+            disabled={isPushing || (simulationResult?.success === false)}
             className={`px-4 py-2 rounded-md ${
-              isPushing || isSimulating || (simulationResult?.success === false)
+              isPushing || (simulationResult?.success === false)
                 ? 'bg-green-400 cursor-not-allowed'
                 : 'bg-green-600 hover:bg-green-700 text-white'
             }`}
