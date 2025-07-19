@@ -35,6 +35,10 @@ const ChatPage: React.FC = () => {
   const handleIntentPushed = () => {
     setIsReviewModalOpen(false);
     setIntentPushed(true);
+    // Hide success message after 3 seconds
+    setTimeout(() => {
+      setIntentPushed(false);
+    }, 3000);
     setTimeout(() => {
       setIsFeedbackModalOpen(true);
     }, 1000);

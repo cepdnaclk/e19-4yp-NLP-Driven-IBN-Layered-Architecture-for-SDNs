@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, ReactNode, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback } from 'react';
+import type { ReactNode } from 'react';
 import type { Intent } from '../types/intent';
 import { validateIntentSchema, sampleIntentJson } from '../schemas/intentSchema';
 
