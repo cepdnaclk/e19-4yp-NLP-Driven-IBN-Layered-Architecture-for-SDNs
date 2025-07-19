@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TRAFFIC_PROFILE="clientTrafficProfile.yaml"
+TRAFFIC_PROFILE="../clientTrafficProfile.yaml"
 
 # Check required files
 for file in scheduler.sh send_traffic.sh "$TRAFFIC_PROFILE"; do

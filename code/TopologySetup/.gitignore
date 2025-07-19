@@ -18,5 +18,9 @@
 !/02_setupScripts/07_init_dashboards/dashboards/hostResourceOverview.json
 !/02_setupScripts/07_init_dashboards/dashboards/networkOverview.json
 !/02_setupScripts/07_init_dashboards/dashboards/qosOverview.json
-
-
+/04_utilityScripts/qos_push/network_knowledge.yaml
+/04_utilityScripts/qos_push/qos_intents.txt
+/04_utilityScripts/qos_push/retrieve_network_knowledge/02_onos_cli_output.txt
+/04_utilityScripts/qos_push/retrieve_network_knowledge/04_clean_hosts.txt
+/04_utilityScripts/qos_push/retrieve_network_knowledge/06_ip_mac_mapping.csv
+/04_utilityScripts/qos_push/retrieve_network_knowledge/08_ip_host_mapping.csv

@@ -281,7 +281,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 72 },
 	  "targets": [
 		{
-		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"48\"}",
+		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"192\"}",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -292,7 +292,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 72 },
 	  "targets": [
 		{
-		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"48\"}[1m])",
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"192\"}[1m])",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -303,7 +303,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 78 },
 	  "targets": [
 		{
-		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"48\"}",
+		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"192\"}",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -314,7 +314,7 @@
 	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 78 },
 	  "targets": [
 		{
-		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"48\"}[1m])",
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"192\"}[1m])",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
@@ -368,6 +368,59 @@
 	  "targets": [
 		{
 		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"40\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+		{
+	  "type": "text",
+	  "title": "",
+	  "gridPos": { "h": 2, "w": 24, "x": 0, "y": 98 },
+	  "options": {
+		"content": "<h2 style='text-align:center; color:#FFFFFF; padding-top:10px;'>📦 Other Traffic</h2>",
+		"mode": "html"
+	  }
+	},
+	{
+	  "type": "timeseries",
+	  "title": "Other: Received Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 100 },
+	  "targets": [
+		{
+		  "expr": "net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"0\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "Other: Received Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 100 },
+	  "targets": [
+		{
+		  "expr": "rate(net_rx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"0\"}[1m])",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "Other: Transmitted Total Packets - Cumulative",
+	  "gridPos": { "h": 6, "w": 12, "x": 0, "y": 106 },
+	  "targets": [
+		{
+		  "expr": "net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"0\"}",
+		  "legendFormat": "{{interface}}"
+		}
+	  ]
+	},
+	{
+	  "type": "timeseries",
+	  "title": "Other: Transmitted Packet Throughput (Packets/sec)",
+	  "gridPos": { "h": 6, "w": 12, "x": 12, "y": 106 },
+	  "targets": [
+		{
+		  "expr": "rate(net_tx_tos_packets{job=\"hosts-passive-metrics\", interface!=\"lo\", interface!=\"eth0\", tos=\"0\"}[1m])",
 		  "legendFormat": "{{interface}}"
 		}
 	  ]
