@@ -100,20 +100,21 @@ const ChatPage: React.FC = () => {
             <div className="w-1/2 pl-3 flex flex-col h-full">
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow h-full overflow-hidden flex flex-col">
                 <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700 ">
-                  <div>
-                    <h2 className="text-lg font-medium text-gray-900 dark:text-white">Configuration Editor</h2>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      View, edit, and validate network configurations
-                    </p>
-                  </div>
-                  {currentIntent && (
+                  {currentIntent ? (
                     <button
                       onClick={handleReviewIntent}
                       className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                     >
                       Review & Push
                     </button>
-                  )}
+                  ):
+                  (<div>
+                    <h2 className="text-lg font-medium text-gray-900 dark:text-white">Configuration Editor</h2>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      Edit , save, and push network intents to the network.
+                    </p>
+                  </div>)
+                  }
                 </div>
                 <div className="flex-1 overflow-auto">
                   <IntentEditor />
@@ -146,13 +147,13 @@ const ChatPage: React.FC = () => {
       )}
       
       {/* Feedback Modal */}
-      {isFeedbackModalOpen && (
+      {/* {isFeedbackModalOpen && (
         <FeedbackForm
           intentId={currentIntent?.id || ''}
           onSubmit={handleFeedbackSubmit}
           onClose={() => setIsFeedbackModalOpen(false)}
         />
-      )}
+      )} */}
     </div>
   );
 };

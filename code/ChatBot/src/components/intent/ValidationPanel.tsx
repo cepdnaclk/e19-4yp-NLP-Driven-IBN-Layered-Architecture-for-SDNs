@@ -4,15 +4,11 @@ import type { ValidationError } from '../../types/intent';
 interface ValidationPanelProps {
   errors: ValidationError[];
   isValid: boolean;
-  onOptimize: () => void;
-  onImproveQoS: () => void;
 }
 
 const ValidationPanel: React.FC<ValidationPanelProps> = ({ 
   errors, 
-  isValid, 
-  onOptimize, 
-  onImproveQoS 
+  isValid
 }) => {
   return (
     <div className="border rounded-md overflow-hidden">
@@ -49,24 +45,7 @@ const ValidationPanel: React.FC<ValidationPanelProps> = ({
           </ul>
         </div>
       )}
-      
-      {/* <div className="p-3 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30">
-        <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Suggestions:</h4>
-        <div className="flex flex-wrap gap-2">
-          <button 
-            onClick={onOptimize}
-            className="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
-          >
-            Optimize Intent
-          </button>
-          <button 
-            onClick={onImproveQoS}
-            className="px-3 py-1.5 bg-purple-600 text-white rounded-md hover:bg-purple-700 text-sm"
-          >
-            Improve QoS
-          </button>
-        </div>
-      </div> */}
+    
     </div>
   );
 };
