@@ -77,10 +77,10 @@ async def process_query_simple(request: QueryRequest):
         logger.info(f"Processing query: {request.message}")
         
         # Retrieve context and ACL rules
-        retrieved_context = retriever_agent("Block all http traffic")
+        retrieved_context = retriever_agent(request.message)
         acl_rules = acl_retriever_agent(ACL_URL)
         # Generate configuration
-        raw_output = template_generator_agent("Block all http traffic", retrieved_context, acl_rules)
+        raw_output = template_generator_agent(request.message, retrieved_context, acl_rules)
         return {
             "response": raw_output,
             "timestamp": datetime.now().isoformat(),
