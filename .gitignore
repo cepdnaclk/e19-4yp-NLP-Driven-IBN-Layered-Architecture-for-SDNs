@@ -3,3 +3,4 @@ NER/extracted_texts.txt
 NER/generate_intents.py
 NER/extracted_texts.txt
 code/Backend/node_modules
+.env
