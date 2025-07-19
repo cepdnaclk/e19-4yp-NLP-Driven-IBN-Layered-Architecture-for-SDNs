@@ -1,7 +1,7 @@
 {
     "intent": "Prioritize HTTP traffic reaching the HTTP server at 192.168.0.1", 
     "config": {
-      "intent_id": "INTENT-001",
+      "intent_id": "INTENT-002",
       "user_role": "admin",
       "timestamp": "2024-07-01T14:30:00Z",
       "QOS": {
