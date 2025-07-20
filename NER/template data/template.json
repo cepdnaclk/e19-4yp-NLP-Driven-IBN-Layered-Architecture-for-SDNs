@@ -21,10 +21,10 @@
       "rules": [
         {
           "action": "<ACTION>", // "allow", "deny" 
-          "source_ip": "<SOURCE_IP>", // default=>any 0.0.0.0/0
-          "destination_ip": "<DESTINATION_IP>", // default=>any 0.0.0.0/0
-          "source_port": "<SOURCE_PORT>", // default=> any
-          "destination_port": "<DESTINATION_PORT>", // default=> any
+          "source_ip": "<SOURCE_IP>", // default=>null 0.0.0.0/0
+          "destination_ip": "<DESTINATION_IP>", // default=>null 0.0.0.0/0
+          "source_port": "<SOURCE_PORT>", // default=> null
+          "destination_port": "<DESTINATION_PORT>", // default=> null
           "protocols": ["<ALLOW_PROTOCOL_1>", "<ALLOW_PROTOCOL_2>"] // default=>["HTTP"]; "FTP","SMTP"
         }
       ],
@@ -38,7 +38,7 @@
         {
           "hosts": "<HOST_IP>", // e.g., "192.168.1.1"
           "ports": "<FILTER_PORT>", // e.g., 80, 443, 8080
-          "application": "<FILTER_APPLICATION>", // default=>any; "WEB", "VIDEO", "VOICE", "ZOOM" | OR DSCP Value ??
+          "application": "<FILTER_APPLICATION>", // default=>null; "WEB", "VIDEO", "VOICE", "ZOOM" | OR DSCP Value ??
           "time_window": "<TIME_WINDOW>" // default=>5min; "6h" ->last_6_hours, "30s" ->last_30_seconds
         }
       ]

@@ -143,47 +143,60 @@ export const validateIntentSchema = async (jsonString: string): Promise<{
 
 // Sample intent object that conforms to the new schema
 export const sampleIntent = {
-  intent: "Configure high-priority video streaming for conference room from 192.168.1.0/24 to 10.0.0.0/24 during business hours",
-  config: {
-    intent_id: "INTENT_001",
-    user_role: "admin",
-    timestamp: "2023-09-01T09:00:00Z",
-    QOS: {
-      application: "ZOOM",
-      category: "video",
-      latency: "50ms",
-      bandwidth: "10Mbps",
-      jitter: "5ms",
-      priority: "high",
-      time_constraints: {
-        start: "2023-09-01T09:00:00Z",
-        end: "2023-09-01T17:00:00Z",
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+  "intent": "<Sample Intent in Natural Language>",
+  "config": {
+    "intent_id": "<INTENT_ID>",
+    "user_role": "<USER_ROLE>",
+    "timestamp": "<TIMESTAMP>",
+    "QOS": {
+      "application": "<APPLICATION>",
+      "category": "<TRAFFIC_CATEGORY>",
+      "latency": "<LATENCY_THRESHOLD>",
+      "bandwidth": "<BANDWIDTH_THRESHOLD>",
+      "jitter": "<JITTER_THRESHOLD>",
+      "priority": "<PRIORITY_LEVEL>",
+      "time_constraints": {
+        "start": "<START_TIME>",
+        "end": "<END_TIME>",
+        "days": [
+          "<DAY_1>",
+          "<DAY_2>",
+          "<DAY_3>"
+        ]
       }
     },
-    ACL: {
-      rules: [
+    "ACL": {
+      "rules": [
         {
-          action: "allow",
-          source_ip: "192.168.1.0/24",
-          destination_ip: "10.0.0.0/24",
-          source_ports: ["443", "80"],
-          destination_ports: ["443", "8080"],
-          protocols: ["HTTPS", "HTTP"]
+          "action": "<ACTION>",
+          "source_ip": "<SOURCE_IP>",
+          "destination_ip": "<DESTINATION_IP>",
+          "source_ports": [
+            "<SOURCE_PORT_1>",
+            "<SOURCE_PORT_2>"
+          ],
+          "destination_ports": [
+            "<DEST_PORT_1>",
+            "<DEST_PORT_2>"
+          ],
+          "protocols": [
+            "<PROTOCOL_1>",
+            "<PROTOCOL_2>"
+          ]
         }
       ],
-      schedule: {
-        start: "2023-09-01T00:00:00Z",
-        end: "2023-10-01T00:00:00Z"
+      "schedule": {
+        "start": "<ACL_START_TIMESTAMP>",
+        "end": "<ACL_END_TIMESTAMP>"
       }
     },
-    LOGS: {
-      filters: [
+    "LOGS": {
+      "filters": [
         {
-          hosts: "192.168.1.1",
-          ports: "443",
-          application: "ZOOM",
-          time_window: "6h"
+          "hosts": "<HOST_IP>",
+          "ports": "<PORT>",
+          "application": "<APPLICATION_NAME_OR_DSCP>",
+          "time_window": "<TIME_WINDOW>"
         }
       ]
     }
