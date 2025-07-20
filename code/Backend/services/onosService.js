@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { onosUrl, onosAuth } from '../config/config.js';
+import { processQoSIntent, validateQoSConfig } from './qosService.js';
 // import { scheduleIntent } from './scheduleService.js';
 
 export const pushIntent = async (config) => {
@@ -7,6 +8,21 @@ export const pushIntent = async (config) => {
     const { intent_id, user_role, QOS, ACL, time_constraints, ...intentData } = config;
     console.log('QOS:', QOS);
     console.log('ACL:', ACL);
+    
+    // Handle QoS intents using the bash script integration
+    if (QOS) {
+      console.log('🎯 Processing QoS intent...');
+      
+      // Validate QoS configuration
+      const validation = validateQoSConfig(config);
+      if (!validation.valid) {
+        throw new Error(`QoS validation failed: ${validation.error}`);
+      }
+      
+      // Process QoS intent using bash scripts
+      const qosResult = await processQoSIntent(config);
+      console.log('✅ QoS intent processed:', qosResult);
+    }
     
     // Determine priority based on user role
     // const onosPriority = user_role === 'admin' ? 50000 : 
