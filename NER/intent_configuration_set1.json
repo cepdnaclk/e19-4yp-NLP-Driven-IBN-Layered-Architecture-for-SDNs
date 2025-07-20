@@ -7,7 +7,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -51,7 +51,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "100Mbps",
         "priority": "high"
       },
@@ -76,7 +76,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "14ms",
         "priority": "medium",
         "time_constraints": {
@@ -128,7 +128,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "90ms",
         "priority": "high",
         "time_constraints": {
@@ -157,7 +157,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "10ms",
         "priority": "high",
         "time_constraints": {
@@ -186,7 +186,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "File Transfer",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "87ms",
         "priority": "medium",
         "time_constraints": {
@@ -215,7 +215,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "46ms",
         "bandwidth": "5Gbps",
         "priority": "high"
@@ -232,7 +232,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "1Gbps",
         "priority": "high"
       },
@@ -257,7 +257,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "priority": "high",
         "time_constraints": {
           "start": "08:00:00",
@@ -294,7 +294,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Lab Courses",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "10Gbps",
         "priority": "high"
       },
@@ -319,7 +319,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "latency": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -363,7 +363,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "5ms",
         "priority": "high",
         "time_constraints": {
@@ -393,7 +393,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "latency": "99ms",
         "priority": "high",
         "time_constraints": {
@@ -422,7 +422,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "priority": "high"
       },
       "ACL": {},
@@ -446,7 +446,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "12ms",
         "priority": "medium",
         "time_constraints": {
@@ -475,7 +475,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "18ms",
         "priority": "medium",
         "time_constraints": {
@@ -519,7 +519,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "85ms",
         "jitter": "100ms",
         "priority": "medium",
@@ -549,7 +549,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "latency": "51ms",
         "priority": "high",
         "time_constraints": {
@@ -578,7 +578,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "16ms",
         "bandwidth": "70Mbps",
         "priority": "high"
@@ -595,7 +595,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "12:00:00",
@@ -632,7 +632,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "50ms",
         "jitter": "5ms",
         "priority": "high"
@@ -649,7 +649,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "latency": "50ms",
         "bandwidth": "80Mbps",
         "priority": "high",
@@ -671,7 +671,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "AR Medical Assistance",
-        "category": "video",
+        "protocol": "video",
         "latency": "85ms",
         "priority": "high",
         "time_constraints": {
@@ -709,7 +709,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "46ms",
         "priority": "high",
         "time_constraints": {
@@ -739,7 +739,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Transactions",
-        "category": "web",
+        "protocol": "http",
         "latency": "33ms",
         "priority": "high",
         "time_constraints": {
@@ -768,7 +768,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "priority": "high",
         "time_constraints": {
           "start": "09:00:00",
@@ -805,7 +805,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Digital Publishing",
-        "category": "web",
+        "protocol": "http",
         "latency": "24ms",
         "jitter": "6ms",
         "priority": "high"
@@ -822,7 +822,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "74ms",
         "priority": "high",
         "time_constraints": {
@@ -860,7 +860,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "64ms",
         "jitter": "30ms",
         "priority": "low",
@@ -890,7 +890,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "69ms",
         "bandwidth": "1Gbps",
         "priority": "medium"
@@ -907,7 +907,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "77ms",
         "priority": "high",
         "time_constraints": {
@@ -937,7 +937,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "jitter": "100ms",
         "priority": "low"
       },
@@ -962,7 +962,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "high",
         "time_constraints": {
           "start": "07:00:00",
@@ -999,7 +999,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "10ms",
         "priority": "high",
         "time_constraints": {
@@ -1020,7 +1020,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Cloud Computing",
-        "category": "web",
+        "protocol": "http",
         "priority": "high",
         "time_constraints": {
           "start": "00:00:00",
@@ -1057,7 +1057,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "12:00:00",
@@ -1094,7 +1094,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Lab Courses",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "500Mbps",
         "priority": "high"
       },
@@ -1119,7 +1119,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "51ms",
         "priority": "medium",
         "time_constraints": {
@@ -1148,7 +1148,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "59ms",
         "priority": "medium",
         "time_constraints": {
@@ -1200,7 +1200,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "bandwidth": "90Mbps",
         "priority": "high",
         "time_constraints": {
@@ -1221,7 +1221,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "06:00:00",
@@ -1258,7 +1258,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "00:00:00",
@@ -1295,7 +1295,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "63ms",
         "priority": "medium",
         "time_constraints": {
@@ -1347,7 +1347,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "88ms",
         "jitter": "80ms",
         "priority": "low",
@@ -1377,7 +1377,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "bandwidth": "1Gbps",
         "priority": "high",
         "time_constraints": {
@@ -1415,7 +1415,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "jitter": "40ms",
         "priority": "low"
       },
@@ -1440,7 +1440,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "AR Medical Assistance",
-        "category": "video",
+        "protocol": "video",
         "latency": "25ms",
         "priority": "high",
         "time_constraints": {
@@ -1478,7 +1478,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "40ms",
         "priority": "high"
       },
@@ -1503,7 +1503,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Cloud Computing",
-        "category": "web",
+        "protocol": "http",
         "latency": "58ms",
         "jitter": "8ms",
         "priority": "high"
@@ -1520,7 +1520,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "00:00:00",
@@ -1557,7 +1557,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "87ms",
         "priority": "medium",
         "time_constraints": {
@@ -1578,7 +1578,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "priority": "high"
       },
       "ACL": {},
@@ -1602,7 +1602,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "latency": "82ms",
         "priority": "high",
         "time_constraints": {
@@ -1631,7 +1631,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -1660,7 +1660,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "latency": "41ms",
         "priority": "high",
         "time_constraints": {
@@ -1689,7 +1689,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "latency": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -1733,7 +1733,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Cloud Computing",
-        "category": "web",
+        "protocol": "http",
         "latency": "72ms",
         "jitter": "90ms",
         "priority": "high"
@@ -1750,7 +1750,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "priority": "high",
         "time_constraints": {
           "start": "10:00:00",
@@ -1787,7 +1787,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "File Transfer",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "31ms",
         "priority": "medium",
         "time_constraints": {
@@ -1825,7 +1825,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "4ms",
         "priority": "high",
         "time_constraints": {
@@ -1854,7 +1854,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "bandwidth": "10Gbps",
         "priority": "high",
         "time_constraints": {
@@ -1875,7 +1875,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "84ms",
         "priority": "medium",
         "time_constraints": {
@@ -1904,7 +1904,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Transactions",
-        "category": "web",
+        "protocol": "http",
         "latency": "16ms",
         "priority": "high",
         "time_constraints": {
@@ -1925,7 +1925,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "48ms",
         "bandwidth": "500Mbps",
         "priority": "medium"
@@ -1942,7 +1942,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "18ms",
         "priority": "medium",
         "time_constraints": {
@@ -1986,7 +1986,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "45ms",
         "priority": "high",
         "time_constraints": {
@@ -2016,7 +2016,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "80ms",
         "priority": "medium",
         "time_constraints": {
@@ -2045,7 +2045,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "95ms",
         "bandwidth": "10Gbps",
         "priority": "high"
@@ -2062,7 +2062,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "71ms",
         "priority": "medium",
         "time_constraints": {
@@ -2091,7 +2091,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "89ms",
         "bandwidth": "20Mbps",
         "priority": "medium"
@@ -2108,7 +2108,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "68ms",
         "bandwidth": "300Mbps",
         "priority": "medium"
@@ -2125,7 +2125,7 @@
       "timestamp": "2025-07-12T15:03:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "62ms",
         "jitter": "2ms",
         "priority": "low",
@@ -2155,7 +2155,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "VPN",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -2199,7 +2199,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "Database",
-        "category": "database",
+        "protocol": "db",
         "bandwidth": "2Gbps",
         "priority": "high"
       },
@@ -2224,7 +2224,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "20ms",
         "priority": "medium",
         "time_constraints": {
@@ -2268,7 +2268,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "jitter": "30ms",
         "bandwidth": "50Mbps",
         "priority": "high",
@@ -2298,7 +2298,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "00:00:00",
@@ -2335,7 +2335,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "60ms",
         "bandwidth": "1Gbps",
         "priority": "medium",
@@ -2365,7 +2365,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "Video Streaming",
-        "category": "video",
+        "protocol": "video",
         "latency": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -2409,7 +2409,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "Database",
-        "category": "database",
+        "protocol": "db",
         "latency": "30ms",
         "bandwidth": "5Gbps",
         "priority": "high"
@@ -2426,7 +2426,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "20ms",
         "priority": "high",
         "time_constraints": {
@@ -2447,7 +2447,7 @@
       "timestamp": "2025-07-13T07:42:00+05:30",
       "QOS": {
         "application": "Remote Desktop",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "40ms",
         "priority": "high"
       },
@@ -2472,7 +2472,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "35ms",
         "bandwidth": "3Gbps",
         "priority": "high"
@@ -2489,7 +2489,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "94ms",
         "bandwidth": "2Gbps",
         "priority": "medium"
@@ -2506,7 +2506,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "40ms",
         "priority": "medium",
         "time_constraints": {
@@ -2550,7 +2550,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "3Gbps",
         "priority": "high"
       },
@@ -2575,7 +2575,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "6ms",
         "jitter": "4ms",
         "priority": "high",
@@ -2605,7 +2605,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "49ms",
         "bandwidth": "70Mbps",
         "priority": "medium"
@@ -2622,7 +2622,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "77ms",
         "bandwidth": "10Mbps",
         "priority": "medium"
@@ -2639,7 +2639,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -2683,7 +2683,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "81ms",
         "priority": "medium",
         "time_constraints": {
@@ -2712,7 +2712,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "web",
+        "protocol": "http",
         "latency": "17ms",
         "priority": "high",
         "time_constraints": {
@@ -2741,7 +2741,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "45ms",
         "priority": "low",
         "time_constraints": {
@@ -2779,7 +2779,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "priority": "high",
         "time_constraints": {
           "start": "07:00:00",
@@ -2816,7 +2816,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "13ms",
         "jitter": "6ms",
         "priority": "high",
@@ -2846,7 +2846,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "86ms",
         "jitter": "100ms",
         "priority": "high",
@@ -2876,7 +2876,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "voice",
+        "protocol": "voice",
         "jitter": "2ms",
         "priority": "high"
       },
@@ -2901,7 +2901,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "latency": "63ms",
         "priority": "high",
         "time_constraints": {
@@ -2930,7 +2930,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "File Transfer",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "50ms",
         "priority": "medium",
         "time_constraints": {
@@ -2974,7 +2974,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "30ms",
         "bandwidth": "100Mbps",
         "priority": "high"
@@ -2991,7 +2991,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "91ms",
         "priority": "medium",
         "time_constraints": {
@@ -3035,7 +3035,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "priority": "high",
         "time_constraints": {
           "start": "06:00:00",
@@ -3072,7 +3072,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "95ms",
         "jitter": "7ms",
         "priority": "low",
@@ -3102,7 +3102,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Transactions",
-        "category": "web",
+        "protocol": "http",
         "latency": "86ms",
         "jitter": "60ms",
         "priority": "high"
@@ -3119,7 +3119,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "jitter": "60ms",
         "priority": "high"
       },
@@ -3144,7 +3144,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "62ms",
         "priority": "high",
         "time_constraints": {
@@ -3174,7 +3174,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "latency": "72ms",
         "priority": "high",
         "time_constraints": {
@@ -3212,7 +3212,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "17ms",
         "bandwidth": "90Mbps",
         "priority": "high"
@@ -3229,7 +3229,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "9ms",
         "priority": "medium",
         "time_constraints": {
@@ -3273,7 +3273,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Transactions",
-        "category": "web",
+        "protocol": "http",
         "latency": "52ms",
         "priority": "high",
         "time_constraints": {
@@ -3294,7 +3294,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "20Mbps",
         "priority": "high",
         "time_constraints": {
@@ -3315,7 +3315,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "latency": "93ms",
         "jitter": "70ms",
         "priority": "high"
@@ -3332,7 +3332,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "web",
+        "protocol": "http",
         "latency": "73ms",
         "bandwidth": "100Mbps",
         "priority": "medium"
@@ -3349,7 +3349,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "latency": "75ms",
         "priority": "high",
         "time_constraints": {
@@ -3378,7 +3378,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "58ms",
         "bandwidth": "80Mbps",
         "priority": "high"
@@ -3395,7 +3395,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "latency": "37ms",
         "priority": "high",
         "time_constraints": {
@@ -3424,7 +3424,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "priority": "high "
       },
       "ACL": {},
@@ -3448,7 +3448,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "voice",
+        "protocol": "voice",
         "latency": "31ms",
         "priority": "high",
         "time_constraints": {
@@ -3469,7 +3469,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "500Mbps",
         "priority": "high",
         "time_constraints": {
@@ -3490,7 +3490,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "jitter": "2ms",
         "priority": "high"
       },
@@ -3515,7 +3515,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "50Mbps",
         "priority": "high",
         "time_constraints": {
@@ -3536,7 +3536,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -3565,7 +3565,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Lab Courses",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "200Mbps",
         "priority": "high"
       },
@@ -3581,7 +3581,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "06:00:00",
@@ -3618,7 +3618,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "jitter": "60ms",
         "priority": "high"
       },
@@ -3643,7 +3643,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "6ms",
         "priority": "high",
         "time_constraints": {
@@ -3672,7 +3672,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "31ms",
         "bandwidth": "10Mbps",
         "priority": "high"
@@ -3689,7 +3689,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "web",
+        "protocol": "http",
         "latency": "92ms",
         "bandwidth": "1Gbps",
         "priority": "low"
@@ -3706,7 +3706,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "web",
+        "protocol": "http",
         "latency": "50ms",
         "bandwidth": "1Gbps",
         "priority": "low"
@@ -3723,7 +3723,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Cloud Computing",
-        "category": "database",
+        "protocol": "db",
         "latency": "75ms",
         "jitter": "9ms",
         "priority": "high"
@@ -3740,7 +3740,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "62ms",
         "priority": "medium",
         "time_constraints": {
@@ -3778,7 +3778,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "30Mbps",
         "priority": "high",
         "time_constraints": {
@@ -3799,7 +3799,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "priority": "high"
       },
       "ACL": {},
@@ -3823,7 +3823,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "13ms",
         "bandwidth": "50Mbps",
         "priority": "medium"
@@ -3840,7 +3840,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "latency": "59ms",
         "priority": "high",
         "time_constraints": {
@@ -3861,7 +3861,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Lab Courses",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "300Mbps",
         "priority": "high"
       },
@@ -3886,7 +3886,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "latency": "7ms",
         "priority": "high",
         "time_constraints": {
@@ -3915,7 +3915,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Cloud Computing",
-        "category": "database",
+        "protocol": "db",
         "latency": "48ms",
         "priority": "high",
         "time_constraints": {
@@ -3944,7 +3944,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Cloud Computing",
-        "category": "database",
+        "protocol": "db",
         "latency": "49ms",
         "priority": "high",
         "time_constraints": {
@@ -3965,7 +3965,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "87ms",
         "jitter": "10ms",
         "priority": "high",
@@ -3995,7 +3995,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "1ms",
         "priority": "high",
         "time_constraints": {
@@ -4024,7 +4024,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "500Mbps",
         "priority": "high"
       },
@@ -4049,7 +4049,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "priority": "high",
         "time_constraints": {
           "start": "00:00:00",
@@ -4086,7 +4086,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "priority": "high",
         "time_constraints": {
           "start": "12:00:00",
@@ -4123,7 +4123,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "58ms",
         "priority": "high",
         "time_constraints": {
@@ -4153,7 +4153,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "27ms",
         "bandwidth": "3Gbps",
         "priority": "high"
@@ -4170,7 +4170,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "42ms",
         "jitter": "80ms",
         "priority": "high",
@@ -4200,7 +4200,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "75ms",
         "priority": "medium",
         "time_constraints": {
@@ -4229,7 +4229,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "video",
+        "protocol": "video",
         "latency": "20ms",
         "priority": "high",
         "time_constraints": {
@@ -4267,7 +4267,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "latency": "5ms",
         "priority": "high",
         "time_constraints": {
@@ -4288,7 +4288,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "51ms",
         "priority": "high",
         "time_constraints": {
@@ -4309,7 +4309,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "69ms",
         "priority": "high",
         "time_constraints": {
@@ -4339,7 +4339,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "64ms",
         "priority": "medium",
         "time_constraints": {
@@ -4383,7 +4383,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "latency": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -4427,7 +4427,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Cloud Computing",
-        "category": "database",
+        "protocol": "db",
         "latency": "98ms",
         "priority": "high",
         "time_constraints": {
@@ -4448,7 +4448,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "71ms",
         "jitter": "8ms",
         "priority": "high"
@@ -4465,7 +4465,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "AR Medical Assistance",
-        "category": "video",
+        "protocol": "video",
         "latency": "69ms",
         "priority": "high",
         "time_constraints": {
@@ -4503,7 +4503,7 @@
       "timestamp": "2025-07-13T11:12:00+05:30",
       "QOS": {
         "application": "Online Transactions",
-        "category": "web",
+        "protocol": "http",
         "jitter": "20ms",
         "priority": "high"
       },
@@ -4528,7 +4528,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "24ms",
         "jitter": "80ms",
         "priority": "high",
@@ -4558,7 +4558,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -4587,7 +4587,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "34ms",
         "jitter": "80ms",
         "priority": "medium",
@@ -4617,7 +4617,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "19ms",
         "jitter": "6ms",
         "priority": "high",
@@ -4647,7 +4647,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "83ms",
         "priority": "medium",
         "time_constraints": {
@@ -4676,7 +4676,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "96ms",
         "bandwidth": "5Gbps",
         "priority": "high"
@@ -4693,7 +4693,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "web",
+        "protocol": "http",
         "latency": "73ms",
         "bandwidth": "70Mbps",
         "priority": "low"
@@ -4710,7 +4710,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "82ms",
         "bandwidth": "50Mbps",
         "priority": "medium"
@@ -4727,7 +4727,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "32ms",
         "priority": "medium",
         "time_constraints": {
@@ -4756,7 +4756,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "07:00:00",
@@ -4793,7 +4793,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "68ms",
         "jitter": "1ms",
         "priority": "high",
@@ -4823,7 +4823,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "30ms",
         "jitter": "6ms",
         "priority": "high",
@@ -4853,7 +4853,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Lab Courses",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "1Gbps",
         "priority": "high"
       },
@@ -4878,7 +4878,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "29ms",
         "priority": "medium",
         "time_constraints": {
@@ -4922,7 +4922,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "26ms",
         "jitter": "4ms",
         "priority": "high",
@@ -4952,7 +4952,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "73ms",
         "jitter": "20ms",
         "priority": "high",
@@ -4982,7 +4982,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "20Mbps",
         "priority": "high"
       },
@@ -5007,7 +5007,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "08:00:00",
@@ -5044,7 +5044,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "94ms",
         "priority": "medium",
         "time_constraints": {
@@ -5088,7 +5088,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "40ms",
         "priority": "medium",
         "time_constraints": {
@@ -5132,7 +5132,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "73ms",
         "priority": "medium",
         "time_constraints": {
@@ -5176,7 +5176,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "61ms",
         "bandwidth": "300Mbps",
         "priority": "high"
@@ -5193,7 +5193,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "14ms",
         "priority": "medium",
         "time_constraints": {
@@ -5222,7 +5222,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "26ms",
         "bandwidth": "5Gbps",
         "priority": "low"
@@ -5239,7 +5239,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "latency": "37ms",
         "priority": "high",
         "time_constraints": {
@@ -5260,7 +5260,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "medium",
         "time_constraints": {
           "start": "11:00:00",
@@ -5297,7 +5297,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "latency": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -5341,7 +5341,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "latency": "58ms",
         "priority": "high",
         "time_constraints": {
@@ -5370,7 +5370,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "1ms",
         "priority": "high",
         "time_constraints": {
@@ -5399,7 +5399,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Lab Courses",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "5Gbps",
         "priority": "high"
       },
@@ -5424,7 +5424,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "7ms",
         "priority": "medium",
         "time_constraints": {
@@ -5453,7 +5453,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "85ms",
         "bandwidth": "3Gbps",
         "priority": "medium"
@@ -5470,7 +5470,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "video",
+        "protocol": "video",
         "latency": "100ms",
         "jitter": "80ms",
         "priority": "high"
@@ -5487,7 +5487,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "61ms",
         "bandwidth": "200Mbps",
         "priority": "high"
@@ -5504,7 +5504,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "17ms",
         "bandwidth": "90Mbps",
         "priority": "medium"
@@ -5521,7 +5521,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "priority": "high",
         "time_constraints": {
           "start": "00:00:00",
@@ -5558,7 +5558,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "video",
+        "protocol": "video",
         "latency": "72ms",
         "priority": "high",
         "time_constraints": {
@@ -5587,7 +5587,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "high",
         "time_constraints": {
           "start": "07:00:00",
@@ -5624,7 +5624,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "82ms",
         "jitter": "7ms",
         "priority": "medium"
@@ -5641,7 +5641,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "File Transfer",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "32ms",
         "priority": "medium",
         "time_constraints": {
@@ -5670,7 +5670,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "86ms",
         "priority": "high",
         "time_constraints": {
@@ -5700,7 +5700,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "15ms",
         "bandwidth": "60Mbps",
         "priority": "high"
@@ -5717,7 +5717,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "82ms",
         "jitter": "1ms",
         "priority": "high"
@@ -5734,7 +5734,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "voice",
+        "protocol": "voice",
         "latency": "57ms",
         "priority": "high",
         "time_constraints": {
@@ -5755,7 +5755,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Digital Publishing",
-        "category": "web",
+        "protocol": "http",
         "latency": "30ms",
         "priority": "medium",
         "time_constraints": {
@@ -5793,7 +5793,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "voice",
+        "protocol": "voice",
         "jitter": "50ms",
         "priority": "high"
       },
@@ -5818,7 +5818,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "latency": "41ms",
         "priority": "high",
         "time_constraints": {
@@ -5856,7 +5856,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Transactions",
-        "category": "web",
+        "protocol": "http",
         "jitter": "4ms",
         "priority": "high"
       },
@@ -5881,7 +5881,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "gaming",
+        "protocol": "udp",
         "latency": "66ms",
         "priority": "high",
         "time_constraints": {
@@ -5910,7 +5910,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Lab Courses",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "60Mbps",
         "priority": "high"
       },
@@ -5935,7 +5935,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "high",
         "time_constraints": {
           "start": "12:00:00",
@@ -5972,7 +5972,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "65ms",
         "jitter": "2ms",
         "priority": "high",
@@ -6002,7 +6002,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "priority": "high",
         "time_constraints": {
           "start": "06:00:00",
@@ -6039,7 +6039,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "priority": "high"
       },
       "ACL": {},
@@ -6063,7 +6063,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Transactions",
-        "category": "web",
+        "protocol": "http",
         "latency": "50ms",
         "priority": "high",
         "time_constraints": {
@@ -6084,7 +6084,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "82ms",
         "bandwidth": "2Gbps",
         "priority": "medium"
@@ -6101,7 +6101,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "latency": "50ms",
         "priority": "low",
         "time_constraints": {
@@ -6145,7 +6145,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "32ms",
         "priority": "medium",
         "time_constraints": {
@@ -6189,7 +6189,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "75ms",
         "bandwidth": "20Mbps",
         "priority": "high"
@@ -6206,7 +6206,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Digital Publishing",
-        "category": "web",
+        "protocol": "http",
         "latency": "35ms",
         "jitter": "5ms",
         "priority": "medium"
@@ -6223,7 +6223,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "85ms",
         "priority": "medium",
         "time_constraints": {
@@ -6252,7 +6252,7 @@
       "timestamp": "2025-07-13T11:21:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "video",
+        "protocol": "video",
         "latency": "45ms",
         "priority": "high",
         "time_constraints": {
@@ -6290,7 +6290,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "latency": "17ms",
         "priority": "medium",
         "time_constraints": {
@@ -6328,7 +6328,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "11:00:00",
@@ -6365,7 +6365,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "latency": "12ms",
         "priority": "high",
         "time_constraints": {
@@ -6386,7 +6386,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "71ms",
         "priority": "high",
         "time_constraints": {
@@ -6424,7 +6424,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "88ms",
         "bandwidth": "30Mbps",
         "priority": "high"
@@ -6441,7 +6441,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "67ms",
         "priority": "medium",
         "time_constraints": {
@@ -6470,7 +6470,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "75ms",
         "priority": "medium",
         "time_constraints": {
@@ -6514,7 +6514,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "93ms",
         "jitter": "7ms",
         "priority": "high",
@@ -6544,7 +6544,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "57ms",
         "priority": "high",
         "time_constraints": {
@@ -6573,7 +6573,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "69ms",
         "priority": "high",
         "time_constraints": {
@@ -6603,7 +6603,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "20Mbps",
         "priority": "high",
         "time_constraints": {
@@ -6624,7 +6624,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "82ms",
         "jitter": "10ms",
         "priority": "high",
@@ -6654,7 +6654,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "web",
+        "protocol": "http",
         "latency": "100ms",
         "bandwidth": "40Mbps",
         "priority": "medium"
@@ -6671,7 +6671,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "medium",
         "time_constraints": {
           "start": "07:00:00",
@@ -6708,7 +6708,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "20ms",
         "jitter": "80ms",
         "priority": "high",
@@ -6738,7 +6738,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "32ms",
         "bandwidth": "10Gbps",
         "priority": "medium"
@@ -6755,7 +6755,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "web",
+        "protocol": "http",
         "latency": "76ms",
         "bandwidth": "70Mbps",
         "priority": "low"
@@ -6772,7 +6772,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "89ms",
         "bandwidth": "10Mbps",
         "priority": "medium"
@@ -6789,7 +6789,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "72ms",
         "priority": "low"
       },
@@ -6816,7 +6816,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "voice",
+        "protocol": "voice",
         "latency": "75ms",
         "priority": "high"
       },
@@ -6832,7 +6832,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low"
       },
       "ACL": {},
@@ -6856,7 +6856,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "20Mbps",
         "priority": "high"
       },
@@ -6881,7 +6881,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "76ms",
         "priority": "medium",
         "time_constraints": {
@@ -6910,7 +6910,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Lab Courses",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "3Gbps",
         "priority": "high"
       },
@@ -6935,7 +6935,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "10ms",
         "priority": "high",
         "time_constraints": {
@@ -6965,7 +6965,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "56ms",
         "priority": "high",
         "time_constraints": {
@@ -6995,7 +6995,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "latency": "52ms",
         "jitter": "3ms",
         "priority": "high"
@@ -7012,7 +7012,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "12:00:00",
@@ -7049,7 +7049,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Big Data Processing",
-        "category": "database",
+        "protocol": "db",
         "latency": "45ms",
         "jitter": "4ms",
         "priority": "high",
@@ -7079,7 +7079,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "latency": "88ms",
         "priority": "high",
         "time_constraints": {
@@ -7108,7 +7108,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "50ms",
         "priority": "medium",
         "time_constraints": {
@@ -7137,7 +7137,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "latency": "34ms",
         "priority": "low",
         "time_constraints": {
@@ -7166,7 +7166,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low"
       },
       "ACL": {},
@@ -7190,7 +7190,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "latency": "28ms",
         "priority": "low"
       },
@@ -7217,7 +7217,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "31ms",
         "priority": "low"
       },
@@ -7233,7 +7233,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Digital Publishing",
-        "category": "web",
+        "protocol": "http",
         "latency": "77ms",
         "jitter": "5ms",
         "priority": "medium"
@@ -7250,7 +7250,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "priority": "medium",
         "time_constraints": {
           "start": "00:00:00",
@@ -7287,7 +7287,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "network_utilization": "93%",
         "priority": "high",
         "time_constraints": {
@@ -7316,7 +7316,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "priority": "high",
         "time_constraints": {
           "start": "06:00:00",
@@ -7353,7 +7353,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "18ms",
         "priority": "high",
         "time_constraints": {
@@ -7391,7 +7391,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "network_utilization": "94%",
         "priority": "high",
         "time_constraints": {
@@ -7420,7 +7420,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "priority": "high"
       },
       "ACL": {},
@@ -7444,7 +7444,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "11ms",
         "priority": "medium",
         "time_constraints": {
@@ -7488,7 +7488,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "82ms",
         "priority": "low",
         "time_constraints": {
@@ -7526,7 +7526,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Lab Courses",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "500Mbps",
         "priority": "high"
       },
@@ -7551,7 +7551,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "07:00:00",
@@ -7588,7 +7588,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "30Mbps",
         "priority": "high"
       },
@@ -7613,7 +7613,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Digital Publishing",
-        "category": "web",
+        "protocol": "http",
         "latency": "36ms",
         "priority": "medium",
         "time_constraints": {
@@ -7651,7 +7651,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "high",
         "time_constraints": {
           "start": "09:00:00",
@@ -7688,7 +7688,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "65ms",
         "bandwidth": "3Gbps",
         "priority": "high"
@@ -7705,7 +7705,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "83ms",
         "jitter": "30ms",
         "priority": "high"
@@ -7722,7 +7722,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "71ms",
         "priority": "medium",
         "time_constraints": {
@@ -7766,7 +7766,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "69ms",
         "priority": "medium",
         "time_constraints": {
@@ -7795,7 +7795,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "65ms",
         "priority": "high",
         "time_constraints": {
@@ -7825,7 +7825,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "37ms",
         "bandwidth": "60Mbps",
         "priority": "medium"
@@ -7842,7 +7842,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "latency": "93ms",
         "bandwidth": "300Mbps",
         "priority": "medium"
@@ -7859,7 +7859,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Digital Publishing",
-        "category": "web",
+        "protocol": "http",
         "jitter": "5ms",
         "priority": "medium"
       },
@@ -7884,7 +7884,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "20Mbps",
         "priority": "high",
         "time_constraints": {
@@ -7905,7 +7905,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Transactions",
-        "category": "web",
+        "protocol": "http",
         "priority": "high"
       },
       "ACL": {},
@@ -7929,7 +7929,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Digital Publishing",
-        "category": "web",
+        "protocol": "http",
         "priority": "medium"
       },
       "ACL": {},
@@ -7953,7 +7953,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "video",
+        "protocol": "video",
         "latency": "55ms",
         "priority": "high",
         "time_constraints": {
@@ -7982,7 +7982,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "64ms",
         "priority": "high",
         "time_constraints": {
@@ -8012,7 +8012,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "90ms",
         "priority": "high",
         "time_constraints": {
@@ -8041,7 +8041,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "98ms",
         "priority": "medium",
         "time_constraints": {
@@ -8085,7 +8085,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "91ms",
         "priority": "high",
         "time_constraints": {
@@ -8115,7 +8115,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "70Mbps",
         "priority": "high",
         "time_constraints": {
@@ -8136,7 +8136,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "82ms",
         "priority": "high",
         "time_constraints": {
@@ -8165,7 +8165,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "08:00:00",
@@ -8202,7 +8202,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "61ms",
         "jitter": "5ms",
         "priority": "high"
@@ -8219,7 +8219,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low",
         "time_constraints": {
           "start": "11:00:00",
@@ -8256,7 +8256,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "jitter": "3ms",
         "priority": "high",
         "time_constraints": {
@@ -8285,7 +8285,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Cloud Computing",
-        "category": "database",
+        "protocol": "db",
         "latency": "20ms",
         "jitter": "6ms",
         "priority": "high"
@@ -8302,7 +8302,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Online Reading",
-        "category": "web",
+        "protocol": "http",
         "latency": "50ms",
         "priority": "medium",
         "time_constraints": {
@@ -8331,7 +8331,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "Cloud Gaming",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "40Mbps",
         "priority": "high",
         "time_constraints": {
@@ -8352,7 +8352,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "latency": "56ms",
         "priority": "high",
         "time_constraints": {
@@ -8381,7 +8381,7 @@
       "timestamp": "2025-07-13T14:14:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "10Gbps",
         "priority": "high"
       },
@@ -8406,7 +8406,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "File Transfer",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "priority": "medium"
       },
       "ACL": {
@@ -8454,7 +8454,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "4ms",
         "priority": "high"
       },
@@ -8512,7 +8512,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "bandwidth": "1Gbps",
         "priority": "medium"
       },
@@ -8539,7 +8539,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "latency": "10s",
         "bandwidth": "5Mbps",
         "priority": "low"
@@ -8567,7 +8567,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "64kbps",
         "latency": "90ms",
         "jitter": "80ms",
@@ -8585,7 +8585,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "100Mbps",
         "latency": "80ms",
         "priority": "high"
@@ -8613,7 +8613,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "9ms",
         "bandwidth": "20Mbps",
         "priority": "medium",
@@ -8658,7 +8658,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "40Mbps",
         "latency": "7ms",
         "priority": "high"
@@ -8675,7 +8675,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "priority": "high"
       },
       "ACL": {
@@ -8701,7 +8701,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "5Mbps",
         "latency": "120ms",
         "priority": "high"
@@ -8718,7 +8718,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Security",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "40Mbps",
         "latency": "9ms",
         "priority": "low"
@@ -8747,7 +8747,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "5Mbps",
         "latency": "120ms",
         "priority": "high"
@@ -8784,7 +8784,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Instant Messaging",
-        "category": "web",
+        "protocol": "http",
         "priority": "high"
       },
       "ACL": {
@@ -8810,7 +8810,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "180ms",
         "jitter": "60ms",
         "priority": "high"
@@ -8827,7 +8827,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "500Mbps",
         "priority": "high"
       },
@@ -8852,7 +8852,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "2Gbps",
         "priority": "low"
       },
@@ -8879,7 +8879,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Core Switch",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "3Gbps",
         "jitter": "100ms",
         "priority": "low"
@@ -8896,7 +8896,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "latency": "6ms",
         "jitter": "4ms",
         "priority": "high"
@@ -8935,7 +8935,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "90Mbps",
         "latency": "70ms",
         "priority": "high"
@@ -8963,7 +8963,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "90ms",
         "bandwidth": "2Gbps",
         "priority": "high"
@@ -8980,7 +8980,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VPN",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "60Mbps",
         "latency": "30ms",
         "priority": "low"
@@ -8997,7 +8997,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Telemedicine",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "20Mbps",
         "latency": "50ms",
         "priority": "high"
@@ -9014,7 +9014,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "File Transfer",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "priority": "medium"
       },
       "ACL": {
@@ -9041,7 +9041,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "4ms",
         "priority": "high"
       },
@@ -9077,7 +9077,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "latency": "11ms",
         "jitter": "7ms",
         "priority": "high"
@@ -9103,7 +9103,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "1Gbps",
         "priority": "low"
       },
@@ -9130,7 +9130,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "latency": "10000ms",
         "bandwidth": "5Mbps",
         "priority": "low"
@@ -9159,7 +9159,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Optimization",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "200Mbps",
         "priority": "low"
       },
@@ -9184,7 +9184,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "64kbps",
         "latency": "90ms",
         "jitter": "80ms",
@@ -9202,7 +9202,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "100Mbps",
         "latency": "80ms",
         "priority": "high"
@@ -9231,7 +9231,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "9ms",
         "bandwidth": "20Mbps",
         "priority": "medium",
@@ -9285,7 +9285,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "40Mbps",
         "latency": "7ms",
         "priority": "high"
@@ -9302,7 +9302,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "priority": "high"
       },
       "ACL": {
@@ -9328,7 +9328,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "5Mbps",
         "latency": "120ms",
         "priority": "high"
@@ -9345,7 +9345,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Security",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "40Mbps",
         "latency": "9ms",
         "priority": "low"
@@ -9374,7 +9374,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "5Mbps",
         "latency": "120ms",
         "priority": "high"
@@ -9411,7 +9411,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Core Switch",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "20Mbps",
         "jitter": "5ms",
         "priority": "low"
@@ -9428,7 +9428,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Monitoring",
-        "category": "remote_access",
+        "protocol": "ssh",
         "priority": "low"
       },
       "ACL": {},
@@ -9452,7 +9452,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "video",
+        "protocol": "video",
         "latency": "180ms",
         "jitter": "60ms",
         "priority": "high"
@@ -9469,7 +9469,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "500Mbps",
         "priority": "high"
       },
@@ -9494,7 +9494,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "2Gbps",
         "priority": "low"
       },
@@ -9521,7 +9521,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Core Switch",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "3Gbps",
         "jitter": "100ms",
         "priority": "low"
@@ -9538,7 +9538,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "latency": "6ms",
         "jitter": "4ms",
         "priority": "high"
@@ -9586,7 +9586,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "90Mbps",
         "latency": "70ms",
         "priority": "high"
@@ -9615,7 +9615,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "latency": "90ms",
         "bandwidth": "2Gbps",
         "priority": "high"
@@ -9632,7 +9632,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VPN",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "60Mbps",
         "latency": "30ms",
         "priority": "low"
@@ -9649,7 +9649,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Telemedicine",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "20Mbps",
         "latency": "50ms",
         "priority": "high"
@@ -9666,7 +9666,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Isolation",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "20Gbps",
         "priority": "high"
       },
@@ -9682,7 +9682,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "20Gbps",
         "priority": "high"
       },
@@ -9707,7 +9707,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "latency": "18ms",
         "jitter": "7ms",
         "priority": "high"
@@ -9733,7 +9733,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "50Mbps",
         "priority": "low"
       },
@@ -9760,7 +9760,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low"
       },
       "ACL": {
@@ -9786,7 +9786,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Security",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "80Mbps",
         "latency": "40ms",
         "priority": "low"
@@ -9815,7 +9815,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "CRM",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "20Mbps",
         "latency": "8000ms",
         "priority": "medium"
@@ -9832,7 +9832,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "CRM",
-        "category": "web",
+        "protocol": "http",
         "priority": "medium"
       },
       "ACL": {
@@ -9858,7 +9858,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Teaching Network",
-        "category": "remote_access",
+        "protocol": "ssh",
         "priority": "low",
         "time_constraints": {
           "start": "08:20:00",
@@ -9886,7 +9886,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "6000ms",
         "priority": "low"
       },
@@ -9914,7 +9914,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "1Gbps",
         "latency": "40ms",
         "priority": "high"
@@ -9931,7 +9931,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "3Gbps",
         "priority": "low",
         "time_constraints": {
@@ -9975,7 +9975,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "priority": "low"
       },
       "ACL": {
@@ -10001,7 +10001,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "3Gbps",
         "latency": "5ms",
         "priority": "high"
@@ -10030,7 +10030,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Teacher Network",
-        "category": "remote_access",
+        "protocol": "ssh",
         "priority": "low"
       },
       "ACL": {},
@@ -10045,7 +10045,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "80Mbps",
         "latency": "12ms",
         "priority": "high",
@@ -10099,7 +10099,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Telnet",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "10ms",
         "priority": "low"
       },
@@ -10126,7 +10126,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "latency": "150ms",
         "bandwidth": "5Gbps",
         "priority": "high"
@@ -10155,7 +10155,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Telnet",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "10ms",
         "priority": "low"
       },
@@ -10182,7 +10182,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Classroom Network",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "10Gbps",
         "priority": "low"
       },
@@ -10198,7 +10198,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "64kbps",
         "latency": "70ms",
         "jitter": "50ms",
@@ -10216,7 +10216,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "30Mbps",
         "latency": "1ms",
         "priority": "high"
@@ -10245,7 +10245,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Network Security",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "30Mbps",
         "latency": "50ms",
         "priority": "low"
@@ -10274,7 +10274,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Telnet",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "120ms",
         "priority": "low"
       },
@@ -10301,7 +10301,7 @@
       "timestamp": "2025-07-13T18:24:00+05:30",
       "QOS": {
         "application": "Instant Messaging",
-        "category": "web",
+        "protocol": "http",
         "latency": "100ms",
         "priority": "high"
       },
@@ -10329,7 +10329,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "priority": "low"
       },
       "ACL": {
@@ -10355,7 +10355,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "3Gbps",
         "latency": "100ms",
         "priority": "high"
@@ -10392,7 +10392,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "2Mbps",
         "latency": "35ms",
         "priority": "high"
@@ -10431,7 +10431,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "database",
+        "protocol": "db",
         "latency": "7ms",
         "jitter": "9ms",
         "priority": "high"
@@ -10457,7 +10457,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "database",
+        "protocol": "db",
         "bandwidth": "90Mbps",
         "latency": "18ms",
         "priority": "high",
@@ -10533,7 +10533,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "100Mbps",
         "latency": "30ms",
         "priority": "high"
@@ -10550,7 +10550,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Electronic Library",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "1Gbps",
         "latency": "150ms",
         "priority": "medium"
@@ -10567,7 +10567,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "bandwidth": "60Mbps",
         "latency": "2000ms",
         "priority": "low"
@@ -10595,7 +10595,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Electronic Library",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "10Gbps",
         "latency": "6ms",
         "priority": "medium"
@@ -10612,7 +10612,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "60Mbps",
         "latency": "6ms",
         "priority": "high"
@@ -10638,7 +10638,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Telnet",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "10ms",
         "priority": "low"
       },
@@ -10665,7 +10665,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Telnet",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "150ms",
         "priority": "low"
       },
@@ -10692,7 +10692,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "40Mbps",
         "priority": "low",
         "time_constraints": {
@@ -10736,7 +10736,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "20ms",
         "priority": "high"
       },
@@ -10816,7 +10816,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "latency": "15ms",
         "jitter": "2ms",
         "priority": "high"
@@ -10842,7 +10842,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Gold Level Service",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "30Mbps",
         "latency": "8ms",
         "priority": "high"
@@ -10859,7 +10859,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "10Gbps",
         "priority": "low"
       },
@@ -10886,7 +10886,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "latency": "12ms",
         "jitter": "5ms",
         "priority": "high"
@@ -10912,7 +10912,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "2Gbps",
         "latency": "90ms",
         "priority": "high"
@@ -10929,7 +10929,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Network Security",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "30Mbps",
         "latency": "35ms",
         "priority": "low"
@@ -10957,7 +10957,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Telemedicine",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "60Mbps",
         "latency": "115ms",
         "priority": "high"
@@ -10974,7 +10974,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "3000ms",
         "priority": "low"
       },
@@ -11011,7 +11011,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "4ms",
         "priority": "high"
       },
@@ -11047,7 +11047,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "bandwidth": "2Gbps",
         "latency": "4000ms",
         "priority": "low"
@@ -11076,7 +11076,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "60Mbps",
         "latency": "30ms",
         "priority": "high"
@@ -11113,7 +11113,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Data Analysis",
-        "category": "database",
+        "protocol": "db",
         "latency": "20ms",
         "priority": "high"
       },
@@ -11141,7 +11141,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "bandwidth": "3Gbps",
         "priority": "medium"
       },
@@ -11177,7 +11177,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Telemedicine",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "10Mbps",
         "latency": "60ms",
         "priority": "high"
@@ -11194,7 +11194,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "bandwidth": "5Mbps",
         "latency": "7000ms",
         "priority": "low"
@@ -11223,7 +11223,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "4000ms",
         "priority": "low"
       },
@@ -11260,7 +11260,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "1Gbps",
         "priority": "low"
       },
@@ -11287,7 +11287,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Telnet",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "7ms",
         "priority": "low"
       },
@@ -11336,7 +11336,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Network Security",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "5Mbps",
         "latency": "3ms",
         "priority": "low"
@@ -11387,7 +11387,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "latency": "9ms",
         "jitter": "2ms",
         "priority": "high"
@@ -11413,7 +11413,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Network Monitoring",
-        "category": "remote_access",
+        "protocol": "ssh",
         "priority": "low"
       },
       "ACL": {},
@@ -11439,7 +11439,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "70ms",
         "priority": "high"
       },
@@ -11475,7 +11475,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "bandwidth": "1Gbps",
         "latency": "9000ms",
         "priority": "low"
@@ -11504,7 +11504,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Telnet",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "120ms",
         "priority": "low"
       },
@@ -11531,7 +11531,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "70ms",
         "priority": "high"
       },
@@ -11567,7 +11567,7 @@
       "timestamp": "2025-07-13T18:37:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "message",
+        "protocol": "http",
         "bandwidth": "30Mbps",
         "latency": "25ms",
         "priority": "high"
@@ -11604,7 +11604,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "40Mbps",
         "latency": "15ms",
         "priority": "high"
@@ -11630,7 +11630,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "bandwidth": "300Mbps",
         "priority": "medium"
       },
@@ -11655,7 +11655,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Teaching Network",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "300Mbps",
         "priority": "low"
       },
@@ -11671,7 +11671,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Security",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "20Mbps",
         "latency": "20ms",
         "priority": "low"
@@ -11700,7 +11700,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Telemedicine",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "60Mbps",
         "latency": "70ms",
         "priority": "high"
@@ -11717,7 +11717,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "database",
+        "protocol": "db",
         "bandwidth": "60Mbps",
         "latency": "5ms",
         "priority": "high"
@@ -11765,7 +11765,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "500Mbps",
         "latency": "25ms",
         "priority": "high"
@@ -11782,7 +11782,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Customer Service",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "180ms",
         "priority": "low"
       },
@@ -11809,7 +11809,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Electronic Library",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "40Mbps",
         "latency": "60ms",
         "priority": "medium"
@@ -11826,7 +11826,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "80Mbps",
         "latency": "9ms",
         "priority": "high"
@@ -11843,7 +11843,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "2Gbps",
         "latency": "100ms",
         "priority": "low",
@@ -11889,7 +11889,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Optimization",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "80Mbps",
         "priority": "low"
       },
@@ -11914,7 +11914,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "60Mbps",
         "priority": "high"
       },
@@ -11961,7 +11961,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "5Gbps",
         "latency": "2ms",
         "priority": "high"
@@ -11978,7 +11978,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "video",
+        "protocol": "video",
         "priority": "high"
       },
       "ACL": {
@@ -12004,7 +12004,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Optimization",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "1Gbps",
         "priority": "low"
       },
@@ -12029,7 +12029,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Gold Level Service",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "20Mbps",
         "latency": "50ms",
         "priority": "high"
@@ -12057,7 +12057,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "70Mbps",
         "latency": "100ms",
         "priority": "medium"
@@ -12086,7 +12086,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "5Gbps",
         "priority": "high"
       },
@@ -12111,7 +12111,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "500Mbps",
         "priority": "low"
       },
@@ -12138,7 +12138,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "1Gbps",
         "latency": "100ms",
         "priority": "low",
@@ -12183,7 +12183,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "VOIP",
-        "category": "voice",
+        "protocol": "voice",
         "bandwidth": "64kbps",
         "latency": "4ms",
         "jitter": "30ms",
@@ -12201,7 +12201,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "IRC",
-        "category": "message",
+        "protocol": "http",
         "bandwidth": "3Gbps",
         "latency": "150ms",
         "priority": "high"
@@ -12282,7 +12282,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "CRM",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "3Gbps",
         "latency": "8000ms",
         "priority": "medium"
@@ -12299,7 +12299,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "bandwidth": "100Mbps",
         "latency": "10000ms",
         "priority": "low"
@@ -12327,7 +12327,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "E-commerce",
-        "category": "web",
+        "protocol": "http",
         "priority": "medium"
       },
       "ACL": {
@@ -12353,7 +12353,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Telemedicine",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "100Mbps",
         "latency": "60ms",
         "priority": "high"
@@ -12370,7 +12370,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "CRM",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "300Mbps",
         "latency": "8000ms",
         "priority": "medium"
@@ -12387,7 +12387,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Security",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "10Gbps",
         "latency": "7ms",
         "priority": "low",
@@ -12434,7 +12434,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "70Mbps",
         "latency": "30ms",
         "priority": "high"
@@ -12451,7 +12451,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "5Mbps",
         "latency": "30ms",
         "priority": "high"
@@ -12468,7 +12468,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "priority": "medium"
       },
       "ACL": {
@@ -12494,7 +12494,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "3Gbps",
         "latency": "2000ms",
         "priority": "high"
@@ -12511,7 +12511,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Path",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "30Mbps",
         "priority": "low"
       },
@@ -12538,7 +12538,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "90ms",
         "priority": "high"
       },
@@ -12574,7 +12574,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Customer Service",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "120ms",
         "priority": "low"
       },
@@ -12601,7 +12601,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "database",
+        "protocol": "db",
         "bandwidth": "200Mbps",
         "priority": "high"
       },
@@ -12626,7 +12626,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "web",
+        "protocol": "http",
         "latency": "25ms",
         "jitter": "1ms",
         "priority": "medium"
@@ -12643,7 +12643,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Transaction",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "500Mbps",
         "latency": "9ms",
         "priority": "medium"
@@ -12671,7 +12671,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "3000ms",
         "priority": "low"
       },
@@ -12706,7 +12706,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Instant Messaging",
-        "category": "message",
+        "protocol": "http",
         "bandwidth": "200Mbps",
         "latency": "5ms",
         "priority": "high"
@@ -12778,7 +12778,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "VPN",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "20Mbps",
         "latency": "9ms",
         "priority": "low"
@@ -12806,7 +12806,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Laboratory Network",
-        "category": "remote_access",
+        "protocol": "ssh",
         "priority": "low"
       },
       "ACL": {
@@ -12832,7 +12832,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "bandwidth": "100Mbps",
         "latency": "4000ms",
         "priority": "low"
@@ -12860,7 +12860,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Web Browsing",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "100Mbps",
         "latency": "25ms",
         "priority": "high"
@@ -12877,7 +12877,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "1Gbps",
         "latency": "3000ms",
         "priority": "high"
@@ -12894,7 +12894,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "bandwidth": "1Mbps",
         "latency": "5000ms",
         "priority": "low"
@@ -12922,7 +12922,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Classroom Network",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "300Mbps",
         "priority": "low"
       },
@@ -12938,7 +12938,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "1Gbps",
         "latency": "2000ms",
         "priority": "high"
@@ -12955,7 +12955,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "VR/AR",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "20Mbps",
         "latency": "7ms",
         "priority": "high"
@@ -12972,7 +12972,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "2Mbps",
         "latency": "4000ms",
         "priority": "high"
@@ -12989,7 +12989,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Gateway Isolation",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "70Mbps",
         "priority": "low"
       },
@@ -13005,7 +13005,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Email",
-        "category": "email",
+        "protocol": "mail",
         "latency": "10000ms",
         "priority": "low"
       },
@@ -13032,7 +13032,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Security Service",
-        "category": "web",
+        "protocol": "http",
         "priority": "medium",
         "time_constraints": {
           "start": "04:24:00",
@@ -13097,7 +13097,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "100Mbps",
         "latency": "5000ms",
         "priority": "high"
@@ -13136,7 +13136,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Gateway Isolation",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "500Mbps",
         "network_utilization": "97%",
         "priority": "low"
@@ -13153,7 +13153,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "LISTSERV",
-        "category": "email",
+        "protocol": "mail",
         "bandwidth": "2Mbps",
         "latency": "1000ms",
         "priority": "low"
@@ -13201,7 +13201,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "latency": "40ms",
         "priority": "high"
       },
@@ -13237,7 +13237,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Customer Service",
-        "category": "remote_access",
+        "protocol": "ssh",
         "latency": "200ms",
         "priority": "low"
       },
@@ -13264,7 +13264,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Telemedicine",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "20Gbps",
         "latency": "40ms",
         "priority": "high"
@@ -13281,7 +13281,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "CRM",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "100Mbps",
         "latency": "5000ms",
         "priority": "medium"
@@ -13298,7 +13298,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Network Security",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "1Gbps",
         "latency": "5ms",
         "priority": "low",
@@ -13345,7 +13345,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "100Mbps",
         "latency": "20ms",
         "priority": "high"
@@ -13362,7 +13362,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Video Conferencing",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "10Mbps",
         "latency": "20ms",
         "priority": "high"
@@ -13405,7 +13405,7 @@
       "timestamp": "2025-07-14T08:33:00+05:30",
       "QOS": {
         "application": "Streaming Media",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "5Gbps",
         "latency": "1000ms",
         "priority": "high"
@@ -13422,7 +13422,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Electronic Library",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "20Gbps",
         "latency": "20ms",
         "priority": "medium"
@@ -13439,7 +13439,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "50Mbps",
         "latency": "15ms",
         "priority": "medium"
@@ -13456,7 +13456,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "100Mbps",
         "latency": "10ms",
         "priority": "medium"
@@ -13473,7 +13473,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "200Mbps",
         "latency": "5ms",
         "priority": "medium"
@@ -13490,7 +13490,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Telemedicine",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "10Mbps",
         "latency": "2ms",
         "priority": "high"
@@ -13507,7 +13507,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "FTP",
-        "category": "file_transfer",
+        "protocol": "ftp",
         "bandwidth": "70Mbps",
         "priority": "medium"
       },
@@ -13543,7 +13543,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Industrial Internet",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "20Mbps",
         "latency": "11ms",
         "priority": "high"
@@ -13569,7 +13569,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Gateway Isolation",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "200Mbps",
         "network_utilization": "91%",
         "priority": "low"
@@ -13586,7 +13586,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Telemedicine",
-        "category": "video",
+        "protocol": "video",
         "bandwidth": "2Gbps",
         "latency": "10ms",
         "priority": "high"
@@ -13603,7 +13603,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Core Switch",
-        "category": "remote_access",
+        "protocol": "ssh",
         "bandwidth": "300Mbps",
         "jitter": "7ms",
         "priority": "low"
@@ -13620,7 +13620,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Gaming",
-        "category": "web",
+        "protocol": "http",
         "priority": "medium"
       },
       "ACL": {
@@ -13646,7 +13646,7 @@
       "timestamp": "2025-07-14T14:14:00+05:30",
       "QOS": {
         "application": "Online Education",
-        "category": "web",
+        "protocol": "http",
         "bandwidth": "150Mbps",
         "latency": "30ms",
         "priority": "medium"
