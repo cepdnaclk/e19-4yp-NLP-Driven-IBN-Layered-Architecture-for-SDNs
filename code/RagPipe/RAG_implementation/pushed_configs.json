@@ -1,0 +1,71 @@
+[
+  {
+    "intent": "Deploy low-latency online education services, with the firewall activated between 9:00 AM and 13:00 PM",
+    "config": {
+      "intent_id": "INTENT-001",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "Online Education",
+        "category": "video",
+        "latency": "50ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "09:00:00",
+          "end": "13:00:00",
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": null,
+            "destination_ip": null,
+            "source_port": null,
+            "destination_port": ["80", "443"],
+            "protocols": ["HTTP", "HTTPS"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-12T03:30:00Z",
+          "end": "2025-07-12T07:30:00Z"
+        }
+      },
+      "LOGS": {}
+    }
+  },
+  {
+    "intent": "Ensure that VoIP calls have bandwidth of at least 100Mbps, with a packet loss rate below 0.029%",
+    "config": {
+      "intent_id": "INTENT-002",
+      "user_role": "admin",
+      "timestamp": "2025-07-12T15:03:00+05:30",
+      "QOS": {
+        "application": "VOIP",
+        "category": "voice",
+        "bandwidth": "100Mbps",
+        "priority": "high"
+      },
+      "ACL": {},
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": null,
+            "ports": null,
+            "application": "VOIP",
+            "time_window": "24h"
+          }
+        ]
+      }
+    }
+  }
+]

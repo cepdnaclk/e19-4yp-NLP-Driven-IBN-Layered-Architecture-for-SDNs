@@ -2,20 +2,21 @@ import React, { useState, useEffect } from 'react';
 import ChatContainer from '../components/chat/ChatContainer';
 import IntentEditor from '../components/intent/IntentEditor';
 import ReviewModal from '../components/review/ReviewModal';
-import FeedbackForm from '../components/feedback/FeedbackForm';
+// import FeedbackForm from '../components/feedback/FeedbackForm';
 import { useChat } from '../contexts/ChatContext';
 import { useIntent } from '../contexts/IntentContext';
 import { useAuth } from '../contexts/AuthContext';
-import { authService } from '../services/authService';
+// import { authService } from '../services/authService';
 
 const ChatPage: React.FC = () => {
   const { currentSession, createSession } = useChat();
-  const { currentIntent, setCurrentIntent } = useIntent();
+  const { currentIntent } = useIntent();
   const { user } = useAuth();
   
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-  const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
+  // const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
   const [intentPushed, setIntentPushed] = useState(false);
+  const [intentPushError, setIntentPushError] = useState<string | null>(null);
   
   // Create a new chat session if none exists
   useEffect(() => {
@@ -35,22 +36,33 @@ const ChatPage: React.FC = () => {
   const handleIntentPushed = () => {
     setIsReviewModalOpen(false);
     setIntentPushed(true);
+    setIntentPushError(null); // Clear any previous errors
     // Hide success message after 3 seconds
     setTimeout(() => {
       setIntentPushed(false);
     }, 3000);
+    // setTimeout(() => {
+    //   setIsFeedbackModalOpen(true);
+    // }, 1000);
+  };
+
+  // Handle failed intent push
+  const handleIntentPushError = (error: string) => {
+    console.log('handleIntentPushError called with:', error);
+    setIntentPushError(error);
+    // Hide error message after 5 seconds
     setTimeout(() => {
-      setIsFeedbackModalOpen(true);
-    }, 1000);
+      setIntentPushError(null);
+    }, 5000);
   };
   
-  // Handle feedback submission
-  const handleFeedbackSubmit = async (rating: 'positive' | 'negative', comment: string) => {
-    if (currentIntent) {
-      await authService.submitFeedback(currentIntent.id, rating, comment);
-    }
-    setIsFeedbackModalOpen(false);
-  };
+  // Handle feedback submission (commented out for now)
+  // const handleFeedbackSubmit = async (rating: 'positive' | 'negative', comment: string) => {
+  //   if (currentIntent) {
+  //     await authService.submitFeedback(currentIntent.id, rating, comment);
+  //   }
+  //   setIsFeedbackModalOpen(false);
+  // };
 
   return (
     <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
@@ -131,12 +143,32 @@ const ChatPage: React.FC = () => {
       
       {/* Success Message */}
       {intentPushed && (
-        <div className="fixed bottom-4 right-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded shadow-md">
+        <div className="fixed bottom-4 right-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded shadow-lg z-50 transition-all duration-300">
           <div className="flex items-center">
-            <svg className="h- w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
             <p>Intent successfully pushed to the network!</p>
+          </div>
+        </div>
+      )}
+
+      {/* Error Message */}
+      {intentPushError !== null && (
+        <div className={`fixed ${intentPushed ? 'bottom-20' : 'bottom-4'} right-4 bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded shadow-lg z-50 transition-all duration-300`}>
+          <div className="flex items-center">
+            <svg className="h-6 w-6 text-red-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <p>Failed to push intent to the network: {intentPushError}</p>
+            <button 
+              onClick={() => setIntentPushError(null)}
+              className="ml-4 text-red-500 hover:text-red-700"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       )}
@@ -147,6 +179,7 @@ const ChatPage: React.FC = () => {
           isOpen={isReviewModalOpen} 
           onClose={() => setIsReviewModalOpen(false)}
           onPushSuccess={handleIntentPushed}
+          onPushError={handleIntentPushError}
         />
       )}
       

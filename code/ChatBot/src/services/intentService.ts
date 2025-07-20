@@ -24,6 +24,13 @@ const api = axios.create({
   },
 });
 
+const vectorApi = axios.create({
+  baseURL: import.meta.env.VITE_CHAT_API_URL || 'http://127.0.0.1:8003',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
 // Intent service for managing network intents
 export const intentService = {
   // Get an intent by ID
@@ -91,15 +98,14 @@ export const intentService = {
       // Get intent ID from configuration or generate a new one
       const intentId = parsedIntent.config?.intent_id || uuidv4();
       
-      // Prepare the request body in the format expected by the backend
-      const requestBody = {
-        intent: parsedIntent,
-        config: {
-          intent_id: intentId,
-          user_role: parsedIntent.config?.user_role || 'admin', // Use config user_role or default to admin
-          ...parsedIntent.config // Spread the existing config properties
-        }
-      };
+      // Ensure the intent has the required structure with intent_id in config
+      if (!parsedIntent.config) {
+        parsedIntent.config = {};
+      }
+      parsedIntent.config.intent_id = intentId;
+      
+      // Use the parsed intent directly as the request body
+      const requestBody = parsedIntent;
       
       console.log('Sending request to backend:', requestBody);
       console.log('API base URL:', api.defaults.baseURL);
@@ -111,6 +117,8 @@ export const intentService = {
       
       if (response.status !== 200) {
         throw new Error(`Backend API error: ${response.status} ${response.statusText}`);
+      }else if (response.status === 200) {
+        await intentService.storeIntentInVectorStore(requestBody);
       }
 
       const result = response.data;
@@ -141,7 +149,23 @@ export const intentService = {
       };
     }
   },
-  
+
+  storeIntentInVectorStore: async (intentData: any): Promise<void> => {
+    try {
+      
+      // Store the intent in the vector store
+      const response = await vectorApi.post('/store-intent', intentData);
+      if (response.status !== 200) {
+      console.error(`Failed to store intent: ${response.status} ${response.statusText}`);
+      }else{
+        console.log('Intent successfully stored in vector store:', response.data);
+      }
+
+    } catch (error) {
+      console.error('Error storing intent in vector store:', error);
+    }
+  },
+
   // Get intent history
   getIntentHistory: async (): Promise<IntentHistory[]> => {
     return [];
