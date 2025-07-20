@@ -23,8 +23,8 @@
           "action": "<ACTION>", // "allow", "deny" 
           "source_ip": "<SOURCE_IP>", // default=>null 0.0.0.0/0
           "destination_ip": "<DESTINATION_IP>", // default=>null 0.0.0.0/0
-          "source_port": "<SOURCE_PORT>", // default=> null
-          "destination_port": "<DESTINATION_PORT>", // default=> null
+          "source_port": "<SOURCE_PORT>", // default=> null or only one port
+          "destination_port": "<DESTINATION_PORT>", // default=> null or only one port
           "protocols": ["<ALLOW_PROTOCOL_1>", "<ALLOW_PROTOCOL_2>"] // default=>["HTTP"]; "FTP","SMTP"
         }
       ],
