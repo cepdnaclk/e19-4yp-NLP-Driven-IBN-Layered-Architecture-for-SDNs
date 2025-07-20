@@ -1,15 +1,16 @@
 import React from 'react';
 import { useIntent } from '../../contexts/IntentContext';
-import IntentDiff from '../intent/IntentDiff';
+// import IntentDiff from '../intent/IntentDiff';
 import intentService from '../../services/intentService';
 
 interface ReviewModalProps {
   isOpen: boolean;
   onClose: () => void;
   onPushSuccess: () => void;
+  onPushError?: (error: string) => void;
 }
 
-const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSuccess }) => {
+const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSuccess, onPushError }) => {
   const { currentIntent } = useIntent();
   const [activeTab, setActiveTab] = React.useState<'code' | 'form'>('code');
   const [isPushing, setIsPushing] = React.useState(false);
@@ -32,6 +33,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
 
   const handlePush = async () => {
     setIsPushing(true);
+    setSimulationResult(null); // Clear previous results
     
     try {
       const resp = await intentService.pushIntent(currentIntent.raw);
@@ -39,16 +41,28 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
       if (resp.success) {
         onPushSuccess();
       } else {
+        const errorMessage = resp.message || 'Failed to push intent to the network. Please try again.';
         setSimulationResult({
           success: false,
-          message: 'Failed to push intent to the network. Please try again.'
+          message: errorMessage
         });
+        // Call the error callback if provided
+        if (onPushError) {
+          onPushError(errorMessage);
+        } else {
+          console.log('ReviewModal: onPushError callback not provided');
+        }
       }
     } catch (error) {
+      const errorMessage = `Push error: ${(error as Error).message}`;
       setSimulationResult({
         success: false,
-        message: `Push error: ${(error as Error).message}`
+        message: errorMessage
       });
+      // Call the error callback if provided
+      if (onPushError) {
+        onPushError(errorMessage);
+      }
     } finally {
       setIsPushing(false);
     }
@@ -149,22 +163,35 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
           ) } */}
           
           {simulationResult && (
-            <div className={`mb-6 p-4 rounded-md ${
+            <div className={`mb-6 p-4 rounded-lg border ${
               simulationResult.success
-                ? 'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300'
-                : 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300'
+                ? 'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 border-green-200 dark:border-green-800'
+                : 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300 border-red-200 dark:border-red-800'
             }`}>
               <div className="flex items-start">
                 {simulationResult.success ? (
-                  <svg className="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                 ) : (
-                  <svg className="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd"></path>
                   </svg>
                 )}
-                <p>{simulationResult.message}</p>
+                <div className="flex-1">
+                  <h4 className="font-semibold mb-1">
+                    {simulationResult.success ? 'Success' : 'Push Failed'}
+                  </h4>
+                  <p className="text-sm">{simulationResult.message}</p>
+                  {!simulationResult.success && (
+                    <button
+                      onClick={() => setSimulationResult(null)}
+                      className="mt-2 text-xs underline hover:no-underline"
+                    >
+                      Dismiss
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           )}
@@ -179,14 +206,16 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
           </button>
           <button
             onClick={handlePush}
-            disabled={isPushing || (simulationResult?.success === false)}
+            disabled={isPushing}
             className={`px-4 py-2 rounded-md ${
-              isPushing || (simulationResult?.success === false)
-                ? 'bg-green-400 cursor-not-allowed'
+              isPushing
+                ? 'bg-green-400 cursor-not-allowed text-white'
+                : simulationResult?.success === false
+                ? 'bg-red-600 hover:bg-red-700 text-white'
                 : 'bg-green-600 hover:bg-green-700 text-white'
             }`}
           >
-            {isPushing ? 'Pushing...' : 'Push Configuration'}
+            {isPushing ? 'Pushing...' : simulationResult?.success === false ? 'Retry Push' : 'Push Configuration'}
           </button>
         </div>
       </div>

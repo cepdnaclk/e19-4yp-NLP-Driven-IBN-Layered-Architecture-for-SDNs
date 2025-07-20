@@ -19,13 +19,13 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isLoading = false }) => {
   };
 
   return (
-    <div className="border-t border-gray-200 dark:border-gray-700 p-4 ">
+    <div className="border-t border-gray-200 dark:border-gray-700 p-2 ">
       <form onSubmit={handleSubmit} className="flex items-end gap-2">
         <div className="flex-1 ">
           <textarea
             className="w-full p-3 overflow-auto border border-gray-300 dark:color-gray-600 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white resize-none"
             placeholder="Type your message..."
-            rows={3}
+            rows={2}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             disabled={isLoading || !currentSession}
@@ -33,7 +33,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isLoading = false }) => {
         </div>
         <button
           type="submit"
-          className={`px-4 py-3 rounded-md my-7 ${
+          className={`px-4 py-2 rounded-md my-6 ${
             isLoading || !message.trim() || !currentSession
               ? 'bg-gray-300 dark:bg-gray-700 cursor-not-allowed'
               : 'bg-blue-600 hover:bg-blue-700 text-white'

@@ -37,6 +37,27 @@ app.add_middleware(
 # Pydantic models for request/response
 class QueryRequest(BaseModel):
     message: str
+
+class IntentRequest(BaseModel):
+    intent: str
+    config: Dict[str, Any]
+
+class BatchIntentRequest(BaseModel):
+    intents: list[IntentRequest]
+
+class IntentResponse(BaseModel):
+    message: str
+    intent_id: str
+    timestamp: str
+    status: str
+
+class BatchIntentResponse(BaseModel):
+    message: str
+    stored_count: int
+    intent_ids: list[str]
+    timestamp: str
+    status: str
+
 class QueryResponse(BaseModel):
     intent: str
     config: Dict[str, Any]
@@ -49,6 +70,150 @@ class HealthResponse(BaseModel):
     status: str
     timestamp: str
     version: str
+
+@app.post("/store-intent", response_model=IntentResponse)
+async def store_intent(request: IntentRequest):
+    """
+    Store a new intent in the knowledge base and update the vector store
+    """
+    try:
+        logger.info(f"Storing new intent: {request.intent[:100]}...")
+        
+        # Generate a unique intent ID
+        import uuid
+        intent_id = f"INTENT-{str(uuid.uuid4())[:8].upper()}"
+        
+        # Add metadata if not present
+        if "intent_id" not in request.config:
+            request.config["intent_id"] = intent_id
+        else:
+            intent_id = request.config["intent_id"]
+
+        if "timestamp" not in request.config:
+            request.config["timestamp"] = datetime.now().isoformat()    
+        
+        # Load existing intents
+        intents_file = "pushed_configs.json"
+        try:
+            with open(intents_file, 'r', encoding='utf-8') as f:
+                intents = json.load(f)
+        except FileNotFoundError:
+            intents = []
+        
+        # Add new intent
+        new_intent = {
+            "intent": request.intent,
+            "config": request.config
+        }
+        intents.append(new_intent)
+        
+        # Save updated intents
+        with open(intents_file, 'w', encoding='utf-8') as f:
+            json.dump(intents, f, indent=2, ensure_ascii=False)
+        
+        # Update vector store
+        from vector_store import update_vector_store
+        update_vector_store(new_intent)
+        
+        logger.info(f"Successfully stored intent with ID: {intent_id} , {request.intent[:50]}...")
+        
+        return IntentResponse(
+            message="Intent stored successfully",
+            intent_id=intent_id,
+            timestamp=datetime.now().isoformat(),
+            status="success"
+        )
+        
+    except Exception as e:
+        logger.error(f"Error storing intent: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to store intent: {str(e)}")
+
+@app.post("/store-intents-batch", response_model=BatchIntentResponse)
+async def store_intents_batch(request: BatchIntentRequest):
+    """
+    Store multiple intents in batch
+    """
+    try:
+        logger.info(f"Storing {len(request.intents)} intents in batch...")
+        
+        # Load existing intents
+        intents_file = "sample_intents_2.json"
+        try:
+            with open(intents_file, 'r', encoding='utf-8') as f:
+                intents = json.load(f)
+        except FileNotFoundError:
+            intents = []
+        
+        intent_ids = []
+        new_intents = []
+        
+        # Process each intent
+        for intent_req in request.intents:
+            import uuid
+            intent_id = f"INTENT-{str(uuid.uuid4())[:8].upper()}"
+            
+            # Add metadata if not present
+            if "intent_id" not in intent_req.config:
+                intent_req.config["intent_id"] = intent_id
+            if "timestamp" not in intent_req.config:
+                intent_req.config["timestamp"] = datetime.now().isoformat()
+            
+            # Create new intent object
+            new_intent = {
+                "intent": intent_req.intent,
+                "config": intent_req.config
+            }
+            
+            intents.append(new_intent)
+            new_intents.append(new_intent)
+            intent_ids.append(intent_id)
+        
+        # Save updated intents file
+        with open(intents_file, 'w', encoding='utf-8') as f:
+            json.dump(intents, f, indent=2, ensure_ascii=False)
+        
+        # Update vector store with all new intents
+        from vector_store import update_vector_store_batch
+        update_vector_store_batch(new_intents)
+        
+        logger.info(f"Successfully stored {len(intent_ids)} intents in batch")
+        
+        return BatchIntentResponse(
+            message=f"Successfully stored {len(intent_ids)} intents",
+            stored_count=len(intent_ids),
+            intent_ids=intent_ids,
+            timestamp=datetime.now().isoformat(),
+            status="success"
+        )
+        
+    except Exception as e:
+        logger.error(f"Error storing intents batch: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to store intents: {str(e)}")
+
+@app.get("/intents")
+async def get_all_intents():
+    """
+    Retrieve all stored intents from the knowledge base
+    """
+    try:
+        intents_file = "sample_intents_2.json"
+        with open(intents_file, 'r', encoding='utf-8') as f:
+            intents = json.load(f)
+        
+        return {
+            "total_intents": len(intents),
+            "intents": intents,
+            "timestamp": datetime.now().isoformat()
+        }
+    except FileNotFoundError:
+        return {
+            "total_intents": 0,
+            "intents": [],
+            "timestamp": datetime.now().isoformat()
+        }
+    except Exception as e:
+        logger.error(f"Error retrieving intents: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to retrieve intents: {str(e)}")
 
 @app.get("/", response_model=HealthResponse)
 async def root():
