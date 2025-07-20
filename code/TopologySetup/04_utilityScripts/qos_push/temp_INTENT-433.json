@@ -1,0 +1,20 @@
+{
+  "intent_id": "INTENT-433",
+  "user_role": "admin",
+  "timestamp": "2025-07-14T08:33:00+05:30",
+  "QOS": {},
+  "ACL": {},
+  "LOGS": {
+    "filters": [
+      {
+        "hosts": null,
+        "ports": [
+          "80",
+          "443"
+        ],
+        "application": "Streaming Media",
+        "time_window": "24h"
+      }
+    ]
+  }
+}

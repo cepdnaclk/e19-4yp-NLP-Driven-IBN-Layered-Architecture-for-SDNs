@@ -116,7 +116,7 @@ export const chatService = {
       
       // Fallback to defaults if parsing failed
       intentConfig = intentConfig || sampleIntentJson;
-      reasoning = reasoning || 'This is a mock intent generated based on your request.';
+      reasoning = reasoning || 'There was an issue with the connection. Please refer to the template below to create your network configuration. The system will use default settings based on common network requirements.';
 
       return {
         id: uuidv4(),

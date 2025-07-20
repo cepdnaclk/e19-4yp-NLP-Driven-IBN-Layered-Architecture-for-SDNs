@@ -100,7 +100,7 @@ const ChatMessage: React.FC<MessageProps> = ({ message }) => {
               </div>
               
               {/* Display additional reasoning if available */}
-              {intentMessage.intentData.reasoning && intentMessage.intentData.reasoning !== message.content && (
+              {/* {intentMessage.intentData.reasoning && intentMessage.intentData.reasoning !== message.content && (
                 <div className="mb-3">
                   <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Additional Details:
@@ -109,7 +109,7 @@ const ChatMessage: React.FC<MessageProps> = ({ message }) => {
                     {intentMessage.intentData.reasoning}
                   </p>
                 </div>
-              )}
+              )} */}
               
               <div className="mt-2 flex gap-2">
                 <button 
