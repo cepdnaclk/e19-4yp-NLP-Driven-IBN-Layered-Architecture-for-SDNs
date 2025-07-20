@@ -96,10 +96,10 @@ for proto in "${protocols[@]}"; do
     for dst in "${dst_macs[@]}"; do
       if [[ "$use_ports" == true ]]; then
 		for port in "${ports[@]}"; do
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=$queue $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
 		done
       else
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=$queue $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ipProto=$ip_proto --setQueue=$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
 	  fi
     done
   done

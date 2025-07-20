@@ -6,7 +6,7 @@
     "timestamp": "<TIMESTAMP>", 
     "QOS": {
       "application": "<APPLICATION>", // default=>"Web Browsing"; "ZOOM","YouTube","Netflix"
-      "category": "<TRAFFIC_CATEGORY>", // default=>"web"; "video", "voice", "file"
+      "protocol": "<TRAFFIC_PROTOCOL>", // default=>"http"; "video", "voip", "ftp", "mail", "db", "ssh"
       "latency": "<LATENCY_THRESHOLD>", // default=>TBD
       "bandwidth": "<BANDWIDTH_THRESHOLD>",// default =>TBD
       "jitter": "<JITTER_THRESHOLD>", // default =>TBD
