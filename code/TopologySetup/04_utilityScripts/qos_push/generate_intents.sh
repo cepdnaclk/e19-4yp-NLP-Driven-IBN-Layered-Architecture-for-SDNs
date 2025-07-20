@@ -9,12 +9,14 @@ JSON_FILE="$1"
 
 YAML_FILE="network_knowledge.yaml"
 OUTPUT_FILE="qos_intents.txt"
+RULE_PRIORITY_COUNTER_TXT="./retrieve_network_knowledge/rule_priority_counter.txt"
 
 > "$OUTPUT_FILE"  # Clear existing
 
 # Read values from JSON
 protocol=$(jq -r '.config.QOS.protocol // empty' "$JSON_FILE")
 priority=$(jq -r '.config.QOS.priority // "medium"' "$JSON_FILE")
+RULE_PRIORITY=$(cat $RULE_PRIORITY_COUNTER_TXT)
 
 # If protocol is empty, get all protocols from YAML
 if [[ -z "$protocol" ]]; then
@@ -144,21 +146,24 @@ for proto in "${protocols[@]}"; do
     for dst in "${dst_macs[@]}"; do
       if [[ "$use_ports" == true ]]; then
 		for port in "${ports[@]}"; do
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=1/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=2/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=3/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=4/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=1/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=2/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=3/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=4/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
 
 		done
       else
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=1/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=2/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=3/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=4/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ipProto=$ip_proto --setQueue=1/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ipProto=$ip_proto --setQueue=2/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ipProto=$ip_proto --setQueue=3/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ipProto=$ip_proto --setQueue=4/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
 
 	  fi
     done
   done
 done
+
+NEXT_RULE_PRIORITY=$((RULE_PRIORITY + 1))
+echo "$NEXT_RULE_PRIORITY" > $RULE_PRIORITY_COUNTER_TXT
 
 echo "✅ Intents written to $OUTPUT_FILE"

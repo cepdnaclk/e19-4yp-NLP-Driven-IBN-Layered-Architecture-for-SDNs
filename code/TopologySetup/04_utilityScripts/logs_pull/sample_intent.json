@@ -1,0 +1,17 @@
+{
+  "intent": "Track any unusual activity on our Database servers.",
+  "config": {
+    "intent_id": "intent_203",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T09:10:00Z",
+    "LOGS": {
+      "filters": [
+        {
+          "ports": "3306,3307",
+          "application": "DB",
+          "time_window": "30s"
+        }
+      ]
+    }
+  }
+}
