@@ -1,14 +1,13 @@
 {
-    "intent": "Lower the priority of all the other traffic except for http traffic reaching the internal servers from host 10.0.0.1", 
+    "intent": "Lower the priority of Video traffic reaching the internal servers", 
     "config": {
       "intent_id": "INTENT-002",
       "user_role": "admin",
       "timestamp": "2024-07-01T14:30:00Z",
       "QOS": {
-		"application": "web",  
-		"protocol": "ssh",
-		"priority": "high",
-		"source_ip": "10.0.0.1"
+		"application": "video streaming",  
+		"protocol": "video",
+		"priority": "low"
 		  },
       "ACL": {},
       "LOGS": {}

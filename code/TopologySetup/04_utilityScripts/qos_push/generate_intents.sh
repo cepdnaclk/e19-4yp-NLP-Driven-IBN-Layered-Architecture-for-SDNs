@@ -15,10 +15,6 @@ OUTPUT_FILE="qos_intents.txt"
 # Read values from JSON
 protocol=$(jq -r '.config.QOS.protocol // empty' "$JSON_FILE")
 priority=$(jq -r '.config.QOS.priority // "medium"' "$JSON_FILE")
-source_ip=$(jq -r '.config.QOS.source_ip // empty' "$JSON_FILE")
-source_hostname=$(jq -r '.config.QOS?.source_hostname // ""' "$JSON_FILE")
-dest_ip=$(jq -r '.config.QOS.destination_ip // empty' "$JSON_FILE")
-dest_hostname=$(jq -r '.config.QOS?.destination_hostname // ""' "$JSON_FILE")
 
 # If protocol is empty, get all protocols from YAML
 if [[ -z "$protocol" ]]; then
@@ -27,7 +23,7 @@ else
   protocols=("$protocol")
 fi
 
-# Loop over protocols safely
+# Loop over protocols safely // check - and  []
 for proto in "${protocols[@]}"; do
   echo "Ports for protocol: $proto"
   yq ".servers.*.traffic-types.${proto} // [] | .[]" "$YAML_FILE"
@@ -41,32 +37,84 @@ case "$priority" in
   *) queue=2 ;;
 esac
 
-# Function: Get MAC for a given IP or Hostname
-get_mac() {
-  local search="$1"
-  yq -r ".all_hosts[] | select(.ip == \"$search\" or .name == \"$search\") | .mac" "$YAML_FILE"
+dest_ips=()
+dest_hostnames=()
+src_hostnames=()
+
+for protocol in "${protocols[@]}"; do
+  # Get all servers with this traffic-type
+  matched_hosts=$(yq e ".servers | to_entries | map(select(.value.\"traffic-types\".$protocol)) | .[].key" "$YAML_FILE")
+
+  while IFS= read -r hostname; do
+    ip=$(yq e ".servers[\"$hostname\"].ip" "$YAML_FILE")
+    dest_ips+=("$ip")
+    dest_hostnames+=("$hostname")
+
+    # Extract src hostnames from .clients.<protocol>
+    clients=$(yq e ".servers[\"$hostname\"].clients.$protocol[]" "$YAML_FILE" 2>/dev/null)
+    while IFS= read -r client; do
+      src_hostnames+=("$client")
+    done <<< "$clients"
+
+  done <<< "$matched_hosts"
+done
+
+# Remove duplicates
+dest_ips=($(printf "%s\n" "${dest_ips[@]}" | sort -u))
+dest_hostnames=($(printf "%s\n" "${dest_hostnames[@]}" | sort -u))
+src_hostnames=($(printf "%s\n" "${src_hostnames[@]}" | sort -u))
+
+echo "Destination IPs:"
+printf "%s\n" "${dest_ips[@]}"
+
+echo -e "\nDestination Hostnames:"
+printf "%s\n" "${dest_hostnames[@]}"
+
+echo -e "\nSource Hostnames:"
+printf "%s\n" "${src_hostnames[@]}"
+
+
+get_mac_from_yaml() {
+  yq e -r ".all_hosts[] | select(.name == \"$1\") | .mac" "$YAML_FILE"
 }
 
-# Function: Get all MACs
 get_all_macs() {
   yq -r '.all_hosts[].mac' "$YAML_FILE"
 }
 
-# Get Source MACs
-if [[ -n "$source_ip" || -n "$source_hostname" ]]; then
-  src_mac=$(get_mac "${source_ip:-$source_hostname}")
-  src_macs=("$src_mac")
-else
-  mapfile -t src_macs < <(get_all_macs)
-fi
+# Destination MACs from hostnames
+dst_macs=()
+for host in "${dest_hostnames[@]}"; do
+  mac=$(get_mac_from_yaml "$host")
+  if [[ -n "$mac" && "$mac" != "null" ]]; then
+    dst_macs+=("$mac")
+  else
+    echo "[!] MAC not found for destination host: $host. Using all MACs."
+    mapfile -t dst_macs < <(get_all_macs)
+  fi
+done
 
-# Get Destination MACs
-if [[ -n "$dest_ip" || -n "$dest_hostname" ]]; then
-  dst_mac=$(get_mac "${dest_ip:-$dest_hostname}")
-  dst_macs=("$dst_mac")
-else
-  mapfile -t dst_macs < <(get_all_macs)
-fi
+# Source MACs from hostnames
+src_macs=()
+for host in "${src_hostnames[@]}"; do
+  mac=$(get_mac_from_yaml "$host")
+  if [[ -n "$mac" && "$mac" != "null" ]]; then
+    src_macs+=("$mac")
+  else
+    echo "[!] MAC not found for source host: $host. Using all MACs."
+    mapfile -t src_macs < <(get_all_macs)
+  fi
+done
+
+# Remove duplicates
+dst_macs=($(printf "%s\n" "${dst_macs[@]}" | sort -u))
+src_macs=($(printf "%s\n" "${src_macs[@]}" | sort -u))
+
+echo -e "\nFinal Destination MACs:"
+printf "%s\n" "${dst_macs[@]}"
+
+echo -e "\nFinal Source MACs:"
+printf "%s\n" "${src_macs[@]}"
 
 # Iterate over each protocol
 for proto in "${protocols[@]}"; do
@@ -96,10 +144,18 @@ for proto in "${protocols[@]}"; do
     for dst in "${dst_macs[@]}"; do
       if [[ "$use_ports" == true ]]; then
 		for port in "${ports[@]}"; do
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=1/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=2/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=3/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=4/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+
 		done
       else
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ipProto=$ip_proto --setQueue=1/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ipProto=$ip_proto --setQueue=2/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ipProto=$ip_proto --setQueue=3/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ipProto=$ip_proto --setQueue=4/$queue --priority=300 $src $dst" >> "$OUTPUT_FILE"
+
 	  fi
     done
   done

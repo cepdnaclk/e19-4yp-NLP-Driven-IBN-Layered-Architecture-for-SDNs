@@ -4,12 +4,12 @@ iface="$1"
 speed=$(ethtool $iface 2>/dev/null | grep Speed | awk '{print $2}' | sed 's/Mb\/s//')
 bps=$((speed * 1000000))
 
-min_q1=$((bps / 20))
-max_q1=$((bps / 10))
-min_q2=$((bps / 25))
-max_q2=$((bps / 15))
-min_q3=$((bps / 50))
-max_q3=$((bps / 20))
+min_q1=$((bps / 2))
+max_q1=$((bps / 1))
+min_q2=$((bps / 8))
+max_q2=$((bps / 2))
+min_q3=$((bps / 40))
+max_q3=$((bps / 8))
 
 sudo ovs-vsctl set port $iface qos=@newqos \
   -- --id=@newqos create qos type=linux-htb other-config:max-rate=$bps \

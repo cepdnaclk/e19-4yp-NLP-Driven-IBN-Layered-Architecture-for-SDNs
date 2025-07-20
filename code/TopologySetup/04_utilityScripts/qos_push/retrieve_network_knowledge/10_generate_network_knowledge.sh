@@ -84,6 +84,7 @@ echo "  total_servers: ${#server_traffic_map[@]}"
 echo "  total_hosts: ${#ip_mac_map[@]}"
 echo "  isUdp:"
 echo "    - voip"
+echo "    - udp"
 
 } > "$OUTPUT_FILE"
 
