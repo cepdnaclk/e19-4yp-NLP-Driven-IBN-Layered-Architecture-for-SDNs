@@ -1,0 +1,4143 @@
+[
+  {
+    "intent": "Ensure low-latency voice communication for VoIP users.",
+    "config": {
+      "intent_id": "INTENT-001",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "VOIP calling",
+        "protocol": "voip",
+        "latency": "184ms",
+        "bandwidth": "1G",
+        "jitter": "60ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "5060",
+            "protocols": ["voip", "udp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.10",
+            "ports": 5060,
+            "application": "VOICE",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide high bandwidth for video streaming platforms.",
+    "config": {
+      "intent_id": "INTENT-002",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "YouTube",
+        "protocol": "video",
+        "latency": "136ms",
+        "bandwidth": "9.5G",
+        "jitter": "60ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["http", "https"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.12",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Support daily web browsing with moderate resources.",
+    "config": {
+      "intent_id": "INTENT-003",
+      "user_role": "user",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": "72ms",
+        "bandwidth": "8G",
+        "jitter": "60ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.20",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable secure and fast access to database services.",
+    "config": {
+      "intent_id": "INTENT-004",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "Database",
+        "protocol": "db",
+        "latency": "32ms",
+        "bandwidth": "6G",
+        "jitter": "20ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "192.168.1.50",
+            "source_port": "any",
+            "destination_port": "3306",
+            "protocols": ["tcp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.1.50",
+            "ports": 3306,
+            "application": "DB",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow developers to connect via SSH with medium priority.",
+    "config": {
+      "intent_id": "INTENT-005",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "Remote Access",
+        "protocol": "ssh",
+        "latency": "64ms",
+        "bandwidth": "4G",
+        "jitter": "60ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "192.168.1.100",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.1.100",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure reliable delivery of emails across the network.",
+    "config": {
+      "intent_id": "INTENT-006",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "Mail Delivery",
+        "protocol": "mail",
+        "latency": "192ms",
+        "bandwidth": "5G",
+        "jitter": "60ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "25",
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.30",
+            "ports": 25,
+            "application": "MAIL",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow FTP uploads with burst bandwidth requirements.",
+    "config": {
+      "intent_id": "INTENT-007",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "FTP Upload",
+        "protocol": "ftp",
+        "latency": "40ms",
+        "bandwidth": "9G",
+        "jitter": "25ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "192.168.0.40",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.40",
+            "ports": 21,
+            "application": "FTP",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Prioritize VoIP traffic during business hours for all staff.",
+    "config": {
+      "intent_id": "INTENT-008",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "VOIP calling",
+        "protocol": "voip",
+        "latency": "184ms",
+        "bandwidth": "1G",
+        "jitter": "60ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T09:00:00+05:30",
+          "end": "2025-07-20T17:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.10.0/24",
+            "destination_ip": "192.168.30.0/24",
+            "source_port": "any",
+            "destination_port": "5060",
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T09:00:00Z",
+          "end": "2025-07-27T09:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.30.10",
+            "ports": 5060,
+            "application": "VOICE",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Boost video streaming bandwidth for evening hours.",
+    "config": {
+      "intent_id": "INTENT-009",
+      "user_role": "user",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "Netflix",
+        "protocol": "video",
+        "latency": "136ms",
+        "bandwidth": "9.5G",
+        "jitter": "60ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T18:00:00+05:30",
+          "end": "2025-07-20T23:00:00+05:30",
+          "days": ["Friday", "Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["https"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T18:00:00Z",
+          "end": "2025-07-21T00:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.88",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable limited guest access for web browsing.",
+    "config": {
+      "intent_id": "INTENT-010",
+      "user_role": "guest",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": "72ms",
+        "bandwidth": "2G",
+        "jitter": "60ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T08:00:00+05:30",
+          "end": "2025-07-20T12:00:00+05:30",
+          "days": ["Monday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.100.0/24",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T08:00:00Z",
+          "end": "2025-07-20T12:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.100.10",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Permit remote access to production database servers.",
+    "config": {
+      "intent_id": "INTENT-011",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "Database",
+        "protocol": "db",
+        "latency": "32ms",
+        "bandwidth": "6G",
+        "jitter": "20ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T22:00:00+05:30",
+          "days": ["Wednesday", "Thursday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.0.0/16",
+            "destination_ip": "10.10.10.10",
+            "source_port": "any",
+            "destination_port": "5432",
+            "protocols": ["tcp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.10.10.10",
+            "ports": 5432,
+            "application": "DB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow remote SSH access from verified internal hosts.",
+    "config": {
+      "intent_id": "INTENT-012",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "Remote Access",
+        "protocol": "ssh",
+        "latency": "64ms",
+        "bandwidth": "4G",
+        "jitter": "60ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T00:00:00+05:30",
+          "end": "2025-07-20T23:59:00+05:30",
+          "days": ["Saturday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.1.0.0/16",
+            "destination_ip": "10.2.2.2",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T00:00:00Z",
+          "end": "2025-07-21T00:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.2.2.2",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide limited mail server access for scheduled updates.",
+    "config": {
+      "intent_id": "INTENT-013",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "Mail Delivery",
+        "protocol": "mail",
+        "latency": "192ms",
+        "bandwidth": "5G",
+        "jitter": "60ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T23:00:00+05:30",
+          "end": "2025-07-21T01:00:00+05:30",
+          "days": ["Monday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.200.0/24",
+            "destination_ip": "192.168.250.5",
+            "source_port": "any",
+            "destination_port": "25",
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T23:00:00Z",
+          "end": "2025-07-21T01:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.250.5",
+            "ports": 25,
+            "application": "MAIL",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable FTP data transfer from data team with strict timing.",
+    "config": {
+      "intent_id": "INTENT-014",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "FTP Upload",
+        "protocol": "ftp",
+        "latency": "40ms",
+        "bandwidth": "9G",
+        "jitter": "25ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T03:00:00+05:30",
+          "end": "2025-07-20T05:00:00+05:30",
+          "days": ["Tuesday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.16.0.0/12",
+            "destination_ip": "172.20.1.10",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T03:00:00Z",
+          "end": "2025-07-20T05:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "172.20.1.10",
+            "ports": 21,
+            "application": "FTP",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide 24/7 moderate priority access to internal services.",
+    "config": {
+      "intent_id": "INTENT-015",
+      "user_role": "user",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": "72ms",
+        "bandwidth": "6G",
+        "jitter": "60ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T00:00:00+05:30",
+          "end": "2025-07-21T00:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.5.0.0/16",
+            "destination_ip": "10.6.6.6",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T00:00:00Z",
+          "end": "2025-07-21T00:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.6.6.6",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure secure SSH connections with moderate bandwidth and low latency",
+    "config": {
+      "intent_id": "INTENT-021",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "SSH",
+        "protocol": "ssh",
+        "latency": 64,
+        "bandwidth": "4G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.8",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable FTP transfers with burst handling and medium jitter",
+    "config": {
+      "intent_id": "INTENT-022",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:10:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "protocol": "ftp",
+        "latency": 40,
+        "bandwidth": "9G",
+        "jitter": 25,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T10:10:00+05:30",
+          "end": "2025-07-20T11:10:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.0.0/8",
+            "destination_ip": "172.16.0.0/12",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:10:00Z",
+          "end": "2025-07-21T10:10:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.5",
+            "ports": 21,
+            "application": "FTP",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Support daily email sync with high latency tolerance and default priority",
+    "config": {
+      "intent_id": "INTENT-023",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:20:00+05:30",
+      "QOS": {
+        "application": "Mail",
+        "protocol": "mail",
+        "latency": 192,
+        "bandwidth": "5G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T10:20:00+05:30",
+          "end": "2025-07-20T11:20:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.10.0/24",
+            "destination_ip": "192.168.20.0/24",
+            "source_port": "any",
+            "destination_port": "25",
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:20:00Z",
+          "end": "2025-07-21T10:20:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.10",
+            "ports": 25,
+            "application": "MAIL",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Facilitate VoIP calls with high priority and low jitter",
+    "config": {
+      "intent_id": "INTENT-024",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:30:00+05:30",
+      "QOS": {
+        "application": "ZOOM",
+        "protocol": "voip",
+        "latency": 184,
+        "bandwidth": "1G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:30:00+05:30",
+          "end": "2025-07-20T11:30:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.10.10.0/24",
+            "destination_ip": "10.20.20.0/24",
+            "source_port": "any",
+            "destination_port": "5060",
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:30:00Z",
+          "end": "2025-07-21T10:30:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.10.10.5",
+            "ports": 5060,
+            "application": "VOICE",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow YouTube video playback with jitter control",
+    "config": {
+      "intent_id": "INTENT-025",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:40:00+05:30",
+      "QOS": {
+        "application": "YouTube",
+        "protocol": "video",
+        "latency": 136,
+        "bandwidth": "9.5G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:40:00+05:30",
+          "end": "2025-07-20T11:40:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.16.0.0/12",
+            "destination_ip": "8.8.8.8",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:40:00Z",
+          "end": "2025-07-21T10:40:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "172.16.0.2",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Database synchronization with controlled bandwidth",
+    "config": {
+      "intent_id": "INTENT-026",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:50:00+05:30",
+      "QOS": {
+        "application": "DB Sync",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:50:00+05:30",
+          "end": "2025-07-20T11:50:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.2.0/24",
+            "destination_ip": "192.168.3.0/24",
+            "source_port": "any",
+            "destination_port": "3306",
+            "protocols": ["db"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:50:00Z",
+          "end": "2025-07-21T10:50:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.3.3",
+            "ports": 3306,
+            "application": "DB",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow general web browsing during business hours",
+    "config": {
+      "intent_id": "INTENT-027",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T11:00:00+05:30",
+          "end": "2025-07-20T12:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T11:00:00Z",
+          "end": "2025-07-21T11:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.4",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable email delivery with allowance for high delay",
+    "config": {
+      "intent_id": "INTENT-028",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:10:00+05:30",
+      "QOS": {
+        "application": "Mail",
+        "protocol": "mail",
+        "latency": 192,
+        "bandwidth": "5G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T11:10:00+05:30",
+          "end": "2025-07-20T12:10:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.10.10",
+            "destination_ip": "192.168.10.20",
+            "source_port": "any",
+            "destination_port": "587",
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T11:10:00Z",
+          "end": "2025-07-21T11:10:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.10.20",
+            "ports": 587,
+            "application": "MAIL",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable secure database backup over night",
+    "config": {
+      "intent_id": "INTENT-029",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:20:00+05:30",
+      "QOS": {
+        "application": "DB",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T23:00:00+05:30",
+          "end": "2025-07-21T04:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.50.0/24",
+            "destination_ip": "192.168.100.0/24",
+            "source_port": "any",
+            "destination_port": "5432",
+            "protocols": ["db"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T23:00:00Z",
+          "end": "2025-07-21T04:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.100.100",
+            "ports": 5432,
+            "application": "DB",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable FTP access for large file transfer on demand",
+    "config": {
+      "intent_id": "INTENT-030",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:30:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "protocol": "ftp",
+        "latency": 40,
+        "bandwidth": "9G",
+        "jitter": 25,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T11:30:00+05:30",
+          "end": "2025-07-20T12:30:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "192.168.100.5",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T11:30:00Z",
+          "end": "2025-07-21T11:30:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.100.5",
+            "ports": 21,
+            "application": "FTP",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow voice communication with low latency",
+    "config": {
+      "intent_id": "INTENT-031",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "ZOOM",
+        "protocol": "voip",
+        "latency": 184,
+        "bandwidth": "1G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.1.20",
+            "destination_ip": "192.168.1.30",
+            "source_port": "any",
+            "destination_port": 5060,
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.1.20",
+            "ports": 5060,
+            "application": "VOICE",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Throttle video streaming during work hours",
+    "config": {
+      "intent_id": "INTENT-032",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:05:00+05:30",
+      "QOS": {
+        "application": "YouTube",
+        "protocol": "video",
+        "latency": 136,
+        "bandwidth": "9.5G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T09:00:00+05:30",
+          "end": "2025-07-20T17:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "deny",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "172.217.0.0/16",
+            "source_port": "any",
+            "destination_port": 443,
+            "protocols": ["video"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T09:00:00Z",
+          "end": "2025-07-21T09:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "172.217.12.110",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Restrict database access to certain IPs",
+    "config": {
+      "intent_id": "INTENT-033",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:10:00+05:30",
+      "QOS": {
+        "application": "CustomDB",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T00:00:00+05:30",
+          "end": "2025-07-21T00:00:00+05:30",
+          "days": ["Monday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.0.10",
+            "destination_ip": "10.0.0.20",
+            "source_port": "any",
+            "destination_port": 3306,
+            "protocols": ["tcp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T00:00:00Z",
+          "end": "2025-07-21T00:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.0.0.20",
+            "ports": 3306,
+            "application": "DB",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable secure remote access for developers",
+    "config": {
+      "intent_id": "INTENT-034",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:15:00+05:30",
+      "QOS": {
+        "application": "SSH Remote",
+        "protocol": "ssh",
+        "latency": 64,
+        "bandwidth": "4G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T08:00:00+05:30",
+          "end": "2025-07-20T20:00:00+05:30",
+          "days": ["Monday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.100.0/24",
+            "destination_ip": "192.168.200.1",
+            "source_port": "any",
+            "destination_port": 22,
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T08:00:00Z",
+          "end": "2025-07-21T08:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.200.1",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow limited web browsing",
+    "config": {
+      "intent_id": "INTENT-035",
+      "user_role": "user",
+      "timestamp": "2025-07-20T10:20:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T11:00:00+05:30",
+          "end": "2025-07-20T12:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": 80,
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T11:00:00Z",
+          "end": "2025-07-21T11:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "any",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure stable VOIP communication for guests during weekends.",
+    "config": {
+      "intent_id": "INTENT-041",
+      "user_role": "guest",
+      "timestamp": "2025-07-20T10:30:00+05:30",
+      "QOS": {
+        "application": "VOIP calling",
+        "protocol": "voip",
+        "latency": 184,
+        "bandwidth": "1G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T11:00:00+05:30",
+          "end": "2025-07-20T12:00:00+05:30",
+          "days": ["Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "any",
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T11:00:00Z",
+          "end": "2025-07-21T11:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.1.41",
+            "ports": 5060,
+            "application": "VOICE",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Provide high-priority video access for team leads on Friday.",
+    "config": {
+      "intent_id": "INTENT-042",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:31:00+05:30",
+      "QOS": {
+        "application": "Netflix",
+        "protocol": "video",
+        "latency": 136,
+        "bandwidth": "9.5G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-25T14:00:00+05:30",
+          "end": "2025-07-25T16:00:00+05:30",
+          "days": ["Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.1.0.0/16",
+            "destination_ip": "10.2.0.0/16",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["http", "video"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-25T14:00:00Z",
+          "end": "2025-07-25T16:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.10.10",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow http access for internal users on working days.",
+    "config": {
+      "intent_id": "INTENT-043",
+      "user_role": "user",
+      "timestamp": "2025-07-20T10:32:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-21T09:00:00+05:30",
+          "end": "2025-07-21T17:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.16.1.0/24",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-21T09:00:00Z",
+          "end": "2025-07-21T17:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.2.1",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Secure database traffic for backend operations every night.",
+    "config": {
+      "intent_id": "INTENT-044",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:33:00+05:30",
+      "QOS": {
+        "application": "Database Sync",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T23:00:00+05:30",
+          "end": "2025-07-21T02:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.100.0/24",
+            "destination_ip": "192.168.200.0/24",
+            "source_port": "any",
+            "destination_port": "3306",
+            "protocols": ["db"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T23:00:00Z",
+          "end": "2025-07-21T02:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.100.5",
+            "ports": 3306,
+            "application": "DB",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow SSH access for developers from VPN IPs during office hours.",
+    "config": {
+      "intent_id": "INTENT-045",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:34:00+05:30",
+      "QOS": {
+        "application": "Remote Admin",
+        "protocol": "ssh",
+        "latency": 64,
+        "bandwidth": "4G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T09:00:00+05:30",
+          "end": "2025-07-20T17:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.10.10.0/24",
+            "destination_ip": "192.168.1.100",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T09:00:00Z",
+          "end": "2025-07-20T17:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.1.100",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure FTP traffic is permitted with specific constraints",
+    "config": {
+      "intent_id": "INTENT-201",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:15:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "protocol": "ftp",
+        "latency": 40,
+        "bandwidth": "9G",
+        "jitter": 25,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T10:15:00+05:30",
+          "end": "2025-07-20T11:15:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.4.10/24",
+            "destination_ip": "192.168.5.20/24",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:15:00+05:30",
+          "end": "2025-07-21T10:15:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.4.10",
+            "ports": "21",
+            "application": "FTP",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow database sync from internal systems",
+    "config": {
+      "intent_id": "INTENT-202",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:20:00+05:30",
+      "QOS": {
+        "application": "Database",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:20:00+05:30",
+          "end": "2025-07-20T11:20:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.0.2/24",
+            "destination_ip": "10.0.1.5/24",
+            "source_port": "any",
+            "destination_port": "3306",
+            "protocols": ["db"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:20:00+05:30",
+          "end": "2025-07-21T10:20:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.0.0.2",
+            "ports": "3306",
+            "application": "DB",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Control SSH access between developer hosts",
+    "config": {
+      "intent_id": "INTENT-203",
+      "user_role": "user",
+      "timestamp": "2025-07-20T10:25:00+05:30",
+      "QOS": {
+        "application": "Remote Access",
+        "protocol": "ssh",
+        "latency": 64,
+        "bandwidth": "4G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:25:00+05:30",
+          "end": "2025-07-20T11:25:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.100.0/24",
+            "destination_ip": "192.168.101.0/24",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:25:00+05:30",
+          "end": "2025-07-21T10:25:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.100.5",
+            "ports": "22",
+            "application": "SSH",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow web browsing with default settings",
+    "config": {
+      "intent_id": "INTENT-204",
+      "user_role": "guest",
+      "timestamp": "2025-07-20T10:30:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T10:30:00+05:30",
+          "end": "2025-07-20T11:30:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "any",
+            "destination_ip": "any",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:30:00+05:30",
+          "end": "2025-07-21T10:30:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "any",
+            "ports": "80",
+            "application": "WEB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Permit mail service connectivity",
+    "config": {
+      "intent_id": "INTENT-205",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:35:00+05:30",
+      "QOS": {
+        "application": "Mail",
+        "protocol": "mail",
+        "latency": 192,
+        "bandwidth": "5G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:35:00+05:30",
+          "end": "2025-07-20T11:35:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.10.0.0/16",
+            "destination_ip": "10.20.0.0/16",
+            "source_port": "any",
+            "destination_port": "25",
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:35:00+05:30",
+          "end": "2025-07-21T10:35:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.10.1.100",
+            "ports": "25",
+            "application": "MAIL",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure smooth video streaming for staff",
+    "config": {
+      "intent_id": "INTENT-206",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:40:00+05:30",
+      "QOS": {
+        "application": "YouTube",
+        "protocol": "video",
+        "latency": 136,
+        "bandwidth": "9.5G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:40:00+05:30",
+          "end": "2025-07-20T11:40:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.16.0.0/12",
+            "destination_ip": "172.20.0.0/12",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["video"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:40:00+05:30",
+          "end": "2025-07-21T10:40:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "172.16.1.1",
+            "ports": "443",
+            "application": "VIDEO",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Permit Zoom meetings with low latency",
+    "config": {
+      "intent_id": "INTENT-207",
+      "user_role": "user",
+      "timestamp": "2025-07-20T10:45:00+05:30",
+      "QOS": {
+        "application": "ZOOM",
+        "protocol": "voip",
+        "latency": 184,
+        "bandwidth": "1G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:45:00+05:30",
+          "end": "2025-07-20T11:45:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.10.0/24",
+            "destination_ip": "10.0.20.0/24",
+            "source_port": "any",
+            "destination_port": "3478",
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:45:00+05:30",
+          "end": "2025-07-21T10:45:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.0.10.5",
+            "ports": "3478",
+            "application": "VOICE",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Permit secure DB access from backup service",
+    "config": {
+      "intent_id": "INTENT-208",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:50:00+05:30",
+      "QOS": {
+        "application": "Database",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:50:00+05:30",
+          "end": "2025-07-20T11:50:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.1.1.0/24",
+            "destination_ip": "10.2.2.0/24",
+            "source_port": "any",
+            "destination_port": "5432",
+            "protocols": ["db"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:50:00+05:30",
+          "end": "2025-07-21T10:50:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.1.1.2",
+            "ports": "5432",
+            "application": "DB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow secure file transfer via FTP between branches",
+    "config": {
+      "intent_id": "INTENT-209",
+      "user_role": "user",
+      "timestamp": "2025-07-20T10:55:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "protocol": "ftp",
+        "latency": 40,
+        "bandwidth": "9G",
+        "jitter": 25,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T10:55:00+05:30",
+          "end": "2025-07-20T11:55:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.50.0/24",
+            "destination_ip": "192.168.60.0/24",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:55:00+05:30",
+          "end": "2025-07-21T10:55:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.50.100",
+            "ports": "21",
+            "application": "FTP",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow access to external web services",
+    "config": {
+      "intent_id": "INTENT-210",
+      "user_role": "guest",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T11:00:00+05:30",
+          "end": "2025-07-20T12:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "any",
+            "destination_ip": "any",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T11:00:00+05:30",
+          "end": "2025-07-21T11:00:00+05:30"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "any",
+            "ports": "80",
+            "application": "WEB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "High-priority VOIP traffic for executive calls",
+    "config": {
+      "intent_id": "INTENT-211",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:10:00+05:30",
+      "QOS": {
+        "application": "VOIP calling",
+        "protocol": "voip",
+        "latency": 184,
+        "bandwidth": "1G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T11:10:00+05:30",
+          "end": "2025-07-20T12:10:00+05:30",
+          "days": ["Monday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.10.10.0/24",
+            "destination_ip": "10.10.20.0/24",
+            "source_port": "any",
+            "destination_port": "5060",
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T11:10:00Z",
+          "end": "2025-07-20T12:10:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.10.10.5",
+            "ports": 5060,
+            "application": "VOICE",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Limit video streaming bandwidth during office hours",
+    "config": {
+      "intent_id": "INTENT-212",
+      "user_role": "user",
+      "timestamp": "2025-07-20T11:15:00+05:30",
+      "QOS": {
+        "application": "YouTube",
+        "protocol": "video",
+        "latency": 136,
+        "bandwidth": "5G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T09:00:00+05:30",
+          "end": "2025-07-20T17:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "deny",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "172.217.0.0/16",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["video"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T09:00:00Z",
+          "end": "2025-07-20T17:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "172.217.10.10",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow HTTP access for guest users during weekends",
+    "config": {
+      "intent_id": "INTENT-213",
+      "user_role": "guest",
+      "timestamp": "2025-07-20T11:20:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T18:00:00+05:30",
+          "days": ["Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.50.0/24",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-20T18:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.50.10",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow SSH access for remote maintenance",
+    "config": {
+      "intent_id": "INTENT-214",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:25:00+05:30",
+      "QOS": {
+        "application": "SSH Remote",
+        "protocol": "ssh",
+        "latency": 64,
+        "bandwidth": "4G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T00:00:00+05:30",
+          "end": "2025-07-20T23:59:59+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "203.0.113.0/24",
+            "destination_ip": "192.168.1.50",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T00:00:00Z",
+          "end": "2025-07-20T23:59:59Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.1.50",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Restrict mail server access to internal network",
+    "config": {
+      "intent_id": "INTENT-215",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:30:00+05:30",
+      "QOS": {
+        "application": "Mail",
+        "protocol": "mail",
+        "latency": 192,
+        "bandwidth": "5G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T00:00:00+05:30",
+          "end": "2025-07-20T23:59:59+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.100.0/24",
+            "destination_ip": "192.168.200.10",
+            "source_port": "any",
+            "destination_port": "25",
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T00:00:00Z",
+          "end": "2025-07-20T23:59:59Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.200.10",
+            "ports": 25,
+            "application": "MAIL",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Prioritize video conference traffic during office hours",
+    "config": {
+      "intent_id": "INTENT-216",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:35:00+05:30",
+      "QOS": {
+        "application": "ZOOM",
+        "protocol": "voip",
+        "latency": 184,
+        "bandwidth": "1G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T09:00:00+05:30",
+          "end": "2025-07-20T17:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.0.0/24",
+            "destination_ip": "10.0.1.0/24",
+            "source_port": "any",
+            "destination_port": "3478",
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T09:00:00Z",
+          "end": "2025-07-20T17:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.0.0.5",
+            "ports": 3478,
+            "application": "VOICE",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Limit FTP transfers during peak hours",
+    "config": {
+      "intent_id": "INTENT-217",
+      "user_role": "user",
+      "timestamp": "2025-07-20T11:40:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "protocol": "ftp",
+        "latency": 40,
+        "bandwidth": "4G",
+        "jitter": 25,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T12:00:00+05:30",
+          "end": "2025-07-20T18:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "deny",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "192.168.10.0/24",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T12:00:00Z",
+          "end": "2025-07-20T18:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.10.5",
+            "ports": 21,
+            "application": "FTP",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow database backup operations overnight",
+    "config": {
+      "intent_id": "INTENT-218",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:45:00+05:30",
+      "QOS": {
+        "application": "Database Backup",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T23:00:00+05:30",
+          "end": "2025-07-21T05:00:00+05:30",
+          "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.50.0/24",
+            "destination_ip": "10.0.60.0/24",
+            "source_port": "any",
+            "destination_port": "3306",
+            "protocols": ["db"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T23:00:00Z",
+          "end": "2025-07-21T05:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.0.50.5",
+            "ports": 3306,
+            "application": "DB",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable secure SSH sessions for network admins",
+    "config": {
+      "intent_id": "INTENT-219",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T11:50:00+05:30",
+      "QOS": {
+        "application": "SSH Admin",
+        "protocol": "ssh",
+        "latency": 64,
+        "bandwidth": "4G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T08:00:00+05:30",
+          "end": "2025-07-20T20:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.0.0/24",
+            "destination_ip": "192.168.1.100",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T08:00:00Z",
+          "end": "2025-07-20T20:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.1.100",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow prioritized VOIP calls for support team",
+    "config": {
+      "intent_id": "INTENT-220",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T12:00:00+05:30",
+      "QOS": {
+        "application": "VOIP calling",
+        "protocol": "voip",
+        "latency": 184,
+        "bandwidth": "1G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T08:00:00+05:30",
+          "end": "2025-07-20T18:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.10.30.0/24",
+            "destination_ip": "10.10.40.0/24",
+            "source_port": "any",
+            "destination_port": "5060",
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T08:00:00Z",
+          "end": "2025-07-20T18:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.10.30.12",
+            "ports": 5060,
+            "application": "VOICE",
+            "time_window": "10min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Limit video streaming bandwidth for general users",
+    "config": {
+      "intent_id": "INTENT-221",
+      "user_role": "user",
+      "timestamp": "2025-07-20T12:05:00+05:30",
+      "QOS": {
+        "application": "Netflix",
+        "protocol": "video",
+        "latency": 136,
+        "bandwidth": "3G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T09:00:00+05:30",
+          "end": "2025-07-20T21:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "deny",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "54.192.0.0/16",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["video"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T09:00:00Z",
+          "end": "2025-07-20T21:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "54.192.10.10",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow HTTP traffic for marketing team",
+    "config": {
+      "intent_id": "INTENT-222",
+      "user_role": "user",
+      "timestamp": "2025-07-20T12:10:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T07:00:00+05:30",
+          "end": "2025-07-20T17:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.150.0/24",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T07:00:00Z",
+          "end": "2025-07-20T17:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.150.10",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "1h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow SSH access for system administrators",
+    "config": {
+      "intent_id": "INTENT-223",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T12:15:00+05:30",
+      "QOS": {
+        "application": "SSH Access",
+        "protocol": "ssh",
+        "latency": 64,
+        "bandwidth": "4G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T00:00:00+05:30",
+          "end": "2025-07-20T23:59:59+05:30",
+          "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "203.0.114.0/24",
+            "destination_ip": "192.168.10.100",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T00:00:00Z",
+          "end": "2025-07-20T23:59:59Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.10.100",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "10min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow mail traffic from trusted network",
+    "config": {
+      "intent_id": "INTENT-224",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T12:20:00+05:30",
+      "QOS": {
+        "application": "Mail",
+        "protocol": "mail",
+        "latency": 192,
+        "bandwidth": "5G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T00:00:00+05:30",
+          "end": "2025-07-20T23:59:59+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.250.0/24",
+            "destination_ip": "192.168.251.10",
+            "source_port": "any",
+            "destination_port": "25",
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T00:00:00Z",
+          "end": "2025-07-20T23:59:59Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.251.10",
+            "ports": 25,
+            "application": "MAIL",
+            "time_window": "30min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Prioritize video streaming during company webinars",
+    "config": {
+      "intent_id": "INTENT-225",
+      "user_role": "user",
+      "timestamp": "2025-07-20T12:25:00+05:30",
+      "QOS": {
+        "application": "YouTube",
+        "protocol": "video",
+        "latency": 136,
+        "bandwidth": "9.5G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T13:00:00+05:30",
+          "end": "2025-07-20T15:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.50.0.0/24",
+            "destination_ip": "10.50.1.0/24",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["video"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T13:00:00Z",
+          "end": "2025-07-20T15:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.50.0.10",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "1h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow FTP file transfers during night hours",
+    "config": {
+      "intent_id": "INTENT-226",
+      "user_role": "user",
+      "timestamp": "2025-07-20T12:30:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "protocol": "ftp",
+        "latency": 40,
+        "bandwidth": "9G",
+        "jitter": 25,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T22:00:00+05:30",
+          "end": "2025-07-21T06:00:00+05:30",
+          "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.16.10.0/24",
+            "destination_ip": "172.16.20.0/24",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T22:00:00Z",
+          "end": "2025-07-21T06:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "172.16.10.10",
+            "ports": 21,
+            "application": "FTP",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow database replication between data centers",
+    "config": {
+      "intent_id": "INTENT-227",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T12:35:00+05:30",
+      "QOS": {
+        "application": "Database",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T01:00:00+05:30",
+          "end": "2025-07-20T05:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.100.0.0/24",
+            "destination_ip": "10.101.0.0/24",
+            "source_port": "any",
+            "destination_port": "5432",
+            "protocols": ["db"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T01:00:00Z",
+          "end": "2025-07-20T05:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.100.0.5",
+            "ports": 5432,
+            "application": "DB",
+            "time_window": "4h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow guest users HTTP access during office hours",
+    "config": {
+      "intent_id": "INTENT-228",
+      "user_role": "guest",
+      "timestamp": "2025-07-20T12:40:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T09:00:00+05:30",
+          "end": "2025-07-20T17:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.200.0/24",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T09:00:00Z",
+          "end": "2025-07-20T17:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.200.20",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "30min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Enable secure SSH access for administrators.",
+    "config": {
+      "intent_id": "INTENT-101",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:30:00+05:30",
+      "QOS": {
+        "application": "SSH",
+        "protocol": "ssh",
+        "latency": 64,
+        "bandwidth": "4G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:30:00+05:30",
+          "end": "2025-07-20T11:30:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.1.1.0/24",
+            "destination_ip": "192.168.10.2",
+            "source_port": "any",
+            "destination_port": 22,
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:30:00Z",
+          "end": "2025-07-21T10:30:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.10.2",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Prioritize FTP transfers during night operations.",
+    "config": {
+      "intent_id": "INTENT-102",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T01:00:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "protocol": "ftp",
+        "latency": 40,
+        "bandwidth": "9G",
+        "jitter": 25,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T01:00:00+05:30",
+          "end": "2025-07-20T02:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.16.1.10",
+            "destination_ip": "192.168.20.100",
+            "source_port": "any",
+            "destination_port": 21,
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T01:00:00Z",
+          "end": "2025-07-21T01:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.20.100",
+            "ports": 21,
+            "application": "FTP",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Permit database access for analytics team.",
+    "config": {
+      "intent_id": "INTENT-103",
+      "user_role": "user",
+      "timestamp": "2025-07-20T08:00:00+05:30",
+      "QOS": {
+        "application": "DB",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T08:00:00+05:30",
+          "end": "2025-07-20T09:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.2.2.0/24",
+            "destination_ip": "192.168.30.10",
+            "source_port": "any",
+            "destination_port": 3306,
+            "protocols": ["db"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T08:00:00Z",
+          "end": "2025-07-21T08:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.30.10",
+            "ports": 3306,
+            "application": "DB",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow YouTube streaming with high bandwidth.",
+    "config": {
+      "intent_id": "INTENT-104",
+      "user_role": "user",
+      "timestamp": "2025-07-20T12:00:00+05:30",
+      "QOS": {
+        "application": "YouTube",
+        "protocol": "video",
+        "latency": 136,
+        "bandwidth": "9.5G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T12:00:00+05:30",
+          "end": "2025-07-20T13:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.50.5",
+            "destination_ip": "youtube.com",
+            "source_port": "any",
+            "destination_port": 443,
+            "protocols": ["video"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T12:00:00Z",
+          "end": "2025-07-21T12:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "youtube.com",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow Zoom meetings with minimum jitter.",
+    "config": {
+      "intent_id": "INTENT-105",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T15:00:00+05:30",
+      "QOS": {
+        "application": "ZOOM",
+        "protocol": "voip",
+        "latency": 184,
+        "bandwidth": "1G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T15:00:00+05:30",
+          "end": "2025-07-20T16:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.60.10",
+            "destination_ip": "zoom.us",
+            "source_port": "any",
+            "destination_port": 8801,
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T15:00:00Z",
+          "end": "2025-07-21T15:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "zoom.us",
+            "ports": 8801,
+            "application": "VOICE",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Monitor outgoing email activity.",
+    "config": {
+      "intent_id": "INTENT-106",
+      "user_role": "user",
+      "timestamp": "2025-07-20T11:00:00+05:30",
+      "QOS": {
+        "application": "MAIL",
+        "protocol": "mail",
+        "latency": 192,
+        "bandwidth": "5G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T11:00:00+05:30",
+          "end": "2025-07-20T12:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.70.0/24",
+            "destination_ip": "mail.corp.com",
+            "source_port": "any",
+            "destination_port": 587,
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T11:00:00Z",
+          "end": "2025-07-21T11:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "mail.corp.com",
+            "ports": 587,
+            "application": "MAIL",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Grant HTTP browsing for guests.",
+    "config": {
+      "intent_id": "INTENT-107",
+      "user_role": "guest",
+      "timestamp": "2025-07-20T09:00:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T09:00:00+05:30",
+          "end": "2025-07-20T10:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.80.0/24",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": 80,
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T09:00:00Z",
+          "end": "2025-07-21T09:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "0.0.0.0/0",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow SSH access with high priority during maintenance hours",
+    "config": {
+      "intent_id": "INTENT-071",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:15:00+05:30",
+      "QOS": {
+        "application": "SSH",
+        "protocol": "ssh",
+        "latency": "64ms",
+        "bandwidth": "4G",
+        "jitter": "60ms",
+        "priority": "high",
+        "time_constraints": {
+          "start": "22:00",
+          "end": "04:00",
+          "days": ["Saturday", "Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.0.5",
+            "destination_ip": "192.168.1.5",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T22:00:00Z",
+          "end": "2025-07-21T04:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.1.5",
+            "ports": "22",
+            "application": "SSH",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure high-speed mail service during business hours",
+    "config": {
+      "intent_id": "INTENT-072",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:17:00+05:30",
+      "QOS": {
+        "application": "Mail",
+        "protocol": "mail",
+        "latency": "192ms",
+        "bandwidth": "5G",
+        "jitter": "60ms",
+        "priority": "medium",
+        "time_constraints": {
+          "start": "08:00",
+          "end": "17:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.10.10.0/24",
+            "destination_ip": "192.168.0.10",
+            "source_port": "any",
+            "destination_port": "25",
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T08:00:00Z",
+          "end": "2025-07-20T17:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.0.10",
+            "ports": "25",
+            "application": "MAIL",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Deny FTP traffic during night hours",
+    "config": {
+      "intent_id": "INTENT-073",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:19:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "protocol": "ftp",
+        "latency": "40ms",
+        "bandwidth": "9G",
+        "jitter": "25ms",
+        "priority": "low",
+        "time_constraints": {
+          "start": "00:00",
+          "end": "06:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "deny",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "192.168.100.100",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-21T00:00:00Z",
+          "end": "2025-07-21T06:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.100.100",
+            "ports": "21",
+            "application": "FTP",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Ensure SSH access is reliable with 64ms latency, 4G bandwidth, and high priority.",
+    "config": {
+      "intent_id": "INTENT-101",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:00:00+05:30",
+      "QOS": {
+        "application": "SSH",
+        "protocol": "ssh",
+        "latency": 64,
+        "bandwidth": "4G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:00:00+05:30",
+          "end": "2025-07-20T11:00:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.0.1/24",
+            "destination_ip": "192.168.1.22",
+            "source_port": "any",
+            "destination_port": "22",
+            "protocols": ["ssh"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:00:00Z",
+          "end": "2025-07-21T10:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.1.22",
+            "ports": 22,
+            "application": "SSH",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow FTP traffic with 40ms latency, 9G bandwidth, and medium priority.",
+    "config": {
+      "intent_id": "INTENT-102",
+      "user_role": "user",
+      "timestamp": "2025-07-20T10:05:00+05:30",
+      "QOS": {
+        "application": "FTP",
+        "protocol": "ftp",
+        "latency": 40,
+        "bandwidth": "9G",
+        "jitter": 25,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T10:05:00+05:30",
+          "end": "2025-07-20T11:05:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.16.0.0/16",
+            "destination_ip": "10.10.10.10",
+            "source_port": "any",
+            "destination_port": "21",
+            "protocols": ["ftp"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:05:00Z",
+          "end": "2025-07-21T10:05:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.10.10.10",
+            "ports": 21,
+            "application": "FTP",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Support VOIP calls with low latency and high bandwidth needs.",
+    "config": {
+      "intent_id": "INTENT-103",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:10:00+05:30",
+      "QOS": {
+        "application": "VOIP",
+        "protocol": "voip",
+        "latency": 184,
+        "bandwidth": "1G",
+        "jitter": 60,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:10:00+05:30",
+          "end": "2025-07-20T11:10:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.50.0/24",
+            "destination_ip": "10.0.0.5",
+            "source_port": "any",
+            "destination_port": "5060",
+            "protocols": ["voip"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:10:00Z",
+          "end": "2025-07-21T10:10:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.0.0.5",
+            "ports": 5060,
+            "application": "VOICE",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Restrict video access to business hours only with 136ms latency limit.",
+    "config": {
+      "intent_id": "INTENT-104",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:15:00+05:30",
+      "QOS": {
+        "application": "YouTube",
+        "protocol": "video",
+        "latency": 136,
+        "bandwidth": "9.5G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T09:00:00+05:30",
+          "end": "2025-07-20T17:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Wednesday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "deny",
+            "source_ip": "any",
+            "destination_ip": "203.0.113.5",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["http", "video"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T09:00:00Z",
+          "end": "2025-07-21T09:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "203.0.113.5",
+            "ports": 443,
+            "application": "VIDEO",
+            "time_window": "6h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Prioritize HTTP traffic during workdays with moderate jitter.",
+    "config": {
+      "intent_id": "INTENT-105",
+      "user_role": "user",
+      "timestamp": "2025-07-20T10:20:00+05:30",
+      "QOS": {
+        "application": "Web Browsing",
+        "protocol": "http",
+        "latency": 72,
+        "bandwidth": "8G",
+        "jitter": 60,
+        "priority": "medium",
+        "time_constraints": {
+          "start": "2025-07-20T08:00:00+05:30",
+          "end": "2025-07-20T18:00:00+05:30",
+          "days": ["Monday", "Wednesday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.100.0/24",
+            "destination_ip": "172.217.160.0",
+            "source_port": "any",
+            "destination_port": "80",
+            "protocols": ["http"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T08:00:00Z",
+          "end": "2025-07-21T08:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "172.217.160.0",
+            "ports": 80,
+            "application": "WEB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow mail protocol usage on weekdays with low jitter.",
+    "config": {
+      "intent_id": "INTENT-106",
+      "user_role": "guest",
+      "timestamp": "2025-07-20T10:25:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "protocol": "mail",
+        "latency": 192,
+        "bandwidth": "5G",
+        "jitter": 60,
+        "priority": "low",
+        "time_constraints": {
+          "start": "2025-07-20T07:00:00+05:30",
+          "end": "2025-07-20T19:00:00+05:30",
+          "days": ["Monday", "Tuesday", "Friday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "any",
+            "destination_ip": "192.0.2.1",
+            "source_port": "any",
+            "destination_port": "25",
+            "protocols": ["mail"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T07:00:00Z",
+          "end": "2025-07-21T07:00:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.0.2.1",
+            "ports": 25,
+            "application": "MAIL",
+            "time_window": "30s"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Protect database access with limited bandwidth and strict latency.",
+    "config": {
+      "intent_id": "INTENT-107",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:30:00+05:30",
+      "QOS": {
+        "application": "Database",
+        "protocol": "db",
+        "latency": 32,
+        "bandwidth": "6G",
+        "jitter": 20,
+        "priority": "high",
+        "time_constraints": {
+          "start": "2025-07-20T10:30:00+05:30",
+          "end": "2025-07-20T11:30:00+05:30",
+          "days": ["Sunday"]
+        }
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.1.0.0/24",
+            "destination_ip": "10.2.2.2",
+            "source_port": "any",
+            "destination_port": "3306",
+            "protocols": ["db"]
+          }
+        ],
+        "schedule": {
+          "start": "2025-07-20T10:30:00Z",
+          "end": "2025-07-21T10:30:00Z"
+        }
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.2.2.2",
+            "ports": 3306,
+            "application": "DB",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Guarantee low-latency video conferencing for executive users",
+    "config": {
+      "intent_id": "INTENT-074",
+      "user_role": "executive",
+      "timestamp": "2025-07-20T10:25:00+05:30",
+      "QOS": {
+        "application": "Zoom",
+        "protocol": "udp",
+        "latency": "20ms",
+        "bandwidth": "3G",
+        "jitter": "10ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.20.1.0/24",
+            "destination_ip": "203.0.113.50",
+            "source_port": "any",
+            "destination_port": "3478-3481",
+            "protocols": ["udp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "203.0.113.50",
+            "ports": "3478-3481",
+            "application": "Zoom",
+            "time_window": "1h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Optimize IoT device telemetry uploads",
+    "config": {
+      "intent_id": "INTENT-075",
+      "user_role": "iot-admin",
+      "timestamp": "2025-07-20T10:26:00+05:30",
+      "QOS": {
+        "application": "Telemetry",
+        "protocol": "mqtt",
+        "latency": "300ms",
+        "bandwidth": "1M",
+        "jitter": "40ms",
+        "priority": "medium"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.50.0.0/16",
+            "destination_ip": "192.168.200.200",
+            "source_port": "any",
+            "destination_port": "1883",
+            "protocols": ["tcp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.200.200",
+            "ports": "1883",
+            "application": "MQTT",
+            "time_window": "10min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Deny peer-to-peer BitTorrent traffic on student VLAN",
+    "config": {
+      "intent_id": "INTENT-076",
+      "user_role": "network-ops",
+      "timestamp": "2025-07-20T10:27:00+05:30",
+      "QOS": {
+        "application": "BitTorrent",
+        "protocol": "tcp",
+        "latency": "800ms",
+        "bandwidth": "500k",
+        "jitter": "100ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "deny",
+            "source_ip": "192.168.80.0/24",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "6881-6889",
+            "protocols": ["tcp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.80.0/24",
+            "ports": "6881-6889",
+            "application": "BitTorrent",
+            "time_window": "1d"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow email traffic to company mail server",
+    "config": {
+      "intent_id": "INTENT-077",
+      "user_role": "admin",
+      "timestamp": "2025-07-20T10:28:00+05:30",
+      "QOS": {
+        "application": "Email",
+        "protocol": "tcp",
+        "latency": "120ms",
+        "bandwidth": "2G",
+        "jitter": "30ms",
+        "priority": "medium"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "0.0.0.0/0",
+            "destination_ip": "198.51.100.25",
+            "source_port": "any",
+            "destination_port": "587",
+            "protocols": ["tcp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "198.51.100.25",
+            "ports": "587",
+            "application": "SMTP",
+            "time_window": "5min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Permit DNS resolution to external resolver",
+    "config": {
+      "intent_id": "INTENT-078",
+      "user_role": "system",
+      "timestamp": "2025-07-20T10:29:00+05:30",
+      "QOS": {
+        "application": "DNS",
+        "protocol": "udp",
+        "latency": "50ms",
+        "bandwidth": "256k",
+        "jitter": "5ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.0.0.0/8",
+            "destination_ip": "8.8.8.8",
+            "source_port": "any",
+            "destination_port": "53",
+            "protocols": ["udp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "8.8.8.8",
+            "ports": "53",
+            "application": "DNS",
+            "time_window": "15min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Boost Git traffic for development servers",
+    "config": {
+      "intent_id": "INTENT-079",
+      "user_role": "developer",
+      "timestamp": "2025-07-20T10:30:00+05:30",
+      "QOS": {
+        "application": "Git",
+        "protocol": "tcp",
+        "latency": "90ms",
+        "bandwidth": "3G",
+        "jitter": "20ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "192.168.10.0/24",
+            "destination_ip": "git.example.com",
+            "source_port": "any",
+            "destination_port": "9418",
+            "protocols": ["tcp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "git.example.com",
+            "ports": "9418",
+            "application": "Git",
+            "time_window": "30min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Throttling streaming traffic on guest network",
+    "config": {
+      "intent_id": "INTENT-080",
+      "user_role": "guest",
+      "timestamp": "2025-07-20T10:31:00+05:30",
+      "QOS": {
+        "application": "Streaming",
+        "protocol": "tcp",
+        "latency": "1000ms",
+        "bandwidth": "512k",
+        "jitter": "200ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "limit",
+            "source_ip": "192.168.30.0/24",
+            "destination_ip": "0.0.0.0/0",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["tcp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "192.168.30.0/24",
+            "ports": "443",
+            "application": "Netflix/YouTube",
+            "time_window": "1h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Permit VoIP for sales team with guaranteed QoS",
+    "config": {
+      "intent_id": "INTENT-081",
+      "user_role": "sales",
+      "timestamp": "2025-07-20T10:32:00+05:30",
+      "QOS": {
+        "application": "VoIP",
+        "protocol": "udp",
+        "latency": "30ms",
+        "bandwidth": "1G",
+        "jitter": "15ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "172.16.50.0/24",
+            "destination_ip": "198.51.100.100",
+            "source_port": "any",
+            "destination_port": "5060",
+            "protocols": ["udp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "198.51.100.100",
+            "ports": "5060",
+            "application": "VoIP",
+            "time_window": "1h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Restrict social media access during work hours",
+    "config": {
+      "intent_id": "INTENT-082",
+      "user_role": "it-policy",
+      "timestamp": "2025-07-20T10:33:00+05:30",
+      "QOS": {
+        "application": "Social Media",
+        "protocol": "tcp",
+        "latency": "600ms",
+        "bandwidth": "100k",
+        "jitter": "100ms",
+        "priority": "low"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "deny",
+            "source_ip": "10.0.20.0/24",
+            "destination_ip": "facebook.com, twitter.com, instagram.com",
+            "source_port": "any",
+            "destination_port": "443",
+            "protocols": ["tcp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "facebook.com",
+            "ports": "443",
+            "application": "HTTPS",
+            "time_window": "30min"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "intent": "Allow backend server replication sync with high priority",
+    "config": {
+      "intent_id": "INTENT-083",
+      "user_role": "devops",
+      "timestamp": "2025-07-20T10:34:00+05:30",
+      "QOS": {
+        "application": "Replication",
+        "protocol": "tcp",
+        "latency": "100ms",
+        "bandwidth": "5G",
+        "jitter": "50ms",
+        "priority": "high"
+      },
+      "ACL": {
+        "rules": [
+          {
+            "action": "allow",
+            "source_ip": "10.10.1.1",
+            "destination_ip": "10.10.2.1",
+            "source_port": "any",
+            "destination_port": "27017",
+            "protocols": ["tcp"]
+          }
+        ]
+      },
+      "LOGS": {
+        "filters": [
+          {
+            "hosts": "10.10.2.1",
+            "ports": "27017",
+            "application": "MongoDB",
+            "time_window": "15min"
+          }
+        ]
+      }
+    }
+  }
+]
+
