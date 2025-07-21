@@ -40,11 +40,7 @@ router.post('/', async (req, res) => {
         urls: monitoringResult.monitoringUrls,
         configGenerated: true
       } : {
-        urls: ["http://localhost:3000/d/545b4595-0a4e-4ef8-b02c-41e874b63fa3/network-qos-overview?viewPanel=17&from=now-30s&to=now",
-        "http://localhost:3000/d/545b4595-0a4e-4ef8-b02c-41e874b63fa3/network-qos-overview?viewPanel=18&from=now-30s&to=now",
-        "http://localhost:3000/d/545b4595-0a4e-4ef8-b02c-41e874b63fa3/network-qos-overview?viewPanel=19&from=now-30s&to=now",
-        "http://localhost:3000/d/545b4595-0a4e-4ef8-b02c-41e874b63fa3/network-qos-overview?viewPanel=20&from=now-30s&to=now"
-        ],
+        urls: [ ],
         configGenerated: false,
         reason: 'No LOGS configuration found'
       }
