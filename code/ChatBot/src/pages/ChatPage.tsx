@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ChatContainer from '../components/chat/ChatContainer';
 import IntentEditor from '../components/intent/IntentEditor';
 import ReviewModal from '../components/review/ReviewModal';
+import MonitoringButton from '../components/common/MonitoringButton';
 // import FeedbackForm from '../components/feedback/FeedbackForm';
 import { useChat } from '../contexts/ChatContext';
 import { useIntent } from '../contexts/IntentContext';
@@ -17,6 +18,7 @@ const ChatPage: React.FC = () => {
   // const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
   const [intentPushed, setIntentPushed] = useState(false);
   const [intentPushError, setIntentPushError] = useState<string | null>(null);
+  const [monitoringUrls, setMonitoringUrls] = useState<string[]>([]);
   
   // Create a new chat session if none exists
   useEffect(() => {
@@ -33,14 +35,22 @@ const ChatPage: React.FC = () => {
   };
   
   // Handle successful intent push
-  const handleIntentPushed = () => {
+  const handleIntentPushed = (urls?: string[]) => {
     setIsReviewModalOpen(false);
     setIntentPushed(true);
     setIntentPushError(null); // Clear any previous errors
-    // Hide success message after 3 seconds
+    
+    // Store monitoring URLs if provided
+    if (urls && urls.length > 0) {
+      setMonitoringUrls(urls);
+    } else {
+      setMonitoringUrls([]);
+    }
+    
+    // Hide success message after 5 seconds (longer to allow monitoring access)
     setTimeout(() => {
       setIntentPushed(false);
-    }, 3000);
+    }, 5000);
     // setTimeout(() => {
     //   setIsFeedbackModalOpen(true);
     // }, 1000);
@@ -143,12 +153,33 @@ const ChatPage: React.FC = () => {
       
       {/* Success Message */}
       {intentPushed && (
-        <div className="fixed bottom-4 right-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded shadow-lg z-50 transition-all duration-300">
-          <div className="flex items-center">
-            <svg className="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="fixed bottom-4 right-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded shadow-lg z-50 transition-all duration-300 max-w-md">
+          <div className="flex items-start">
+            <svg className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            <p>Intent successfully pushed to the network!</p>
+            <div className="flex-1">
+              <p className="font-medium">Intent successfully pushed to the network!</p>
+              {monitoringUrls.length > 0 && (
+                <div className="mt-2">
+                  <p className="text-sm text-green-600 mb-2">
+                    {monitoringUrls.length} monitoring dashboard(s) available
+                  </p>
+                  <MonitoringButton 
+                    urls={monitoringUrls} 
+                    className="text-sm"
+                  />
+                </div>
+              )}
+            </div>
+            <button 
+              onClick={() => setIntentPushed(false)}
+              className="ml-2 text-green-500 hover:text-green-700"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       )}
