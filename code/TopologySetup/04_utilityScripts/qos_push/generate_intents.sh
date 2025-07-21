@@ -146,17 +146,17 @@ for proto in "${protocols[@]}"; do
     for dst in "${dst_macs[@]}"; do
       if [[ "$use_ports" == true ]]; then
 		for port in "${ports[@]}"; do
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=1/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=2/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=3/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
-			echo "add-host-intent --ipProto=$ip_proto --$proto_key=$port --setQueue=4/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ethType 2048 --ipProto=$ip_proto --$proto_key=$port --setQueue=1/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ethType 2048 --ipProto=$ip_proto --$proto_key=$port --setQueue=2/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ethType 2048 --ipProto=$ip_proto --$proto_key=$port --setQueue=3/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+			echo "add-host-intent --ethType 2048 --ipProto=$ip_proto --$proto_key=$port --setQueue=4/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
 
 		done
       else
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=1/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=2/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=3/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
-		echo "add-host-intent --ipProto=$ip_proto --setQueue=4/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ethType 2048 --ipProto=$ip_proto --setQueue=1/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ethType 2048 --ipProto=$ip_proto --setQueue=2/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ethType 2048 --ipProto=$ip_proto --setQueue=3/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
+		echo "add-host-intent --ethType 2048 --ipProto=$ip_proto --setQueue=4/$queue --priority=$RULE_PRIORITY $src $dst" >> "$OUTPUT_FILE"
 
 	  fi
     done

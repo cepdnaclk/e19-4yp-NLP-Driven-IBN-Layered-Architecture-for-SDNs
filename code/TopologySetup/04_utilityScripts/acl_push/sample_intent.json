@@ -1,31 +1,15 @@
 {
-    "intent": "Block all HTTP traffic reaching the HTTP server at 192.168.0.1/32", 
+    "intent": "Lets block all HTTP traffic headed to web server at 192.168.0.1, no exceptions",
     "config": {
-      "intent_id": "INTENT-001",
+      "intent_id": "INTENT-015",
       "user_role": "admin",
       "timestamp": "2024-07-01T14:30:00Z",
       "QoS": {},
       "ACL": {
-        "source_ip": "192.168.0.1/32", 
-        "destination_port": "80",
-        "protocol": "tcp",
+        "destination_ip": "192.168.0.1/32", 
+        "destination_port": "[80,81,82]",
+        "protocol": ["TCP"],
         "action": "deny"
-      },
-      "logs": {
-        "enable": true,
-        "log_type": "flow",
-        "match_conditions": [
-          {
-            "source_ip": "192.168.0.1/32" 
-          },
-          {
-            "destination_port": 80
-          },
-          {
-            "protocol": "tcp"
-          }
-        ],
-        "retention_period": "7d"
       }
     }
   }

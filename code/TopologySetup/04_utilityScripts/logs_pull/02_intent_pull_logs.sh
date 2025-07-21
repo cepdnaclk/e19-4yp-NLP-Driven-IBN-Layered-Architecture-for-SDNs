@@ -39,3 +39,19 @@ tail -n +2 "$CSV_FILE" | while IFS=',' read -r dash_title panel_title url; do
 done
 
 echo "[+] Matching URLs written to $OUTPUT_FILE"
+
+FILE="./matched_urls.txt"
+
+if [ ! -f "$FILE" ]; then
+  echo "File $FILE not found!"
+  exit 1
+fi
+
+while IFS= read -r url; do
+  if [[ -n "$url" ]]; then
+    echo "Opening $url"
+    # For Linux (xdg-open)
+    xdg-open "$url" >/dev/null 2>&1 &
+  fi
+done < "$FILE"
+

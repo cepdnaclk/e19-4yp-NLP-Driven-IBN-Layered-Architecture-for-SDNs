@@ -1,5 +1,5 @@
 {
-    "intent": "Lower the priority of Video traffic reaching the internal servers", 
+    "intent": "I wanna lower the priority of Video traffic in the network", 
     "config": {
       "intent_id": "INTENT-002",
       "user_role": "admin",

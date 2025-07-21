@@ -15,28 +15,53 @@ if [ ! -f "$JSON_FILE" ]; then
 fi
 
 # Extract required fields from the input JSON using jq
-DST_IP=$(jq -r '.config.ACL.source_ip' "$JSON_FILE")
-DST_PORT=$(jq -r '.config.ACL.destination_port' "$JSON_FILE")
-PROTOCOL=$(jq -r '.config.ACL.protocol' "$JSON_FILE")
+
+DST_IP=$(jq -r '.config.ACL.destination_ip' "$JSON_FILE")
+DST_PORTS=$(jq -r '.config.ACL.destination_port | fromjson | join(",")' "$JSON_FILE")
+PROTOCOLS=$(jq -r '.config.ACL.protocol | join(",")' "$JSON_FILE")
 ACTION=$(jq -r '.config.ACL.action' "$JSON_FILE")
 
-# Formatted JSON payload
-read -r -d '' PAYLOAD <<EOF
+# Convert protocol and action to uppercase
+# For protocol, pick first protocol if multiple are present
+PROTOCOL_UPPER=$(echo "$PROTOCOLS" | cut -d',' -f1 | tr '[:lower:]' '[:upper:]')
+ACTION_UPPER=$(echo "$ACTION" | tr '[:lower:]' '[:upper:]')
+
+# Split destination ports and iterate
+IFS=',' read -ra PORT_ARRAY <<< "$DST_PORTS"
+for PORT in "${PORT_ARRAY[@]}"; do
+  PORT_TRIMMED=$(echo "$PORT" | xargs) # remove any surrounding spaces
+
+  echo "Sending ACL rule for port $PORT_TRIMMED..."
+
+  # Remove any non-digit characters (just in case)
+  PORT_NUM=$(echo "$PORT_TRIMMED" | tr -d -c '0-9')
+
+  PAYLOAD=$(cat <<EOF
 {
-  "priority": 100,
   "srcIp": "0.0.0.0/0",
   "dstIp": "${DST_IP}",
-  "protocol": "${PROTOCOL^^}",
-  "dstPort": ${DST_PORT},
-  "action": "${ACTION^^}"
+  "ipProto": "${PROTOCOL_UPPER}",
+  "dstTpPort": "${PORT_NUM}",
+  "action": "${ACTION_UPPER}"
 }
 EOF
+)
+  
+  echo "Payload being sent:"
+  echo "$PAYLOAD" | jq . || echo "$PAYLOAD"
 
-# Send the request
-echo "Sending ACL rule to ONOS..."
-curl -X POST http://localhost:8181/onos/v1/acl/rules \
-     -H "Content-Type: application/json" \
-     -u onos:rocks \
-     -d "$PAYLOAD"
+  curl -X POST http://localhost:8181/onos/v1/acl/rules \
+       -H "Content-Type: application/json" \
+       -u onos:rocks \
+       -d "$PAYLOAD"
 
-echo -e "\nDone."
+  echo -e "\nRule for port $PORT_TRIMMED applied.\n"
+done
+
+ORIGINAL_DIR=$(pwd)
+TARGET_DIR="../../03_trafficGenScripts"
+cd "$TARGET_DIR" 
+./stop_schedulers.sh
+cd "$ORIGINAL_DIR"
+
+echo "All rules sent."
