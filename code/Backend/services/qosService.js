@@ -35,11 +35,17 @@ export const processQoSIntent = async (config) => {
     const result = await executeQoSPush(tempJsonPath);
     
     // Clean up temporary file
-    await fs.unlink(tempJsonPath);
+    try {
+      await fs.unlink(tempJsonPath);
+    } catch (unlinkError) {
+      console.warn('⚠️  Could not delete temporary file:', unlinkError.message);
+    }
     
     return {
-      success: true,
-      message: 'QoS intents successfully pushed to ONOS',
+      success: result.success !== false, // Default to true unless explicitly false
+      message: result.success !== false 
+        ? 'QoS intents successfully pushed to ONOS' 
+        : 'QoS intent push completed with warnings - check logs',
       details: result
     };
     
@@ -98,27 +104,55 @@ const executeQoSPush = async (jsonFilePath) => {
     
     console.log('🚀 Pushing QoS intents to ONOS...');
     
-    // Execute the intent push script
+    // Execute the intent push script with improved error handling
     const { stdout, stderr } = await execAsync(
       `cd "${QOS_SCRIPTS_PATH}" && bash 02_intent_push_qos.sh "${jsonFilePath}"`,
-      { timeout: 60000 } // 60 second timeout
+      { 
+        timeout: 1200000, // 2 minute timeout (increased from 60s)
+        maxBuffer: 1024 * 1024 * 15, // 10MB buffer for large outputs
+        killSignal: 'SIGTERM'
+      }
     );
     
-    if (stderr) {
-      console.warn('⚠️  Push warnings:', stderr);
+    // Clean up ANSI escape sequences and control characters from output
+    const cleanStdout = stdout ? stdout.replace(/\x1B\[[?]?\d*[;h=]*[A-Za-z]/g, '').replace(/\r/g, '') : '';
+    const cleanStderr = stderr ? stderr.replace(/\x1B\[[?]?\d*[;h=]*[A-Za-z]/g, '').replace(/\r/g, '') : '';
+    
+    // Log warnings but don't fail for SSH warnings
+    if (cleanStderr && !cleanStderr.includes('Warning: Permanently added')) {
+      console.warn('⚠️  Push warnings:', cleanStderr);
     }
     
-    console.log('📤 ONOS Response:', stdout);
+    console.log('📤 ONOS Response (cleaned):', cleanStdout);
+    
+    // Check if the output indicates success
+    const isSuccess = cleanStdout.includes('Intent') || 
+                     cleanStdout.includes('submitted') || 
+                     cleanStdout.includes('installed') ||
+                     !cleanStdout.includes('error') && !cleanStdout.includes('failed');
+    
+    if (!isSuccess && cleanStdout.length > 0) {
+      console.warn('⚠️  Possible script execution issue - check output manually');
+    }
     
     return {
-      stdout,
-      stderr,
-      timestamp: new Date().toISOString()
+      stdout: cleanStdout,
+      stderr: cleanStderr,
+      timestamp: new Date().toISOString(),
+      success: isSuccess
     };
     
   } catch (error) {
     console.error('❌ Error executing QoS push:', error);
-    throw new Error('Failed to push intents to ONOS');
+    
+    // Provide more specific error information
+    if (error.code === 'TIMEOUT') {
+      throw new Error('Script execution timeout - ONOS may be slow to respond');
+    } else if (error.code === 'ENOENT') {
+      throw new Error('QoS script not found - check script path');
+    } else {
+      throw new Error(`Script execution failed: ${error.message}`);
+    }
   }
 };
 
