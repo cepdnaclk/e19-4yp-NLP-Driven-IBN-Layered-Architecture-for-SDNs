@@ -19,41 +19,43 @@ export const pushIntent = async (config) => {
         const srcIp = rule.source_ip ?? '0.0.0.0/0';
         const srcPort = rule.source_port ?? -1;
         const dstIp = rule.destination_ip ?? '0.0.0.0/0';
-        const dstPort = rule.destination_port ?? -1;
+        const dstPorts = Array.isArray(rule.destination_port) ? rule.destination_port : [rule.destination_port ?? -1];
         const protocols = rule.protocols ? rule.protocols : ["HTTP"];
         const action = rule.action ?? 'ALLOW';
         
-        // Create separate ACL rules for each protocol
+        // Create separate ACL rules for each protocol and destination port combination
         for (const protocol of protocols) {
-          const aclPayload = {
-            priority: priority,
-            srcIp: srcIp,
-            protocol: protocol.toUpperCase(),
-            action: action.toUpperCase()
-          };
-          
-          if (dstIp !== '0.0.0.0/0') {
-            aclPayload.dstIp = dstIp;
-          }
-          
-          if (dstPort !== -1) {
-            aclPayload.dstPort = parseInt(dstPort);
-          }
-          
-          if (srcPort !== -1) {
-            aclPayload.srcPort = parseInt(srcPort);
-          }
-          
-          // Send ACL rule to ONOS ACL API
-          console.log(`ACL rule sent to ONOS: ${JSON.stringify(aclPayload)}`);
-          try {
-            await axios.post(`${onosUrl}/acl/rules`, aclPayload, {
-              auth: onosAuth,
-              headers: { 'Content-Type': 'application/json' }
-            });
+          for (const dstPort of dstPorts) {
+            const aclPayload = {
+              priority: priority,
+              srcIp: srcIp,
+              protocol: protocol.toUpperCase(),
+              action: action.toUpperCase()
+            };
+            
+            if (dstIp !== '0.0.0.0/0') {
+              aclPayload.dstIp = dstIp;
+            }
+            
+            if (dstPort !== -1) {
+              aclPayload.dstPort = parseInt(dstPort);
+            }
+            
+            if (srcPort !== -1) {
+              aclPayload.srcPort = parseInt(srcPort);
+            }
+            
+            // Send ACL rule to ONOS ACL API
             console.log(`ACL rule sent to ONOS: ${JSON.stringify(aclPayload)}`);
-          } catch (error) {
-            console.error('Error sending ACL rule to ONOS:', error.message);
+            try {
+              await axios.post(`${onosUrl}/acl/rules`, aclPayload, {
+                auth: onosAuth,
+                headers: { 'Content-Type': 'application/json' }
+              });
+              console.log(`ACL rule sent to ONOS: ${JSON.stringify(aclPayload)}`);
+            } catch (error) {
+              console.error('Error sending ACL rule to ONOS:', error.message);
+            }
           }
         }
       }
