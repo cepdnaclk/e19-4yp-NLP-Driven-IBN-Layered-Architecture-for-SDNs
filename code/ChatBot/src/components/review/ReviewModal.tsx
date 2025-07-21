@@ -6,7 +6,7 @@ import intentService from '../../services/intentService';
 interface ReviewModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onPushSuccess: () => void;
+  onPushSuccess: (monitoringUrls?: string[]) => void;
   onPushError?: (error: string) => void;
 }
 
@@ -14,6 +14,9 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
   const { currentIntent } = useIntent();
   const [activeTab, setActiveTab] = React.useState<'code' | 'form'>('code');
   const [isPushing, setIsPushing] = React.useState(false);
+  const [isMonitoring, setIsMonitoring] = React.useState(false);
+  const [isPushed, setIsPushed] = React.useState(false);
+  const [monitoringUrls, setMonitoringUrls] = React.useState<string[]>([]);
   const [simulationResult, setSimulationResult] = React.useState<{
     success: boolean;
     message: string;
@@ -24,6 +27,10 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
   React.useEffect(() => {
     if (isOpen && currentIntent) {
       originalIntentRef.current = currentIntent.raw;
+      // Reset states when modal opens
+      setIsPushed(false);
+      setMonitoringUrls([]);
+      setSimulationResult(null);
     }
   }, [isOpen, currentIntent]);
 
@@ -37,9 +44,28 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
     
     try {
       const resp = await intentService.pushIntent(currentIntent.raw);
-      console.log('Push result:', resp.success);
+      console.log('Push result:', resp);
+      
       if (resp.success) {
-        onPushSuccess();
+        setIsPushed(true);
+        
+        // Check if monitoring URLs were returned
+        if (resp.monitoring && resp.monitoring.urls && resp.monitoring.urls.length > 0) {
+          setMonitoringUrls(resp.monitoring.urls);
+          setSimulationResult({
+            success: true,
+            message: `Intent pushed successfully! ${resp.monitoring.urls.length} monitoring dashboard(s) available.`
+          });
+        } else {
+          setMonitoringUrls([]);
+          setSimulationResult({
+            success: true,
+            message: 'Intent pushed successfully! No monitoring dashboards configured.'
+          });
+        }
+        
+        // Don't close modal immediately - let user access monitoring
+        // onPushSuccess();
       } else {
         const errorMessage = resp.message || 'Failed to push intent to the network. Please try again.';
         setSimulationResult({
@@ -65,6 +91,48 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
       }
     } finally {
       setIsPushing(false);
+    }
+  };
+
+  const handleMonitor = async () => {
+    if (monitoringUrls.length === 0) {
+      console.log('No monitoring URLs available');
+      return;
+    }
+    
+    setIsMonitoring(true);
+    
+    try {
+      console.log(`Opening ${monitoringUrls.length} monitoring dashboard(s)...`);
+      
+      // Open each URL in a new tab with a slight delay to prevent popup blocking
+      monitoringUrls.forEach((url, index) => {
+        setTimeout(() => {
+          window.open(url, `_monitoring_${index}`, 'noopener,noreferrer');
+          console.log(`Opened monitoring dashboard: ${url}`);
+        }, index * 300); // 1000ms delay between each tab
+      });
+      
+      // Update simulation result to show monitoring opened
+      setSimulationResult({
+        success: true,
+        message: `${monitoringUrls.length} monitoring dashboard(s) opened in new tabs.`
+      });
+      
+      // Close modal after opening dashboards
+      setTimeout(() => {
+        onPushSuccess(monitoringUrls);
+        onClose();
+      }, 5000);
+      
+    } catch (error) {
+      console.error('Error opening monitoring dashboards:', error);
+      setSimulationResult({
+        success: false,
+        message: `Error opening monitoring dashboards: ${(error as Error).message}`
+      });
+    } finally {
+      setIsMonitoring(false);
     }
   };
 
@@ -204,19 +272,47 @@ const ReviewModal: React.FC<ReviewModalProps> = ({ isOpen, onClose, onPushSucces
           >
             Cancel
           </button>
-          <button
-            onClick={handlePush}
-            disabled={isPushing}
-            className={`px-4 py-2 rounded-md ${
-              isPushing
-                ? 'bg-green-400 cursor-not-allowed text-white'
-                : simulationResult?.success === false
-                ? 'bg-red-600 hover:bg-red-700 text-white'
-                : 'bg-green-600 hover:bg-green-700 text-white'
-            }`}
-          >
-            {isPushing ? 'Pushing...' : simulationResult?.success === false ? 'Retry Push' : 'Push Configuration'}
-          </button>
+          
+          {!isPushed ? (
+            <button
+              onClick={handlePush}
+              disabled={isPushing}
+              className={`px-4 py-2 rounded-md ${
+                isPushing
+                  ? 'bg-green-400 cursor-not-allowed text-white'
+                  : simulationResult?.success === false
+                  ? 'bg-red-600 hover:bg-red-700 text-white'
+                  : 'bg-green-600 hover:bg-green-700 text-white'
+              }`}
+            >
+              {isPushing ? 'Pushing...' : simulationResult?.success === false ? 'Retry Push' : 'Push Configuration'}
+            </button>
+          ) : (
+            <>
+              {monitoringUrls.length > 0 && (
+                <button
+                  onClick={handleMonitor}
+                  disabled={isMonitoring}
+                  className={`px-4 py-2 rounded-md ${
+                    isMonitoring
+                      ? 'bg-blue-400 cursor-not-allowed text-white'
+                      : 'bg-blue-600 hover:bg-blue-700 text-white'
+                  }`}
+                >
+                  {isMonitoring ? 'Opening Dashboards...' : `Monitor (${monitoringUrls.length} dashboards)`}
+                </button>
+              )}
+              <button
+                onClick={() => {
+                  onPushSuccess(monitoringUrls);
+                  onClose();
+                }}
+                className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+              >
+                Done
+              </button>
+            </>
+          )}
         </div>
       </div>
     </div>

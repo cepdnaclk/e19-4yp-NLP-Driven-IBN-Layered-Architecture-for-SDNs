@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import type { Intent, ValidationError, IntentHistory, IntentVersion } from '../types/intent';
+import type { Intent, ValidationError, IntentHistory, IntentVersion, PushIntentResponse } from '../types/intent';
 import { validateIntentSchema, sampleIntentJson } from '../schemas/intentSchema';
 import axios from 'axios';
 
@@ -68,11 +68,7 @@ export const intentService = {
   },
   
   // Push an intent to the network
-  pushIntent: async (intentJson: string): Promise<{
-    success: boolean;
-    message: string;
-    intentId?: string;
-  }> => {
+  pushIntent: async (intentJson: string): Promise<PushIntentResponse> => {
     try {
       // Validate the intent first
       const validation = await validateIntentSchema(intentJson);
@@ -123,10 +119,18 @@ export const intentService = {
 
       const result = response.data;
 
+      // Handle monitoring configuration from backend
+      const monitoring = result.monitoring ? {
+        urls: result.monitoring.urls || [],
+        configGenerated: result.monitoring.configGenerated || false,
+        reason: result.monitoring.reason
+      } : undefined;
+
       return {
         success: true,
         message: result.message || `Intent successfully pushed to the network with ID: ${intentId}`,
-        intentId: intentId
+        intentId: intentId,
+        monitoring: monitoring
       };
       
     } catch (error) {

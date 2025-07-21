@@ -39,3 +39,16 @@ export interface IntentHistory {
   status: 'draft' | 'validated' | 'simulated' | 'pushed' | 'failed';
   versions: IntentVersion[];
 }
+
+export interface MonitoringConfig {
+  urls: string[];
+  configGenerated: boolean;
+  reason?: string;
+}
+
+export interface PushIntentResponse {
+  success: boolean;
+  message: string;
+  intentId?: string;
+  monitoring?: MonitoringConfig;
+}

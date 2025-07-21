@@ -2,7 +2,12 @@
   "intent_id": "INTENT-433",
   "user_role": "admin",
   "timestamp": "2025-07-14T08:33:00+05:30",
-  "QOS": {},
+  "QOS": {
+    "application": "Streaming Media",
+    "protocol": "video",
+    "bandwidth": "60Mbps",
+    "priority": "high"
+  },
   "ACL": {},
   "LOGS": {
     "filters": [
