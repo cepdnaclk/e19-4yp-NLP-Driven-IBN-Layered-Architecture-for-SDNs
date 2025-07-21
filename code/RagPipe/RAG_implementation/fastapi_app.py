@@ -244,11 +244,12 @@ async def process_query_simple(request: QueryRequest):
         # Retrieve context and ACL rules
         retrieved_context = retriever_agent(request.message)
         acl_rules = acl_retriever_agent(ACL_URL)
+        timestamp = datetime.now().isoformat()
         # Generate configuration
-        raw_output = template_generator_agent(request.message, retrieved_context, acl_rules)
+        raw_output = template_generator_agent(request.message, retrieved_context, acl_rules,timestamp)
         return {
             "response": raw_output,
-            "timestamp": datetime.now().isoformat(),
+            "timestamp": timestamp,
         }
             
     except Exception as e:
