@@ -24,3 +24,4 @@
 /04_utilityScripts/qos_push/retrieve_network_knowledge/04_clean_hosts.txt
 /04_utilityScripts/qos_push/retrieve_network_knowledge/06_ip_mac_mapping.csv
 /04_utilityScripts/qos_push/retrieve_network_knowledge/08_ip_host_mapping.csv
+/04_utilityScripts/qos_push/retrieve_network_knowledge/rule_priority_counter.txt

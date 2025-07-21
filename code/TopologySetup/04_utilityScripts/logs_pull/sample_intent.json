@@ -1,5 +1,5 @@
 {
-  "intent": "Track any unusual activity on our Database servers.",
+  "intent": "Track any unusual activity on our Database servers for past 30 minutes.",
   "config": {
     "intent_id": "intent_203",
     "user_role": "admin",
@@ -9,7 +9,7 @@
         {
           "ports": "3306,3307",
           "application": "DB",
-          "time_window": "30s"
+          "time_window": "30m"
         }
       ]
     }

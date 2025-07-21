@@ -4,7 +4,7 @@ TRAFFIC_PROFILE="clientTrafficProfile.yaml"
 
 # Check for the profile file
 if [[ ! -f "$TRAFFIC_PROFILE" ]]; then
-    echo "Missing traffic profile: $TRAFFIC_PROFILE"
+   #echo "Missing traffic profile: $TRAFFIC_PROFILE"
     exit 1
 fi
 
@@ -12,7 +12,7 @@ fi
 hosts=$(yq eval 'keys' "$TRAFFIC_PROFILE" | sed 's/- //g')
 
 for host in $hosts; do
-    echo "Stopping traffic in $host..."
+    #echo "Stopping traffic in $host..."
 
     # Gracefully kill scheduler and traffic scripts
     docker exec "$host" pkill -f scheduler.sh
@@ -21,7 +21,7 @@ for host in $hosts; do
     # Kill any lingering iperf3 clients
     docker exec "$host" pkill -f 'iperf3 -c'
 
-    echo "✔️  Killed processes in $host"
+    # echo "✔️  Killed processes in $host"
 done
 
-echo "✅ All iperf3 client processes stopped."
+# echo "✅ All iperf3 client processes stopped."
