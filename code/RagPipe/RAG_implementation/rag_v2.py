@@ -12,6 +12,8 @@ from langchain_deepseek.chat_models import ChatDeepSeek # Deepseek chat model
 
 from langchain.schema import HumanMessage, AIMessage, SystemMessage
 
+from datetime import datetime
+
 import requests
 
 import os
@@ -64,7 +66,7 @@ model = ChatDeepSeek(
 
 MAX_HISTORY = 3 #
 
-def template_generator_agent(user_intent, context, acl_rules):
+def template_generator_agent(user_intent, context, acl_rules, system_timestamp):
     PROMPT_TEMPLATE = """
     You are a network policy expert.
 
@@ -73,47 +75,47 @@ def template_generator_agent(user_intent, context, acl_rules):
     {{
     "intent": "<Rephrase the user intent in natural language>",
     "config": {{
-        "intent_id": "<Generate a unique INTENT_ID or leave empty>",
+        "intent_id": "<Generate a unique identifier that includes the current timestamp (e.g., INT-<YYYYMMDDHHMMSS>>",
         "user_role": "<USER_ROLE>", // default: "admin"
-        "timestamp": "<current timestamp in ISO format>",
+        "timestamp": {system_timestamp},
         "QOS": {{
-        "application": "<APPLICATION>", // default: "Web Browsing"
-        "category": "<TRAFFIC_CATEGORY>", // default: "web"
-        "latency": "<LATENCY_THRESHOLD>", // e.g., "50ms"
-        "bandwidth": "<BANDWIDTH_THRESHOLD>", // e.g., "5Mbps"
-        "jitter": "<JITTER_THRESHOLD>", // e.g., "30ms"
-        "priority": "<PRIORITY_LEVEL>", // default: "low"
-        "time_constraints": {{
-            "start": "<START_TIME>", // default: now
-            "end": "<END_TIME>",     // default: 1 hour later
-            "days": ["<DAY_1>", "<DAY_2>"] // default: ["Today"]
+            "application": "<APPLICATION>", // default: "Web Browsing"
+            "protocol": "<TRAFFIC_PROTOCOL>", // default=>"http"; "video", "voip", "ftp", "mail", "db", "ssh"
+            "latency": "<LATENCY_THRESHOLD>", // e.g., "50ms"
+            "bandwidth": "<BANDWIDTH_THRESHOLD>", // e.g., "5Mbps"
+            "jitter": "<JITTER_THRESHOLD>", // e.g., "30ms", use milliseconds only
+            "priority": "<PRIORITY_LEVEL>", // default: "low"
+            "time_constraints": {{
+                "start": "<START_TIME>", 
+                "end": "<END_TIME>",    
+                "days": ["<DAY_1>", "<DAY_2>"] 
         }}
         }},
         "ACL": {{
-        "rules": [
-            {{
-            "action": "<ACTION>", // "allow" or "deny"
-            "source_ip": "<SOURCE_IP>", // default: "0.0.0.0/0"
-            "destination_ip": "<DESTINATION_IP>", // default: "0.0.0.0/0"
-            "source_port": "<SOURCE_PORT>", // default: "any"
-            "destination_port": "<DESTINATION_PORT>", // default: "any"
-            "protocols": ["<ALLOW_PROTOCOL_1>", "<ALLOW_PROTOCOL_2>"] // default: ["HTTP"]
-            }}
-        ],
-        "schedule": {{
-            "start": "<ACL_START_TIME>", // default: now
-            "end": "<ACL_END_TIME>"      // default: 24h later
+            "rules": [
+                {{
+                "action": "<ACTION>", // "allow" or "deny"
+                "source_ip": "<SOURCE_IP>", // default: "0.0.0.0/0"
+                "destination_ip": "<DESTINATION_IP>", // default: "0.0.0.0/0"
+                "source_port": "<SOURCE_PORT>", // default: null 
+                "destination_port": "<DESTINATION_PORT>", // default: null or array
+                "protocols": ["<ALLOW_PROTOCOL_1>", "<ALLOW_PROTOCOL_2>"] // default: ["HTTP"]
+                }}
+            ],
+            "schedule": {{
+                "start": "<ACL_START_TIME>", 
+                "end": "<ACL_END_TIME>"      
         }}
         }},
         "LOGS": {{
-        "filters": [
-            {{
-            "hosts": "<HOST_IP>", // default: "any"
-            "ports": "<FILTER_PORT>", // default: "any"
-            "application": "<FILTER_APPLICATION>", // default: "any"
-            "time_window": "<TIME_WINDOW>" // default: "5min"
-            }}
-        ]
+            "filters": [
+                {{
+                "hosts": "<HOST_IP>",
+                "ports": "<FILTER_PORT>", 
+                "application": "<FILTER_APPLICATION>", 
+                "time_window": "<TIME_WINDOW>" 
+                }}
+            ]
         }}
     }}
     }}
@@ -130,17 +132,19 @@ def template_generator_agent(user_intent, context, acl_rules):
     ---
 
     **Instructions:**
-    - First, provide a brief explanation/reasoning for the intent configuration
+    - First, provide a brief explanation/reasoning for the intent configuration. **Do not use markdown heading syntax (e.g., '###') for the "Explanation/Reasoning:" and "JSON Configuration:" titles.**
     - Then, provide the JSON configuration wrapped in \\\json and \\\
     - Generate a complete JSON configuration strictly following the schema above.
+    - Analyze the given relevant examples as an aid to generate the configuration.
     - If the user intent has to create new ACL rules, compare and check whether they conflict with existing rules. If there are conflicts, resolve them by modifying the new rules or suggesting changes to existing rules.
     - Only fill in sections that are relevant to the given user intent.
-    - For the `intent_id` field inside `config`, generate a unique identifier that includes the current timestamp (e.g., INT-<YYYYMMDDHHMMSS>
     - For irrelevant sections, keep the key but return an empty object {{}} or empty list [].
+    - Do not add additional fields that are not specified in the schema when generating the config. Even if a field seems relevant or important, omit it unless it is part of the schema.
+    - If a field doesn't apply to the user intent and it doesn't have a default value, don't add that field to the JSON.
     """
     # return PROMPT_TEMPLATE.format(user_intent=user_intent, context=context)
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
-    prompt = prompt_template.format(context=context, user_intent=user_intent, acl_rules=acl_rules)
+    prompt = prompt_template.format(user_intent=user_intent, context=context, acl_rules=acl_rules, system_timestamp=system_timestamp)
 
     chat_history.append(HumanMessage(content=prompt))
 
@@ -169,10 +173,13 @@ def acl_retriever_agent(acl_url):
 
 
 if __name__ == "__main__":
-    user_query = "Block all UDP traffic originating from 192.168.1.1"
+    user_query = "Prioritize HTTP traffic reaching the HTTP server at 192.168.0.1"
+    system_timestamp = datetime.now().isoformat()
     retrieved_context = retriever_agent(user_query)
     acl_rules = acl_retriever_agent("http://10.40.19.248:8181/onos/v1/acl/rules")
-    output = template_generator_agent(user_query, retrieved_context, acl_rules)
+    print("acl rules:", acl_rules)
+    output = template_generator_agent(user_query, retrieved_context, acl_rules, system_timestamp)
     print("=== AI RESPONSE ===")
     print(output)
+
 

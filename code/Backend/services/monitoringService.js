@@ -2,6 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import { spawn } from 'child_process';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,7 +13,7 @@ const __dirname = path.dirname(__filename);
 const LOGS_PULL_DIR = path.join(__dirname, '../../TopologySetup/04_utilityScripts/logs_pull');
 const INTENT_PULL_SCRIPT = path.join(LOGS_PULL_DIR, '02_intent_pull_logs.sh');
 const MATCHED_URLS_FILE = path.join(LOGS_PULL_DIR, 'matched_urls.txt');
-const MONITORING_SERVER_IP = '10.40.19.247';
+const MONITORING_SERVER_IP = process.env.MONITORING_SERVER_IP || 'localhost';
 
 /**
  * Generate JSON file for the intent configuration and trigger logs pulling

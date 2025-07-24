@@ -1,0 +1,41 @@
+{
+  "intent_id": "INTENT-486",
+  "user_role": "admin",
+  "timestamp": "2025-07-14T08:33:00+05:30",
+  "QOS": {
+    "application": "Streaming Media",
+    "protocol": "video",
+    "latency": "40ms",
+    "priority": "high"
+  },
+  "ACL": {
+    "rules": [
+      {
+        "action": "allow",
+        "source_ip": null,
+        "destination_ip": "10.0.2.10",
+        "source_port": null,
+        "destination_port": null,
+        "protocols": [
+          "HTTP",
+          "HTTPS"
+        ]
+      }
+    ]
+  },
+  "LOGS": {
+    "filters": [
+      {
+        "hosts": [
+          "10.0.2.10"
+        ],
+        "ports": [
+          "5060",
+          "5061"
+        ],
+        "application": "Streaming Media",
+        "time_window": "24h"
+      }
+    ]
+  }
+}
