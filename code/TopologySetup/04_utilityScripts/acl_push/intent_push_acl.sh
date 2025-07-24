@@ -1,5 +1,7 @@
 #!/bin/bash
 
+start_time=$(date +%s%N)
+
 # Check if a JSON file path was provided
 if [ "$#" -ne 1 ]; then
   echo "Usage: $0 <json_input_file>"
@@ -58,10 +60,15 @@ EOF
   echo -e "\nRule for port $PORT_TRIMMED applied.\n"
 done
 
-ORIGINAL_DIR=$(pwd)
-TARGET_DIR="../../03_trafficGenScripts"
-cd "$TARGET_DIR" 
-./stop_schedulers.sh
-cd "$ORIGINAL_DIR"
+#ORIGINAL_DIR=$(pwd)
+#TARGET_DIR="../../03_trafficGenScripts"
+#cd "$TARGET_DIR" 
+#./stop_schedulers.sh
+#cd "$ORIGINAL_DIR"
+
+end_time=$(date +%s%N)
+duration_ns=$(( end_time - start_time ))
+duration_sec=$(echo "scale=3; $duration_ns / 1000000000" | bc)
+echo "Total execution time: ${duration_sec} seconds"
 
 echo "All rules sent."

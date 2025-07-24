@@ -1,0 +1,17 @@
+{
+  "intent": "Give me a overview of Network throuput of the network for last 24 hours",
+  "config": {
+    "intent_id": "intent_203",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T09:10:00Z",
+    "LOGS": {
+      "filters": [
+        {
+          "ports": "",
+          "application": "Throughput",
+          "time_window": "24h"
+        }
+      ]
+    }
+  }
+}

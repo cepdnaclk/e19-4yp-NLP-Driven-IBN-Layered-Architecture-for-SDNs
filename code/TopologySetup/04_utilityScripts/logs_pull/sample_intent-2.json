@@ -1,0 +1,17 @@
+{
+  "intent": "Monitor last five minutes of CPU usage of all hosts",
+  "config": {
+    "intent_id": "intent_203",
+    "user_role": "admin",
+    "timestamp": "2025-07-17T09:10:00Z",
+    "LOGS": {
+      "filters": [
+        {
+          "ports": "",
+          "application": "CPU",
+          "time_window": "5m"
+        }
+      ]
+    }
+  }
+}

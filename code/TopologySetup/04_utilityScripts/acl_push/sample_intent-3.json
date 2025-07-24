@@ -1,0 +1,15 @@
+{
+    "intent": "Allow all audio calls",
+    "config": {
+      "intent_id": "INTENT-015",
+      "user_role": "admin",
+      "timestamp": "2024-07-01T14:30:00Z",
+      "QoS": {},
+      "ACL": {
+        "destination_ip": "192.168.1.1/32", 
+        "destination_port": "[16390,16391,16392]",
+        "protocol": ["UDP"],
+        "action": "allow"
+      }
+    }
+  }

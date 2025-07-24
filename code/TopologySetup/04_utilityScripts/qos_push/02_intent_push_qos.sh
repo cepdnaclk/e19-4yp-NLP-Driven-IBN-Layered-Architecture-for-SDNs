@@ -1,5 +1,7 @@
 #!/bin/bash
 
+start_time=$(date +%s%N)
+
 if [[ -z "$1" ]]; then
   echo "Usage: $0 <json_file>"
   exit 1
@@ -52,3 +54,8 @@ echo "✅ ONOS CLI is available."
 } | sshpass -p "$PASSWORD" ssh -tt -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST"
 
 echo "✅ Intents applied and SSH session closed."
+
+end_time=$(date +%s%N)
+duration_ns=$(( end_time - start_time ))
+duration_sec=$(echo "scale=3; $duration_ns / 1000000000" | bc)
+echo "Total execution time: ${duration_sec} seconds"

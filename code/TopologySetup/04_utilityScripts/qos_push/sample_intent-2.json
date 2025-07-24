@@ -1,0 +1,15 @@
+{
+    "intent": "Priotarize httP traffic from now on", 
+    "config": {
+      "intent_id": "INTENT-003",
+      "user_role": "admin",
+      "timestamp": "2024-07-01T14:30:00Z",
+      "QOS": {
+		"application": "Web",  
+		"protocol": "http",
+		"priority": "high"
+		  },
+      "ACL": {},
+      "LOGS": {}
+    }
+  }

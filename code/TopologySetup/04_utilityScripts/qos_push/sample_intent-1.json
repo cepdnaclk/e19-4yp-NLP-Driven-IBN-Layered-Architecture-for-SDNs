@@ -1,12 +1,12 @@
 {
-    "intent": "I wanna lower the priority of Video traffic in the network", 
+    "intent": "I wanna lower the priority of SSH traffic in the network", 
     "config": {
       "intent_id": "INTENT-002",
       "user_role": "admin",
       "timestamp": "2024-07-01T14:30:00Z",
       "QOS": {
-		"application": "video streaming",  
-		"protocol": "video",
+		"application": "SSH sessions",  
+		"protocol": "ssh",
 		"priority": "low"
 		  },
       "ACL": {},

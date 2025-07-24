@@ -1,5 +1,7 @@
 #!/bin/bash
 
+start_time=$(date +%s%N)
+
 if [[ -z "$1" ]]; then
   echo "Usage: $0 <intent_json_file>"
   exit 1
@@ -55,3 +57,7 @@ while IFS= read -r url; do
   fi
 done < "$FILE"
 
+end_time=$(date +%s%N)
+duration_ns=$(( end_time - start_time ))
+duration_sec=$(echo "scale=3; $duration_ns / 1000000000" | bc)
+echo "Total execution time: ${duration_sec} seconds"

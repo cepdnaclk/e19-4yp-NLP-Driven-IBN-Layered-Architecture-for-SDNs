@@ -1,0 +1,15 @@
+{
+    "intent": "Don't give file transfers too much or too little priority. just keep it balanced", 
+    "config": {
+      "intent_id": "INTENT-026",
+      "user_role": "admin",
+      "timestamp": "2024-07-01T14:30:00Z",
+      "QOS": {
+		"application": "File Transfer",  
+		"protocol": "ftp",
+		"priority": "medium"
+		  },
+      "ACL": {},
+      "LOGS": {}
+    }
+  }
