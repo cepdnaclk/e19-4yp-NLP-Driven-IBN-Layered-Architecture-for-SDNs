@@ -16,12 +16,12 @@ net.addController('c0')
 
 info('*** Adding docker containers\n')
 d1 = net.addDocker('d1', ip='192.168.0.1/24', dimage="ubuntu22")
-d2 = net.addDocker('d2', ip='192.168.2.1/24', dimage="ubuntu22")
-d3 = net.addDocker('d3', ip='192.168.1.1/24', dimage="ubuntu22")
-d4 = net.addDocker('d4', ip='192.168.1.2/24', dimage="ubuntu22")
-d5 = net.addDocker('d5', ip='192.168.0.2/24', dimage="ubuntu22")
-d6 = net.addDocker('d6', ip='192.168.2.2/24', dimage="ubuntu22")
-d7 = net.addDocker('d7', ip='10.0.0.1/8', dimage="ubuntu22")
+d2 = net.addDocker('d2', ip='192.168.0.2/24', dimage="ubuntu22")
+d3 = net.addDocker('d3', ip='192.168.0.3/24', dimage="ubuntu22")
+d4 = net.addDocker('d4', ip='192.168.0.4/24', dimage="ubuntu22")
+d5 = net.addDocker('d5', ip='192.168.0.5/24', dimage="ubuntu22")
+d6 = net.addDocker('d6', ip='192.168.0.6/24', dimage="ubuntu22")
+d7 = net.addDocker('d7', ip='192.168.0.7/24', dimage="ubuntu22")
 
 
 info('*** Adding switches\n')

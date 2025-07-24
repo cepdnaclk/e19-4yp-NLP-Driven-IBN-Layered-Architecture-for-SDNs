@@ -48,9 +48,6 @@ mv "${FOLDER}/clientTrafficProfile.yaml" "../03_trafficGenScripts/clientTrafficP
 find "${DEST_ROOT}/07_init_dashboards/dashboards/" -maxdepth 1 -type f -name 'd*.json' -exec rm -f {} \;
 cp -r "${FOLDER}/dashboards/"* "${DEST_ROOT}/07_init_dashboards/dashboards/"
 
-# Copy routingAndSwitching.txt
-cp "${FOLDER}/routingAndSwitching.txt" "${DEST_ROOT}/06_init_intents/05_init_intents.txt"
-
 # Copy grafana_admin_config.txt
 cp "./common/grafana_admin_config.txt" "${DEST_ROOT}/07_init_dashboards/02_grafana_config.txt"
 

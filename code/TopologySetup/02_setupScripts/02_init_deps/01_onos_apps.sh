@@ -22,6 +22,7 @@ apps=(
   "org.onosproject.roadm"
   "org.onosproject.pathpainter"
   "org.onosproject.layout"
+  "org.onosproject.fwd"
 )
 
 # Ensure ~/.ssh exists
